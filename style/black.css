@@ -1,0 +1,24 @@
+body{
+ background: #000000;
+ color: #DDDDDD;}
+
+#pageHeader h2{
+ color: #dddddd;}
+
+#border{
+ background-image: url(../images_site/backgroundb.jpg);}
+
+#wrapper{
+ background-color: #000000;}
+
+#footer{
+ border-top-color: #666666;}
+
+#footer .cc {
+ background-position: -20px 0px;}
+
+p{
+ color: #999999;}
+
+a:hover{
+ color: #2D7DA5;}

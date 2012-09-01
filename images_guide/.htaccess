@@ -1,0 +1,3 @@
+<FilesMatch "\.(jpg|png|jpeg)$">
+Header set Cache-Control "max-age=684000, must-revalidate"
+</FilesMatch>

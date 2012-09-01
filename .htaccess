@@ -1,0 +1,22 @@
+Redirect 301 /tltips.html /timelapse_guide.html
+RedirectMatch 301 ~arne/(.*)$ http://arne.delaat.net/$1
+ErrorDocument 404 /404.html
+ErrorDocument 403 http://arne.delaat.net/403.html
+AddOutputFilterByType DEFLATE text/html
+
+<FilesMatch "\.xml$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+<FilesMatch "\.html$">
+Header set Cache-Control "max-age=56400, must-revalidate"
+</FilesMatch>
+
+Options -Indexes
+
+IndexOrderDefault Descending Name
+IndexOptions FancyIndexing
+IndexOptions SuppressDescription FoldersFirst IgnoreCase NameWidth=85
+IndexOptions IconsAreLinks IconHeight=18 IconWidth=17
+IndexOptions SuppressHTMLPreamble
+HeaderName /Index_Header.html
+ReadmeName /Index_Footer.html
