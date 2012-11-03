@@ -1,8 +1,12 @@
 Redirect 301 /tltips.html /timelapse_guide.html
+
 RedirectMatch 301 ~arne/(.*)$ http://arne.delaat.net/$1
+
 ErrorDocument 404 /404.html
 ErrorDocument 403 http://arne.delaat.net/403.html
-AddOutputFilterByType DEFLATE text/html
+
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+AddOutputFilterByType DEFLATE application/javascript application/xml application/x-shockwave-flash
 
 <FilesMatch "\.xml$">
 Header set Cache-Control "no-cache"
