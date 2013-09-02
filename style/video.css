@@ -8,10 +8,28 @@
  border-radius: 7px;
  overflow: hidden;}
 
-.slide{
- width: 246px;
- margin: 0px auto;}
+.jThumbnailScroller{
+ position: relative;
+ width: 880px;
+ padding: 0px 10px;
+ height: 61px;
+ margin: 10px auto 0 auto;
+ background: #bbb;
+ padding: 0;
+ overflow: hidden;}
 
+.jThumbnailScroller .jTscrollerContainer{
+ position: absolute;
+ width: 9999px;}
+
+.jThumbnailScroller .jTscroller{
+ position: relative;
+ height: 100%;
+ margin: 0 7px;
+ left: 0;
+ top: 0;
+ display: inline-block;
+ *display: inline;}
 
 #categories{
  width: 100%;}
@@ -77,13 +95,13 @@
  
 /* Sprites_D700 */
 
-/*.d90 {background: url(../TimeLapse_D90/thumbs_D90.png) no-repeat top left;}*/
+/*.d90 {background: url(../images_timelapse/thumbs_D90.png) no-repeat top left;}*/
 
 /* /Sprites_D90 */
 
 /* Sprites_D700 */
 
-.d700 {background: url(../TimeLapse_D700/thumbs_D700.png) no-repeat top left;}
+.d700 {background: url(../images_timelapse/thumbs_D700.png) no-repeat top left;}
 #D700_091228_1 {background-position: -84px -0px;}
 #D700_100722_4_5 {background-position: -2px -0px;}
 #D700_101109_1 {background-position: -166px -0px;}
@@ -99,7 +117,7 @@
 
 /* Sprites_D80 */
 
-.d80 {background: url(../TimeLapse_D80/thumbs_D80.png) no-repeat top left;}
+.d80 {background: url(../images_timelapse/thumbs_D80.png) no-repeat top left;}
 #D80_080707_1 {background-position: -84px -248px;}
 #D80_080708_1 {background-position: -412px -0px;}
 #D80_080708_2 {background-position: -494px -554px;}
@@ -185,7 +203,7 @@
 
 /* Sprites_S60 */
 
-.s60 {background: url(../TimeLapse_S60/thumbs_S60.jpg) no-repeat top left;}
+.s60 {background: url(../images_timelapse/thumbs_S60.jpg) no-repeat top left;}
 #S60_050504_1{background-position: 0 0;}
 #S60_050621_2{background-position: -90px 0;}
 #S60_051218_1{background-position: -180px 0;}
