@@ -14,6 +14,18 @@ var ie = /msie/.test(navi);
 var ip = (/ipad/.test(navi) || /iphone/.test(navi) || /ipod/.test(navi));
 var ctrl = sf || ch || op;
 var ctrls = 0;
+var thumb_options = {scrollerType: "hoverAccelerate", 
+                     scrollerOrientation: "horizontal", 
+                     scrollSpeed: 2, 
+                     scrollEasing: "easeOutCirc", 
+                     scrollEasingAmount: 600, 
+                     acceleration: 4, 
+                     scrollSpeed: 500, 
+                     noScrollCenterSpace: 200, 
+                     autoScrolling: 0, 
+                     autoScrollingSpeed: 2000, 
+                     autoScrollingEasing: "easeInOutQuad", 
+                     autoScrollingDelay: 500};
 
 /* Initiate */
 $(document).ready(function () {
@@ -34,6 +46,9 @@ $(document).ready(function () {
             $('#' + numm).animate({height: "show", opacity: "show"}, "slow").removeClass("slidehide").addClass("currentslide");
             $('#categories').find('li.currentcat').removeClass("currentcat");
             $(this).addClass("currentcat");}});
+
+    /* Thumbnail Scroller */
+    $("#thumbnails").thumbnailScroller(thumb_options);
 
     /* Thumbnail Tips */
     $glo.thu.tipTip({attribute: "id", delay: "25", defaultPosition: "top"});

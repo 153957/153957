@@ -25,27 +25,6 @@
     <script type="text/javascript" src="script/video.js"></script>
     <script type="text/javascript" src="script/jquery-ui-1.8.13.custom.min.js"></script>
     <script type="text/javascript" src="script/jquery.thumbnailScroller.js"></script>
-    <script>
-        /* calling thumbnailScroller function with options as parameters */
-        (function($){
-        window.onload=function(){ 
-            $("#thumbnails").thumbnailScroller({ 
-                scrollerType:"hoverAccelerate", 
-                scrollerOrientation:"horizontal", 
-                scrollSpeed:2, 
-                scrollEasing:"easeOutCirc", 
-                scrollEasingAmount:600, 
-                acceleration:4, 
-                scrollSpeed:500, 
-                noScrollCenterSpace:200, 
-                autoScrolling:0, 
-                autoScrollingSpeed:2000, 
-                autoScrollingEasing:"easeInOutQuad", 
-                autoScrollingDelay:500 
-            });
-        }
-        })(jQuery);
-    </script>
 </head>
 <body>
     <div id="border">
@@ -88,7 +67,7 @@
         </li><li class="category" id="Reels">Reels
     </li></ul></div><!--/categories-->
 
-    <div id="thumbnails" class="jThumbnailScroller" style="margin-top:10px;">
+    <div id="thumbnails" class="jThumbnailScroller">
         <div class="jTscrollerContainer">
             <div class="jTscroller">
 
