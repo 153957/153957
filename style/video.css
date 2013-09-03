@@ -1,7 +1,7 @@
 /* Slider */
 
 #thumbnails{
- display: block;
+ display: inline-block;
  margin-top: 3px;
  padding: 8px 0px;
  background: #102A38;
@@ -10,12 +10,8 @@
 
 .jThumbnailScroller{
  position: relative;
- width: 880px;
- padding: 0px 10px;
+ width: 80%;
  height: 61px;
- margin: 10px auto 0 auto;
- background: #bbb;
- padding: 0;
  overflow: hidden;}
 
 .jThumbnailScroller .jTscrollerContainer{
@@ -32,12 +28,13 @@
  *display: inline;}
 
 #categories{
- width: 100%;}
+ display: inline-block;
+ width: 18%;}
 
 .category{
  display: inline-block;
  padding: 1%;
- width: 31%;
+ width: 40%;
  vertical-align: middle;
  list-style: none;}
 
