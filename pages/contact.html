@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block page_name %}
+    Photography
+{% endblock %}
+
+{% block banner %}DSC_028809{% endblock %}
+{% block banner2x %}DSC_028809{% endblock %}
+
+{% block style %}
+    #pageHeader {
+        background-position: 50%;}
+
+    #pageHeader h1 {
+        color: #fff;
+        left: 480px;
+        top: 100px;}
+{% endblock %}
+
+{% block body %}
+    <h3>About Me</h3>
+    <div style="text-indent: 5px; text-align: justify; float:left; width:300px; display: block;">
+        <p>
+            I am Arne de Laat, a photography enthusiast living in the
+            Netherlands. My photography started in 2004 with the purchase of
+            a compact camera, and then some years later upgrading to a DSLR
+            camera. Soon after I started with photography I also discovered
+            the wonderful world of time-lapse. After having made many
+            time-lapse movies and gained much experience in this field I
+            wrote (and still update) the time-lapse guide for other people
+            interested in time-lapse.
+        </p>
+        <p>
+            My interests in photography subjects are vast, but as can be
+            seen from my photos here my main subjects are nature (flora and
+            fauna), events (festivals and balfolk dance).
+        </p>
+    </div>
+
+    <div style="float:left; margin: 0px 55px 30px 55px; width:289px; display: block;">
+        <img src="{% static '/static/images_contact/me.jpg' %}" />
+    </div>
+    <div style="float:right; width:212px; display: block;">
+        <p>
+            e-mail:<br>
+            <a id="mail_contact">arne aa delaat dd net</a>
+        </p>
+    </div>
+{% endblock %}
+
+{% block script %}
+    var _bla0 = "mai";
+    var _bla1 = "lto:";
+    var _bla2 = "ar";
+    var _bla3 = "ne@";
+    var _bla4 = "del";
+    var _bla5 = "aat";
+    var _bla6 = ".ne";
+    var _bla7 = "t";
+    var _bla = _bla0+_bla1+_bla2+_bla3+_bla4+_bla5+_bla6+_bla7;
+    var _blaa = _bla2+_bla3+_bla4+_bla5+_bla6+_bla7;
+    document.getElementById('mail_contact').href = _bla;
+    document.getElementById('mail_contact').innerHTML = _blaa;
+{% endblock %}

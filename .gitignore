@@ -1,3 +1,7 @@
 # OS generated files
 .DS_Store*
 Icon?
+
+# Cactus
+*.pyc
+.build/
