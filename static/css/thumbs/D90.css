@@ -1,0 +1,30 @@
+﻿/* glue: 0.9.4 hash: 593ba4bca9 */
+        .thu-D90_120602_1 {
+            background-image: url('../../images_timelapse/D90.png?593ba4bca9');
+            background-repeat: no-repeat;
+        }
+        
+        .thu-D90_120602_1 {
+            background-position: 0 0;
+            width: 40px;
+            height: 30px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .thu-D90_120602_1 {
+                background-image: url('../../images_timelapse/D90.png?593ba4bca9');
+                -webkit-background-size: 40px 30px;
+                -moz-background-size: 40px 30px;
+                background-size: 40px 30px;
+            }
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0), screen and (-o-min-device-pixel-ratio: 200/100), screen and (min-device-pixel-ratio: 2.0), screen and (min-resolution: 2.0dppx) {
+            .thu-D90_120602_1 {
+                background-image: url('../../images_timelapse/D90@2x.png?593ba4bca9');
+                -webkit-background-size: 40px 30px;
+                -moz-background-size: 40px 30px;
+                background-size: 40px 30px;
+            }
+        }
+        

@@ -1,0 +1,183 @@
+﻿/* glue: 0.9.4 hash: 9e8c2c4ec5 */
+        .thu-S60_080614_1,
+.thu-S60_080608_1,
+.thu-S60_080607_1,
+.thu-S60_080515_1,
+.thu-S60_080110_1,
+.thu-S60_070728_1,
+.thu-S60_070601_1,
+.thu-S60_070428_1,
+.thu-S60_060921_1,
+.thu-S60_060812_1,
+.thu-S60_060716_1,
+.thu-S60_060530_1,
+.thu-S60_060504_1,
+.thu-S60_060404_1,
+.thu-S60_060228_1,
+.thu-S60_051218_1,
+.thu-S60_050621_2,
+.thu-S60_050504_1 {
+            background-image: url('../../images_timelapse/S60.png?9e8c2c4ec5');
+            background-repeat: no-repeat;
+        }
+        
+        .thu-S60_080614_1 {
+            background-position: 0 0;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_080608_1 {
+            background-position: -90px 0;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_080607_1 {
+            background-position: 0 -60px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_080515_1 {
+            background-position: -90px -60px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_080110_1 {
+            background-position: 0 -120px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_070728_1 {
+            background-position: -90px -120px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_070601_1 {
+            background-position: -180px 0;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_070428_1 {
+            background-position: -180px -60px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_060921_1 {
+            background-position: -180px -120px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_060812_1 {
+            background-position: 0 -180px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_060716_1 {
+            background-position: -90px -180px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_060530_1 {
+            background-position: -180px -180px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_060504_1 {
+            background-position: -270px 0;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_060404_1 {
+            background-position: -270px -60px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_060228_1 {
+            background-position: -270px -120px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_051218_1 {
+            background-position: -270px -180px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_050621_2 {
+            background-position: 0 -240px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        .thu-S60_050504_1 {
+            background-position: -90px -240px;
+            width: 90px;
+            height: 60px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .thu-S60_080614_1,
+    .thu-S60_080608_1,
+    .thu-S60_080607_1,
+    .thu-S60_080515_1,
+    .thu-S60_080110_1,
+    .thu-S60_070728_1,
+    .thu-S60_070601_1,
+    .thu-S60_070428_1,
+    .thu-S60_060921_1,
+    .thu-S60_060812_1,
+    .thu-S60_060716_1,
+    .thu-S60_060530_1,
+    .thu-S60_060504_1,
+    .thu-S60_060404_1,
+    .thu-S60_060228_1,
+    .thu-S60_051218_1,
+    .thu-S60_050621_2,
+    .thu-S60_050504_1 {
+                background-image: url('../../images_timelapse/S60.png?9e8c2c4ec5');
+                -webkit-background-size: 360px 300px;
+                -moz-background-size: 360px 300px;
+                background-size: 360px 300px;
+            }
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0), screen and (-o-min-device-pixel-ratio: 200/100), screen and (min-device-pixel-ratio: 2.0), screen and (min-resolution: 2.0dppx) {
+            .thu-S60_080614_1,
+    .thu-S60_080608_1,
+    .thu-S60_080607_1,
+    .thu-S60_080515_1,
+    .thu-S60_080110_1,
+    .thu-S60_070728_1,
+    .thu-S60_070601_1,
+    .thu-S60_070428_1,
+    .thu-S60_060921_1,
+    .thu-S60_060812_1,
+    .thu-S60_060716_1,
+    .thu-S60_060530_1,
+    .thu-S60_060504_1,
+    .thu-S60_060404_1,
+    .thu-S60_060228_1,
+    .thu-S60_051218_1,
+    .thu-S60_050621_2,
+    .thu-S60_050504_1 {
+                background-image: url('../../images_timelapse/S60@2x.png?9e8c2c4ec5');
+                -webkit-background-size: 360px 300px;
+                -moz-background-size: 360px 300px;
+                background-size: 360px 300px;
+            }
+        }
+        
