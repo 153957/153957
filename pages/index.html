@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
-{% block page_name %}
-    Index
-{% endblock %}
+{% block page_name %}Index{% endblock %}
 
 {% block style %}
-    #pageHeader h1 {color: #111111; top:35px; left: 195px;}
+    #pageHeader h1 {
+        color: #111111;
+        top: 28px;
+        left: 305px;}
+
     #navcontainer ul #current{background: #666666;}
     .idx_1_1 {background-image: url({% static '/static/images_index/index_01_1.jpg' %});}
     .idx_1_2 {background-image: url({% static '/static/images_index/index_01_2.jpg' %});}
