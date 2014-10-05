@@ -38,6 +38,9 @@
 
 /* Video */
 
+video, audio {
+    display: block;}
+
 #poster, .thu {
     cursor: pointer;}
 
@@ -71,6 +74,7 @@
     z-index: 1;}
 
 .hidden {
+    display: none;
     opacity: 0;
     position: absolute;
     z-index: -1;}
