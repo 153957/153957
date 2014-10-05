@@ -2,6 +2,9 @@
 .DS_Store*
 Icon?
 
+# Generated thumbnails
+thumbs/
+
 # Cactus
 *.pyc
 .build/

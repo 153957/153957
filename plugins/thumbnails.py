@@ -24,9 +24,9 @@ sudo pip install pil
 sudo pip install glue
 """
 
-TEMPLATE_PATH = '/Users/arne/Dropbox/Code/153957/plugins/thumbnails_template.css'
+TEMPLATE_PATH = 'plugins/thumbnails_template.css'
 SRC_PATH = 'static/images_timelapse_src'
-IMG_PATH = 'static/images_timelapse'
+IMG_PATH = 'static/images_timelapse/thumbs'
 CSS_PATH = 'static/css/thumbs'
 
 KEY = '_PREV_CHECKSUM'
