@@ -1,5 +1,5 @@
 {
     "prettify": false,
-    "optimize": ["js", "css"],
-    "fingerprint": ["js", "css", "jpg", "png"]
+    "optimize": [],
+    "fingerprint": []
 }
