@@ -120,13 +120,15 @@ video, audio {
     color: rgba(255, 255, 255, .9);}
 
 /* Sprites_browser */
-.support {background: url(../images_timelapse/support.jpg) transparent no-repeat top left; display: inline-block;}
-#ch {background-position: 0 0; width: 16px; height: 15px;}
-#ff {background-position: -18px 0; width: 16px; height: 15px;}
-#ie {background-position: -36px 0; width: 18px; height: 15px;}
-#op {background-position: -56px 0; width: 14px; height: 15px;}
-#qt {background-position: -72px 0; width: 15px; height: 15px;}
-#sf {background-position: -89px 0; width: 14px; height: 16px;}
+.support {
+    background: url(../images_timelapse/support.png) transparent no-repeat top left;
+    display: inline-block;}
+#ch {background-position: 0 0; width: 24px; height: 25px;}
+#ff {background-position: -29px 0; width: 24px; height: 25px;}
+#op {background-position: -57px 0; width: 23px; height: 25px;}
+#sf {background-position: -84px 0; width: 23px; height: 25px;}
+#ie {background-position: -115px 0; width: 21px; height: 25px;}
+#qt {background-position: -141px 0; width: 23px; height: 26px;}
 /* /Sprites_browser */
 
 /* /Sprites */
