@@ -1,0 +1,35 @@
+                    </div><!-- /content -->
+                </div><!-- /contentContainer -->
+                <div class="clearer">
+                </div><!-- clearer -->
+                <div id="footer">
+                    <p>
+                        This website and its content is licensed
+                        under <a target="_blank" rel="license"
+                        href="http://creativecommons.org/licenses/by
+                        -nc-nd/3.0/nl/" class="cc"></a> by <a
+                        href="contact.html">Arne de Laat</a>. Some
+                        rights reserved.
+                    </p>
+                </div><!-- /footer -->
+            </div><!-- /container -->
+        </div><!-- /wrapper -->
+
+        <script src="{% static '/static/js/vendor/jquery-1.10.2.js' %}"></script>
+        <script src="{% static '/static/js/main.js' %}"></script>
+        <script>
+            var sc_project=865657;
+            var sc_invisible=1;
+            var sc_security="b2bfd38e";
+        </script>
+        <script src="http://www.statcounter.com/counter/counter.js"></script>
+    </body>
+
+    {% block scripts %}
+    {% endblock %}
+    <script>
+        {% block script %}
+        {% endblock %}
+    </script>
+
+</html>
