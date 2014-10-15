@@ -1,0 +1,134 @@
+/* Slider */
+
+#slider {
+    height: 143px;
+    width: 100%;
+    float: left;
+    overflow: hidden;}
+
+#categories {
+    vertical-align: top;
+    display: inline-block;
+    width: 160px;}
+
+.category {
+    display: inline-block;
+    padding: 0 1%;
+    width: 48%;
+    vertical-align: middle;
+    list-style: none;}
+ 
+#thumbnails {
+    width: 770px;
+    display: inline-block;
+    border: 1px black solid;
+    border-radius: 7px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 140px;}
+
+.slide {
+    width: 97%;
+    padding: 7px 0;
+    margin: 0px auto;}
+
+
+/* /Slider */
+
+
+/* Video */
+
+video, audio {
+    display: block;}
+
+#poster, .thu {
+    cursor: pointer;}
+
+#poster {
+    position: absolute;
+    width: 100%;}
+
+#poster.showing {
+    opacity: 1.0;}
+
+#status {
+    color: black;
+    position: absolute;
+    z-index: 2;
+    font-size: 900%;
+    width: 100%;
+    text-align: center;
+    margin: 20% 0;}
+
+#movie {
+    display: inline-block;
+    background-color: transparent;
+    margin-top: 5px;
+    width: 100%;
+    height: 665px;
+    overflow: hidden;}
+
+.showing {
+    opacity: 0.8;
+    position: absolute;
+    z-index: 1;}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;}
+
+/* /Video */
+
+
+/* Sprites */
+/* Generator: http://css.spritegen.com/
+      Output Type: PNG
+      Padding between images: 2px
+
+      Old: spritegen.website-performance.org
+      Horizontal
+      [hv]_offset: 5 px
+      background: #102A38
+      JPG 80% */
+
+.thu {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    width: 80px;
+    height: 59px;
+    border-radius: 2px;}
+
+#thumbnails .currentmovie::before, #thumbnails .thu:hover::before {
+    color: rgba(255, 255, 255, .8);
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    text-align: center;
+    vertical-align: bottom;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+    content: '\f01d';
+    font-size: 200%;
+    font-family: FontAwesome;}
+
+#thumbnails .currentmovie::before {
+    color: rgba(255, 255, 255, .9);}
+
+/* Sprites_browser */
+.support {
+    background: url(../images_timelapse/support.png) transparent no-repeat top left;
+    display: inline-block;}
+#ch {background-position: 0 0; width: 24px; height: 25px;}
+#ff {background-position: -29px 0; width: 24px; height: 25px;}
+#op {background-position: -57px 0; width: 23px; height: 25px;}
+#sf {background-position: -84px 0; width: 23px; height: 25px;}
+#ie {background-position: -115px 0; width: 21px; height: 25px;}
+#qt {background-position: -141px 0; width: 23px; height: 26px;}
+/* /Sprites_browser */
+
+/* /Sprites */

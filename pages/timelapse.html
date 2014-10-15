@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+
+{% block page_name %}Time-Lapse{% endblock %}
+{% block title %}{{ block.super }} : Time-Lapse{% endblock %}
+
+{% block banner %}DSC_085677{% endblock %}
+{% block banner2x %}DSC_085677{% endblock %}
+
+{% block style %}
+    #pageHeader h1 {
+        left: 650px;
+        top: 25px;}
+
+    #content {
+        padding-left: 0;
+        padding-right: 0;}
+
+    #slider {
+        padding: 0 9px;}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/static/css/tipTip.css' %}" />
+    <link rel="stylesheet" href="{% static '/static/css/video.css' %}" />
+    <link rel="stylesheet" href="{% static '/static/css/controls.css' %}" />
+    <link rel="stylesheet" href="{% static '/static/css/thumbs/D80.css' %}" />
+    <link rel="stylesheet" href="{% static '/static/css/thumbs/D90.css' %}" />
+    <link rel="stylesheet" href="{% static '/static/css/thumbs/D700.css' %}" />
+    <link rel="stylesheet" href="{% static '/static/css/thumbs/S60.css' %}" />
+{% endblock %} 
+
+{% block body %}
+<div id="slider">
+    <div id="categories"><ul>
+        <strong>CATEGORIES</strong><br>
+        <ul>
+<!-- 
+             <li class="category currentcat" id="Latest">Latest
+        </li>
+ -->
+             <li class="category currentcat" id="Reels">Reels
+        </li><li class="category" id="Archery">Archery
+        </li><li class="category" id="Astronomy">Astronomy
+        </li><li class="category" id="Balfolk">Balfolk
+        </li><li class="category" id="Clouds">Clouds (1/2)
+        </li><li class="category" id="Clouds2">Clouds (2/2)
+        </li><li class="category" id="Fire">Fire
+        </li><li class="category" id="Flowers">Flowers
+        </li><li class="category" id="Frost">Frost
+        </li><li class="category" id="Other">Other
+        </li><li class="category" id="Sun">Sun
+        </li><li class="category" id="Traffic">Traffic
+        </li></ul>
+    </div><!--/categories-->
+
+    <div id="thumbnails">
+<!-- 
+        <div id="Latest-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d90" id="D90_120602_1">
+            </li><li class="thu d80" id="D80_110514_110520_1_2_4">
+            </li><li class="thu d80" id="D80_111111_1">
+            </li><li class="thu d700" id="D700_110928_1">
+            </li><li class="thu d700" id="D700_110927_1">
+            </li><li class="thu d700" id="D700_110413_2">
+            </li><li class="thu d80" id="D80_110521_1">
+            </li><li class="thu d80" id="D80_110516_5">
+            </li><li class="thu d80" id="D80_110516_3">
+            </li><li class="thu d80" id="D80_110515_2">
+            </li><li class="thu d80" id="D80_110514_2">
+            </li><li class="thu d80" id="D80_110311_1">
+            </li><li class="thu d80" id="D80_101121_2">
+            </li><li class="thu d80" id="D80_101118_101126_1">
+            </li><li class="thu d700" id="D700_D80_101014_2_4_1">
+            </li></ul>
+        </div><!~~/Latest~~>
+ -->
+        <div id="Flowers-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d80" id="D80_080816_1">
+            </li><li class="thu d80" id="D80_080806_1">
+            </li><li class="thu d80" id="D80_080714_1">
+            </li><li class="thu s60" id="S60_080614_1">
+            </li><li class="thu s60" id="S60_080608_1">
+            </li><li class="thu s60" id="S60_080607_1">
+            </li><li class="thu s60" id="S60_080515_1">
+            </li><li class="thu s60" id="S60_070728_1">
+            </li><li class="thu s60" id="S60_070428_1">
+            </li><li class="thu s60" id="S60_060921_1">
+            </li><li class="thu s60" id="S60_060716_1">
+            </li></ul>
+        </div><!--/Flowers-->
+        <div id="Clouds-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d80" id="D80_100722_3">
+            </li><li class="thu d80" id="D80_091012_2">
+            </li><li class="thu d80" id="D80_091009_1">
+            </li><li class="thu d80" id="D80_090721_2">
+            </li><li class="thu d80" id="D80_090710_1">
+            </li><li class="thu d80" id="D80_090624_5">
+            </li><li class="thu d80" id="D80_090624_3">
+            </li><li class="thu d80" id="D80_090624_1">
+            </li><li class="thu d80" id="D80_090327_3">
+            </li><li class="thu d80" id="D80_090325_2">
+            </li><li class="thu d80" id="D80_090325_1">
+            </li><li class="thu d80" id="D80_090313_2">
+            </li><li class="thu d80" id="D80_090313_1">
+            </li></ul>
+        </div><!--/Clouds-->
+        <div id="Clouds2-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d80" id="D80_081111_1">
+            </li><li class="thu d80" id="D80_080716_2">
+            </li><li class="thu d80" id="D80_080716_1">
+            </li><li class="thu d80" id="D80_080711_1">
+            </li><li class="thu d80" id="D80_080708_2">
+            </li><li class="thu d80" id="D80_080707_1">
+            </li><li class="thu s60" id="S60_060228_1">
+            </li><li class="thu s60" id="S60_060530_1">
+            </li><li class="thu s60" id="S60_050621_2">
+            </li></ul>
+        </div><!--/Clouds2-->
+        <div id="Traffic-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d80" id="D80_101121_2">
+            </li><li class="thu d80" id="D80_101118_101126_1">
+            </li><li class="thu d700" id="D700_101109_2">
+            </li><li class="thu d80" id="D80_100914_1">
+            </li><li class="thu d80" id="D80_100913_2">
+            </li><li class="thu d700" id="D700_100722_4_5">
+            </li><li class="thu d80" id="D80_091019_1">
+            </li><li class="thu d80" id="D80_091019_3">
+            </li><li class="thu d80" id="D80_090727_3">
+            </li><li class="thu d80" id="D80_090727_2">
+            </li><li class="thu d80" id="D80_090721_1">
+            </li><li class="thu d80" id="D80_090712_1">
+            </li><li class="thu d80" id="D80_080716_4">
+            </li></ul>
+        </div><!--/Traffic-->
+        <div id="Frost-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d80" id="D80_100201_1">
+            </li><li class="thu d80" id="D80_090109_1">
+            </li><li class="thu d80" id="D80_080708_1">
+            </li><li class="thu s60" id="S60_060812_1">
+            </li><li class="thu s60" id="S60_060504_1">
+            </li><li class="thu s60" id="S60_050504_1">
+            </li></ul>
+        </div><!--/Frost-->
+        <div id="Sun-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d80" id="D80_100816_1_2">
+            </li><li class="thu d80" id="D80_100722_1">
+            </li><li class="thu d80" id="D80_100531_1">
+            </li><li class="thu d80" id="D80_091012_3">
+            </li><li class="thu d80" id="D80_091012_1">
+            </li><li class="thu d80" id="D80_090403_1">
+            </li><li class="thu d80" id="D80_090401_1">
+            </li><li class="thu d80" id="D80_081218_1">
+            </li><li class="thu s60" id="S60_080110_1">
+            </li><li class="thu s60" id="S60_070601_1">
+            </li></ul>
+        </div><!--/Sun-->
+        <div id="Balfolk-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d90" id="D90_120602_1">
+            </li><li class="thu d80" id="D80_100405_1">
+            </li><li class="thu d80" id="D80_091009_2">
+            </li><li class="thu d80" id="D80_090906_3">
+            </li><li class="thu d80" id="D80_090617_1">
+            </li></ul>
+        </div><!--/Balfolk-->
+        <div id="Archery-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d80" id="D80_100816_3">
+            </li><li class="thu d80" id="D80_090906_2">
+            </li><li class="thu d80" id="D80_090906_1">
+            </li><li class="thu s60" id="S60_051218_1">
+            </li></ul>
+        </div><!--/Archery-->
+        <div id="Other-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d700" id="D700_110413_2">
+            </li><li class="thu d700" id="D700_D80_101014_2_4_1">
+            </li><li class="thu d700" id="D700_D80_100722_2_4">
+            </li><li class="thu d80" id="D80_100427_1">
+            </li><li class="thu d80" id="D80_100208_1">
+            </li><li class="thu d80" id="D80_090918_1">
+            </li><li class="thu d80" id="D80_090715_1">
+            </li><li class="thu d80" id="D80_090712_2">
+            </li><li class="thu d80" id="D80_090710_2">
+            </li><li class="thu d80" id="D80_080721_1">
+            </li><li class="thu s60" id="S60_060404_1">
+            </li>
+            </ul>
+        </div><!--/Other-->
+        <div id="Fire-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d80" id="D80_111111_1">
+            </li><li class="thu d80" id="D80_110311_1">
+            </li><li class="thu d700" id="D700_091228_1">
+            </li><li class="thu d80" id="D80_090829_1">
+            </li><li class="thu d80" id="D80_090718_2">
+            </li><li class="thu d80" id="D80_090718_1">
+            </li><li class="thu d80" id="D80_090603_2">
+            </li><li class="thu d80" id="D80_090403_2">
+            </li><li class="thu d80" id="D80_081214_1">
+            </li></ul>
+        </div><!--/Fire-->
+        <div id="Astronomy-content" class="slide slidehide">
+            <ul>
+                 <li class="thu d700" id="D700_110928_1">
+            </li><li class="thu d700" id="D700_110927_1">
+            </li><li class="thu d80" id="D80_110521_1">
+            </li><li class="thu d80" id="D80_110516_5">
+            </li><li class="thu d80" id="D80_110516_3">
+            </li><li class="thu d80" id="D80_110515_2">
+            </li><li class="thu d80" id="D80_110514_2">
+            </li><li class="thu d80" id="D80_110514_110520_1_2_4">
+            </li><li class="thu d80" id="D80_100131_2">
+            </li><li class="thu d80" id="D80_091207_1">
+            </li><li class="thu d80" id="D80_091102_2">
+            </li><li class="thu d80" id="D80_090903_4">
+            </li><li class="thu d80" id="D80_090901_2">
+            </li><li class="thu d80" id="D80_080716_3">
+            </li></ul>
+        </div><!--/Astronomy-->
+        <div id="Reels-content" class="slide currentslide">
+             <ul>
+                 <li class="thu d700" id="D700_D80_Virtual_Eyes">
+            </li><li class="thu d80" id="D80_Events">
+            </li><li class="thu d80" id="D80_110514_110520_1_2_4">
+            </li></ul>
+        </div><!--/Reels-->
+        <div id="Description-content" class="slide slidehide">
+            <p>
+                This is my time-lapse showcase. This page contains a
+                collection of my Time-lapse movies. Most movies were
+                created with my Nikon DSLRs and some with my Canon
+                Powershot. The Nikon D80 and D90 required an external
+                intervalometer or a computer to control the camera, the
+                Canon S60 and Nikon D700 have a built-in intervalometer
+                to take time-lapse photos. A HTML5 video capable browser
+                or Quicktime 7+ is required to view the movies, the
+                movies are encoded with the x264/WebM/Ogv codecs (the
+                most suitable is selected by your browser). The movies
+                are ordered by shooting date, the newest are at the top
+                of the categories. Most movies are made in the
+                Netherlands, but some were shot in Chile, Japan or
+                China. The categories include movies about archery,
+                balfolk dancing, blooming flowers, airplanes, traffic,
+                fireshows, clouds, sunsets, sunrise, night skies, stars,
+                ice cubes melting and some other miscellaneous subjects.
+            </p>
+        </div><!--/Description-->
+    </div><!--/thumbnails-->
+</div><!--/slider-->
+
+<div class="quicktime" id="movie">
+    <img id="poster" class="showing" name="D700_D80_Virtual_Eyes" src="{% static '/static/images_timelapse/D700_D80_Virtual_Eyes_poster.jpg' %}" />
+    <video id="player" style="margin: 37px 0px" height="529" width="100%">
+        <p style="font-size: 125%;">
+            Your browser does not support HTML 5, upgrade to a newer version that does:
+                <a class="support" id="sf" href="http://www.apple.com/safari/" title="Safari 4+">
+            </a><a class="support" id="ch" href="http://www.google.com/chrome" title="Google Chrome 5+">
+            </a><a class="support" id="ff" href="http://www.firefox.com/" title="Firefox 3.5+">
+            </a><a class="support" id="op" href="http://www.opera.com/" title="Opera 10.60+">
+            </a><a class="support" id="ie" href="http://windows.microsoft.com/ie" title="Internet Explorer 9+"></a><br>
+            Or use your current browser, but then you need Quicktime:
+                <a class="support" id="qt" href="http://www.apple.com/quicktime/download/" title="Quicktime 7+"></a>
+        </p>
+    </video>
+</div><!--/movie-->
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static '/static/js/vendor/jquery.tipTip.min.js' %}"></script>
+    <script src="{% static '/static/js/video.js' %}"></script>
+{% endblock %}
