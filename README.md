@@ -1,7 +1,14 @@
+153957
+======
+
+My personal website: [153957 Photography](http://arne.delaat.net)
+
+
 Make website
+------------
+
+Open a terminal in this directory and run 
 
     cactus build
 
-Making time-lapse thumbnail sprite and css code
-
-    glue thumbs sprite --namespace= --sprite-namespace= --cachebuster
+The built website should then be in the `.build` directory.
