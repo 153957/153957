@@ -33,7 +33,7 @@ KEY = '_PREV_CHECKSUM'
 
 
 def checksum(path):
-    command = 'md5 `find %s -type f`' % pipes.quote(IMG_PATH)
+    command = 'md5 `find %s -type f`' % pipes.quote(path)
     return subprocess.check_output(command, shell=True)
 
 
@@ -44,7 +44,7 @@ def preBuild(site):
     If so, use glue to create the new sprites and css.
 
     """
-    currChecksum = checksum(IMG_PATH)
+    currChecksum = checksum(SRC_PATH)
     prevChecksum = getattr(site, KEY, None)
 
     # Don't run if none of the images has changed
@@ -54,11 +54,9 @@ def preBuild(site):
     if os.path.isdir(CSS_PATH):
         shutil.rmtree(CSS_PATH)
 
-    if os.path.isdir(IMG_PATH):
-        shutil.rmtree(IMG_PATH)
-
+    # Ensure that this directory exist
     os.mkdir(CSS_PATH)
-    os.mkdir(IMG_PATH)
+
     os.system('glue --cachebuster --namespace= --sprite-namespace= --retina '
               '--css-template %s --project %s --img %s --css %s' %
               (TEMPLATE_PATH, SRC_PATH, IMG_PATH, CSS_PATH))
