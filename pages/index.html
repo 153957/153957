@@ -25,9 +25,9 @@
 {% endblock %}
 
 {% block body %}
-    <a href="{% url '/photography.html' %}" id="idx1" class="collage idx_1_4" alt="Photography"></a>
-    <a href="{% url '/timelapse.html' %}" id="idx2" class="collage idx_2_1" alt="Time-Lapse Movies"></a>
-    <a href="{% url '/timelapse_guide.html' %}" id="idx3" class="collage idx_3_1" alt="Time-Lapse Guide"></a>
+    <a href="{% url '/photography.html' %}" id="idx1" class="collage idx_1_4" data-tip="Photography"></a>
+    <a href="{% url '/timelapse.html' %}" id="idx2" class="collage idx_2_1" data-tip="Time-Lapse Movies"></a>
+    <a href="{% url '/timelapse_guide.html' %}" id="idx3" class="collage idx_3_1" data-tip="Time-Lapse Guide"></a>
 {% endblock %}
 
 {% block scripts %}

@@ -4,7 +4,8 @@ var tips, idx1, idx2, idx3;
 /* Initiate Tips */
 $(document).ready(function() {
     tips = $('.collage');
-    tips.tipTip({attribute: "alt", delay: "25", defaultPosition: "top", edgeOffset: -7});
+    tips.tipTip({attribute: "data-tip", delay: "25", defaultPosition: "top",
+                 edgeOffset: -7});
     idx1 = $('#idx1');
     idx2 = $('#idx2');
     idx3 = $('#idx3');
