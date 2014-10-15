@@ -54,7 +54,11 @@ def preBuild(site):
     if os.path.isdir(CSS_PATH):
         shutil.rmtree(CSS_PATH)
 
+    if os.path.isdir(IMG_PATH):
+        shutil.rmtree(IMG_PATH)
+
     os.mkdir(CSS_PATH)
+    os.mkdir(IMG_PATH)
     os.system('glue --cachebuster --namespace= --sprite-namespace= --retina '
               '--css-template %s --project %s --img %s --css %s' %
               (TEMPLATE_PATH, SRC_PATH, IMG_PATH, CSS_PATH))
