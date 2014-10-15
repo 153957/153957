@@ -3,6 +3,7 @@ import sys
 import pipes
 import shutil
 import subprocess
+import hashlib
 
 import glue
 
@@ -33,8 +34,9 @@ KEY = '_PREV_CHECKSUM'
 
 
 def checksum(path):
-    command = 'md5 `find %s -type f`' % pipes.quote(path)
-    return subprocess.check_output(command, shell=True)
+    command = 'tar -cf - %s' % pipes.quote(path)
+    file_data = subprocess.check_output(command, shell=True)
+    return hashlib.sha512(file_data).hexdigest()
 
 
 def preBuild(site):
