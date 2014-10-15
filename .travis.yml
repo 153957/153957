@@ -4,6 +4,7 @@ python:
 
 before_install:
   - pip install https://github.com/koenbok/Cactus/archive/v3.zip
+  - pip install glue
   - wget https://raw.githubusercontent.com/mozilla/html5-lint/master/html5check.py
 
 script:
