@@ -19,10 +19,9 @@
     list-style: none;}
  
 #thumbnails {
-    width: 770px;
+    width: 80%;
     display: inline-block;
-    overflow: hidden;
-    height: 140px;}
+    overflow: hidden;}
 
 .slide {
     width: 97%;
@@ -42,8 +41,7 @@ video, audio {
     cursor: pointer;}
 
 #poster {
-    position: absolute;
-    width: 100%;}
+    position: absolute;}
 
 #poster.showing {
     opacity: 1.0;}
