@@ -11,6 +11,4 @@ script:
   - cactus build
   - cd .build 
   - CHECK=$(for file in *.html; do python ../html5check.py -geh $file; done;)
-  - CHECK=$(echo "$CHECK" | grep -v index_)
-  - CHECK=$(echo "$CHECK" | grep -v iframe)
-  - if [[ ! -z "$CHECK" ]]; then echo "$CHECK"; exit 1; fi;
+  - if [[ ! -z $(echo "$CHECK" | grep -vE 'index_|iframe') ]]; then echo "$CHECK"; exit 1; fi;
