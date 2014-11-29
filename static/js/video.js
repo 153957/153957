@@ -51,7 +51,7 @@ $(document).ready(function () {
 
     /* Poster Link */
     $global.poster.click(function () {
-        swapVideo(this.name);
+        swapVideo(this.dataset.id);
         return false;});
 
     /* Select Video Codec */
