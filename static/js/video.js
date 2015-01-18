@@ -171,21 +171,21 @@ function setHWM() {
             pin_width = $global.video.width - 137;
             full = '';}
         $global.movie.append(
-            '<div id="controls" style="margin-left:' + hmargin + 'px; width:' + $global.video.width + 'px;">\
-                 <div id="play_pause_button" class="fa fa-play" onclick="playpause()"></div>\
-                 <div id="progress_bar">\
-                     <div id="time_display">0:00</div>\
-                     <div id="progress_back" style="width:' + pbg_width + 'px;">\
-                         <div id="progress_buffered" style="width:0%;"></div>\
-                         <div id="progress_elapsed" style="width:0%;"></div>\
-                     <input id="progress_indicator" type="range" step="any" value="0" min="0" max="' + $global.video.duration + '"\
-                            style="width:' + pin_width + 'px;" onchange="setTime()"></div></div>\
-                 <div id="volume_speaker_button" class="fa fa-volume-up" onclick="mute()"></div>\
-                 <div id="volume_bar">\
-                     <div id="volume_back" style="width:47px; ">\
-                         <div id="volume_used" style="width:75%; "></div>\
-                     <input id="volume_indicator" type="range" value="30" min="0" max="40"\
-                            style="width:50px;" onchange="setVolume()"></div></div>' + full + '</div>');
+            '<div id="controls" style="margin-left:' + hmargin + 'px; width:' + $global.video.width + 'px;">' +
+            '    <div id="play_pause_button" class="fa fa-play" onclick="playpause()"></div>' +
+            '    <div id="progress_bar">' +
+            '        <div id="time_display">0:00</div>' +
+            '        <div id="progress_back" style="width:' + pbg_width + 'px;">' +
+            '            <div id="progress_buffered" style="width:0%;"></div>' +
+            '            <div id="progress_elapsed" style="width:0%;"></div>' +
+            '        <input id="progress_indicator" type="range" step="any" value="0" min="0" max="' + $global.video.duration + '"' +
+            '               style="width:' + pin_width + 'px;" onchange="setTime()"></div></div>' +
+            '    <div id="volume_speaker_button" class="fa fa-volume-up" onclick="mute()"></div>' +
+            '    <div id="volume_bar">' +
+            '        <div id="volume_back" style="width:47px; ">' +
+            '            <div id="volume_used" style="width:75%; "></div>' +
+            '        <input id="volume_indicator" type="range" value="30" min="0" max="40"' +
+            '               style="width:50px;" onchange="setVolume()"></div></div>' + full + '</div>');
         window.$controls = {
             con: $('#controls'),
             ppb: $('#play_pause_button'),
@@ -244,14 +244,14 @@ function swapVideo(movieid) {
     /* Quicktime Embed/Object */
     else {
         $global.movie.html(
-            "<object width='" + $global.movie.width() + "' height='" + $global.movie.height() + "'\
-                     classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B'\
-                     codebase='http://www.apple.com/qtactivex/qtplugin.cab'>\
-             <param name='src' value='" + videolink + "' /><param name='bgcolor' value='#ffffff' />\
-             <param name='controller' value='true' /><param name='autoplay' value='true' /><param name='scale' value='aspect' />\
-             <embed src='" + videolink + "' bgcolor='ffffff' width='" + $global.movie.width() + "' height='" + $global.movie.height() + "'\
-                    type='video/quicktime' pluginspage='http://www.apple.com/quicktime/download/'\
-                    controller='true' autoplay='true' scale='aspect'>\
-             </object>");}
+            "<object width='" + $global.movie.width() + "' height='" + $global.movie.height() + "'" +
+            "        classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B'" +
+            "        codebase='http://www.apple.com/qtactivex/qtplugin.cab'>" +
+            "<param name='src' value='" + videolink + "' /><param name='bgcolor' value='#ffffff' />" +
+            "<param name='controller' value='true' /><param name='autoplay' value='true' /><param name='scale' value='aspect' />" +
+            "<embed src='" + videolink + "' bgcolor='ffffff' width='" + $global.movie.width() + "' height='" + $global.movie.height() + "'" +
+            "       type='video/quicktime' pluginspage='http://www.apple.com/quicktime/download/'" +
+            "       controller='true' autoplay='true' scale='aspect'>" +
+            "</object>");}
     window.location.hash = movieid;
     return false;}
