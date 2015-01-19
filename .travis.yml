@@ -1,10 +1,14 @@
-language: python
-python:
-  - "2.7"
+#language: python
+#python:
+#  - "2.7"
+
+language: node_js
+node_js:
+  - "0.10"
 
 before_install:
-  - pip install https://github.com/koenbok/Cactus/archive/v3.zip
-  - pip install glue
+  - npm install -g jshint
+  - pip install Cactus glue
   - wget https://raw.githubusercontent.com/mozilla/html5-lint/master/html5check.py
 
 script:
@@ -12,3 +16,5 @@ script:
   - cd .build 
   - CHECK=$(for file in *.html; do python ../html5check.py -geh $file; done;)
   - if [[ ! -z $(echo "$CHECK" | grep -vE 'index_|iframe') ]]; then echo "$CHECK"; exit 1; fi;
+  - jshint --extract auto *.html
+  - jshint static/js/*.js 
