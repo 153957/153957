@@ -192,6 +192,14 @@ a:hover {
 /* /Navigation */
 /* Content */
 
+hr {
+    margin: 1.5em auto;
+    background: #999;
+    width: 240px;
+    height: 1px;
+    border: 0;
+}
+
 #contentContainer {
     width: 100%;
     float: left;
