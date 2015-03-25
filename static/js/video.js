@@ -2,7 +2,6 @@
 
 /* Global variables */
 var base = "http://arne.delaat.net/"; /* "http://delaat.me/"; */
-var kind = "x264";
 var quality = "SD";
 var extension = ".mp4";
 var html5 = true; /* No HTML5 -> Use QuicktTime Embed */
@@ -58,11 +57,7 @@ $(document).ready(function () {
     if ($global.video.canPlayType) {
         /*codecs=http://wiki.whatwg.org/wiki/Video_type_parameters*/
         var mp4 = $global.video.canPlayType('video/mp4');
-        if (ip) {kind = 'ipod';}
-        if (mp4 !== "" && mp4 !== "no") {
-            kind = 'x264';
-            extension = '.mp4';}
-        else {
+        if (mp4 == "" || mp4 == "no") {
             html5 = false;}}
     else {
         html5 = false;}
