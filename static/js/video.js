@@ -13,6 +13,8 @@ var ie = /msie/.test(navi);
 var ip = (/ipad/.test(navi) || /iphone/.test(navi) || /ipod/.test(navi));
 var ctrl = (!ip && sf) || ch || op;
 var ctrls = 0;
+var ctrls_height = 25;
+var fullscreen = false;
 
 /* Initiate */
 $(document).ready(function () {
@@ -62,6 +64,25 @@ $(document).ready(function () {
     else {
         html5 = false;}
 
+    /* Fullscreen Button */
+    /* Check Full screen support */
+    if ($global.video.requestFullscreen) {
+        fullscreen = function () {
+            $global.video.requestFullscreen();
+            return false;}}
+    else if ($global.video.msRequestFullscreen) {
+        fullscreen = function () {
+            $global.video.msRequestFullscreen();
+            return false;}}
+    else if ($global.video.mozRequestFullScreen) {
+        fullscreen = function () {
+            $global.video.mozRequestFullScreen();
+            return false;}}
+    else if ($global.video.webkitRequestFullscreen) {
+        fullscreen = function () {
+            $global.video.webkitRequestFullscreen();
+            return false;}}
+
     /* Load linked video */
     if (window.location.hash) {
         if ($global.thumbnails.filter(window.location.hash).length) {
@@ -90,8 +111,10 @@ function playpause() {
 /* Show Progress */
 function progress(e) {
     var percentDone = $global.video.currentTime / $global.video.duration * 100;
-    if (sf) {$controls.pel.style.width = (percentDone / 100 * ($global.video.width - 153)) + 'px';}
-    else    {$controls.pel.style.width = (percentDone / 100 * ($global.video.width - 138)) + 'px';}
+    if (fullscreen) {
+        $controls.pel.style.width = (percentDone / 100 * ($global.video.width - 153)) + 'px';}
+    else {
+        $controls.pel.style.width = (percentDone / 100 * ($global.video.width - 138)) + 'px';}
     $controls.pin.val($global.video.currentTime);
     var sec = Math.max(Math.floor($global.video.currentTime % 60), 0);
     var min = Math.max(Math.floor($global.video.currentTime / 60), 0);
@@ -132,32 +155,28 @@ function volumeused() {
     else {
         $controls.vsb.removeClass('fa-volume-down fa-volume-off').addClass('fa-volume-up');}}
 
-/* Fullscreen Button */
-var fullscreen = function () {
-    $global.video.webkitEnterFullscreen();};
-
 /* Fullwindow Button */
 var fullwindow = function () {
     $global.video.width  = window.innerWidth;
-    $global.video.height = window.innerHeight - 25;}; /* Set z-index, position.. */
+    $global.video.height = window.innerHeight - ctrls_height;}; /* Set z-index, position.. */
 
 /* Metadata Loaded -> Set Width/Height/Margins */
 function setHWM() {
     var hmargin;
-    if ($global.video.videoHeight / ($global.movie.height() - 25) <= $global.video.videoWidth / $global.movie.width()) {
+    if ($global.video.videoHeight / ($global.movie.height() - ctrls_height) <= $global.video.videoWidth / $global.movie.width()) {
         $global.video.width  = $global.movie.width();
         $global.video.height = $global.video.videoHeight * ($global.movie.width() / $global.video.videoWidth);
         hmargin = 0;}
     else {
-        $global.video.height = $global.movie.height() - 25;
-        $global.video.width  = $global.video.videoWidth * (($global.movie.height() - 25) / $global.video.videoHeight);
+        $global.video.height = $global.movie.height() - ctrls_height;
+        $global.video.width  = $global.video.videoWidth * ($global.video.height / $global.video.videoHeight);
         hmargin = ($global.movie.width() - $global.video.width) / 2;}
     $global.video.style.margin = '0 0 0 ' + hmargin + 'px';
     /* Attach Webkit Controls */
     if (ctrl && !ctrls) {
         var pbg_width, pin_width, full;
         ctrls = 1;
-        if (sf) {
+        if (fullscreen) {
             pbg_width = $global.video.width - 151;
             pin_width = $global.video.width - 152;
             full = '<div id="fullscreen_button" class="fa fa-expand" onclick="fullscreen()"></div>';}
@@ -227,12 +246,14 @@ function swapVideo(movieid) {
     if (html5) {
         if (ip) {
             $global.movie.html('<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
-                               '       height="100%" width="100%" preload="auto" controls onloadedmetadata="setHWM()"></video>' +
+                               '       height="100%" width="100%" preload="auto" controls ' +
+                               '       onloadedmetadata="setHWM()"></video>' +
                                '<span id="status" class="fa fa-circle-o-notch fa-spin hidden"></span>');}
         else{
-            $global.movie.html('<span id="status" class="fa fa-spinner fa-spin showing"></span>' +
+            $global.movie.html('<span id="status" class="fa fa-circle-o-notch fa-spin showing"></span>' +
                                '<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
-                               '       height="0" width="0" preload="auto" onloadedmetadata="setHWM()" oncanplay="hideLoad()"></video>');}
+                               '       height="0" width="0" preload="auto" onloadedmetadata="setHWM()" ' +
+                               '       oncanplay="hideLoad()"></video>');}
         $global.video = $('#player').get(0);
         $global.status = $('#status');
         $global.video.addEventListener('error', errorStatus, true);}
