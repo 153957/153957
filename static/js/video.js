@@ -9,7 +9,6 @@ var navi = navigator.userAgent.toLowerCase();
 var op = /opera/.test(navi);
 var ch = /chrome/.test(navi);
 var sf = /safari/.test(navi) && !ch;
-var ie = /msie/.test(navi);
 var ip = (/ipad/.test(navi) || /iphone/.test(navi) || /ipod/.test(navi));
 var ctrl = (!ip && sf) || ch || op;
 var ctrls = 0;
@@ -235,7 +234,7 @@ function swapVideo(movieid) {
     var videolink;
     ctrls = 0;
     $global.poster.hide();
-    var camera = movieid.substring(0,3);
+    var camera = movieid.substring(0, 3);
     if      (camera === "D70") {videolink = base + "TimeLapse_D700/" + quality + '/' + movieid + extension;}
     else if (camera === "D90") {videolink = base + "TimeLapse_D90/" + quality + '/' + movieid + extension;}
     else if (camera === "D80") {videolink = base + "TimeLapse_D80/" + quality + '/' + movieid + extension;}
