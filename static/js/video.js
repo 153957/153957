@@ -241,6 +241,9 @@ function swapVideo(movieid) {
     else if (camera === "S60") {videolink = base + "TimeLapse_S60/" + quality + '/' + movieid + extension;}
     else                       {videolink = base + "Movies/" + quality + '/' + movieid + extension;}
 
+    /* Example video */
+    // videolink = '../static/sample_video/150317_NorthernLights.mp4'
+
     /* HTML5 Video */
     if (html5) {
         if (ip) {
