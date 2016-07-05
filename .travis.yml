@@ -10,7 +10,7 @@ sudo: false
 
 before_install:
 #  - npm install -g jshint
-  - pip install https://github.com/koenbok/Cactus/archive/master.zip
+  - pip install cactus
   - pip install glue
   - wget https://raw.githubusercontent.com/mozilla/html5-lint/master/html5check.py
 
