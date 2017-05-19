@@ -2,12 +2,8 @@
     margin: 0;
     padding: 0;}
 
-
-/* General Styles */
-
 body {
-    font-family: Helvetica, 'Trebuchet ms', 'Gill Sans', 'Lucida Grande',
-                 LucidaGrande, verdana;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 12.5px;
     color: #353535;
     line-height: 100%;
@@ -28,9 +24,6 @@ img {
 
 a img {
     border: 0px;}
-
-/* /General Styles */
-/* Global Classes */
 
 p {
     margin-top: 5px;
@@ -60,24 +53,23 @@ h5 {
     font-size: 1.0em;
     color: #222222;}
 
+a:link,
+a:visited,
+a:active,
+a:hover {
+    text-decoration: none;}
+
 a:link {
-    text-decoration: none;
     color: #005079;}
 
 a:visited {
-    text-decoration: none;
     color: #3D6F88;}
 
 a:active {
-    text-decoration: none;
     color: #637C88;}
 
 a:hover {
-    text-decoration: none;
     color: #000000;}
-
-/* /Global Classes */
-/* Layout */
 
 .clearer {
     clear: both;}
@@ -95,15 +87,12 @@ a:hover {
 #wrapper {
     position: relative;
     min-height: 400px;
-    width: 960px;
+    max-width: 960px;
     margin: 0px auto;
     background-color: #ffffff;}
 
 #container {
     max-width: 960px;}
-
-/* /Layout */
-/* Header */
 
 #pageHeader {
     background-size: cover;
@@ -129,12 +118,8 @@ a:hover {
     font-size: 1.5em;
     font-weight: normal;}
 
-/* /Header */
-/* Navigation */
-
 #navcontainer {
     background: rgba(0, 0, 0, 0.7);
-    font-family: Helvetica, 'Gill sans', 'Trebuchet ms', arial;
     position: relative;
     top: 0px;
     left: 0px;
@@ -146,7 +131,6 @@ a:hover {
     background: no-repeat;
     z-index: 5;}
 
-/* Level 0 */
 #navcontainer .active {
     transition: all 0.1s linear;
     background: rgba(0, 0, 0, 1);}
@@ -171,12 +155,11 @@ a:hover {
     color: #eee;
     text-decoration: none;
     padding-left: 12px;
-    height: 1.80em; /*new*/}
+    height: 1.80em;}
 
 #navcontainer a:hover {
     background: rgba(0, 0, 0, 0.6);}
 
-/* Level 1 */
 #navcontainer ul ul {
     padding: 0px;
     margin: 0px;}
@@ -187,10 +170,7 @@ a:hover {
     padding-left: 25px;
     color: #85B497;
     font-size: 13px;
-    height: 14px; /*new*/}
-
-/* /Navigation */
-/* Content */
+    height: 14px;}
 
 hr {
     margin: 1.5em auto;
@@ -211,9 +191,6 @@ hr {
 #content {
     padding: 9px 9px 5px;}
 
-/* /Content */
-/* Slider */
-
 #topics {
     font-size: 1.1em;
     line-height: 1.4em;}
@@ -229,7 +206,8 @@ hr {
 .currentcat {
     color: #1676A7;}
 
-.category:hover, .currentcat:hover {
+.category:hover,
+.currentcat:hover {
     color: #1184BE;}
 
 .slide li {
@@ -247,9 +225,6 @@ hr {
     float: right;
     display: block;}
 
-/* /Slider */
-/* Footer */
-
 #footer {
     text-align: center;
     height: 25px;
@@ -264,10 +239,10 @@ hr {
     margin: 0px;
     font-size: 11px;}
 
-#footer a:link, #footer a:visited {
+#footer a:link,
+#footer a:visited {
     color: #686868;}
 
-#footer a:hover, #footer a:active {
+#footer a:hover,
+#footer a:active {
     color: #979797;}
-
-/* /Footer */

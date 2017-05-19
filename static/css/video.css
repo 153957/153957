@@ -1,5 +1,3 @@
-/* Slider */
-
 #slider {
     height: 143px;
     width: 100%;
@@ -17,7 +15,7 @@
     width: 48%;
     vertical-align: middle;
     list-style: none;}
- 
+
 #thumbnails {
     width: 80%;
     display: inline-block;
@@ -28,13 +26,8 @@
     padding: 7px 0;
     margin: 0px auto;}
 
-
-/* /Slider */
-
-
-/* Video */
-
-video, audio {
+video,
+audio {
     display: block;}
 
 #poster, .thu {
@@ -75,11 +68,6 @@ video, audio {
     position: absolute;
     z-index: -1;}
 
-/* /Video */
-
-
-/* Sprites */
-
 .thu {
     position: relative;
     display: inline-block;
@@ -88,7 +76,8 @@ video, audio {
     height: 59px;
     border-radius: 2px;}
 
-#thumbnails .currentmovie::before, #thumbnails .thu:hover::before {
+#thumbnails .currentmovie::before,
+#thumbnails .thu:hover::before {
     color: rgba(255, 255, 255, .8);
     width: 100%;
     position: absolute;
@@ -106,7 +95,6 @@ video, audio {
 #thumbnails .currentmovie::before {
     color: rgba(255, 255, 255, .9);}
 
-/* Sprites_browser */
 .support {
     background: url(../images_timelapse/support.png) transparent no-repeat top left;
     display: inline-block;}
@@ -116,6 +104,3 @@ video, audio {
 #sf {background-position: -84px 0; width: 23px; height: 25px;}
 #ie {background-position: -115px 0; width: 21px; height: 25px;}
 #qt {background-position: -141px 0; width: 23px; height: 26px;}
-/* /Sprites_browser */
-
-/* /Sprites */
