@@ -11,18 +11,10 @@ import glue
 This plugin uses glue to sprite images:
 http://glue.readthedocs.org/en/latest/quickstart.html
 
-Install:
+Install glue::
 
-(Only if you want to sprite jpg too)
-brew install libjpeg
+    pip install glue
 
-(Only if you want to optimize pngs with optipng)
-brew install optipng
-
-sudo easy_install pip
-sudo pip uninstall pil
-sudo pip install pil
-sudo pip install glue
 """
 
 TEMPLATE_PATH = 'plugins/thumbnails_template.css'
@@ -59,8 +51,12 @@ def preBuild(site):
     # Ensure that this directory exist
     os.mkdir(CSS_PATH)
 
-    os.system('glue --cachebuster --namespace= --sprite-namespace= --retina '
-              '--css-template %s --project %s --img %s --css %s' %
-              (TEMPLATE_PATH, SRC_PATH, IMG_PATH, CSS_PATH))
+    glue_command = (
+        'glue --cachebuster --namespace= --sprite-namespace= --retina '
+        '--css-template {css} --project {img_src} --img {img_dest} --css {css_dest}'
+        .format(css=TEMPLATE_PATH, img_src=SRC_PATH, img_dest=IMG_PATH, css_dest=CSS_PATH)
+    )
+
+    subprocess.check_call(glue_command, shell=True)
 
     setattr(site, KEY, currChecksum)
