@@ -2,5 +2,5 @@
 
 $(document).ready(function() {
     var target = $('#target');
-    target.prop('src', target.attr("name") + '/' + window.location.hash);
+    target.prop('src', target.data("album") + window.location.hash.slice(1));
 });

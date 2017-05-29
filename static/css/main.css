@@ -191,6 +191,13 @@ hr {
 #content {
     padding: 9px 9px 5px;}
 
+.album {
+    background-color: transparent;
+    border: 0;
+    overflow: auto;
+    width: 100%;
+}
+
 #topics {
     font-size: 1.1em;
     line-height: 1.4em;}
