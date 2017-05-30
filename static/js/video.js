@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     /* Global Selectors */
     window.$global = {
-        thumbnails: $('#thumbnails').find('.thu'),
+        thumbnails: $('#thumbnails').find('li'),
         movie: $('#movie'),
         poster: $('#poster'),
         status: $('#status'),
@@ -43,7 +43,7 @@ $(document).ready(function () {
         defaultPosition: "top"});
 
     /* Thumbnail Links */
-    $('#thumbnails').on('click', ".thu", function () {
+    $('#thumbnails').on('click', "li", function () {
         $global.thumbnails.removeClass('currentmovie');
         $(this).addClass('currentmovie');
         swapVideo(this.id);

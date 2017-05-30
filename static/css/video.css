@@ -30,7 +30,8 @@ video,
 audio {
     display: block;}
 
-#poster, .thu {
+#poster,
+#thumbnails li {
     cursor: pointer;}
 
 #poster {
@@ -57,18 +58,20 @@ audio {
     height: 665px;
     overflow: hidden;}
 
-#status.showing, .showing {
+#status.showing,
+.showing {
     opacity: 0.8;
     position: absolute;
     z-index: 1;}
 
-#status.hidden, .hidden {
+#status.hidden,
+.hidden {
     display: none;
     opacity: 0;
     position: absolute;
     z-index: -1;}
 
-.thu {
+#thumbnails li {
     position: relative;
     display: inline-block;
     background-color: transparent;
@@ -77,7 +80,7 @@ audio {
     border-radius: 2px;}
 
 #thumbnails .currentmovie::before,
-#thumbnails .thu:hover::before {
+#thumbnails li:hover::before {
     color: rgba(255, 255, 255, .8);
     width: 100%;
     position: absolute;
@@ -94,13 +97,3 @@ audio {
 
 #thumbnails .currentmovie::before {
     color: rgba(255, 255, 255, .9);}
-
-.support {
-    background: url(../images_timelapse/support.png) transparent no-repeat top left;
-    display: inline-block;}
-#ch {background-position: 0 0; width: 24px; height: 25px;}
-#ff {background-position: -29px 0; width: 24px; height: 25px;}
-#op {background-position: -57px 0; width: 23px; height: 25px;}
-#sf {background-position: -84px 0; width: 23px; height: 25px;}
-#ie {background-position: -115px 0; width: 21px; height: 25px;}
-#qt {background-position: -141px 0; width: 23px; height: 26px;}
