@@ -22,6 +22,6 @@ install:
 
 script:
   - cactus build
-  - html5validator --root .build --show-warnings
+  - html5validator --root .build --show-warnings --ignore 'index_'
 #  - jshint --extract auto *.html
 #  - jshint static/js/*.js 
