@@ -1,9 +1,10 @@
+import glob
+import hashlib
 import os
-import sys
-import pipes
+import shlex
 import shutil
 import subprocess
-import hashlib
+import sys
 
 import glue
 
@@ -21,14 +22,15 @@ TEMPLATE_PATH = 'plugins/thumbnails_template.css'
 SRC_PATH = 'static/images_timelapse_src'
 IMG_PATH = 'static/images_timelapse/thumbs'
 CSS_PATH = 'static/css/thumbs'
+CHECKSUM_PATH = os.path.join(SRC_PATH, '.previous_checksum')
 
-KEY = '_PREV_CHECKSUM'
 
-
-def checksum(path):
-    command = 'tar -cf - %s' % pipes.quote(path)
-    file_data = subprocess.check_output(command, shell=True)
-    return hashlib.sha512(file_data).hexdigest()
+def checksum():
+    hash = hashlib.sha512(open(TEMPLATE_PATH, 'rb').read())
+    src_files = glob.glob(os.path.join(SRC_PATH, '*', '*.png'))
+    for src_file in src_files:
+        hash.update(open(src_file, 'rb').read())
+    return hash.hexdigest()
 
 
 def preBuild(site):
@@ -38,13 +40,17 @@ def preBuild(site):
     If so, use glue to create the new sprites and css.
 
     """
-    currChecksum = checksum(SRC_PATH)
-    prevChecksum = getattr(site, KEY, None)
+    try:
+        previous_checksum = open(CHECKSUM_PATH).read()
+    except FileNotFoundError:
+        previous_checksum = None
+    current_checksum = checksum()
 
-    # Don't run if none of the images has changed
-    if currChecksum == prevChecksum:
+    # Don't run if none of the images nor the template has changed
+    if current_checksum == previous_checksum:
         return
 
+    # Clean old output
     if os.path.isdir(CSS_PATH):
         shutil.rmtree(CSS_PATH)
 
@@ -54,9 +60,13 @@ def preBuild(site):
     glue_command = (
         'glue --cachebuster --namespace= --sprite-namespace= --retina '
         '--css-template {css} --project {img_src} --img {img_dest} --css {css_dest}'
-        .format(css=TEMPLATE_PATH, img_src=SRC_PATH, img_dest=IMG_PATH, css_dest=CSS_PATH)
+        .format(
+            css=shlex.quote(TEMPLATE_PATH), img_src=shlex.quote(SRC_PATH),
+            img_dest=shlex.quote(IMG_PATH), css_dest=shlex.quote(CSS_PATH)
+        )
     )
 
     subprocess.check_call(glue_command, shell=True)
 
-    setattr(site, KEY, currChecksum)
+    with open(CHECKSUM_PATH, 'w') as checksum_file:
+        checksum_file.write(current_checksum)

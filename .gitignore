@@ -4,6 +4,7 @@ Icon?
 
 # Generated thumbnails
 thumbs/
+.previous_checksum
 
 # Cactus
 *.pyc
