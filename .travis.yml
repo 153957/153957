@@ -8,16 +8,20 @@ sudo: false
 #node_js:
 #  - "0.10"
 
-before_install:
+addons:
+  apt:
+    packages:
+      - oracle-java8-set-default
+
+install:
 #  - npm install -g jshint
+  # Install requirements for building the site
   - pip install cactus
   - pip install glue
-  - wget https://raw.githubusercontent.com/mozilla/html5-lint/master/html5check.py
+  - pip install html5validator
 
 script:
   - cactus build
-  - cd .build 
-  - CHECK=$(for file in *.html; do python ../html5check.py -geh $file; done;)
-  - if [[ ! -z $(echo "$CHECK" | grep -vE 'index_|iframe') ]]; then echo "$CHECK"; exit 1; fi;
+  - html5validator --root .build --show-warnings --ignore 'index_'
 #  - jshint --extract auto *.html
 #  - jshint static/js/*.js 
