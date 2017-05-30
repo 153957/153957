@@ -8,11 +8,10 @@ sudo: false
 #node_js:
 #  - "0.10"
 
-before_install:
-  # Install Java 8 for validator.nu
-  - sudo apt-get update
-  - sudo apt-get install oracle-java8-installer
-  - sudo update-java-alternatives -s java-8-oracle
+addons:
+  apt:
+    packages:
+      - oracle-java8-set-default
 
 install:
 #  - npm install -g jshint
