@@ -9,15 +9,20 @@ sudo: false
 #  - "0.10"
 
 before_install:
+  # Install Java 8 for validator.nu
+  - sudo apt-get update
+  - sudo apt-get install oracle-java8-installer
+  - sudo update-java-alternatives -s java-8-oracle
+
+install:
 #  - npm install -g jshint
+  # Install requirements for building the site
   - pip install cactus
   - pip install glue
-  - wget https://raw.githubusercontent.com/mozilla/html5-lint/master/html5check.py
+  - pip install html5validator
 
 script:
   - cactus build
-  - cd .build 
-  - CHECK=$(for file in *.html; do python ../html5check.py -geh $file; done;)
-  - if [[ ! -z $(echo "$CHECK" | grep -vE 'index_|iframe') ]]; then echo "$CHECK"; exit 1; fi;
+  - html5validator --root .build --show-warnings
 #  - jshint --extract auto *.html
 #  - jshint static/js/*.js 
