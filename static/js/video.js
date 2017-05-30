@@ -248,6 +248,6 @@ function swapVideo(movieid) {
                            '       oncanplay="hideLoad()"></video>');}
     $global.video = $('#player').get(0);
     $global.status = $('#status');
-    $global.video.addEventListener('error', errorStatus, true);}
+    $global.video.addEventListener('error', errorStatus, true);
     window.location.hash = movieid;
     return false;}
