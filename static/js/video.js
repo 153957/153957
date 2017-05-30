@@ -4,13 +4,12 @@
 var base = "http://arne.delaat.net/"; /* "http://delaat.me/"; */
 var quality = "SD";
 var extension = ".mp4";
-var html5 = true; /* No HTML5 -> Use QuicktTime Embed */
 var navi = navigator.userAgent.toLowerCase();
 var op = /opera/.test(navi);
 var ch = /chrome/.test(navi);
 var sf = /safari/.test(navi) && !ch;
-var ip = (/ipad/.test(navi) || /iphone/.test(navi) || /ipod/.test(navi));
-var ctrl = (!ip && sf) || ch || op;
+var ios = (/ipad/.test(navi) || /iphone/.test(navi) || /ipod/.test(navi));
+var ctrl = (!ios && sf) || ch || op;
 var ctrls = 0;
 var ctrls_height = 25;
 var fullscreen = false;
@@ -38,9 +37,10 @@ $(document).ready(function () {
             $(this).addClass("currentcat");}});
 
     /* Thumbnail Tips */
-    $global.thumbnails.tipTip({attribute: "id",
-                               delay: "25",
-                               defaultPosition: "top"});
+    $global.thumbnails.tipTip({
+        attribute: "id",
+        delay: "25",
+        defaultPosition: "top"});
 
     /* Thumbnail Links */
     $('#thumbnails').on('click', ".thu", function () {
@@ -53,15 +53,6 @@ $(document).ready(function () {
     $global.poster.click(function () {
         swapVideo(this.dataset.id);
         return false;});
-
-    /* Select Video Codec */
-    if ($global.video.canPlayType) {
-        /*codecs=http://wiki.whatwg.org/wiki/Video_type_parameters*/
-        var mp4 = $global.video.canPlayType('video/mp4');
-        if (mp4 == "" || mp4 == "no") {
-            html5 = false;}}
-    else {
-        html5 = false;}
 
     /* Fullscreen Button */
     /* Check Full screen support */
@@ -245,31 +236,18 @@ function swapVideo(movieid) {
     // videolink = '../static/sample_video/150317_NorthernLights.mp4'
 
     /* HTML5 Video */
-    if (html5) {
-        if (ip) {
-            $global.movie.html('<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
-                               '       height="100%" width="100%" preload="auto" controls ' +
-                               '       onloadedmetadata="setHWM()"></video>' +
-                               '<span id="status" class="fa fa-circle-o-notch fa-spin hidden"></span>');}
-        else{
-            $global.movie.html('<span id="status" class="fa fa-circle-o-notch fa-spin showing"></span>' +
-                               '<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
-                               '       height="0" width="0" preload="auto" onloadedmetadata="setHWM()" ' +
-                               '       oncanplay="hideLoad()"></video>');}
-        $global.video = $('#player').get(0);
-        $global.status = $('#status');
-        $global.video.addEventListener('error', errorStatus, true);}
-    /* Quicktime Embed/Object */
-    else {
-        $global.movie.html(
-            "<object width='" + $global.movie.width() + "' height='" + $global.movie.height() + "'" +
-            "        classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B'" +
-            "        codebase='http://www.apple.com/qtactivex/qtplugin.cab'>" +
-            "<param name='src' value='" + videolink + "' /><param name='bgcolor' value='#ffffff' />" +
-            "<param name='controller' value='true' /><param name='autoplay' value='true' /><param name='scale' value='aspect' />" +
-            "<embed src='" + videolink + "' bgcolor='ffffff' width='" + $global.movie.width() + "' height='" + $global.movie.height() + "'" +
-            "       type='video/quicktime' pluginspage='http://www.apple.com/quicktime/download/'" +
-            "       controller='true' autoplay='true' scale='aspect'>" +
-            "</object>");}
+    if (ios) {
+        $global.movie.html('<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
+                           '       height="100%" width="100%" preload="auto" controls ' +
+                           '       onloadedmetadata="setHWM()"></video>' +
+                           '<span id="status" class="fa fa-circle-o-notch fa-spin hidden"></span>');}
+    else{
+        $global.movie.html('<span id="status" class="fa fa-circle-o-notch fa-spin showing"></span>' +
+                           '<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
+                           '       height="0" width="0" preload="auto" onloadedmetadata="setHWM()" ' +
+                           '       oncanplay="hideLoad()"></video>');}
+    $global.video = $('#player').get(0);
+    $global.status = $('#status');
+    $global.video.addEventListener('error', errorStatus, true);}
     window.location.hash = movieid;
     return false;}
