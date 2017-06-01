@@ -4,19 +4,20 @@
 var base = "http://arne.delaat.net/"; /* "http://delaat.me/"; */
 var quality = "SD";
 var extension = ".mp4";
+
 var navi = navigator.userAgent.toLowerCase();
-var op = /opera/.test(navi);
-var ch = /chrome/.test(navi);
-var sf = /safari/.test(navi) && !ch;
-var ios = (/ipad/.test(navi) || /iphone/.test(navi) || /ipod/.test(navi));
-var ctrl = (!ios && sf) || ch || op;
-var ctrls = 0;
-var ctrls_height = 25;
+var isOpera = /opera/.test(navi);
+var isChrome = /chrome/.test(navi);
+var isSafari = /safari/.test(navi) && !isChrome;
+var isiOS = (/ipad/.test(navi) || /iphone/.test(navi) || /ipod/.test(navi));
+var useCustomControls = (!isiOS && isSafari) || isChrome || isOpera;
+
+var controlsCreated = false;
+var controlsHeight = 25;
 var fullscreen = false;
 
 /* Initiate */
 $(document).ready(function () {
-
     /* Global Selectors */
     window.$global = {
         thumbnails: $('#thumbnails').find('li'),
@@ -85,8 +86,8 @@ $(document).ready(function () {
 
 /* Set Button */
 function playingpaused() {
-    if ($global.video.paused) {$controls.ppb.addClass('fa-play').removeClass('fa-pause');}
-    else                      {$controls.ppb.removeClass('fa-play').addClass('fa-pause');}}
+    if ($global.video.paused) {$controls.playButton.addClass('fa-play').removeClass('fa-pause');}
+    else                      {$controls.playButton.removeClass('fa-play').addClass('fa-pause');}}
 
 /* Ended: Pause */
 function pause() {
@@ -102,70 +103,70 @@ function playpause() {
 function progress(e) {
     var percentDone = $global.video.currentTime / $global.video.duration * 100;
     if (fullscreen) {
-        $controls.pel.style.width = (percentDone / 100 * ($global.video.width - 153)) + 'px';}
+        $controls.progressElapsed.style.width = (percentDone / 100 * ($global.video.width - 153)) + 'px';}
     else {
-        $controls.pel.style.width = (percentDone / 100 * ($global.video.width - 138)) + 'px';}
-    $controls.pin.val($global.video.currentTime);
+        $controls.progressElapsed.style.width = (percentDone / 100 * ($global.video.width - 138)) + 'px';}
+    $controls.progressIndicator.val($global.video.currentTime);
     var sec = Math.max(Math.floor($global.video.currentTime % 60), 0);
     var min = Math.max(Math.floor($global.video.currentTime / 60), 0);
-    if (sec < 10) {$controls.tdi.html(min + ':0' + sec);}
-    else          {$controls.tdi.html(min + ':' + sec);}}
+    if (sec < 10) {$controls.timeDisplay.html(min + ':0' + sec);}
+    else          {$controls.timeDisplay.html(min + ':' + sec);}}
 
 /* Show Buffering */
 function buffering(e) {
     var maxBuffered = 0.0;
     if ($global.video.buffered.length > 0) {maxBuffered = $global.video.buffered.end(0);}
     var percentBuffered = maxBuffered / $global.video.duration * 100;
-    $controls.pbu.style.width = percentBuffered + '%';}
+    $controls.progressBuffered.style.width = percentBuffered + '%';}
 
 /* Select Time */
 function setTime() {
-    $global.video.currentTime = $controls.pin.val();}
+    $global.video.currentTime = $controls.progressIndicator.val();}
 
 /* Mute */
 function mute() {
     if ($global.video.muted || $global.video.volume === 0) {
         $global.video.volume = 0.5;
-        $controls.vin.val(20);}
+        $controls.volumeIndicator.val(20);}
     else {
         $global.video.volume = 0;
-        $controls.vin.val(0);}}
+        $controls.volumeIndicator.val(0);}}
 
 /* Change Volume */
 var setVolume = function () {
-    $global.video.volume = $controls.vin.val() / 40;};
+    $global.video.volume = $controls.volumeIndicator.val() / 40;};
 
 function volumeused() {
     var percentUsed = $global.video.volume * 100;
-    $controls.vus.style.width = percentUsed + '%';
+    $controls.volumeUsed.style.width = percentUsed + '%';
     if (percentUsed === 0) {
-        $controls.vsb.removeClass('fa-volume-up fa-volume-down').addClass('fa-volume-off');}
+        $controls.volumeButton.removeClass('fa-volume-up fa-volume-down').addClass('fa-volume-off');}
     else if (percentUsed <= 40) {
-        $controls.vsb.removeClass('fa-volume-up fa-volume-off').addClass('fa-volume-down');}
+        $controls.volumeButton.removeClass('fa-volume-up fa-volume-off').addClass('fa-volume-down');}
     else {
-        $controls.vsb.removeClass('fa-volume-down fa-volume-off').addClass('fa-volume-up');}}
+        $controls.volumeButton.removeClass('fa-volume-down fa-volume-off').addClass('fa-volume-up');}}
 
 /* Fullwindow Button */
 var fullwindow = function () {
     $global.video.width  = window.innerWidth;
-    $global.video.height = window.innerHeight - ctrls_height;}; /* Set z-index, position.. */
+    $global.video.height = window.innerHeight - controlsHeight;}; /* Set z-index, position.. */
 
 /* Metadata Loaded -> Set Width/Height/Margins */
 function setHWM() {
     var hmargin;
-    if ($global.video.videoHeight / ($global.movie.height() - ctrls_height) <= $global.video.videoWidth / $global.movie.width()) {
+    if ($global.video.videoHeight / ($global.movie.height() - controlsHeight) <= $global.video.videoWidth / $global.movie.width()) {
         $global.video.width  = $global.movie.width();
         $global.video.height = $global.video.videoHeight * ($global.movie.width() / $global.video.videoWidth);
         hmargin = 0;}
     else {
-        $global.video.height = $global.movie.height() - ctrls_height;
+        $global.video.height = $global.movie.height() - controlsHeight;
         $global.video.width  = $global.video.videoWidth * ($global.video.height / $global.video.videoHeight);
         hmargin = ($global.movie.width() - $global.video.width) / 2;}
     $global.video.style.margin = '0 0 0 ' + hmargin + 'px';
     /* Attach Webkit Controls */
-    if (ctrl && !ctrls) {
+    if (useCustomControls && !controlsCreated) {
         var pbg_width, pin_width, full;
-        ctrls = 1;
+        controlsCreated = true;
         if (fullscreen) {
             pbg_width = $global.video.width - 151;
             pin_width = $global.video.width - 152;
@@ -191,15 +192,15 @@ function setHWM() {
             '        <input id="volume_indicator" type="range" value="30" min="0" max="40"' +
             '               style="width:50px;" onchange="setVolume()"></div></div>' + full + '</div>');
         window.$controls = {
-            con: $('#controls'),
-            ppb: $('#play_pause_button'),
-            pin: $('#progress_indicator'),
-            pel: $('#progress_elapsed').get(0),
-            pbu: $('#progress_buffered').get(0),
-            tdi: $('#time_display'),
-            vsb: $('#volume_speaker_button'),
-            vin: $('#volume_indicator'),
-            vus: $('#volume_used').get(0)};
+            controls: $('#controls'),
+            playButton: $('#play_pause_button'),
+            progressIndicator: $('#progress_indicator'),
+            progressElapsed: $('#progress_elapsed').get(0),
+            progressBuffered: $('#progress_buffered').get(0),
+            timeDisplay: $('#time_display'),
+            volumeButton: $('#volume_speaker_button'),
+            volumeIndicator: $('#volume_indicator'),
+            volumeUsed: $('#volume_used').get(0)};
         $('#player').attr({
             onclick: "playpause()",
             onpause: "playingpaused()",
@@ -212,7 +213,7 @@ function setHWM() {
 /* CanPlay -> Hide Status, Show Controls and Play*/
 function hideLoad() {
     $global.status.removeClass("showing").addClass("hidden");
-    if (!ctrl) {$('#player').attr('controls', 'true');}
+    if (!useCustomControls) {$('#player').attr('controls', 'true');}
     $global.video.play();}
 
 /* Change Status to Error Image */
@@ -223,7 +224,7 @@ function errorStatus() {
 /* Exchange Video Player HTML With New Source */
 function swapVideo(movieid) {
     var videolink;
-    ctrls = 0;
+    controls = 0;
     $global.poster.hide();
     var camera = movieid.substring(0, 3);
     if      (camera === "D70") {videolink = base + "TimeLapse_D700/" + quality + '/' + movieid + extension;}
@@ -236,12 +237,12 @@ function swapVideo(movieid) {
     // videolink = '../static/sample_video/150317_NorthernLights.mp4'
 
     /* HTML5 Video */
-    if (ios) {
+    if (isiOS) {
         $global.movie.html('<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
                            '       height="100%" width="100%" preload="auto" controls ' +
                            '       onloadedmetadata="setHWM()"></video>' +
                            '<span id="status" class="fa fa-circle-o-notch fa-spin hidden"></span>');}
-    else{
+    else {
         $global.movie.html('<span id="status" class="fa fa-circle-o-notch fa-spin showing"></span>' +
                            '<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
                            '       height="0" width="0" preload="auto" onloadedmetadata="setHWM()" ' +
