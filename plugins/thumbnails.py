@@ -18,10 +18,11 @@ Install glue::
 
 """
 
-TEMPLATE_PATH = 'plugins/thumbnails_template.css'
-SRC_PATH = 'static/images_timelapse_src'
-IMG_PATH = 'static/images_timelapse/thumbs'
-CSS_PATH = 'static/css/thumbs'
+BASE_DIR = os.path.join(os.path.dirname(__file__), '..')
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'plugins/thumbnails_template.css')
+SRC_PATH = os.path.join(BASE_DIR, 'static/images_timelapse_src')
+IMG_PATH = os.path.join(BASE_DIR, 'static/images_timelapse/thumbs')
+CSS_PATH = os.path.join(BASE_DIR, 'static/css/thumbs')
 CHECKSUM_PATH = os.path.join(SRC_PATH, '.previous_checksum')
 
 
