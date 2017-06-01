@@ -1,11 +1,13 @@
-#controls, #controls * {
+#controls,
+#controls * {
     cursor: default !important;
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     position: static !important;}
 
-#mov, #mov * {
+#mov,
+#mov * {
     user-select: none;
     -khtml-user-select: none;
     -o-user-select: none;
@@ -169,7 +171,8 @@
 /* /Volume */
 
 /* Apperance Sliders */
-#progress_back, #volume_back {
+#progress_back,
+#volume_back {
     float: left;
     padding: 0;
     height: 10px;
@@ -182,7 +185,8 @@
     -webkit-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0 !important;
     box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0 !important;}
 
-#progress_elapsed, #volume_used {
+#progress_elapsed,
+#volume_used {
     width: 0;
     height: 10px;
     position: relative !important;

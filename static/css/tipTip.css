@@ -35,7 +35,8 @@
     -webkit-box-shadow: 0 0 3px #666666;
     -moz-box-shadow: 0 0 3px #666666;}
 
-#tiptip_arrow, #tiptip_arrow_inner {
+#tiptip_arrow,
+#tiptip_arrow_inner {
     position: absolute;
     border-color: transparent;
     border-style: solid;
