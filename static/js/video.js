@@ -107,10 +107,10 @@ function progress(e) {
     else {
         $controls.progressElapsed.style.width = (percentDone / 100 * ($global.video.width - 138)) + 'px';}
     $controls.progressIndicator.val($global.video.currentTime);
-    var sec = Math.max(Math.floor($global.video.currentTime % 60), 0);
-    var min = Math.max(Math.floor($global.video.currentTime / 60), 0);
-    if (sec < 10) {$controls.timeDisplay.html(min + ':0' + sec);}
-    else          {$controls.timeDisplay.html(min + ':' + sec);}}
+    var seconds = Math.max(Math.floor($global.video.currentTime % 60), 0);
+    var minutes = Math.max(Math.floor($global.video.currentTime / 60), 0);
+    if (seconds < 10) {$controls.timeDisplay.html(minutes + ':0' + seconds);}
+    else              {$controls.timeDisplay.html(minutes + ':' + seconds);}}
 
 /* Show Buffering */
 function buffering(e) {
@@ -152,7 +152,7 @@ var fullwindow = function () {
     $global.video.height = window.innerHeight - controlsHeight;}; /* Set z-index, position.. */
 
 /* Metadata Loaded -> Set Width/Height/Margins */
-function setHWM() {
+function setHeightWidthMargins() {
     var hmargin;
     if ($global.video.videoHeight / ($global.movie.height() - controlsHeight) <= $global.video.videoWidth / $global.movie.width()) {
         $global.video.width  = $global.movie.width();
@@ -165,26 +165,26 @@ function setHWM() {
     $global.video.style.margin = '0 0 0 ' + hmargin + 'px';
     /* Attach Webkit Controls */
     if (useCustomControls && !controlsCreated) {
-        var pbg_width, pin_width, full;
+        var progressBackgroundWidth, progressIndicatorWidth, full;
         controlsCreated = true;
         if (fullscreen) {
-            pbg_width = $global.video.width - 151;
-            pin_width = $global.video.width - 152;
+            progressBackgroundWidth = $global.video.width - 151;
+            progressIndicatorWidth = $global.video.width - 152;
             full = '<div id="fullscreen_button" class="fa fa-expand" onclick="fullscreen()"></div>';}
         else {
-            pbg_width = $global.video.width - 136;
-            pin_width = $global.video.width - 137;
+            progressBackgroundWidth = $global.video.width - 136;
+            progressIndicatorWidth = $global.video.width - 137;
             full = '';}
         $global.movie.append(
             '<div id="controls" style="margin-left:' + hmargin + 'px; width:' + $global.video.width + 'px;">' +
             '    <div id="play_pause_button" class="fa fa-play" onclick="playpause()"></div>' +
             '    <div id="progress_bar">' +
             '        <div id="time_display">0:00</div>' +
-            '        <div id="progress_back" style="width:' + pbg_width + 'px;">' +
+            '        <div id="progress_back" style="width:' + progressBackgroundWidth + 'px;">' +
             '            <div id="progress_buffered" style="width:0%;"></div>' +
             '            <div id="progress_elapsed" style="width:0%;"></div>' +
             '        <input id="progress_indicator" type="range" step="any" value="0" min="0" max="' + $global.video.duration + '"' +
-            '               style="width:' + pin_width + 'px;" onchange="setTime()"></div></div>' +
+            '               style="width:' + progressIndicatorWidth + 'px;" onchange="setTime()"></div></div>' +
             '    <div id="volume_speaker_button" class="fa fa-volume-up" onclick="mute()"></div>' +
             '    <div id="volume_bar">' +
             '        <div id="volume_back" style="width:47px; ">' +
@@ -224,7 +224,7 @@ function errorStatus() {
 /* Exchange Video Player HTML With New Source */
 function swapVideo(movieid) {
     var videolink;
-    controls = 0;
+    controlsCreated = false;
     $global.poster.hide();
     var camera = movieid.substring(0, 3);
     if      (camera === "D70") {videolink = base + "TimeLapse_D700/" + quality + '/' + movieid + extension;}
@@ -240,12 +240,12 @@ function swapVideo(movieid) {
     if (isiOS) {
         $global.movie.html('<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
                            '       height="100%" width="100%" preload="auto" controls ' +
-                           '       onloadedmetadata="setHWM()"></video>' +
+                           '       onloadedmetadata="setHeightWidthMargins()"></video>' +
                            '<span id="status" class="fa fa-circle-o-notch fa-spin hidden"></span>');}
     else {
         $global.movie.html('<span id="status" class="fa fa-circle-o-notch fa-spin showing"></span>' +
                            '<video src=' + videolink + ' id="player" style="margin: 0px 0px;" ' +
-                           '       height="0" width="0" preload="auto" onloadedmetadata="setHWM()" ' +
+                           '       height="0" width="0" preload="auto" onloadedmetadata="setHeightWidthMargins()" ' +
                            '       oncanplay="hideLoad()"></video>');}
     $global.video = $('#player').get(0);
     $global.status = $('#status');
