@@ -165,16 +165,16 @@ function setHeightWidthMargins() {
     $global.video.style.margin = '0 0 0 ' + hmargin + 'px';
     /* Attach Webkit Controls */
     if (useCustomControls && !controlsCreated) {
-        var progressBackgroundWidth, progressIndicatorWidth, full;
+        var progressBackgroundWidth, progressIndicatorWidth, fullscreenButton;
         controlsCreated = true;
         if (fullscreen) {
             progressBackgroundWidth = $global.video.width - 151;
             progressIndicatorWidth = $global.video.width - 152;
-            full = '<div id="fullscreen_button" class="fa fa-expand" onclick="fullscreen()"></div>';}
+            fullscreenButton = '<div id="fullscreen_button" class="fa fa-expand" onclick="fullscreen()"></div>';}
         else {
             progressBackgroundWidth = $global.video.width - 136;
             progressIndicatorWidth = $global.video.width - 137;
-            full = '';}
+            fullscreenButton = '';}
         $global.movie.append(
             '<div id="controls" style="margin-left:' + hmargin + 'px; width:' + $global.video.width + 'px;">' +
             '    <div id="play_pause_button" class="fa fa-play" onclick="playpause()"></div>' +
@@ -190,7 +190,7 @@ function setHeightWidthMargins() {
             '        <div id="volume_back" style="width:47px; ">' +
             '            <div id="volume_used" style="width:75%; "></div>' +
             '        <input id="volume_indicator" type="range" value="30" min="0" max="40"' +
-            '               style="width:50px;" onchange="setVolume()"></div></div>' + full + '</div>');
+            '               style="width:50px;" onchange="setVolume()"></div></div>' + fullscreenButton + '</div>');
         window.$controls = {
             controls: $('#controls'),
             playButton: $('#play_pause_button'),
