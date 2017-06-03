@@ -2,3 +2,6 @@
 # yarn lockfile v1
 
 
+prettier@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.4.1.tgz#3526cc46aea102e980db5b70cabe2020910ef142"
