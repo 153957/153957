@@ -13,16 +13,14 @@ addons:
     packages:
       - oracle-java8-set-default
 
-before_script:
-  - nvm install
-  - nvm use
-  - npm install -g yarn
-
 install:
   # Install requirements for building the site
   - pip install cactus
   - pip install glue
   - pip install html5validator
+  - nvm install
+  - nvm use
+  - npm install -g yarn
   - yarn install
 
 script:
