@@ -13,15 +13,19 @@ addons:
     packages:
       - oracle-java8-set-default
 
+before_script:
+  - nvm install
+  - nvm use
+  - npm install -g yarn
+
 install:
-#  - npm install -g jshint
   # Install requirements for building the site
   - pip install cactus
   - pip install glue
   - pip install html5validator
+  - yarn install
 
 script:
+  - yarn run stylelint
   - cactus build
   - html5validator --root .build --show-warnings --ignore 'index_'
-#  - jshint --extract auto *.html
-#  - jshint static/js/*.js 
