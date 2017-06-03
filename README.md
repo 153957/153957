@@ -7,6 +7,31 @@
 My personal website: [153957 Photography](http://arne.delaat.net)
 
 
+Installation
+------------
+
+
+Node
+----
+
+Install nvm and yarn:
+
+    brew install nvm yarn
+
+Follow the instructions to update your `.bash_profile`, adding:
+
+    export NVM_DIR="$HOME/.nvm"
+    . "/usr/local/opt/nvm/nvm.sh"
+
+Then install the correct node version:
+
+    nvm install
+
+It can now be activated using:
+
+    nvm use
+
+
 Make website
 ------------
 

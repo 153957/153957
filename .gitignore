@@ -7,5 +7,11 @@ thumbs/
 .previous_checksum
 
 # Cactus
-*.pyc
 .build/
+
+# Python
+*.pyc
+__pycache__/
+
+# Node
+node_modules/
