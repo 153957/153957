@@ -1,8 +1,15 @@
 {
   "dependencies": {
-    "prettier": "^1.4.1"
+    "postcss-cli": "^4.0.0",
+    "postcss-cssnext": "^2.11.0",
+    "prettier": "^1.4.1",
+    "stylelint": "^7.10.1",
+    "stylelint-config-concentric-order": "^2.0.1",
+    "stylelint-config-standard": "^16.0.0"
   },
   "scripts": {
-    "prettier": "prettier --write --tab-width 4 --no-bracket-spacing static/js/*.js"
+    "prettier": "prettier --write --tab-width 4 --no-bracket-spacing static/js/*.js",
+    "postcss": "postcss static/css/*.css --dir .build/static/css/ -c postcss.config.js",
+    "stylelint": "stylelint static/css/*.css"
   }
 }

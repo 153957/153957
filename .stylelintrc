@@ -1,0 +1,9 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-concentric-order"
+    ],
+    "rules": {
+        "indentation": 4
+    }
+}
