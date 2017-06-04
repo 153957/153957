@@ -1,255 +1,294 @@
 * {
     margin: 0;
-    padding: 0;}
+    padding: 0;
+}
 
 body {
+    margin-top: 0;
+    background: #fff;
+    line-height: 100%;
+    color: #353535;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 12.5px;
-    color: #353535;
-    line-height: 100%;
-    margin-top: 0px;
-    background: #ffffff;}
+}
 
 .collage {
-    border: none;
     display: inline-block;
+    margin: 15px 25px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px #000;
     width: 250px;
     height: 250px;
-    margin: 15px 25px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 15px #000;}
+}
 
 img {
-    border: 0px;}
+    border: 0;
+}
 
 a img {
-    border: 0px;}
+    border: 0;
+}
 
 p {
     margin-top: 5px;
-    color: #333333;}
-
-h1 {
-    }
+    color: #333;
+}
 
 h2 {
     margin-top: 5px;
-    font-weight: normal;}
+    font-weight: normal;
+}
 
 h3 {
+    margin: 2px 0 9px;
     line-height: 26px;
-    font-weight: normal;
-    margin: 2px 0px 9px;
+    color: #003550;
     font-size: 24px;
-    color: #003550;}
+    font-weight: normal;
+}
 
 h4 {
-    font-size: 1.1em;
     margin-top: 10px;
-    margin-bottom: 0px;
-    color: #006394;}
+    margin-bottom: 0;
+    color: #006394;
+    font-size: 1.1em;
+}
 
 h5 {
-    font-size: 1.0em;
-    color: #222222;}
+    color: #222;
+    font-size: 1em;
+}
 
 a:link,
 a:visited,
 a:active,
 a:hover {
-    text-decoration: none;}
+    text-decoration: none;
+}
 
 a:link {
-    color: #005079;}
+    color: #005079;
+}
 
 a:visited {
-    color: #3D6F88;}
+    color: #3d6f88;
+}
 
 a:active {
-    color: #637C88;}
+    color: #637c88;
+}
 
 a:hover {
-    color: #000000;}
+    color: #000;
+}
 
 .clearer {
-    clear: both;}
+    clear: both;
+}
 
 #shadow {
     position: absolute;
     top: 0;
     right: 0;
     z-index: -2;
+    box-shadow: 0 0 1.5em -0.5em black;
+    background-color: transparent;
     width: 100%;
     height: 300px;
-    box-shadow: 0 0 1.5em -0.5em black;
-    background-color: transparent;}
+}
 
 #wrapper {
     position: relative;
-    min-height: 400px;
+    margin: 0 auto;
+    background-color: #fff;
     max-width: 960px;
-    margin: 0px auto;
-    background-color: #ffffff;}
+    min-height: 400px;
+}
 
 #container {
-    max-width: 960px;}
+    max-width: 960px;
+}
 
 #pageHeader {
     background-size: cover;
-    height: 190px;}
+    height: 190px;
+}
 
 #pageHeader h1 {
     position: absolute;
     top: 100px;
     left: 425px;
-    line-height: 26px;
-    font-weight: normal;
     margin: 0;
+    line-height: 26px;
+    color: #fff;
     font-size: 2.5em;
-    color: #fff;}
+    font-weight: normal;
+}
 
 #pageHeader h2 {
-    display:none;
+    display: none;
     position: absolute;
     top: 158px;
     right: 10px;
-    text-align: right;
     margin: 0;
+    text-align: right;
     font-size: 1.5em;
-    font-weight: normal;}
+    font-weight: normal;
+}
 
 #navcontainer {
-    background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.65) 62%, rgba(0,0,0,0.6) 67%, rgba(0,0,0,0) 100%);
     position: relative;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 125px;
-    line-height: 25px;
-    padding: 5px 0;
+    top: 0;
+    left: 0;
     float: left;
-    z-index: 5;}
+    z-index: 5;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 62%, rgba(0, 0, 0, 0.6) 67%, rgba(0, 0, 0, 0) 100%);
+    background-repeat: no-repeat;
+    padding: 5px 0;
+    width: 125px;
+    height: 100%;
+    line-height: 25px;
+}
 
 #navcontainer .active {
     transition: all 0.1s linear;
-    background: rgba(0, 0, 0, 1);}
+    background: rgba(0, 0, 0, 1);
+}
 
 #navcontainer:hover .active {
-    background: rgba(0, 0, 0, 0.4);}
+    background: rgba(0, 0, 0, 0.4);
+}
 
 #navcontainer ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    margin: 0px;
-    padding: 0px;}
+}
 
 #navcontainer ul #current {
-    color: #eeeeee;
-    background: #416E83;
-    /* BFD7E3 00527A CEE1EB*/}
+    background: #416e83;
+    color: #eee;
+}
 
 #navcontainer a {
-    transition: all 0.1s linear;
-    font-size: 15px;
     display: block;
-    color: #eee;
-    text-decoration: none;
+    transition: all 0.1s linear;
     padding-left: 12px;
-    height: 1.80em;}
+    height: 1.8em;
+    text-decoration: none;
+    color: #eee;
+    font-size: 15px;
+}
 
 #navcontainer a:hover {
-    background: rgba(0, 0, 0, 0.6);}
+    background: rgba(0, 0, 0, 0.6);
+}
 
 #navcontainer ul ul {
-    padding: 0px;
-    margin: 0px;}
+    margin: 0;
+    padding: 0;
+}
 
 #navcontainer ul ul a {
     display: block;
-    text-decoration: none;
     padding-left: 25px;
-    color: #85B497;
+    height: 14px;
+    text-decoration: none;
+    color: #85b497;
     font-size: 13px;
-    height: 14px;}
+}
 
 hr {
     margin: 1.5em auto;
+    border: 0;
     background: #999;
     width: 240px;
     height: 1px;
-    border: 0;
 }
 
 #contentContainer {
-    width: 100%;
     float: left;
+    width: 100%;
+    min-height: 300px;
     overflow: hidden;
     text-align: left;
-    min-height: 300px;
-    line-height: 1.3em;}
+    line-height: 1.3em;
+}
 
 #content {
-    padding: 9px 9px 5px;}
+    padding: 9px 9px 5px;
+}
 
 .album {
-    background-color: transparent;
     border: 0;
-    overflow: auto;
+    background-color: transparent;
     width: 100%;
+    overflow: auto;
 }
 
 #topics {
+    line-height: 1.4em;
     font-size: 1.1em;
-    line-height: 1.4em;}
+}
 
 .slidehide {
     display: none;
-    overflow: hidden;}
+    overflow: hidden;
+}
 
 .category {
     cursor: pointer;
-    font-size: 100%;}
+    font-size: 100%;
+}
 
 .currentcat {
-    color: #1676A7;}
+    color: #1676a7;
+}
 
 .category:hover,
 .currentcat:hover {
-    color: #1184BE;}
+    color: #1184be;
+}
 
 .slide li {
+    margin: 1px;
     list-style: none;
-    margin: 1px;}
+}
 
 .slide .article {
-    width: 660px;
-    float: left;
     display: block;
-    padding-bottom: 10px;}
+    float: left;
+    padding-bottom: 10px;
+    width: 660px;
+}
 
 .slide .screenshots {
-    width: 210px;
+    display: block;
     float: right;
-    display: block;}
+    width: 210px;
+}
 
 #footer {
-    text-align: center;
-    height: 25px;
+    border-top: 1px solid #eee;
     padding-top: 3px;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: #EEEEEE;
-    color: #6B6B6B;}
+    height: 25px;
+    text-align: center;
+    color: #6b6b6b;
+}
 
 #footer p {
-    padding: 0px;
-    margin: 0px;
-    font-size: 11px;}
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
 
 #footer a:link,
 #footer a:visited {
-    color: #686868;}
+    color: #686868;
+}
 
 #footer a:hover,
 #footer a:active {
-    color: #979797;}
+    color: #979797;
+}
