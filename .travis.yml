@@ -4,24 +4,22 @@ python:
 
 sudo: false
 
-#language: node_js
-#node_js:
-#  - "0.10"
-
 addons:
   apt:
     packages:
       - oracle-java8-set-default
 
 install:
-#  - npm install -g jshint
-  # Install requirements for building the site
+  - nvm ls-remote
   - pip install cactus
   - pip install glue
   - pip install html5validator
+  - nvm install 6.10.3
+  - nvm use 6.10.3
+  - npm install -g yarn
+  - yarn install
 
 script:
+  - yarn run stylelint
   - cactus build
   - html5validator --root .build --show-warnings --ignore 'index_'
-#  - jshint --extract auto *.html
-#  - jshint static/js/*.js 
