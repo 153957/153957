@@ -294,3 +294,14 @@ hr {
 #footer a:active {
     color: #979797;
 }
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & > div {
+        flex-grow: 1;
+        min-width: 220px;
+    }
+}
