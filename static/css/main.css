@@ -111,8 +111,10 @@ a:hover {
 }
 
 #pageHeader {
+    position: relative;
     background-size: cover;
     height: 190px;
+    overflow: hidden;
 }
 
 #pageHeader h1 {
