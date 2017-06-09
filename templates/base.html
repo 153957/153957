@@ -39,28 +39,7 @@
         <div id="wrapper">
             <div id="shadow"></div>
             <div id="pageHeader">
-                <div id="navcontainer">
-                    <ul>
-                        <li class="{% if_current_page '/photography.html' 'active' '' %}">
-                            <a href="{% url '/photography.html' %}">Photography</a>
-                        </li>
-                        <li class="{% if_current_page '/photos_events.html' 'active' '' %}">
-                            <a href="{% url '/photos_events.html' %}">Events</a>
-                        </li>
-                        <li class="{% if_current_page '/timelapse.html' 'active' '' %}">
-                            <a href="{% url '/timelapse.html' %}">Time-Lapse</a>
-                        </li>
-                        <li class="{% if_current_page '/timelapse_guide.html' 'active' '' %}">
-                            <a href="{% url '/timelapse_guide.html' %}">Guide</a>
-                        </li>
-                        <li class="{% if_current_page '/contact.html' 'active' '' %}">
-                            <a href="{% url '/contact.html' %}">Contact</a>
-                        </li>
-                        <li class="{% if_current_page '/links.html' 'active' '' %}">
-                            <a href="{% url '/links.html' %}">Links</a>
-                        </li>
-                    </ul>
-                </div><!-- /navcontainer -->
+                {% include 'navigation.html' %}
                 <h1>153957 Photography</h1>
                 <h2>{% block page_name %}{% endblock %}</h2>
             </div><!-- /pageHeader -->
