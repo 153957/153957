@@ -139,7 +139,7 @@ a:hover {
     font-weight: normal;
 }
 
-#navcontainer {
+nav {
     position: relative;
     top: 0;
     left: 0;
@@ -147,58 +147,50 @@ a:hover {
     z-index: 5;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 62%, rgba(0, 0, 0, 0.6) 67%, rgba(0, 0, 0, 0) 100%);
     background-repeat: no-repeat;
-    padding: 5px 0;
+    padding: 0;
     width: 125px;
     height: 100%;
     line-height: 25px;
-}
 
-#navcontainer .active {
-    transition: all 0.1s linear;
-    background: rgba(0, 0, 0, 1);
-}
+    & .active {
+        transition: background 0.1s linear;
+        background: rgba(0, 0, 0, 1);
+    }
 
-#navcontainer:hover .active {
-    background: rgba(0, 0, 0, 0.4);
-}
+    &:hover .active {
+        background: rgba(0, 0, 0, 0.4);
+    }
 
-#navcontainer ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+    & ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 5px 0;
+        list-style: none;
+    }
 
-#navcontainer ul #current {
-    background: #416e83;
-    color: #eee;
-}
+    & ul #current {
+        background: #416e83;
+        color: #eee;
+    }
 
-#navcontainer a {
-    display: block;
-    transition: all 0.1s linear;
-    padding-left: 12px;
-    height: 1.8em;
-    text-decoration: none;
-    color: #eee;
-    font-size: 15px;
-}
+    & a {
+        display: block;
+        transition: background 0.1s linear;
+        padding-left: 12px;
+        height: 1.8em;
+        text-decoration: none;
+        color: #eee;
+        font-size: 15px;
 
-#navcontainer a:hover {
-    background: rgba(0, 0, 0, 0.6);
-}
+        &:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
 
-#navcontainer ul ul {
-    margin: 0;
-    padding: 0;
-}
-
-#navcontainer ul ul a {
-    display: block;
-    padding-left: 25px;
-    height: 14px;
-    text-decoration: none;
-    color: #85b497;
-    font-size: 13px;
+        &:visited {
+            color: #eee;
+        }
+    }
 }
 
 hr {
