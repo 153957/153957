@@ -14,18 +14,18 @@
         <style>
             #pageHeader {
                 background-image: linear-gradient(to bottom,
-                                                  rgba(255,255,255,0) 80%,
-                                                  rgba(255,255,255,.9) 97%,
-                                                  rgba(255,255,255,1)),
+                                                  rgba(255, 255, 255, 0) 80%,
+                                                  rgba(255, 255, 255, 0.9) 97%,
+                                                  rgba(255, 255, 255, 1)),
                                   url('/static/images_banners/{% block banner %}DSC_000166{% endblock %}.jpg');}
-            @media 
-            only screen and (-webkit-min-device-pixel-ratio: 2), 
+            @media
+            only screen and (-webkit-min-device-pixel-ratio: 2),
             only screen and (min-resolution: 192dpi) {
                 #pageHeader {
                     background-image: linear-gradient(to bottom,
-                                                      rgba(255,255,255,0) 80%,
-                                                      rgba(255,255,255,.9) 97%,
-                                                      rgba(255,255,255,1)),
+                                                      rgba(255, 255, 255, 0) 80%,
+                                                      rgba(255, 255, 255, 0.9) 97%,
+                                                      rgba(255, 255, 255, 1)),
                                       url('/static/images_banners/{% block banner2x %}DSC_000166{% endblock %}@2x.jpg');}
             }
             {% block style %}
