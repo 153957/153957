@@ -2,6 +2,7 @@
   "dependencies": {
     "postcss-cli": "^4.0.0",
     "postcss-cssnext": "^2.11.0",
+    "postcss-nesting": "^4.0.1",
     "prettier": "^1.4.1",
     "stylelint": "^7.10.1",
     "stylelint-config-concentric-order": "^2.0.1",
