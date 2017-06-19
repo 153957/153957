@@ -20,6 +20,10 @@
     .selecthalf {background-color:#AED6EB;}
 {% endblock %}
 
+{% block head %}
+    <link rel="stylesheet" href="{% static '/static/css/guide.css' %}" />
+{% endblock %}
+
 
 {% block body %}
 <table>
@@ -59,7 +63,7 @@
 </table><br>
 
 <div id="tips_content">
-    <div class="slide slidehide" id="basic-content">
+    <div class="slide" id="basic-content">
         <div class="article">
             <h3>Basics of Time-lapse</h3>
 
@@ -108,7 +112,7 @@
         </div>
     </div>
 
-    <div class="slide slidehide" id="requirements-content">
+    <div class="slide" id="requirements-content">
         <div class="article">
             <h3>Requirements</h3>
 
@@ -184,7 +188,7 @@
         </div>
     </div>
 
-    <div class="slide slidehide" id="taking-content">
+    <div class="slide" id="taking-content">
         <div class="article">
             <h3>Taking the pictures</h3>
 
@@ -323,7 +327,7 @@
         </div>
     </div>
 
-    <div class="slide slidehide" id="making-content">
+    <div class="slide" id="making-content">
         <div class="article">
             <h3>How to make movies out of pictures</h3>
 
@@ -604,7 +608,7 @@
         </div>
     </div>
 
-    <div class="slide slidehide" id="advanced-content">
+    <div class="slide" id="advanced-content">
         <div class="article">
             <h3>Advanced techniques</h3>
 

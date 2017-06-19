@@ -29,21 +29,15 @@ $(document).ready(function() {
 
     /* Category Slider */
     $("#categories").on("click", ".category", function() {
-        var numm = $(this).attr("id") + "-content";
+        var thumbs = $(this).attr("id") + "-content";
         if (
-            $("#" + numm).get(0) !==
-            $("#thumbnails").find("div.currentslide").get(0)
+            $("#" + thumbs).get(0) !==
+            $("#thumbnails").find(".currentslide").get(0)
         ) {
-            $("#thumbnails")
-                .find("div.currentslide")
-                .animate({height: "hide", opacity: "hide"}, "fast")
-                .removeClass("currentslide")
-                .addClass("slidehide");
-            $("#" + numm)
-                .animate({height: "show", opacity: "show"}, "fast")
-                .removeClass("slidehide")
-                .addClass("currentslide");
-            $("#categories").find("li.currentcat").removeClass("currentcat");
+            $("#thumbnails .currentslide").hide().removeClass("currentslide");
+            $("#categories .currentcat").removeClass("currentcat");
+            // First show to set display to block, then add the class to transition the opacity.
+            $("#" + thumbs).show(0, function() {$(this).addClass("currentslide")});
             $(this).addClass("currentcat");
         }
     });

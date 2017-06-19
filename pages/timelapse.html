@@ -12,10 +12,6 @@
         top: 25px;}
 
     /* Temporary fix */
-    #wrapper,
-    #container {
-        min-width: 960px;}
-
     #content {
         padding-left: 0;
         padding-right: 0;}
@@ -32,7 +28,7 @@
     <link rel="stylesheet" href="{% static '/static/css/thumbs/D90.css' %}" />
     <link rel="stylesheet" href="{% static '/static/css/thumbs/D700.css' %}" />
     <link rel="stylesheet" href="{% static '/static/css/thumbs/S60.css' %}" />
-{% endblock %} 
+{% endblock %}
 
 {% block body %}
 <div id="slider">
@@ -55,7 +51,7 @@
     </div><!--/categories-->
 
     <div id="thumbnails">
-        <div id="Flowers-content" class="slide slidehide">
+        <div id="Flowers-content" class="slide">
             <ul>
                  <li class="d90" id="D90_130217_1_4">
             </li><li class="d80" id="D80_080816_1">
@@ -71,7 +67,7 @@
             </li><li class="s60" id="S60_060716_1">
             </li></ul>
         </div>
-        <div id="Clouds-content" class="slide slidehide">
+        <div id="Clouds-content" class="slide">
             <ul>
                  <li class="d700" id="D700_110413_1">
             </li><li class="d80" id="D80_100722_3">
@@ -89,7 +85,7 @@
             </li><li class="d80" id="D80_090313_1">
             </li></ul>
         </div>
-        <div id="Clouds2-content" class="slide slidehide">
+        <div id="Clouds2-content" class="slide">
             <ul>
                  <li class="d80" id="D80_081111_1">
             </li><li class="d80" id="D80_080716_2">
@@ -102,7 +98,7 @@
             </li><li class="s60" id="S60_050621_2">
             </li></ul>
         </div>
-        <div id="Traffic-content" class="slide slidehide">
+        <div id="Traffic-content" class="slide">
             <ul>
                  <li class="d90" id="D90_130424_1">
             </li><li class="d700" id="D700_120826_1">
@@ -121,7 +117,7 @@
             </li><li class="d80" id="D80_080716_4">
             </li></ul>
         </div>
-        <div id="Frost-content" class="slide slidehide">
+        <div id="Frost-content" class="slide">
             <ul>
                  <li class="d80" id="D80_100201_3">
             </li><li class="d80" id="D80_100201_1">
@@ -132,7 +128,7 @@
             </li><li class="s60" id="S60_050504_1">
             </li></ul>
         </div>
-        <div id="Sun-content" class="slide slidehide">
+        <div id="Sun-content" class="slide">
             <ul>
                  <li class="d80" id="D80_100816_1_2">
             </li><li class="d80" id="D80_100722_1">
@@ -146,7 +142,7 @@
             </li><li class="s60" id="S60_070601_1">
             </li></ul>
         </div>
-        <div id="Balfolk-content" class="slide slidehide">
+        <div id="Balfolk-content" class="slide">
             <ul>
                  <li class="d90" id="D90_CaDansa2014">
             </li><li class="d90" id="D90_120602_1">
@@ -156,7 +152,7 @@
             </li><li class="d80" id="D80_090617_1">
             </li></ul>
         </div>
-        <div id="Archery-content" class="slide slidehide">
+        <div id="Archery-content" class="slide">
             <ul>
                  <li class="d80" id="D80_100816_3">
             </li><li class="d80" id="D80_090906_2">
@@ -164,7 +160,7 @@
             </li><li class="s60" id="S60_051218_1">
             </li></ul>
         </div>
-        <div id="Other-content" class="slide slidehide">
+        <div id="Other-content" class="slide">
             <ul>
                  <li class="d700" id="D700_140608_2">
             </li><li class="d700" id="D700_110413_2-111202_1-120219_1">
@@ -182,7 +178,7 @@
             </li>
             </ul>
         </div>
-        <div id="Fire-content" class="slide slidehide">
+        <div id="Fire-content" class="slide">
             <ul>
                  <li class="d80" id="D80_111111_1">
             </li><li class="d80" id="D80_110311_1">
@@ -195,7 +191,7 @@
             </li><li class="d80" id="D80_081214_1">
             </li></ul>
         </div>
-        <div id="Astronomy-content" class="slide slidehide">
+        <div id="Astronomy-content" class="slide">
             <ul>
                  <li class="d90" id="D90_150322_1">
             </li><li class="d90" id="D90_150316_1">
@@ -222,7 +218,7 @@
             </li><li class="d80" id="D80_110514_110520_1_2_4">
             </li></ul>
         </div>
-        <div id="Description-content" class="slide slidehide">
+        <div id="Description-content" class="slide">
             <p>
                 This is my time-lapse showcase. This page contains a
                 collection of my Time-lapse movies. Most movies were
@@ -245,10 +241,10 @@
     </div><!--/thumbnails-->
 </div><!--/slider-->
 
-<div class="quicktime" id="movie">
+<div id="movie">
     <img id="poster" class="showing" data-id="D700_D90_150317_NorthernLights" alt="Northern Lights"
          src="{% static '/static/images_timelapse/D700_D90_150317_NorthernLights_poster.jpg' %}" />
-    <video id="player" style="margin: 37px 0px; height: 529px; width: 960px;"></video>
+    <video id="player"></video>
 </div><!--/movie-->
 {% endblock %}
 

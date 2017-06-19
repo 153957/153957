@@ -6,11 +6,10 @@
 body {
     margin-top: 0;
     background: #fff;
-    line-height: 100%;
+    line-height: 23px;
     color: #353535;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
-    line-height: 23px;
 }
 
 .collage {
@@ -125,7 +124,7 @@ a:hover {
     margin: 0;
     line-height: 26px;
     color: #fff;
-    font-size: 2.5em;
+    font-size: 25px;
     font-weight: normal;
 }
 
@@ -221,70 +220,28 @@ hr {
     overflow: auto;
 }
 
-#topics {
-    line-height: 1.4em;
-    font-size: 1.1em;
-}
-
-.slidehide {
-    display: none;
-    overflow: hidden;
-}
-
-.category {
-    cursor: pointer;
-    font-size: 100%;
-}
-
-.currentcat {
-    color: #1676a7;
-}
-
-.category:hover,
-.currentcat:hover {
-    color: #1184be;
-}
-
-.slide li {
-    margin: 1px;
-    list-style: none;
-}
-
-.slide .article {
-    display: block;
-    float: left;
-    padding-bottom: 10px;
-    width: 660px;
-}
-
-.slide .screenshots {
-    display: block;
-    float: right;
-    width: 210px;
-}
-
 #footer {
     border-top: 1px solid #eee;
     padding-top: 3px;
     height: 25px;
     text-align: center;
     color: #6b6b6b;
-}
 
-#footer p {
-    margin: 0;
-    padding: 0;
-    font-size: 11px;
-}
+    & p {
+        margin: 0;
+        padding: 0;
+        font-size: 11px;
+    }
 
-#footer a:link,
-#footer a:visited {
-    color: #686868;
-}
+    & a:link,
+    & a:visited {
+        color: #686868;
+    }
 
-#footer a:hover,
-#footer a:active {
-    color: #979797;
+    & a:hover,
+    & a:active {
+        color: #979797;
+    }
 }
 
 .columns {

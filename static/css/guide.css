@@ -1,0 +1,45 @@
+#topics {
+    line-height: 1.4em;
+    font-size: 1.1em;
+}
+
+#tips_content .currentslide {
+    display: block;
+    opacity: 1;
+}
+
+.category {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.currentcat {
+    color: #1676a7;
+}
+
+.category:hover,
+.currentcat:hover {
+    color: #1184be;
+}
+
+.slide {
+    display: none;
+
+    & li {
+        margin: 1px;
+        list-style: none;
+    }
+
+    & .article {
+        display: block;
+        float: left;
+        padding-bottom: 10px;
+        width: 660px;
+    }
+
+    & .screenshots {
+        display: block;
+        float: right;
+        width: 210px;
+    }
+}
