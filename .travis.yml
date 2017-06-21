@@ -20,6 +20,6 @@ install:
   - yarn install
 
 script:
-  - yarn run stylelint
   - cactus build
+  - yarn run stylelint
   - html5validator --root .build --show-warnings --ignore 'index_'
