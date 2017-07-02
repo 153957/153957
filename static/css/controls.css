@@ -7,8 +7,8 @@
     font-size: 14px;
 }
 
-#mov,
-#mov * {
+#movie,
+#movie * {
     user-select: none;
 }
 
@@ -31,13 +31,13 @@
 }
 
 #progress_bar {
-    display: block;
+    display: flex;
+    flex-grow: 1;
     padding: 6px 0 0;
 }
 
 #time_display {
     display: block;
-    float: left;
     cursor: default;
     width: 35px;
     text-align: center !important;
@@ -50,6 +50,7 @@
 
 #progress_back {
     position: relative !important;
+    flex-grow: 1;
 }
 
 #progress_loading_wrapper {
@@ -189,7 +190,6 @@
 
 #progress_back,
 #volume_back {
-    float: left;
     border: 1px solid rgba(0, 0, 0, 1) !important;
     box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0 !important;
     background: linear-gradient(to bottom, #353535, #5b5b5b);
@@ -211,7 +211,7 @@
 
 #fullscreen_button {
     display: block;
-    margin: 5px 0 0 5px;
+    margin: 5px 2px 0 5px;
     width: 15px;
     height: 15px;
     color: #eee;

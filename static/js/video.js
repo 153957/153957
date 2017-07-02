@@ -5,15 +5,7 @@ var base = "http://arne.delaat.net/"; /* "http://delaat.me/"; */
 var quality = "SD";
 var extension = ".mp4";
 
-var navi = navigator.userAgent.toLowerCase();
-var isOpera = /opera/.test(navi);
-var isChrome = /chrome/.test(navi);
-var isSafari = /safari/.test(navi) && !isChrome;
-var isiOS = /ipad/.test(navi) || /iphone/.test(navi) || /ipod/.test(navi);
-var useCustomControls = (!isiOS && isSafari) || isChrome || isOpera;
-
 var controlsCreated = false;
-var controlsHeight = 25;
 var fullscreen = false;
 
 /* Initiate */
@@ -124,13 +116,7 @@ function playpause() {
 /* Show Progress */
 function progress(e) {
     var percentDone = $global.video.currentTime / $global.video.duration * 100;
-    if (fullscreen) {
-        $controls.progressElapsed.style.width =
-            percentDone / 100 * ($global.video.width - 153) + "px";
-    } else {
-        $controls.progressElapsed.style.width =
-            percentDone / 100 * ($global.video.width - 138) + "px";
-    }
+    $controls.progressElapsed.style.width = percentDone + "%";
     $controls.progressIndicator.val($global.video.currentTime);
     var seconds = Math.max(Math.floor($global.video.currentTime % 60), 0);
     var minutes = Math.max(Math.floor($global.video.currentTime / 60), 0);
@@ -190,74 +176,37 @@ function volumeused() {
     }
 }
 
-/* Fullwindow Button */
-var fullwindow = function() {
-    $global.video.width = window.innerWidth;
-    $global.video.height = window.innerHeight - controlsHeight;
-}; /* Set z-index, position.. */
-
 /* Metadata Loaded -> Set Width/Height/Margins */
-function setHeightWidthMargins() {
-    var hmargin;
-    if (
-        $global.video.videoHeight / ($global.movie.height() - controlsHeight) <=
-        $global.video.videoWidth / $global.movie.width()
-    ) {
-        $global.video.width = $global.movie.width();
-        $global.video.height =
-            $global.video.videoHeight *
-            ($global.movie.width() / $global.video.videoWidth);
-        hmargin = 0;
-    } else {
-        $global.video.height = $global.movie.height() - controlsHeight;
-        $global.video.width =
-            $global.video.videoWidth *
-            ($global.video.height / $global.video.videoHeight);
-        hmargin = ($global.movie.width() - $global.video.width) / 2;
-    }
-    $global.video.style.margin = "0 0 0 " + hmargin + "px";
+function addControls() {
     /* Attach Webkit Controls */
-    if (useCustomControls && !controlsCreated) {
-        var progressBackgroundWidth, progressIndicatorWidth, fullscreenButton;
+    if (!controlsCreated) {
+        var fullscreenButton;
         controlsCreated = true;
         if (fullscreen) {
-            progressBackgroundWidth = $global.video.width - 151;
-            progressIndicatorWidth = $global.video.width - 152;
             fullscreenButton =
                 '<div id="fullscreen_button" class="fa fa-expand" onclick="fullscreen()"></div>';
         } else {
-            progressBackgroundWidth = $global.video.width - 136;
-            progressIndicatorWidth = $global.video.width - 137;
             fullscreenButton = "";
         }
         $global.movie.append(
-            '<div id="controls" style="margin-left:' +
-                hmargin +
-                "px; width:" +
-                $global.video.width +
-                'px;">' +
-                '    <div id="play_pause_button" class="fa fa-play" onclick="playpause()"></div>' +
-                '    <div id="progress_bar">' +
-                '        <div id="time_display">0:00</div>' +
-                '        <div id="progress_back" style="width:' +
-                progressBackgroundWidth +
-                'px;">' +
-                '            <div id="progress_buffered" style="width:0%;"></div>' +
-                '            <div id="progress_elapsed" style="width:0%;"></div>' +
-                '        <input id="progress_indicator" type="range" step="any" value="0" min="0" max="' +
-                $global.video.duration +
-                '"' +
-                '               style="width:' +
-                progressIndicatorWidth +
-                'px;" onchange="setTime()"></div></div>' +
-                '    <div id="volume_speaker_button" class="fa fa-volume-up" onclick="mute()"></div>' +
-                '    <div id="volume_bar">' +
-                '        <div id="volume_back" style="width:47px; ">' +
-                '            <div id="volume_used" style="width:75%; "></div>' +
-                '        <input id="volume_indicator" type="range" value="30" min="0" max="40"' +
-                '               style="width:50px;" onchange="setVolume()"></div></div>' +
-                fullscreenButton +
-                "</div>"
+            '<div id="controls">' +
+            '    <div id="play_pause_button" class="fa fa-play" onclick="playpause()"></div>' +
+            '    <div id="progress_bar">' +
+            '        <div id="time_display">0:00</div>' +
+            '        <div id="progress_back">' +
+            '            <div id="progress_buffered" style="width:0%;"></div>' +
+            '            <div id="progress_elapsed" style="width:0%;"></div>' +
+            '        <input id="progress_indicator" type="range" step="any" value="0" min="0" max="' +
+            $global.video.duration +
+            '" oninput="setTime()" onchange="setTime()"></div></div>' +
+            '    <div id="volume_speaker_button" class="fa fa-volume-up" onclick="mute()"></div>' +
+            '    <div id="volume_bar">' +
+            '        <div id="volume_back" style="width:47px; ">' +
+            '            <div id="volume_used" style="width:75%; "></div>' +
+            '        <input id="volume_indicator" type="range" value="30" min="0" max="40"' +
+            '               style="width:50px;" oninput="setVolume()" onchange="setVolume()"></div></div>' +
+            fullscreenButton +
+            '</div>'
         );
         window.$controls = {
             controls: $("#controls"),
@@ -285,7 +234,7 @@ function setHeightWidthMargins() {
 /* CanPlay -> Hide Status, Show Controls and Play*/
 function hideLoad() {
     $global.status.removeClass("showing").addClass("hidden");
-    if (!useCustomControls) {
+    if (!controlsCreated) {
         $("#player").attr("controls", "true");
     }
     $global.video.play();
@@ -321,25 +270,21 @@ function swapVideo(movieid) {
     // videolink = '../static/sample_video/150317_NorthernLights.mp4'
 
     /* HTML5 Video */
-    if (isiOS) {
+    var coarse = window.matchMedia("(pointer: coarse)");
+
+    if (coarse.matches) {
         $global.movie.html(
-            "<video src=" +
-                videolink +
-                ' id="player" style="margin: 0px 0px;" ' +
-                '       height="100%" width="100%" preload="auto" controls ' +
-                '       onloadedmetadata="setHeightWidthMargins()"></video>' +
-                '<span id="status" class="fa fa-circle-o-notch fa-spin hidden"></span>'
+            '<video src="' + videolink + '" id="player" preload="auto" controls></video>' +
+            '<span id="status" class="fa fa-circle-o-notch fa-spin hidden"></span>'
         );
     } else {
         $global.movie.html(
             '<span id="status" class="fa fa-circle-o-notch fa-spin showing"></span>' +
-                "<video src=" +
-                videolink +
-                ' id="player" style="margin: 0px 0px;" ' +
-                '       height="0" width="0" preload="auto" onloadedmetadata="setHeightWidthMargins()" ' +
-                '       oncanplay="hideLoad()"></video>'
+            '<video src="' + videolink + '" id="player" preload="auto" onloadedmetadata="addControls()" oncanplay="hideLoad()"></video>'
         );
     }
+
+    $global.movie.height('auto');
     $global.video = $("#player").get(0);
     $global.status = $("#status");
     $global.video.addEventListener("error", errorStatus, true);
