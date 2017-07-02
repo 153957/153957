@@ -187,7 +187,8 @@ nav {
             background: rgba(0, 0, 0, 0.6);
         }
 
-        &:visited {
+        &:visited,
+        &:link {
             color: #eee;
         }
     }
