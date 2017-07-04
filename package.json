@@ -13,6 +13,6 @@
     "prettier": "prettier --write --tab-width 4 --no-bracket-spacing static/js/*.js",
     "postcss": "postcss static/css/*.css --dir .build/static/css/ -c postcss.config.js",
     "postcss-test": "postcss static/css/*.css --dir .tmp/static/css/ -c postcss.config.js -e test",
-    "stylelint": "rm -r .tmp && yarn run postcss-test && stylelint .tmp/static/css/*.css"
+    "stylelint": "rm -r .tmp; yarn run postcss-test && stylelint .tmp/static/css/*.css"
   }
 }
