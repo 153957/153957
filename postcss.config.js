@@ -1,8 +1,8 @@
 module.exports = (context) => ({
     plugins: {
         'postcss-each': {},
-        'stylelint': {},
-        'postcss-nesting': {},
-        'postcss-cssnext': {}
+        'stylelint': context.env === 'development' ? {} : false,
+        'postcss-nesting': context.env === 'development' ? {} : false,
+        'postcss-cssnext': context.env === 'development' ? {} : false
     }
 })
