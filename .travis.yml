@@ -10,9 +10,7 @@ addons:
       - oracle-java8-set-default
 
 install:
-  - nvm ls-remote
-  - pip install cactus
-  - pip install glue
+  - pip install -r requirements.txt
   - pip install html5validator
   - nvm install 6.10.3
   - nvm use 6.10.3
