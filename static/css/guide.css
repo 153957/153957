@@ -1,45 +1,64 @@
-#topics {
-    line-height: 1.4em;
-    font-size: 1.1em;
+.topics {
+    margin: 0 15px;
+
+    & li {
+        list-style: none;
+
+        &::before {
+            content: "» ";
+        }
+    }
 }
 
-#tips_content .currentslide {
-    display: block;
-    opacity: 1;
-}
+.guide_content {
+    margin: 0 15px;
 
-.category {
-    cursor: pointer;
-    font-size: 14px;
-}
+    & h3 {
+        margin-top: 24px;
+    }
 
-.currentcat {
-    color: #1676a7;
-}
+    & h4 {
+        margin-top: 20px;
+    }
 
-.category:hover,
-.currentcat:hover {
-    color: #1184be;
-}
+    & p {
+        line-height: 26px;
+    }
 
-.slide {
-    display: none;
+    & img {
+        border-radius: 2px;
+    }
 
     & li {
         margin: 1px;
         list-style: none;
-    }
 
-    & .article {
-        display: block;
-        float: left;
-        padding-bottom: 10px;
-        width: 660px;
+        &::before {
+            content: "» ";
+        }
     }
 
     & .screenshots {
-        display: block;
-        float: right;
-        width: 210px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+
+        & a {
+            display: flex;
+            flex-direction: column;
+            margin-right: 3px;
+        }
     }
+}
+
+.select {
+    background-color: #63bbe7;
+}
+
+.selecthalf {
+    background-color: #aed6eb;
+}
+
+.caption {
+    font-size: 14px;
 }

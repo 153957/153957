@@ -1,0 +1,6 @@
+<a href="{% static '/static/images_guide/'|add:section|add:'/'|add:image|add:'.jpg' %}" target="_blank">
+    <img alt=""
+        src="{% static '/static/images_guide/'|add:section|add:'/thumbs/'|add:image|add:'.jpg' %}"
+        srcset="{% static '/static/images_guide/'|add:section|add:'/thumbs/'|add:image|add:'@2x.jpg' %} 2x">
+    <span class="caption">{{ caption }}</span>
+</a>
