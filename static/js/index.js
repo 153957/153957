@@ -6,6 +6,6 @@ $(document).ready(function() {
         attribute: "data-tip",
         delay: "25",
         defaultPosition: "top",
-        edgeOffset: -7
+        edgeOffset: -0
     });
 });
