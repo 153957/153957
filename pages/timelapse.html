@@ -33,14 +33,12 @@
 {% block body %}
 <div id="slider">
     <div id="categories">
-        <strong>CATEGORIES</strong><br>
         <ul>
              <li class="category currentcat" id="Reels">Reels
         </li><li class="category" id="Archery">Archery
         </li><li class="category" id="Astronomy">Astronomy
         </li><li class="category" id="Balfolk">Balfolk
-        </li><li class="category" id="Clouds">Clouds (1/2)
-        </li><li class="category" id="Clouds2">Clouds (2/2)
+        </li><li class="category" id="Clouds">Clouds
         </li><li class="category" id="Fire">Fire
         </li><li class="category" id="Flowers">Flowers
         </li><li class="category" id="Frost">Frost
@@ -51,7 +49,7 @@
     </div><!--/categories-->
 
     <div id="thumbnails">
-        <div id="Flowers-content" class="slide">
+        <div class="slide" id="Flowers-content">
             <ul>
                  <li class="d90" id="D90_130217_1_4">
             </li><li class="d80" id="D80_080816_1">
@@ -67,7 +65,7 @@
             </li><li class="s60" id="S60_060716_1">
             </li></ul>
         </div>
-        <div id="Clouds-content" class="slide">
+        <div class="slide" id="Clouds-content">
             <ul>
                  <li class="d700" id="D700_110413_1">
             </li><li class="d80" id="D80_100722_3">
@@ -83,11 +81,7 @@
             </li><li class="d80" id="D80_090325_1">
             </li><li class="d80" id="D80_090313_2">
             </li><li class="d80" id="D80_090313_1">
-            </li></ul>
-        </div>
-        <div id="Clouds2-content" class="slide">
-            <ul>
-                 <li class="d80" id="D80_081111_1">
+            </li><li class="d80" id="D80_081111_1">
             </li><li class="d80" id="D80_080716_2">
             </li><li class="d80" id="D80_080716_1">
             </li><li class="d80" id="D80_080711_1">
@@ -98,7 +92,7 @@
             </li><li class="s60" id="S60_050621_2">
             </li></ul>
         </div>
-        <div id="Traffic-content" class="slide">
+        <div class="slide" id="Traffic-content">
             <ul>
                  <li class="d90" id="D90_130424_1">
             </li><li class="d700" id="D700_120826_1">
@@ -117,7 +111,7 @@
             </li><li class="d80" id="D80_080716_4">
             </li></ul>
         </div>
-        <div id="Frost-content" class="slide">
+        <div class="slide" id="Frost-content">
             <ul>
                  <li class="d80" id="D80_100201_3">
             </li><li class="d80" id="D80_100201_1">
@@ -128,7 +122,7 @@
             </li><li class="s60" id="S60_050504_1">
             </li></ul>
         </div>
-        <div id="Sun-content" class="slide">
+        <div class="slide" id="Sun-content">
             <ul>
                  <li class="d80" id="D80_100816_1_2">
             </li><li class="d80" id="D80_100722_1">
@@ -142,7 +136,7 @@
             </li><li class="s60" id="S60_070601_1">
             </li></ul>
         </div>
-        <div id="Balfolk-content" class="slide">
+        <div class="slide" id="Balfolk-content">
             <ul>
                  <li class="d90" id="D90_CaDansa2014">
             </li><li class="d90" id="D90_120602_1">
@@ -152,7 +146,7 @@
             </li><li class="d80" id="D80_090617_1">
             </li></ul>
         </div>
-        <div id="Archery-content" class="slide">
+        <div class="slide" id="Archery-content">
             <ul>
                  <li class="d80" id="D80_100816_3">
             </li><li class="d80" id="D80_090906_2">
@@ -160,7 +154,7 @@
             </li><li class="s60" id="S60_051218_1">
             </li></ul>
         </div>
-        <div id="Other-content" class="slide">
+        <div class="slide" id="Other-content">
             <ul>
                  <li class="d700" id="D700_140608_2">
             </li><li class="d700" id="D700_110413_2-111202_1-120219_1">
@@ -178,7 +172,7 @@
             </li>
             </ul>
         </div>
-        <div id="Fire-content" class="slide">
+        <div class="slide" id="Fire-content">
             <ul>
                  <li class="d80" id="D80_111111_1">
             </li><li class="d80" id="D80_110311_1">
@@ -191,7 +185,7 @@
             </li><li class="d80" id="D80_081214_1">
             </li></ul>
         </div>
-        <div id="Astronomy-content" class="slide">
+        <div class="slide" id="Astronomy-content">
             <ul>
                  <li class="d90" id="D90_150322_1">
             </li><li class="d90" id="D90_150316_1">
@@ -210,7 +204,7 @@
             </li><li class="d80" id="D80_080716_3">
             </li></ul>
         </div>
-        <div id="Reels-content" class="slide currentslide">
+        <div class="slide currentslide" id="Reels-content">
              <ul>
                  <li class="d700" id="D700_D90_150317_NorthernLights">
             </li><li class="d700" id="D700_D80_Virtual_Eyes">
@@ -218,24 +212,21 @@
             </li><li class="d80" id="D80_110514_110520_1_2_4">
             </li></ul>
         </div>
-        <div id="Description-content" class="slide">
+        <div class="slide" id="Description-content">
             <p>
-                This is my time-lapse showcase. This page contains a
-                collection of my Time-lapse movies. Most movies were
-                created with my Nikon DSLRs and some with my Canon
-                Powershot. The Nikon D80 and D90 required an external
-                intervalometer or a computer to control the camera, the
-                Canon S60 and Nikon D700 have a built-in intervalometer
-                to take time-lapse photos. A HTML5 video capable browser
-                is required to view the movies, the movies are encoded
-                with the x264 codec. The movies are ordered by shooting
-                date, the newest are at the top of the categories. Most
-                movies are made in the Netherlands, but some were shot
-                in Chile, Japan or China. The categories include movies
-                about archery, balfolk dancing, blooming flowers,
-                airplanes, traffic, fireshows, clouds, sunsets, sunrise,
-                night skies, stars, ice cubes melting, and some other
-                miscellaneous subjects.
+                This is my time-lapse showcase. This page contains a collection of my
+                time-lapse movies. Most movies were created with my Nikon DSLRs and some
+                with my Canon Powershot. The Nikon D80 and D90 required an external
+                intervalometer or a computer to control the camera, the Canon S60, Nikon
+                D500, and Nikon D700 have built-in intervalometers.
+
+                A HTML5 video capable browser is required to view the movies. The movies
+                are encoded with the x264 codec. The movies are ordered by shooting date,
+                the newest are at the top of the categories. Most movies are made in the
+                Netherlands, but some were shot in Chile, Japan, or China. The categories
+                include movies about archery shooting, balfolk dancing, blooming flowers,
+                traffic, fireshows, clouds, sunset, sunrise, night skies, stars,
+                ice cubes melting, and some other miscellaneous subjects.
             </p>
         </div>
     </div><!--/thumbnails-->
