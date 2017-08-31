@@ -1,18 +1,12 @@
-.topics {
-    margin: 0 15px;
+.topics li {
+    list-style: none;
 
-    & li {
-        list-style: none;
-
-        &::before {
-            content: "» ";
-        }
+    &::before {
+        content: "» ";
     }
 }
 
 .guide_content {
-    margin: 0 15px;
-
     & h3 {
         margin-top: 24px;
     }

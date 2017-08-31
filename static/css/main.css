@@ -52,7 +52,7 @@ h3 {
 h4 {
     margin-top: 15px;
     margin-bottom: 5px;
-    color: #444;
+    color: #222;
     font-size: 20px;
 }
 
@@ -207,7 +207,6 @@ hr {
 }
 
 #contentContainer {
-    float: left;
     width: 100%;
     min-height: 300px;
     overflow: hidden;
@@ -215,7 +214,7 @@ hr {
 }
 
 #content {
-    padding: 9px 9px 5px;
+    padding: 8px 12px 6px;
 }
 
 .album {
