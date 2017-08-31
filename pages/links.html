@@ -147,17 +147,19 @@
     </div>
 {% endblock %}
 
-{% block script %}
-    var _bla0 = "mai";
-    var _bla1 = "lto:";
-    var _bla2 = "ar";
-    var _bla3 = "ne@";
-    var _bla4 = "del";
-    var _bla5 = "aat";
-    var _bla6 = ".ne";
-    var _bla7 = "t";
-    var _bla = _bla0 + _bla1 + _bla2 + _bla3 + _bla4 + _bla5 + _bla6 + _bla7;
-    var _blaa = _bla2 + _bla3 + _bla4 + _bla5 + _bla6 + _bla7;
-    document.getElementById('mail_contact').href = _bla;
-    document.getElementById('mail_contact').innerHTML = _blaa;
+{% block scripts %}
+    <script>
+        var _bla0 = "mai";
+        var _bla1 = "lto:";
+        var _bla2 = "ar";
+        var _bla3 = "ne@";
+        var _bla4 = "del";
+        var _bla5 = "aat";
+        var _bla6 = ".ne";
+        var _bla7 = "t";
+        var _bla = _bla0 + _bla1 + _bla2 + _bla3 + _bla4 + _bla5 + _bla6 + _bla7;
+        var _blaa = _bla2 + _bla3 + _bla4 + _bla5 + _bla6 + _bla7;
+        document.getElementById('mail_contact').href = _bla;
+        document.getElementById('mail_contact').innerHTML = _blaa;
+    </script>
 {% endblock %}

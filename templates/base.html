@@ -68,14 +68,7 @@
         <script src="{% static '/static/js/vendor/jquery-1.10.2.js' %}"></script>
         {% block scripts %}
         {% endblock %}
-        <script>
-            {% block script %}
-            {% endblock %}
-            var sc_project=865657;
-            var sc_invisible=1;
-            var sc_security="b2bfd38e";
-        </script>
-        <script src="http://www.statcounter.com/counter/counter.js"></script>
+        {% include 'statcounter.html' %}
     </body>
 </html>
 
