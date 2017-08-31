@@ -20,8 +20,8 @@
 .category {
     display: inline-block;
     cursor: pointer;
-    padding: 0 1%;
-    width: 48%;
+    padding: 1px 0;
+    width: 50%;
     list-style: none;
     vertical-align: middle;
     font-size: 14px;
@@ -48,15 +48,15 @@
         border-radius: 2px;
         background-color: transparent;
         cursor: pointer;
-        width: 80px;
-        height: 59px;
+        width: 88px;
+        height: 58px;
     }
 
     & .currentmovie::before,
     & li:hover::before {
         display: inline-block;
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 0;
         width: 100%;
         vertical-align: bottom;
@@ -64,7 +64,7 @@
         line-height: 1;
         color: rgba(255, 255, 255, 0.8);
         font-family: FontAwesome;
-        font-size: 200%;
+        font-size: 30px;
         -webkit-font-smoothing: antialiased;
         content: '\f01d';
     }
@@ -78,7 +78,7 @@
     display: none;
     opacity: 0;
     margin: 0 auto;
-    padding: 7px 0;
+    padding: 4px 0;
     width: 97%;
 
     &.currentslide {
@@ -87,9 +87,14 @@
         opacity: 1;
     }
 
-    & li {
-        margin: 1px;
-        list-style: none;
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        & li {
+            margin: 1px;
+            list-style: none;
+        }
     }
 }
 
