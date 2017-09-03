@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'fontello';
+    font-weight: normal;
+    font-style: normal;
+    src:
+        url('../font/icons.woff') format('woff'),
+        url('../font/icons.woff2') format('woff2');
+}
+
+.icon {
+    display: inline-block;
+    text-rendering: auto;
+    font: normal normal normal 14px/1 'fontello';
+    font-size: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spin {
+    animation: icon-spin 2s infinite linear;
+}
+
+@keyframes icon-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); }
+}
+
+.icon-pause::before { content: '\e800'; }
+.icon-play::before { content: '\e801'; }
+.icon-resize-full::before { content: '\e802'; }
+.icon-resize-small::before { content: '\e803'; }
+.icon-volume-off::before { content: '\e804'; }
+.icon-volume-down::before { content: '\e805'; }
+.icon-volume-up::before { content: '\e806'; }
+.icon-cancel-circled::before { content: '\e807'; }
+.icon-resize-small-1::before { content: '\e808'; }
+.icon-resize-full-1::before { content: '\e809'; }
+.icon-play-circled2::before { content: '\e80a'; }
+.icon-spinner::before { content: '\f110'; }
+.icon-circle-notch::before { content: '\f1ce'; }
+.icon-creative-commons::before { content: '\f25e'; }

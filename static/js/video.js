@@ -92,8 +92,8 @@ $(document).ready(function() {
 
 /* Set Button */
 function playingpaused() {
-    $controls.playButton.toggleClass("fa-play", $global.video.paused);
-    $controls.playButton.toggleClass("fa-pause", !$global.video.paused);
+    $controls.playButton.toggleClass("icon-play", $global.video.paused);
+    $controls.playButton.toggleClass("icon-pause", !$global.video.paused);
 }
 
 /* Ended: Pause */
@@ -162,9 +162,9 @@ function volumeused() {
 
 function volumeUI() {
     $controls.volumeIndicator.val(volume);
-    $controls.volumeButton.toggleClass("fa-volume-off", volume === 0);
-    $controls.volumeButton.toggleClass("fa-volume-down", 0 < volume && volume < 50);
-    $controls.volumeButton.toggleClass("fa-volume-up", volume >= 50);
+    $controls.volumeButton.toggleClass("icon-volume-off", volume === 0);
+    $controls.volumeButton.toggleClass("icon-volume-down", 0 < volume && volume < 50);
+    $controls.volumeButton.toggleClass("icon-volume-up", volume >= 50);
 }
 
 /* Metadata Loaded -> Set Width/Height/Margins */
@@ -175,13 +175,13 @@ function addControls() {
         controlsCreated = true;
         if (fullscreen) {
             fullscreenButton =
-                '<div id="fullscreen_button" class="fa fa-expand" onclick="fullscreen()"></div>';
+                '<div id="fullscreen_button" class="icon icon-resize-full" onclick="fullscreen()"></div>';
         } else {
             fullscreenButton = "";
         }
         $global.movie.append(
             '<div id="controls">' +
-            '    <div id="play_pause_button" class="fa fa-play" onclick="playpause()"></div>' +
+            '    <div id="play_pause_button" class="icon icon-play" onclick="playpause()"></div>' +
             '    <div id="progress_bar">' +
             '        <div id="time_display">0:00</div>' +
             '        <div id="progress_back">' +
@@ -190,7 +190,7 @@ function addControls() {
             '        <input id="progress_indicator" type="range" step="any" value="0" min="0" max="' +
             $global.video.duration +
             '" oninput="setTime()" onchange="setTime()"></div></div>' +
-            '    <div id="volume_speaker_button" class="fa fa-volume-up" onclick="mute()"></div>' +
+            '    <div id="volume_speaker_button" class="icon icon-volume-up" onclick="mute()"></div>' +
             '    <div id="volume_bar">' +
             '        <div id="volume_back">' +
             '            <input id="volume_indicator" type="range" value="50" min="0" max="100"' +
@@ -233,8 +233,8 @@ function hideLoad() {
 /* Change Status to Error Image */
 function errorStatus() {
     $global.status
-        .removeClass("fa-spinner fa-spin hidden")
-        .addClass("fa-times-circle-o showing error");
+        .removeClass("icon-circle-notch icon-spin hidden")
+        .addClass("icon-times-circle-o showing error");
 }
 
 /* Exchange Video Player HTML With New Source */
@@ -265,11 +265,11 @@ function swapVideo(movieid) {
     if (coarse.matches) {
         $global.movie.html(
             '<video src="' + videolink + '" id="player" preload="auto" controls></video>' +
-            '<span id="status" class="fa fa-circle-o-notch fa-spin hidden"></span>'
+            '<span id="status" class="icon icon-circle-notch icon-spin hidden"></span>'
         );
     } else {
         $global.movie.html(
-            '<span id="status" class="fa fa-circle-o-notch fa-spin showing"></span>' +
+            '<span id="status" class="icon icon-circle-notch icon-spin showing"></span>' +
             '<video src="' + videolink + '" id="player" preload="auto" onloadedmetadata="addControls()" oncanplay="hideLoad()"></video>'
         );
     }
