@@ -1,4 +1,4 @@
-<FilesMatch "\.(ttf|otf|eot|woff)$">
+<FilesMatch "\.(woff2|woff)$">
   <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
   </IfModule>
