@@ -123,6 +123,7 @@ a:hover {
         left: 425px;
         margin: 0;
         line-height: 26px;
+        white-space: nowrap;
         color: #fff;
         font-size: 25px;
         font-weight: normal;
@@ -141,10 +142,7 @@ a:hover {
 }
 
 nav {
-    position: relative;
-    top: 0;
-    left: 0;
-    float: left;
+    display: inline-block;
     background-image:
         linear-gradient(
             to bottom,
@@ -154,7 +152,6 @@ nav {
             rgba(0, 0, 0, 0) 100%
         );
     background-repeat: no-repeat;
-    padding: 0;
     height: 100%;
     line-height: 25px;
 
