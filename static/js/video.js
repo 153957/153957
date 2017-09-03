@@ -5,6 +5,7 @@ var base = "http://arne.delaat.net/"; /* "http://delaat.me/"; */
 var quality = "SD";
 var extension = ".mp4";
 
+var volume = 50;
 var controlsCreated = false;
 var fullscreen = false;
 
@@ -91,11 +92,8 @@ $(document).ready(function() {
 
 /* Set Button */
 function playingpaused() {
-    if ($global.video.paused) {
-        $controls.playButton.addClass("fa-play").removeClass("fa-pause");
-    } else {
-        $controls.playButton.removeClass("fa-play").addClass("fa-pause");
-    }
+    $controls.playButton.toggleClass("fa-play", $global.video.paused);
+    $controls.playButton.toggleClass("fa-pause", !$global.video.paused);
 }
 
 /* Ended: Pause */
@@ -144,36 +142,29 @@ function setTime() {
 
 /* Mute */
 function mute() {
-    if ($global.video.muted || $global.video.volume === 0) {
-        $global.video.volume = 0.5;
-        $controls.volumeIndicator.val(20);
+    if ($global.video.muted || $global.video.volume === 0 || volume === 0) {
+        $controls.volumeIndicator.val(50).change();
     } else {
-        $global.video.volume = 0;
-        $controls.volumeIndicator.val(0);
+        $controls.volumeIndicator.val(0).change();
     }
 }
 
 /* Change Volume */
-var setVolume = function() {
-    $global.video.volume = $controls.volumeIndicator.val() / 40;
-};
+function setVolume() {
+    $global.video.volume = $controls.volumeIndicator.val() / 100;
+}
 
+/* Video volume changed, store value and update UI */
 function volumeused() {
-    var percentUsed = $global.video.volume * 100;
-    $controls.volumeUsed.style.width = percentUsed + "%";
-    if (percentUsed === 0) {
-        $controls.volumeButton
-            .removeClass("fa-volume-up fa-volume-down")
-            .addClass("fa-volume-off");
-    } else if (percentUsed <= 40) {
-        $controls.volumeButton
-            .removeClass("fa-volume-up fa-volume-off")
-            .addClass("fa-volume-down");
-    } else {
-        $controls.volumeButton
-            .removeClass("fa-volume-down fa-volume-off")
-            .addClass("fa-volume-up");
-    }
+    volume = parseInt($global.video.volume * 100, 10);
+    volumeUI();
+}
+
+function volumeUI() {
+    $controls.volumeIndicator.val(volume);
+    $controls.volumeButton.toggleClass("fa-volume-off", volume === 0);
+    $controls.volumeButton.toggleClass("fa-volume-down", 0 < volume && volume < 50);
+    $controls.volumeButton.toggleClass("fa-volume-up", volume >= 50);
 }
 
 /* Metadata Loaded -> Set Width/Height/Margins */
@@ -194,17 +185,16 @@ function addControls() {
             '    <div id="progress_bar">' +
             '        <div id="time_display">0:00</div>' +
             '        <div id="progress_back">' +
-            '            <div id="progress_buffered" style="width:0%;"></div>' +
-            '            <div id="progress_elapsed" style="width:0%;"></div>' +
+            '            <div id="progress_buffered" style="width: 0;"></div>' +
+            '            <div id="progress_elapsed" style="width: 0;"></div>' +
             '        <input id="progress_indicator" type="range" step="any" value="0" min="0" max="' +
             $global.video.duration +
             '" oninput="setTime()" onchange="setTime()"></div></div>' +
             '    <div id="volume_speaker_button" class="fa fa-volume-up" onclick="mute()"></div>' +
             '    <div id="volume_bar">' +
-            '        <div id="volume_back" style="width:47px; ">' +
-            '            <div id="volume_used" style="width:75%; "></div>' +
-            '        <input id="volume_indicator" type="range" value="30" min="0" max="40"' +
-            '               style="width:50px;" oninput="setVolume()" onchange="setVolume()"></div></div>' +
+            '        <div id="volume_back">' +
+            '            <input id="volume_indicator" type="range" value="50" min="0" max="100"' +
+            '                   oninput="setVolume()" onchange="setVolume()"></div></div>' +
             fullscreenButton +
             '</div>'
         );
@@ -217,7 +207,6 @@ function addControls() {
             timeDisplay: $("#time_display"),
             volumeButton: $("#volume_speaker_button"),
             volumeIndicator: $("#volume_indicator"),
-            volumeUsed: $("#volume_used").get(0)
         };
         $("#player").attr({
             onclick: "playpause()",
@@ -228,6 +217,7 @@ function addControls() {
             ontimeupdate: "progress()",
             onended: "pause()"
         });
+        $controls.volumeIndicator.val(volume).change();
     }
 }
 

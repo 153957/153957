@@ -77,6 +77,7 @@
 }
 
 #progress_elapsed {
+    position: relative !important;
     left: 0;
 }
 
@@ -85,7 +86,7 @@
 #progress_indicator {
     position: absolute !important;
     top: 0;
-    left: 1px;
+    left: 0;
     margin: 0;
     border-radius: 10px;
     background: none;
@@ -153,11 +154,8 @@
 #volume_back {
     display: block;
     border-radius: 20px;
-}
-
-#volume_used {
-    border-radius: 20px 5px 5px 20px;
-    min-width: 5px;
+    width: 47px;
+    overflow: hidden;
 }
 
 #volume_indicator {
@@ -165,7 +163,7 @@
     top: 8px;
     border-radius: 10px;
     background: none;
-    width: 100%;
+    width: 47px;
     height: 8px;
     -webkit-appearance: none;
     -o-appearance: none;
@@ -177,9 +175,9 @@
 
 #volume_indicator::-webkit-slider-thumb {
     display: block;
-    border: 1px solid #000;
+    border: none;
     border-radius: 50%;
-    background: linear-gradient(to bottom, #2e2e2e, #0a0a0a);
+    background: linear-gradient(to bottom, #ddd, #888);
     background-clip: padding-box;
     width: 10px;
     height: 10px;
@@ -200,7 +198,6 @@
 
 #progress_elapsed,
 #volume_used {
-    position: relative !important;
     background: linear-gradient(to bottom, #bbb, #666);
     background-clip: padding-box;
     width: 0;
