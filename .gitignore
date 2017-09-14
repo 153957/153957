@@ -3,7 +3,8 @@
 Icon?
 
 # Generated thumbnails
-thumbs/
+static/images_timelapse/thumbs/
+static/css/thumbs/
 .previous_checksum
 
 # Cactus
