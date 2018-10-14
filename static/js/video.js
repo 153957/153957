@@ -2,7 +2,7 @@
 
 /* Global variables */
 var base = "http://arne.delaat.net/"; /* "http://delaat.me/"; */
-var quality = "SD";
+var quality = "960";
 var extension = ".mp4";
 
 var volume = 50;
