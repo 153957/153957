@@ -52,6 +52,7 @@ $(document).ready(function() {
 
     /* Poster Link */
     $global.poster.click(function() {
+        $('#' + this.dataset.id).addClass("currentmovie");
         swapVideo(this.dataset.id);
         return false;
     });
@@ -83,6 +84,7 @@ $(document).ready(function() {
     /* Load linked video */
     if (window.location.hash) {
         if ($global.thumbnails.filter(window.location.hash).length) {
+            $global.thumbnails.filter(window.location.hash).addClass("currentmovie");
             var hash_value = window.location.hash.replace("#", "");
             swapVideo(hash_value);
         }
@@ -91,7 +93,7 @@ $(document).ready(function() {
 /* /Initiate */
 
 /* Set Button */
-function playingpaused() {
+function playingPaused() {
     $controls.playButton.toggleClass("icon-play", $global.video.paused);
     $controls.playButton.toggleClass("icon-pause", !$global.video.paused);
 }
@@ -102,7 +104,7 @@ function pause() {
 }
 
 /* Play/Pause button action */
-function playpause() {
+function playPause() {
     if ($global.video.paused) {
         $global.video.play();
     } else {
@@ -155,7 +157,7 @@ function setVolume() {
 }
 
 /* Video volume changed, store value and update UI */
-function volumeused() {
+function volumeUsed() {
     volume = parseInt($global.video.volume * 100, 10);
     volumeUI();
 }
@@ -167,34 +169,49 @@ function volumeUI() {
     $controls.volumeButton.toggleClass("icon-volume-up", volume >= 50);
 }
 
+/* Toggle quality*/
+function toggleQuality() {
+    quality = quality === '960' ? '1920' : '960';
+    swapVideo($('.currentmovie').get(0).id);
+}
+
 /* Metadata Loaded -> Set Width/Height/Margins */
 function addControls() {
     /* Attach Webkit Controls */
     if (!controlsCreated) {
-        var fullscreenButton;
+        var fullscreenButton = "";
+        var qualityToggleButton = "";
         controlsCreated = true;
         if (fullscreen) {
             fullscreenButton =
                 '<div id="fullscreen_button" class="icon icon-resize-full" onclick="fullscreen()"></div>';
-        } else {
-            fullscreenButton = "";
         }
+        if ($('.currentmovie').get(0).hasAttribute('data-1920')) {
+            // HQ version available
+            qualityToggleButton =
+                '<div id="quality_toggle" class="quality_' + quality + '" onclick="toggleQuality()">HQ</div>';
+        }
+
         $global.movie.append(
             '<div id="controls">' +
-            '    <div id="play_pause_button" class="icon icon-play" onclick="playpause()"></div>' +
+            '    <div id="play_pause_button" class="icon icon-play" onclick="playPause()"></div>' +
             '    <div id="progress_bar">' +
             '        <div id="time_display">0:00</div>' +
             '        <div id="progress_back">' +
             '            <div id="progress_buffered" style="width: 0;"></div>' +
             '            <div id="progress_elapsed" style="width: 0;"></div>' +
-            '        <input id="progress_indicator" type="range" step="any" value="0" min="0" max="' +
-            $global.video.duration +
-            '" oninput="setTime()" onchange="setTime()"></div></div>' +
+            '            <input id="progress_indicator" type="range" step="any" value="0"' +
+            '                   min="0" max="' + $global.video.duration + '" oninput="setTime()" onchange="setTime()">' +
+            '        </div>' +
+            '    </div>' +
             '    <div id="volume_speaker_button" class="icon icon-volume-up" onclick="mute()"></div>' +
             '    <div id="volume_bar">' +
             '        <div id="volume_back">' +
             '            <input id="volume_indicator" type="range" value="50" min="0" max="100"' +
-            '                   oninput="setVolume()" onchange="setVolume()"></div></div>' +
+            '                   oninput="setVolume()" onchange="setVolume()">' +
+            '        </div>' +
+            '    </div>' +
+            qualityToggleButton +
             fullscreenButton +
             '</div>'
         );
@@ -209,11 +226,11 @@ function addControls() {
             volumeIndicator: $("#volume_indicator"),
         };
         $("#player").attr({
-            onclick: "playpause()",
-            onpause: "playingpaused()",
-            onplay: "playingpaused()",
+            onclick: "playPause()",
+            onpause: "playingPaused()",
+            onplay: "playingPaused()",
             onprogress: "buffering()",
-            onvolumechange: "volumeused()",
+            onvolumechange: "volumeUsed()",
             ontimeupdate: "progress()",
             onended: "pause()"
         });
@@ -242,8 +259,14 @@ function swapVideo(movieid) {
     var videolink;
     controlsCreated = false;
     $global.poster.hide();
+    var currentMovie = $('.currentmovie').get(0);
+    var currentQuality = quality;
+    if (!currentMovie.hasAttribute('data-' + quality)) {
+        // Requested quality not available for the chosen movie, use fallback
+        currentQuality = '960';
+    }
     var camera = movieid.substring(0, 3);
-    var movie_path = quality + "/" + movieid + extension;
+    var movie_path = currentQuality + "/" + movieid + extension;
     if (camera === "D70") {
         videolink = base + "TimeLapse_D700/" + movie_path;
     } else if (camera === "D90") {

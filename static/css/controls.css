@@ -3,7 +3,7 @@
     display: flex;
     position: static !important;
     box-shadow: none !important;
-    cursor: default !important;
+    cursor: default;
     font-size: 14px;
 }
 
@@ -25,6 +25,7 @@
 #play_pause_button {
     display: block;
     margin: 5px 0 0 8px;
+    cursor: pointer;
     width: 15px;
     height: 15px;
     color: #eee;
@@ -36,14 +37,24 @@
     padding: 6px 0 0;
 }
 
-#time_display {
+#time_display,
+#quality_toggle {
     display: block;
     cursor: default;
     width: 35px;
     text-align: center !important;
     text-shadow: #000 1px 1px 1px;
-    color: #d5d5d5;
-    font: normal bold 10px/10px Helvetica, Arial, sans-serif;
+    color: #ddd;
+    font: normal bold 11px/11px Helvetica, Arial, sans-serif;
+}
+
+#quality_toggle {
+    align-self: center;
+    cursor: pointer;
+}
+
+#quality_toggle.quality_960 {
+    color: #bbb;
 }
 
 /* Progress */
@@ -133,13 +144,12 @@
     background: transparent;
 }
 
-/* /Progress */
-
 /* Volume */
 
 #volume_speaker_button {
     display: block;
     margin: 5px 0 0 5px;
+    cursor: pointer;
     width: 15px;
     height: 15px;
     color: #eee;
@@ -209,9 +219,8 @@
 #fullscreen_button {
     display: block;
     margin: 5px 2px 0 5px;
+    cursor: pointer;
     width: 15px;
     height: 15px;
     color: #eee;
 }
-
-/* /Fullscreen */
