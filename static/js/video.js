@@ -44,15 +44,12 @@ $(document).ready(function() {
 
     /* Thumbnail Links */
     $("#thumbnails").on("click", "li", function() {
-        $global.thumbnails.removeClass("currentmovie");
-        $(this).addClass("currentmovie");
         swapVideo(this.id);
         return false;
     });
 
     /* Poster Link */
     $global.poster.click(function() {
-        $('#' + this.dataset.id).addClass("currentmovie");
         swapVideo(this.dataset.id);
         return false;
     });
@@ -84,7 +81,6 @@ $(document).ready(function() {
     /* Load linked video */
     if (window.location.hash) {
         if ($global.thumbnails.filter(window.location.hash).length) {
-            $global.thumbnails.filter(window.location.hash).addClass("currentmovie");
             var hash_value = window.location.hash.replace("#", "");
             swapVideo(hash_value);
         }
@@ -172,24 +168,37 @@ function volumeUI() {
 /* Toggle quality*/
 function toggleQuality() {
     quality = quality === '960' ? '1920' : '960';
-    swapVideo($('.currentmovie').get(0).id);
+    swapVideo($global.current.id);
 }
 
 /* Metadata Loaded -> Set Width/Height/Margins */
 function addControls() {
     /* Attach Webkit Controls */
     if (!controlsCreated) {
-        var fullscreenButton = "";
+        var audioControls = "";
         var qualityToggleButton = "";
+        var fullscreenButton = "";
         controlsCreated = true;
-        if (fullscreen) {
-            fullscreenButton =
-                '<div id="fullscreen_button" class="icon icon-resize-full" onclick="fullscreen()"></div>';
+
+        if ($global.current.hasAttribute('data-audio')) {
+            // Video has an audio track
+            audioControls =
+                '<div id="volume_speaker_button" class="icon icon-volume-up" onclick="mute()"></div>' +
+                '<div id="volume_bar">' +
+                '    <div id="volume_back">' +
+                '        <input id="volume_indicator" type="range" value="50" min="0" max="100"' +
+                '               oninput="setVolume()" onchange="setVolume()">' +
+                '    </div>' +
+                '</div>';
         }
-        if ($('.currentmovie').get(0).hasAttribute('data-1920')) {
+        if ($global.current.hasAttribute('data-1920')) {
             // HQ version available
             qualityToggleButton =
                 '<div id="quality_toggle" class="quality_' + quality + '" onclick="toggleQuality()">HQ</div>';
+        }
+        if (fullscreen) {
+            fullscreenButton =
+                '<div id="fullscreen_button" class="icon icon-resize-full" onclick="fullscreen()"></div>';
         }
 
         $global.movie.append(
@@ -204,13 +213,7 @@ function addControls() {
             '                   min="0" max="' + $global.video.duration + '" oninput="setTime()" onchange="setTime()">' +
             '        </div>' +
             '    </div>' +
-            '    <div id="volume_speaker_button" class="icon icon-volume-up" onclick="mute()"></div>' +
-            '    <div id="volume_bar">' +
-            '        <div id="volume_back">' +
-            '            <input id="volume_indicator" type="range" value="50" min="0" max="100"' +
-            '                   oninput="setVolume()" onchange="setVolume()">' +
-            '        </div>' +
-            '    </div>' +
+            audioControls +
             qualityToggleButton +
             fullscreenButton +
             '</div>'
@@ -257,11 +260,16 @@ function errorStatus() {
 /* Exchange Video Player HTML With New Source */
 function swapVideo(movieid) {
     var videolink;
+
     controlsCreated = false;
     $global.poster.hide();
-    var currentMovie = $('.currentmovie').get(0);
+
+    $global.thumbnails.removeClass("currentmovie");
+    $global.current = $('#' + movieid).get(0);
+    $global.current.classList.add("currentmovie");
+
     var currentQuality = quality;
-    if (!currentMovie.hasAttribute('data-' + quality)) {
+    if (!$global.current.hasAttribute('data-' + quality)) {
         // Requested quality not available for the chosen movie, use fallback
         currentQuality = '960';
     }
