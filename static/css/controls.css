@@ -111,10 +111,6 @@
     outline: none;
 }
 
-#progress_indicator:focus {
-    outline: none;
-}
-
 @each $browser in webkit-slider, moz-range, ms {
 #progress_indicator::-$(browser)-thumb {
     border: none;
@@ -183,7 +179,8 @@
     outline: none;
 }
 
-#volume_indicator::-webkit-slider-thumb {
+@each $browser in webkit-slider, moz-range, ms {
+#volume_indicator::-$(browser)-thumb {
     display: block;
     border: none;
     border-radius: 50%;
@@ -192,6 +189,18 @@
     width: 10px;
     height: 10px;
     -webkit-appearance: none;
+}
+}
+
+@each $browser in webkit-slider-runnable, moz-range, ms {
+#volume_indicator::-$(browser)-track {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    height: 10px;
+    color: transparent;
+}
 }
 
 /* Apperance Sliders */
