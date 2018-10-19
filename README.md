@@ -37,7 +37,7 @@ version and install the requirements:
 
     nvm install
     nvm use
-    yarn install
+    yarn
 
 
 Make website
