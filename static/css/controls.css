@@ -19,8 +19,8 @@
     opacity: 1;
     border-top: 1px solid #444;
     background: linear-gradient(to bottom, #2b2b2b, #050505);
-    height: 24px;
     padding: 0 8px;
+    height: 24px;
 }
 
 #play_pause_button,
@@ -28,8 +28,8 @@
 #step_frame_backward,
 #fullscreen_button {
     display: flex;
-    justify-content: center;
     align-self: center;
+    justify-content: center;
     cursor: pointer;
     width: 16px;
     height: 16px;
