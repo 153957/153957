@@ -110,7 +110,7 @@ function playPause() {
 }
 
 /* Show Progress */
-function progress(e) {
+function progress() {
     var percentDone = $global.video.currentTime / $global.video.duration * 100;
     $controls.progressElapsed.style.width = percentDone + "%";
     $controls.progressIndicator.val($global.video.currentTime);
@@ -123,8 +123,19 @@ function progress(e) {
     }
 }
 
+/* Step one frame */
+function stepFrameFoward() {
+    $global.video.pause();
+    $global.video.currentTime += 1 / $global.current.dataset.fps;
+}
+
+function stepFrameBackward() {
+    $global.video.pause();
+    $global.video.currentTime -= 1 / $global.current.dataset.fps;
+}
+
 /* Show Buffering */
-function buffering(e) {
+function buffering() {
     var maxBuffered = 0.0;
     if ($global.video.buffered.length > 0) {
         maxBuffered = $global.video.buffered.end(0);
@@ -175,15 +186,24 @@ function toggleQuality() {
 function addControls() {
     /* Attach Webkit Controls */
     if (!controlsCreated) {
+        var fowardStepButton = "";
+        var backwardStepButton = "";
         var audioControls = "";
         var qualityToggleButton = "";
         var fullscreenButton = "";
         controlsCreated = true;
 
+        if ($global.current.hasAttribute('data-fps')) {
+            // Video framerate is known
+            fowardStepButton =
+                '<div id="step_frame_forward" class="icon icon-step-forward" onclick="stepFrameFoward()" title="Step frame forward"></div>';
+            backwardStepButton =
+                '<div id="step_frame_backward" class="icon icon-step-backward" onclick="stepFrameBackward()" title="Step frame backward"></div>';
+        }
         if ($global.current.hasAttribute('data-audio')) {
             // Video has an audio track
             audioControls =
-                '<div id="volume_speaker_button" class="icon icon-volume-up" onclick="mute()"></div>' +
+                '<div id="volume_speaker_button" class="icon icon-volume-up" onclick="mute()" title="(Un)mute audio"></div>' +
                 '<div id="volume_bar">' +
                 '    <div id="volume_back">' +
                 '        <input id="volume_indicator" type="range" value="50" min="0" max="100"' +
@@ -194,16 +214,18 @@ function addControls() {
         if ($global.current.hasAttribute('data-1920')) {
             // HQ version available
             qualityToggleButton =
-                '<div id="quality_toggle" class="quality_' + quality + '" onclick="toggleQuality()">HQ</div>';
+                '<div id="quality_toggle" class="quality_' + quality + '" onclick="toggleQuality()" title="Toggle high quality">HQ</div>';
         }
         if (fullscreen) {
             fullscreenButton =
-                '<div id="fullscreen_button" class="icon icon-resize-full" onclick="fullscreen()"></div>';
+                '<div id="fullscreen_button" class="icon icon-resize-full" onclick="fullscreen()" title="Fullscreen"></div>';
         }
 
         $global.movie.append(
             '<div id="controls">' +
-            '    <div id="play_pause_button" class="icon icon-play" onclick="playPause()"></div>' +
+            backwardStepButton +
+            '    <div id="play_pause_button" class="icon icon-play" onclick="playPause()" title="Toggle play/pause"></div>' +
+            fowardStepButton +
             '    <div id="progress_bar">' +
             '        <div id="time_display">0:00</div>' +
             '        <div id="progress_back">' +

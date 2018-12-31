@@ -89,6 +89,18 @@
       "css": "play-circled2",
       "code": 59402,
       "src": "fontawesome"
+    },
+    {
+      "uid": "c47efa0e3e74f6ba4c2562c1258fff1f",
+      "css": "step-forward",
+      "code": 59403,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "12052b30d23a1a70d6b32962d5464cae",
+      "css": "step-backward",
+      "code": 59404,
+      "src": "fontawesome"
     }
   ]
 }

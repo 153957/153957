@@ -20,14 +20,19 @@
     border-top: 1px solid #444;
     background: linear-gradient(to bottom, #2b2b2b, #050505);
     height: 24px;
+    padding: 0 8px;
 }
 
-#play_pause_button {
-    display: block;
-    margin: 5px 0 0 8px;
+#play_pause_button,
+#step_frame_forward,
+#step_frame_backward,
+#fullscreen_button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
     cursor: pointer;
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     color: #eee;
 }
 
@@ -221,15 +226,4 @@
     background-clip: padding-box;
     width: 0;
     height: 10px;
-}
-
-/* Fullscreen */
-
-#fullscreen_button {
-    display: block;
-    margin: 5px 2px 0 5px;
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
-    color: #eee;
 }
