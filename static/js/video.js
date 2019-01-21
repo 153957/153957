@@ -1,7 +1,7 @@
 /* "use strict"; */
 
 /* Global variables */
-var base = "http://arne.delaat.net/"; /* "http://delaat.me/"; */
+var base = "https://arne.delaat.net/"; /* "https://delaat.me/"; */
 var quality = "960";
 var extension = ".mp4";
 
