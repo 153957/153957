@@ -299,6 +299,8 @@ function swapVideo(movieid) {
     var movie_path = currentQuality + "/" + movieid + extension;
     if (camera === "D70") {
         videolink = base + "TimeLapse_D700/" + movie_path;
+    } else if (camera === "D50") {
+        videolink = base + "TimeLapse_D500/" + movie_path;
     } else if (camera === "D90") {
         videolink = base + "TimeLapse_D90/" + movie_path;
     } else if (camera === "D80") {
