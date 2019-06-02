@@ -6,7 +6,7 @@ import shutil
 import subprocess
 import sys
 
-import glue
+import glue.bin
 
 """
 This plugin uses glue to sprite images:
@@ -30,7 +30,7 @@ def checksum():
     hash = hashlib.sha512(open(TEMPLATE_PATH, 'rb').read())
     src_files = glob.glob(os.path.join(SRC_PATH, '*', '*.png'))
     for src_file in src_files:
-        hash.update(open(src_file, 'rb').read())
+        hash.update(src_file.encode('utf-8') + open(src_file, 'rb').read())
     return hash.hexdigest()
 
 
@@ -49,7 +49,10 @@ def preBuild(site):
 
     # Don't run if none of the images nor the template has changed
     if current_checksum == previous_checksum:
+        print('No changes detected to thumbnails')
         return
+    else:
+        print('(Re)building thumbnails')
 
     # Clean old output
     if os.path.isdir(CSS_PATH):
@@ -58,16 +61,17 @@ def preBuild(site):
     # Ensure that this directory exist
     os.mkdir(CSS_PATH)
 
-    glue_command = (
-        'glue --cachebuster --namespace= --sprite-namespace= --retina '
-        '--css-template {css} --project {img_src} --img {img_dest} --css {css_dest}'
-        .format(
-            css=shlex.quote(TEMPLATE_PATH), img_src=shlex.quote(SRC_PATH),
-            img_dest=shlex.quote(IMG_PATH), css_dest=shlex.quote(CSS_PATH)
-        )
-    )
-
-    subprocess.check_call(glue_command, shell=True)
+    glue.bin.main((
+        '',
+        '--cachebuster',
+        '--namespace', '',
+        '--sprite-namespace', '',
+        '--retina',
+        '--css-template', TEMPLATE_PATH,
+        '--project', SRC_PATH,
+        '--img', IMG_PATH,
+        '--css', CSS_PATH,
+    ))
 
     with open(CHECKSUM_PATH, 'w') as checksum_file:
         checksum_file.write(current_checksum)
