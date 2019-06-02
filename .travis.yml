@@ -25,4 +25,4 @@ install:
 script:
   - cactus build
   - yarn run stylelint
-  - html5validator --root .build --show-warnings --ignore 'index_'
+  - html5validator --root .build --show-warnings --ignore 'index_' --also-check-css
