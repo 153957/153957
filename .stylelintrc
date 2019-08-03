@@ -4,6 +4,8 @@
         "stylelint-config-concentric-order"
     ],
     "rules": {
-        "indentation": 4
+        "indentation": 4,
+        "no-descending-specificity": null,
+        "font-family-no-missing-generic-family-keyword": null
     }
 }
