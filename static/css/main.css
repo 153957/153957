@@ -155,13 +155,13 @@ nav {
     height: 100%;
     line-height: 25px;
 
+    &:hover .active {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
     & .active {
         transition: background 0.1s linear;
         background: rgba(0, 0, 0, 1);
-    }
-
-    &:hover .active {
-        background: rgba(0, 0, 0, 0.4);
     }
 
     & ul {
