@@ -306,7 +306,7 @@ function swapVideo(movieid) {
 
     var currentQuality = quality;
     if (!$global.current.hasAttribute('data-' + quality)) {
-        // Requested quality not available for the chosen movie, use fallback
+        // Requested quality not available for the chosen movie, use default fallback
         currentQuality = '960';
     }
     var camera = movieid.substring(0, 3);
@@ -315,6 +315,8 @@ function swapVideo(movieid) {
         videolink = base + "TimeLapse_D700/" + movie_path;
     } else if (camera === "D50") {
         videolink = base + "TimeLapse_D500/" + movie_path;
+    } else if (camera === "D30") {
+        videolink = base + "TimeLapse_D300/" + movie_path;
     } else if (camera === "D90") {
         videolink = base + "TimeLapse_D90/" + movie_path;
     } else if (camera === "D80") {
