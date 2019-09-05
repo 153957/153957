@@ -49,7 +49,7 @@ $(document).ready(function() {
     });
 
     /* Poster Link */
-    $global.poster.click(function() {
+    $global.poster.on("click", function() {
         swapVideo(this.dataset.id);
         return false;
     });
@@ -152,9 +152,9 @@ function setTime() {
 /* Mute */
 function mute() {
     if ($global.video.muted || $global.video.volume === 0 || volume === 0) {
-        $controls.volumeIndicator.val(50).change();
+        $controls.volumeIndicator.val(50).trigger("change");
     } else {
-        $controls.volumeIndicator.val(0).change();
+        $controls.volumeIndicator.val(0).trigger("trigger");
     }
 }
 
@@ -259,7 +259,7 @@ function addControls() {
             ontimeupdate: "progress()",
             onended: "pause()"
         });
-        $controls.volumeIndicator.val(volume).change();
+        $controls.volumeIndicator.val(volume).trigger("change");
     }
 }
 
