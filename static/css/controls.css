@@ -44,19 +44,30 @@
 }
 
 #time_display,
+#frame_display,
 #quality_toggle {
     display: block;
     cursor: default;
-    width: 35px;
     text-align: center !important;
     text-shadow: #000 1px 1px 1px;
     color: #ddd;
     font: normal bold 11px/11px Helvetica, Arial, sans-serif;
+    font-variant-numeric: tabular-nums;
+}
+
+#time_display {
+    min-width: 30px;
+}
+
+#frame_display {
+    margin-right: 3px;
+    width: 15px;
 }
 
 #quality_toggle {
     align-self: center;
     cursor: pointer;
+    width: 35px;
 }
 
 #quality_toggle.quality_960 {

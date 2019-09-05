@@ -114,12 +114,14 @@ function progress() {
     var percentDone = $global.video.currentTime / $global.video.duration * 100;
     $controls.progressElapsed.style.width = percentDone + "%";
     $controls.progressIndicator.val($global.video.currentTime);
-    var seconds = Math.max(Math.floor($global.video.currentTime % 60), 0);
+    // Ensure length of 2 characters (left pad with zero)
+    var frames = ("0" + Math.max(Math.floor($global.video.currentTime % 1 * $global.current.dataset.fps), 0)).slice(-2);
+    var seconds = ("0" + Math.max(Math.floor($global.video.currentTime % 60), 0)).slice(-2);
     var minutes = Math.max(Math.floor($global.video.currentTime / 60), 0);
-    if (seconds < 10) {
-        $controls.timeDisplay.html(minutes + ":0" + seconds);
-    } else {
-        $controls.timeDisplay.html(minutes + ":" + seconds);
+    $controls.timeDisplay.html(minutes + ":" + seconds);
+    $controls.frameDisplay.html(frames);
+    if (progressId && $global.video.paused) {
+        clearInterval(progressId);
     }
 }
 
@@ -228,6 +230,7 @@ function addControls() {
             fowardStepButton +
             '    <div id="progress_bar">' +
             '        <div id="time_display">0:00</div>' +
+            '        <div id="frame_display">00</div>' +
             '        <div id="progress_back">' +
             '            <div id="progress_buffered" style="width: 0;"></div>' +
             '            <div id="progress_elapsed" style="width: 0;"></div>' +
@@ -247,6 +250,7 @@ function addControls() {
             progressElapsed: $("#progress_elapsed").get(0),
             progressBuffered: $("#progress_buffered").get(0),
             timeDisplay: $("#time_display"),
+            frameDisplay: $("#frame_display"),
             volumeButton: $("#volume_speaker_button"),
             volumeIndicator: $("#volume_indicator"),
         };
