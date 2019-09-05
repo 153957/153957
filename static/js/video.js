@@ -8,6 +8,7 @@ var extension = ".mp4";
 var volume = 50;
 var controlsCreated = false;
 var fullscreen = false;
+var progressId;
 
 /* Initiate */
 $(document).ready(function() {
@@ -99,10 +100,19 @@ function pause() {
     $global.video.pause();
 }
 
+/* Play movie and track progress */
+function play() {
+    $global.video.play();
+    if (progressId) {
+        clearInterval(progressId);
+    }
+    progressId = setInterval(progress, 20);
+}
+
 /* Play/Pause button action */
 function playPause() {
     if ($global.video.paused) {
-        $global.video.play();
+        play();
     } else {
         $global.video.pause();
     }
@@ -273,7 +283,7 @@ function hideLoad() {
     if (!controlsCreated) {
         $("#player").attr("controls", "true");
     }
-    $global.video.play();
+    play();
 }
 
 /* Change Status to Error Image */
