@@ -55,15 +55,15 @@
 				var org_title = opts.content;
 			} else {
 				var org_title = org_elem.attr(opts.attribute)
-                    .replace(/(_[0-9])+$/g,"")
-				    .replace(/_/g," ")
-                    .replace(/^[SD]\d/,"Camera: $&")
-                    .replace(/^iPad/,"Camera: iPad")
-                    .replace(/ [0-2][0-9]{5}/,"<br>Date:$&")
-                    .replace("Events","<br>Title: The following events do<br>not occur in real-time")
-                    .replace("Virtual","<br>Title: Virtual")
-                    .replace("CaDansa","<br>Title: CaDansa ")
-                    .replace("Northern","<br>Title: Northern ");
+                    .replace(/(_[0-9])+$/g, "")
+				    .replace(/_/g, " ")
+                    .replace(/^[SD][0-9]/, "Camera: $&")
+                    .replace(/^iPad/, "Camera: iPad")
+                    .replace(/ [0-2][0-9]{5}/, "<br>Date:$&")
+                    .replace("Events", "<br>Title: The following events do<br>not occur in real-time")
+                    .replace("Virtual", "<br>Title: Virtual")
+                    .replace("CaDansa", "<br>Title: CaDansa ")
+                    .replace("Northern", "<br>Title: Northern ");
 			}
 			if(org_title != ""){
 				/*
