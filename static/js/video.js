@@ -121,15 +121,19 @@ function playPause() {
 
 /* Show Progress */
 function progress() {
-    var percentDone = $global.video.currentTime / $global.video.duration * 100;
+    var currentTime = $global.video.currentTime;
+    var percentDone = currentTime / $global.video.duration * 100;
     $controls.progressElapsed.style.width = percentDone + "%";
-    $controls.progressIndicator.val($global.video.currentTime);
+    $controls.progressIndicator.val(currentTime);
     // Ensure length of 2 characters (left pad with zero)
-    var frames = ("0" + Math.max(Math.floor($global.video.currentTime % 1 * $global.current.dataset.fps), 0)).slice(-2);
-    var seconds = ("0" + Math.max(Math.floor($global.video.currentTime % 60), 0)).slice(-2);
-    var minutes = Math.max(Math.floor($global.video.currentTime / 60), 0);
+    var seconds = ("0" + Math.max(Math.floor(currentTime % 60), 0)).slice(-2);
+    var minutes = Math.max(Math.floor(currentTime / 60), 0);
     $controls.timeDisplay.html(minutes + ":" + seconds);
-    $controls.frameDisplay.html(frames);
+    if ($global.current.hasAttribute('data-fps')) {
+        // Only set frame number if fps is known
+        var frames = ("0" + Math.max(Math.floor(currentTime % 1 * $global.current.dataset.fps), 0)).slice(-2);
+        $controls.frameDisplay.html(frames);
+    }
     if (progressId && $global.video.paused) {
         clearInterval(progressId);
     }
@@ -200,6 +204,7 @@ function addControls() {
     if (!controlsCreated) {
         var fowardStepButton = "";
         var backwardStepButton = "";
+        var frameDisplay = "";
         var audioControls = "";
         var qualityToggleButton = "";
         var fullscreenButton = "";
@@ -211,6 +216,8 @@ function addControls() {
                 '<div id="step_frame_forward" class="icon icon-step-forward" onclick="stepFrameFoward()" title="Step frame forward"></div>';
             backwardStepButton =
                 '<div id="step_frame_backward" class="icon icon-step-backward" onclick="stepFrameBackward()" title="Step frame backward"></div>';
+            frameDisplay =
+                '<div id="frame_display">00</div>';
         }
         if ($global.current.hasAttribute('data-audio')) {
             // Video has an audio track
@@ -240,7 +247,7 @@ function addControls() {
             fowardStepButton +
             '    <div id="progress_bar">' +
             '        <div id="time_display">0:00</div>' +
-            '        <div id="frame_display">00</div>' +
+            frameDisplay +
             '        <div id="progress_back">' +
             '            <div id="progress_buffered" style="width: 0;"></div>' +
             '            <div id="progress_elapsed" style="width: 0;"></div>' +
