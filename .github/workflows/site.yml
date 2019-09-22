@@ -16,7 +16,7 @@ jobs:
     - name: Setup node
       uses: actions/setup-node@v1
       with:
-        node-version: lts/dubnium
+        node-version: dubnium
     - name: Install openjdk
       run: |
         sudo apt-get install openjdk-8-jre
