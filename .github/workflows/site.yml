@@ -12,11 +12,11 @@ jobs:
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: '3.7'
     - name: Setup node
       uses: actions/setup-node@v1
       with:
-        node-version: dubnium
+        node-version: '10.x'
     - name: Install openjdk
       run: |
         sudo apt-get install openjdk-8-jre
