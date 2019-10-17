@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+
+  cactus:
+    image: 'python:3.7'
+    restart: unless-stopped
+    volumes:
+      - '.:/base'
+    ports:
+      - '8000:8000'
+    working_dir: '/base'
+    command: 'pip install -r requirements.txt && cactus serve'
+    stdin_open: true
+    tty: true
+
+  frontend:
+    image: 'node:dubnium'
+    restart: unless-stopped
+    volumes:
+    - '.:/base'
+    working_dir: '/base'
+    command: 'npm i  && npm start '
+    stdin_open: true
+    tty: true
