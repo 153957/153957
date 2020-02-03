@@ -1,13 +1,3 @@
-import glob
-import hashlib
-import os
-import shlex
-import shutil
-import subprocess
-import sys
-
-import glue.bin
-
 """
 This plugin uses glue to sprite images:
 http://glue.readthedocs.org/en/latest/quickstart.html
@@ -17,49 +7,63 @@ Install glue::
     pip install glue
 
 """
+import hashlib
+import logging
+import pathlib
+import shutil
 
-BASE_DIR = os.path.join(os.path.dirname(__file__), '..')
-TEMPLATE_PATH = os.path.join(BASE_DIR, 'plugins/thumbnails_template.css')
-SRC_PATH = os.path.join(BASE_DIR, 'static/images_timelapse_src')
-IMG_PATH = os.path.join(BASE_DIR, 'static/images_timelapse/thumbs')
-CSS_PATH = os.path.join(BASE_DIR, 'static/css/thumbs')
-CHECKSUM_PATH = os.path.join(SRC_PATH, '.previous_checksum')
+import glue.bin
+
+from pelican import signals
+
+logger = logging.getLogger(__name__)
+
+SETTINGS_NAME = 'THUMBNAIL_PATHS'
 
 
-def checksum():
-    hash = hashlib.sha512(open(TEMPLATE_PATH, 'rb').read())
-    src_files = glob.glob(os.path.join(SRC_PATH, '*', '*.png'))
+def checksum(settings):
+    """Calculate checksum over files involved in the generation of the sprites
+
+    - css template
+    - source images
+    - source image filenames
+
+    """
+    hash = hashlib.sha512(settings['TEMPLATE'].read_bytes())
+    src_files = settings['SRC'].glob('*/*.png')
     for src_file in src_files:
-        hash.update(src_file.encode('utf-8') + open(src_file, 'rb').read())
+        hash.update(str(src_file).encode('utf-8') + src_file.read_bytes())
     return hash.hexdigest()
 
 
-def preBuild(site):
+def generate_sprites(pelican):
     """Build thumbnail sprites and css
 
     First check if they need to be updated.
     If so, use glue to create the new sprites and css.
 
     """
+    settings = pelican.settings.get(SETTINGS_NAME)
     try:
-        previous_checksum = open(CHECKSUM_PATH).read()
+        previous_checksum = settings['CHECKSUM'].read_text()
     except FileNotFoundError:
         previous_checksum = None
-    current_checksum = checksum()
+    current_checksum = checksum(settings)
 
     # Don't run if none of the images nor the template has changed
     if current_checksum == previous_checksum:
-        print('No changes detected to thumbnails')
+        logger.debug('No changes detected to thumbnails')
         return
     else:
-        print('(Re)building thumbnails')
+        logger.info('(Re)building thumbnails')
 
     # Clean old output
-    if os.path.isdir(CSS_PATH):
-        shutil.rmtree(CSS_PATH)
+    if settings['CSS'].is_dir():
+        logger.debug('Removing old output at %s', settings['CSS'])
+        shutil.rmtree(settings['CSS'])
 
     # Ensure that this directory exist
-    os.mkdir(CSS_PATH)
+    settings['CSS'].mkdir()
 
     glue.bin.main((
         '',
@@ -67,11 +71,14 @@ def preBuild(site):
         '--namespace', '',
         '--sprite-namespace', '',
         '--retina',
-        '--css-template', TEMPLATE_PATH,
-        '--project', SRC_PATH,
-        '--img', IMG_PATH,
-        '--css', CSS_PATH,
+        '--css-template', str(settings['TEMPLATE']),
+        '--project', str(settings['SRC']),
+        '--img', str(settings['IMG']),
+        '--css', str(settings['CSS']),
     ))
 
-    with open(CHECKSUM_PATH, 'w') as checksum_file:
-        checksum_file.write(current_checksum)
+    settings['CHECKSUM'].write_text(current_checksum)
+
+
+def register():
+    signals.finalized.connect(generate_sprites)
