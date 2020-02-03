@@ -3,8 +3,8 @@
 Icon?
 
 # Generated thumbnails
-static/images_timelapse/thumbs/
-static/css/thumbs/
+theme/static/images_timelapse/thumbs/
+theme/static/css/thumbs/
 .previous_checksum
 
 # Pelican
