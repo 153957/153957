@@ -13,7 +13,3 @@ static/css/thumbs/
 # Python
 *.pyc
 __pycache__/
-
-# Node
-node_modules/
-.tmp/
