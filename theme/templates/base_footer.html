@@ -14,9 +14,8 @@
             </div><!-- /container -->
         </div><!-- /wrapper -->
 
-        <script src="{% static '/static/js/vendor/jquery-1.10.2.js' %}"></script>
-        {% block scripts %}
-        {% endblock %}
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/vendor/jquery-3.4.1.min.js"></script>
         {% include 'statcounter.html' %}
+        {{ page.footer|join('\n') }}
     </body>
 </html>

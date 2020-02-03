@@ -2,15 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{% block title %}153957 Photography{% endblock %}</title>
+        <title>153957 Photography : {{ page.title }}</title>
         {% include 'favicon.html' %}
         <meta name="application-name" content="153957 Photography">
-        <meta name="description" content="{% block meta_description %}{% endblock %}">
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static '/static/css/vendor/normalize.css' %}">
-        <link rel="stylesheet" href="{% static '/static/css/icons.css' %}">
-        <link rel="stylesheet" href="{% static '/static/css/main.css' %}">
-        <link rel="stylesheet" href="{% static '/static/css/tipTip.css' %}">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/vendor/normalize.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/icons.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/main.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/tipTip.css">
         <style>
             #pageHeader {
                 background-image: linear-gradient(to bottom,
@@ -18,24 +18,22 @@
                                                   rgba(255, 255, 255, 0.1) 75%,
                                                   rgba(255, 255, 255, 0.9) 95%,
                                                   rgba(255, 255, 255, 1)),
-                                  url('/static/images_banners/{% block banner %}DSC_000166{% endblock %}.jpg');}
-            @media
-            only screen and (-webkit-min-device-pixel-ratio: 2),
-            only screen and (min-resolution: 192dpi),
-            only screen and (min-resolution: 2dppx) {
+                                  url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}.jpg');
+            }
+            @media screen and (-webkit-min-device-pixel-ratio: 2),
+                   screen and (min-resolution: 192dpi),
+                   screen and (min-resolution: 2dppx) {
                 #pageHeader {
                     background-image: linear-gradient(to bottom,
                                                       rgba(255, 255, 255, 0) 70%,
                                                       rgba(255, 255, 255, 0.1) 75%,
                                                       rgba(255, 255, 255, 0.9) 95%,
                                                       rgba(255, 255, 255, 1)),
-                                      url('/static/images_banners/{% block banner2x %}DSC_000166{% endblock %}@2x.jpg');}
+                                      url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}@2x.jpg');
+                }
             }
-            {% block style %}
-            {% endblock %}
         </style>
-        {% block head %}
-        {% endblock %}
+        {{ page.head|join('\n') }}
     </head>
 
     <body>
@@ -44,7 +42,7 @@
             <div id="pageHeader">
                 {% include 'navigation.html' %}
                 <h1>153957 Photography</h1>
-                <h2>{% block page_name %}{% endblock %}</h2>
+                <h2>{{ page.title }}</h2>
             </div><!-- /pageHeader -->
             <div id="container">
                 <div id="contentContainer">
