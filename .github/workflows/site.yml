@@ -25,12 +25,9 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
         pip install html5validator
-    - name: Install Node dependencies
-      run: |
-        npm i
     - name: Build site
       run: |
-        cactus build
+        pelican
     - name: Check html
       run: |
         html5validator --root .build --show-warnings --ignore 'index_' --also-check-css
