@@ -17,12 +17,7 @@ addons:
 install:
   - pip install -r requirements.txt
   - pip install html5validator
-  - nvm install lts/carbon
-  - nvm use lts/carbon
-  - npm install -g yarn
-  - yarn install
 
 script:
-  - cactus build
-  - yarn run stylelint
+  - pelican
   - html5validator --root .build --show-warnings --ignore 'index_' --also-check-css
