@@ -1,23 +1,17 @@
-{% extends "base.html" %}
+---
+title: Time-Lapse Guide
+save_as: timelapse_guide.html
+banner: DSC_084625
+head: 
+    <style>
+      #pageHeader h1 {
+          left: 180px;
+          top: 30px;
+      }
+    </style>
+    <link rel="stylesheet" href="/static/base/css/guide.css" />
+---
 
-{% block page_name %}Time-Lapse Guide{% endblock %}
-{% block title %}{{ block.super }} : Time-Lapse Guide{% endblock %}
-
-{% block banner %}DSC_084625{% endblock %}
-{% block banner2x %}DSC_084625{% endblock %}
-
-{% block style %}
-    #pageHeader h1 {
-        left: 180px;
-        top: 30px;}
-{% endblock %}
-
-{% block head %}
-    <link rel="stylesheet" href="{% static '/static/css/guide.css' %}" />
-{% endblock %}
-
-
-{% block body %}
 <div class="topics">
     <strong>Jump to a topic:</strong><br>
     <ul>
@@ -129,13 +123,13 @@
     </p>
 
     <div class="screenshots">
-        {% include "guide_screenshot.html" with section='require' image='tripod_vft' caption='Camera and umbrella tripods' %}
-        {% include "guide_screenshot.html" with section='require' image='tripod_garden' caption='Tripod' %}
-        {% include "guide_screenshot.html" with section='require' image='superclamp_windowsill' caption='Clamped to windowsill' %}
-        {% include "guide_screenshot.html" with section='require' image='superclamp_fence' caption='Clamped to fence' %}
-        {% include "guide_screenshot.html" with section='require' image='superclamp_guardrail' caption='Clamped to guardrail' %}
-        {% include "guide_screenshot.html" with section='require' image='superclamp_firehydrant' caption='Clamped to sign' %}
-        {% include "guide_screenshot.html" with section='require' image='superclamp_rail' caption='Clamped to rail' %}
+        [% captioned_image section='require' image='tripod_vft' caption='Camera and umbrella tripods' %]
+        [% captioned_image section='require' image='tripod_garden' caption='Tripod' %]
+        [% captioned_image section='require' image='superclamp_windowsill' caption='Clamped to windowsill' %]
+        [% captioned_image section='require' image='superclamp_fence' caption='Clamped to fence' %]
+        [% captioned_image section='require' image='superclamp_guardrail' caption='Clamped to guardrail' %]
+        [% captioned_image section='require' image='superclamp_firehydrant' caption='Clamped to sign' %]
+        [% captioned_image section='require' image='superclamp_rail' caption='Clamped to rail' %]
     </div>
 
     <h4>Composition - a subject</h4>
@@ -235,7 +229,7 @@
     </p>
 
     <div class="screenshots">
-        {% include "guide_screenshot.html" with section='intervalometer' image='sofortbild' caption='Sofortbild' %}
+        [% captioned_image section='intervalometer' image='sofortbild' caption='Sofortbild' %]
     </div>
 
     <h4>Intervalometers</h4>
@@ -267,9 +261,9 @@
     </div>
 
     <div class="screenshots">
-        {% include "guide_screenshot.html" with section='intervalometer' image='nikond500' caption='Nikon D500' %}
-        {% include "guide_screenshot.html" with section='intervalometer' image='nikond3' caption='Nikon D3' %}
-        {% include "guide_screenshot.html" with section='intervalometer' image='aputure' caption='Aputure' %}
+        [% captioned_image section='intervalometer' image='nikond500' caption='Nikon D500' %]
+        [% captioned_image section='intervalometer' image='nikond3' caption='Nikon D3' %]
+        [% captioned_image section='intervalometer' image='aputure' caption='Aputure' %]
     </div>
 
 
@@ -427,14 +421,14 @@
     </ul>
 
     <div class="screenshots">
-        {% include "guide_screenshot.html" with section='aftereffects' image='basicinterface' caption='Basic interface' %}
-        {% include "guide_screenshot.html" with section='aftereffects' image='importmenu' caption='Import' %}
-        {% include "guide_screenshot.html" with section='aftereffects' image='importraw' caption='Import dialog' %}
-        {% include "guide_screenshot.html" with section='aftereffects' image='rawsettings' caption='Raw settings' %}
-        {% include "guide_screenshot.html" with section='aftereffects' image='composition' caption='Composition' %}
-        {% include "guide_screenshot.html" with section='aftereffects' image='timestretch' caption='Time stretch' %}
-        {% include "guide_screenshot.html" with section='aftereffects' image='exportmpeg4' caption='Export' %}
-        {% include "guide_screenshot.html" with section='aftereffects' image='renderqueue' caption='Render queue' %}
+        [% captioned_image section='aftereffects' image='basicinterface' caption='Basic interface' %]
+        [% captioned_image section='aftereffects' image='importmenu' caption='Import' %]
+        [% captioned_image section='aftereffects' image='importraw' caption='Import dialog' %]
+        [% captioned_image section='aftereffects' image='rawsettings' caption='Raw settings' %]
+        [% captioned_image section='aftereffects' image='composition' caption='Composition' %]
+        [% captioned_image section='aftereffects' image='timestretch' caption='Time stretch' %]
+        [% captioned_image section='aftereffects' image='exportmpeg4' caption='Export' %]
+        [% captioned_image section='aftereffects' image='renderqueue' caption='Render queue' %]
     </div>
 
 
@@ -478,12 +472,16 @@
     </p>
 
     <div class="screenshots">
-        <a href="{% static '/static/images_guide/flicker/S60_070728_1_flickering.mov' %}" target="_blank">
-            <img alt="" src="{% static '/static/images_guide/flicker/thumbs/S60_070728_1_flickering.jpg' %}">
+        <a href="/static/base/images_guide/flicker/S60_070728_1_flickering.mov" target="_blank">
+            <img
+                alt="Preview thumbnail of a flickering time-lapse movie"
+                src="/static/base/images_guide/flicker/thumbs/S60_070728_1_flickering.jpg">
             <span class="caption">Before</span>
         </a>
-        <a href="{% static '/static/images_guide/flicker/S60_070728_1_deflickered.mov' %}" target="_blank">
-            <img alt="" src="{% static '/static/images_guide/flicker/thumbs/S60_070728_1_deflickered.jpg' %}">
+        <a href="/static/base/images_guide/flicker/S60_070728_1_deflickered.mov" target="_blank">
+            <img
+                alt="Preview thumbnail of a deflickered time-lapse movie"
+                src="/static/base/images_guide/flicker/thumbs/S60_070728_1_deflickered.jpg">
             <span class="caption">After</span>
         </a>
     </div>
@@ -514,7 +512,7 @@
     </p>
 
     <div class="screenshots">
-        {% include "guide_screenshot.html" with section='advanced' image='aperturemotor' caption='Aperture motor' %}
+        [% captioned_image section='advanced' image='aperturemotor' caption='Aperture motor' %]
     </div>
 
     <hr>
@@ -548,4 +546,3 @@
         and out if you want) to go from one situation to the other, thus simulating motion.
     </p>
 </div>
-{% endblock %}

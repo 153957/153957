@@ -1,37 +1,35 @@
-{% extends "base.html" %}
+---
+title: Time-Lapse
+save_as: timelapse.html
+banner: DSC_085677
+head: 
+    <style>
+        #pageHeader h1 {
+            left: 650px;
+            top: 25px;
+        }
+        /* Temporary fix */
+        #content {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        #slider {
+            padding: 0 9px;
+        }
+    </style>
+    <link rel="stylesheet" href="/static/base/css/tipTip.css" />
+    <link rel="stylesheet" href="/static/base/css/video.css" />
+    <link rel="stylesheet" href="/static/base/css/controls.css" />
+    <link rel="stylesheet" href="/static/base/css/thumbs/D80.css" />
+    <link rel="stylesheet" href="/static/base/css/thumbs/D90.css" />
+    <link rel="stylesheet" href="/static/base/css/thumbs/D500.css" />
+    <link rel="stylesheet" href="/static/base/css/thumbs/D700.css" />
+    <link rel="stylesheet" href="/static/base/css/thumbs/S60.css" />
+footer: 
+    <script src="/static/base/js/vendor/jquery.tipTip.js"></script>
+    <script src="/static/base/js/video.js"></script>
+---
 
-{% block page_name %}Time-Lapse{% endblock %}
-{% block title %}{{ block.super }} : Time-Lapse{% endblock %}
-
-{% block banner %}DSC_085677{% endblock %}
-{% block banner2x %}DSC_085677{% endblock %}
-
-{% block style %}
-    #pageHeader h1 {
-        left: 650px;
-        top: 25px;}
-
-    /* Temporary fix */
-    #content {
-        padding-left: 0;
-        padding-right: 0;}
-
-    #slider {
-        padding: 0 9px;}
-{% endblock %}
-
-{% block head %}
-    <link rel="stylesheet" href="{% static '/static/css/tipTip.css' %}" />
-    <link rel="stylesheet" href="{% static '/static/css/video.css' %}" />
-    <link rel="stylesheet" href="{% static '/static/css/controls.css' %}" />
-    <link rel="stylesheet" href="{% static '/static/css/thumbs/D80.css' %}" />
-    <link rel="stylesheet" href="{% static '/static/css/thumbs/D90.css' %}" />
-    <link rel="stylesheet" href="{% static '/static/css/thumbs/D500.css' %}" />
-    <link rel="stylesheet" href="{% static '/static/css/thumbs/D700.css' %}" />
-    <link rel="stylesheet" href="{% static '/static/css/thumbs/S60.css' %}" />
-{% endblock %}
-
-{% block body %}
 <div id="slider">
     <div id="categories">
         <ul>
@@ -258,12 +256,6 @@
 
 <div id="movie">
     <img id="poster" class="showing" data-id="D700_D90_150317_NorthernLights" alt="Northern Lights"
-         src="{% static '/static/images_timelapse/D700_D90_150317_NorthernLights_poster.jpg' %}" />
+         src="/static/base/images_timelapse/D700_D90_150317_NorthernLights_poster.jpg" />
     <video id="player"></video>
 </div><!--/movie-->
-{% endblock %}
-
-{% block scripts %}
-    <script src="{% static '/static/js/vendor/jquery.tipTip.js' %}"></script>
-    <script src="{% static '/static/js/video.js' %}"></script>
-{% endblock %}
