@@ -1,2 +1,4 @@
-cactus
 glue
+libsass
+Jinja2>=2.10
+pelican[Markdown]

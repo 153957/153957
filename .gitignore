@@ -7,7 +7,7 @@ static/images_timelapse/thumbs/
 static/css/thumbs/
 .previous_checksum
 
-# Cactus
+# Pelican
 .build/
 
 # Python
