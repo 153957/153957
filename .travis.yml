@@ -1,13 +1,6 @@
 language: python
 python:
-  - "3.6"
-
-# Work around boto bug:
-# https://github.com/boto/boto/issues/3717#issuecomment-430894557
-env:
-  - BOTO_CONFIG=/dev/null
-
-sudo: false
+  - "3.7"
 
 addons:
   apt:
