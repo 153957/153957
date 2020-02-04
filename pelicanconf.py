@@ -68,7 +68,7 @@ TAGS_SAVE_AS = False
 INDEX_SAVE_AS = False
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
 # No feeds, no blog!
 FEED_ALL_ATOM = None

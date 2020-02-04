@@ -23,9 +23,11 @@ will become:
     <img src=/images/foo.png>This Is A Test<img>
 """
 import re
-from typing import Match, Dict
+
+from typing import Dict, Match
 
 from jinja2 import Template
+
 from pelican import signals
 from pelican.contents import Content
 
@@ -37,7 +39,7 @@ def expand_shortcodes(text: str, shortcodes: Dict[str, str]) -> str:
         """replace shortocodes with evaluated templates"""
         match = group.groups()[0]
         func, args = match.split(' ', 1)
-        args = re.split('(\w+=)', args)
+        args = re.split(r'(\w+=)', args)
         args = [a.strip("""'" """) for a in args if a]
         kwargs = {args[i].strip('='): args[i + 1] for i in range(0, len(args), 2)}
         try:

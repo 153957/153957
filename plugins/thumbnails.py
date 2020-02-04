@@ -9,7 +9,6 @@ Install glue::
 """
 import hashlib
 import logging
-import pathlib
 import shutil
 
 import glue.bin
