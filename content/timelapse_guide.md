@@ -472,13 +472,13 @@ head:
     </p>
 
     <div class="screenshots">
-        <a href="/static/base/images_guide/flicker/S60_070728_1_flickering.mov" target="_blank">
+        <a href="/static/base/images_guide/flicker/S60_070728_1_flickering.mp4" target="_blank">
             <img
                 alt="Preview thumbnail of a flickering time-lapse movie"
                 src="/static/base/images_guide/flicker/thumbs/S60_070728_1_flickering.jpg">
             <span class="caption">Before</span>
         </a>
-        <a href="/static/base/images_guide/flicker/S60_070728_1_deflickered.mov" target="_blank">
+        <a href="/static/base/images_guide/flicker/S60_070728_1_deflickered.mp4" target="_blank">
             <img
                 alt="Preview thumbnail of a deflickered time-lapse movie"
                 src="/static/base/images_guide/flicker/thumbs/S60_070728_1_deflickered.jpg">
