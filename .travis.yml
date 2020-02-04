@@ -16,8 +16,9 @@ addons:
 
 install:
   - pip install -r requirements.txt
-  - pip install html5validator
+  - pip install -r requirements-dev.txt
 
 script:
+  - flake8
   - pelican
   - html5validator --root .build --show-warnings --ignore 'index_' --also-check-css

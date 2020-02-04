@@ -1,4 +1,4 @@
-name: Build site and check output
+name: Run flake8 on Python code
 
 on: [push]
 
@@ -8,23 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
         python-version: '3.7'
-    - name: Install openjdk
-      run: |
-        sudo apt-get install openjdk-8-jre
     - name: Install Python dependencies
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
         pip install -r requirements-dev.txt
-    - name: Build site
+    - name: Flake8
       run: |
-        pelican
-    - name: Check html
-      run: |
-        html5validator --root .build --show-warnings --ignore 'index_' --also-check-css
+        flake8
 
