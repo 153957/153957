@@ -14,41 +14,18 @@ Installation
 Python
 ------
 
-Create a new virtual env with Python 3.6 and install the requirements:
+Create a new virtual env with Python 3.7 and install the requirements:
 
-    conda create -n website python=3.6 --yes
-    pip install cactus
-    pip install glue
-
-
-Node
-----
-
-Install nvm and yarn:
-
-    brew install nvm yarn
-
-Follow the instructions to update your `.bash_profile`, adding:
-
-    export NVM_DIR="$HOME/.nvm"
-    . "/usr/local/opt/nvm/nvm.sh"
-
-Then install the correct node version, activate the installed node
-version and install the requirements:
-
-    nvm install
-    nvm use
-    yarn
+    conda create -n website python=3.7 --yes
+    pip install -r requirements.txt
 
 
 Make website
 ------------
 
-Open a terminal in this directory and activate the virtual env and node version then run:
+Activate the virtual env and run:
 
-    source activate website
-    nvm use
-    cactus build
+    pelican
 
 The built website should then be in the `.build` directory.
 
@@ -56,11 +33,7 @@ The built website should then be in the `.build` directory.
 Developing
 ----------
 
-Use the following command to locally test the site, with automatic
-builds and browser refresh.
+Use the following command to locally test the site (localhost:8000),
+with automatic rebuilds when making changes:
 
-    source activate website
-    nvm use
-    cactus serve
-
-**Note**: This requires a more recent version of Cactus than v3.3.3.
+    pelican --listen --autoreload
