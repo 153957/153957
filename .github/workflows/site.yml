@@ -1,6 +1,9 @@
 name: Build site and check output
 
-on: [push]
+on:
+  schedule:
+    - cron: '0 6 1,15 * 5'
+  push:
 
 jobs:
   build:
