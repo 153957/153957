@@ -28,5 +28,6 @@ jobs:
       with:
         root: .build/
         css: true
+        log_level: INFO
         extra: --ignore index_
 
