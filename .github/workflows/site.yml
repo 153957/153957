@@ -28,5 +28,5 @@ jobs:
       with:
         root: .build/
         css: true
-        extra: --ignore 'index_'
+        extra: --ignore index_
 
