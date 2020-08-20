@@ -16,19 +16,17 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: '3.7'
-    - name: Install openjdk
-      run: |
-        sudo apt-get update
-        sudo apt-get install openjdk-8-jre
     - name: Install Python dependencies
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
-        pip install -r requirements-dev.txt
     - name: Build site
       run: |
         pelican
     - name: Check html
-      run: |
-        html5validator --root .build --show-warnings --ignore 'index_' --also-check-css
+      uses: Cyb3r-Jak3/html5validator-action@v0.4.2
+      with:
+        root: .build/
+        css: true
+        extra: --ignore 'index_'
 
