@@ -81,6 +81,7 @@ footer:
         <h5>Photography</h5>
 
         <ul>
+            <li><a rel="noreferrer" href="https://www.captureone.com/">Capture One</a></li>
             <li><a rel="noreferrer" href="https://www.apple.com/">Apple Aperture</a></li>
             <li><a rel="noreferrer" href="https://www.lemkesoft.com/">GraphicConverter</a></li>
             <li><a rel="noreferrer" href="https://www.publicspace.net/ABetterFinderRename/">A Better Finder Rename</a></li>
@@ -112,7 +113,6 @@ footer:
         <ul>
             <li><a rel="noreferrer" href="http://www.setvak.cz/timelapse/timelapse.html">Martin Setvak</a></li>
             <li><a rel="noreferrer" href="http://www.timescapes.org/">Timescapes</a></li>
-            <li><a rel="noreferrer" href="http://www.sciencephotography.com/how2do2.shtml">An Introduction to Time-lapse Photography</a></li>
             <li><a rel="noreferrer" href="https://www.zardec.net.au/keith/lapse2.htm">A Turorial about Time-lapse Photography</a></li>
         </ul>
 
