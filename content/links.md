@@ -111,7 +111,7 @@ footer:
         <h5>Time-lapse</h5>
 
         <ul>
-            <li><a rel="noreferrer" href="http://www.setvak.cz/timelapse/timelapse.html">Martin Setvak</a></li>
+            <li><a rel="noreferrer" href="https://www.setvak.cz/timelapse/timelapse.html">Martin Setvak</a></li>
             <li><a rel="noreferrer" href="http://www.timescapes.org/">Timescapes</a></li>
             <li><a rel="noreferrer" href="https://www.zardec.net.au/keith/lapse2.htm">A Turorial about Time-lapse Photography</a></li>
         </ul>
