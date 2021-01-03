@@ -1,14 +1,12 @@
 version: '3.7'
-services:
 
-  pelican:
+services:
+  pelican-build:
     image: 'python:3.9'
-    restart: unless-stopped
+    restart: 'no'
     volumes:
       - '.:/base'
-    ports:
-      - '8000:8000'
     working_dir: '/base'
-    command: 'make serve'
+    command: 'make build'
     stdin_open: true
     tty: true
