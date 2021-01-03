@@ -28,20 +28,11 @@ OUTPUT_CSS = OUTPUT_PATH / THEME_STATIC_DIR / 'css'
 PLUGINS = [
     'plugins.libsass',
     'plugins.shortcodes',
-    'plugins.thumbnails',
 ]
 
 LIBSASS_PATHS = [
     (OUTPUT_CSS, OUTPUT_CSS),
 ]
-
-THUMBNAIL_PATHS = {
-    'CHECKSUM': PROJECT_DIR / '.previous_checksum',
-    'TEMPLATE': PROJECT_DIR / 'plugins' / 'thumbnails_template.css',
-    'SRC': THEME / 'static' / 'images_timelapse_src',
-    'IMG': THEME / 'static' / 'images_timelapse' / 'thumbs',
-    'CSS': THEME / 'static' / 'css' / 'thumbs',
-}
 
 SHORTCODES = {
     # Link to image via a thumbnail with a caption
@@ -54,6 +45,17 @@ SHORTCODES = {
             >
             <span class="caption">{{{{ caption }}}}</span>
         </a>
+    """,
+    # Add a thumbnail for a time-lapse movie
+    'thumbnail': f"""
+        <img
+            id="{{{{ id }}}}"
+            class="thumbnail"
+            alt=""
+            data-fps="{{{{ fps }}}}"
+            {{{{ 'data-' + data.replace(' ', 'data-') if data else '' }}}}
+            src="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse_src/{{{{ id.partition('_')[0] }}}}/{{{{ id }}}}.png"
+        />
     """,
 }
 

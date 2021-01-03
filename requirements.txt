@@ -1,4 +1,3 @@
-glue>=0.13
 libsass
 Jinja2>=2.10
 pelican[Markdown]

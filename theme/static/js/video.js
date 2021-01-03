@@ -14,7 +14,7 @@ var progressId;
 $(document).ready(function() {
     /* Global Selectors */
     window.$global = {
-        thumbnails: $("#thumbnails").find("li"),
+        thumbnails: $("#thumbnails").find(".thumbnail"),
         movie: $("#movie"),
         poster: $("#poster"),
         status: $("#status"),
@@ -28,10 +28,11 @@ $(document).ready(function() {
             $("#" + thumbs).get(0) !==
             $("#thumbnails").find(".currentslide").get(0)
         ) {
-            $("#thumbnails .currentslide").hide().removeClass("currentslide");
+            $("#thumbnails .currentslide").removeClass("currentslide currentreveal");
             $("#categories .currentcat").removeClass("currentcat");
-            // First show to set display to block, then add the class to transition the opacity.
-            $("#" + thumbs).show(0, function() {$(this).addClass("currentslide")});
+            // First make the item displayed, then add the class to transition the opacity.
+            $("#" + thumbs).addClass("currentslide")
+            setTimeout(function() {$("#" + thumbs).addClass("currentreveal")}, 0);
             $(this).addClass("currentcat");
         }
     });
@@ -44,7 +45,7 @@ $(document).ready(function() {
     });
 
     /* Thumbnail Links */
-    $("#thumbnails").on("click", "li", function() {
+    $("#thumbnails").on("click", ".thumbnail", function() {
         swapVideo(this.id);
         return false;
     });

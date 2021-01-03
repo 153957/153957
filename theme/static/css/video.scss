@@ -10,11 +10,6 @@
     flex-shrink: 0;
     width: 180px;
     vertical-align: top;
-
-    & ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
 }
 
 .category {
@@ -42,7 +37,7 @@
     flex-grow: 1;
     overflow: hidden;
 
-    & li {
+    .thumbnail {
         display: inline-block;
         position: relative;
         border-radius: 2px;
@@ -50,10 +45,11 @@
         cursor: pointer;
         width: 88px;
         height: 58px;
+        margin: 1px;
     }
 
-    & .currentmovie::before,
-    & li:hover::before {
+    .currentmovie::before,
+    .thumbnail:hover::before {
         display: inline-block;
         position: absolute;
         top: 25%;
@@ -69,7 +65,7 @@
         content: '\e80a';
     }
 
-    & .currentmovie::before {
+    .currentmovie::before {
         color: rgba(255, 255, 255, 0.9);
     }
 }
@@ -77,24 +73,18 @@
 .slide {
     display: none;
     opacity: 0;
+    transition: opacity 0.7s;
     margin: 0 auto;
     padding: 4px 0;
     width: 97%;
 
     &.currentslide {
-        display: block;
-        transition: opacity 1s;
-        opacity: 1;
-    }
-
-    & ul {
         display: flex;
         flex-wrap: wrap;
+    }
 
-        & li {
-            margin: 1px;
-            list-style: none;
-        }
+    &.currentreveal {
+        opacity: 1;
     }
 }
 
