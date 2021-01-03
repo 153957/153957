@@ -24,33 +24,30 @@ will become:
 """
 import re
 
-from typing import Dict, Match
-
 from jinja2 import Template
 
 from pelican import signals
-from pelican.contents import Content
 
 SETTINGS_NAME = 'SHORTCODES'
 
 
-def expand_shortcodes(text: str, shortcodes: Dict[str, str]) -> str:
-    def repl(group: Match):
-        """replace shortocodes with evaluated templates"""
+def expand_shortcodes(text, shortcodes) -> str:
+    def repl(group):
+        """replace shortcodes with evaluated templates"""
         match = group.groups()[0]
-        func, args = match.split(' ', 1)
-        args = re.split(r'(\w+=)', args)
-        args = [a.strip("""'" """) for a in args if a]
-        kwargs = {args[i].strip('='): args[i + 1] for i in range(0, len(args), 2)}
+        code, _, args = match.partition(' ')
+        args = re.split(r'(\w+)=', args)
+        args = [a.strip('\'" ') for a in args if a]
+        kwargs = {args[i]: args[i + 1] for i in range(0, len(args), 2)}
         try:
-            return Template(shortcodes[func]).render(**kwargs)
+            return Template(shortcodes[code]).render(**kwargs)
         except KeyError:
-            raise KeyError('shortcode {} not found'.format(func))
+            raise KeyError(f'shortcode "{code}" not found')
 
-    return re.sub(r'\[% (.+?) %\]', repl, text)
+    return re.sub(r'\[% ([\w\W]+?) %\]', repl, text, flags=re.MULTILINE)
 
 
-def content_object_init(instance: Content):
+def content_object_init(instance):
     shortcodes = instance.settings.get(SETTINGS_NAME)
     if not shortcodes or not instance._content:
         return
