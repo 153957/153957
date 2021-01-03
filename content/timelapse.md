@@ -2,6 +2,7 @@
 title: Time-Lapse
 save_as: timelapse.html
 banner: DSC_085677
+order: 2
 head: 
     <style>
         #pageHeader h1 {

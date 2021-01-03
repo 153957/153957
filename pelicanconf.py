@@ -21,6 +21,7 @@ DEFAULT_LANG = 'en'
 SLUGIFY_SOURCE = 'basename'
 PAGE_SAVE_AS = '{slug}.html'
 PAGE_URL = '{slug}.html'
+PAGE_ORDER_BY = 'order'
 
 OUTPUT_CSS = OUTPUT_PATH / THEME_STATIC_DIR / 'css'
 

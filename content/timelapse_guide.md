@@ -2,6 +2,7 @@
 title: Time-Lapse Guide
 save_as: timelapse_guide.html
 banner: DSC_084625
+order: 3
 head: 
     <style>
       #pageHeader h1 {

@@ -2,6 +2,8 @@
 title: Index
 save_as: index.html
 banner: DSC_000166
+status: hidden
+order: x
 head: 
     <style>
         #pageHeader h1 {
