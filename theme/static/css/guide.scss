@@ -1,43 +1,30 @@
-.topics li {
-    list-style: none;
-
-    &::before {
-        content: "» ";
-    }
-}
-
-.guide_content {
-    & h3 {
+#content {
+    h3 {
         margin-top: 24px;
     }
 
-    & h4 {
+    h4 {
         margin-top: 20px;
     }
 
-    & p {
+    p {
         line-height: 26px;
     }
 
-    & img {
+    img {
         border-radius: 2px;
     }
 
-    & li {
-        margin: 1px;
-        list-style: none;
-
-        &::before {
-            content: "» ";
-        }
+    li {
+        list-style-position: inside;
     }
 
-    & .screenshots {
+    .screenshots {
         display: flex;
         flex-wrap: wrap;
         margin: 10px 0;
 
-        & a {
+        a {
             display: flex;
             flex-direction: column;
             margin-right: 3px;
