@@ -29,18 +29,18 @@ footer:
 <div id="slider">
     <div id="categories">
         <ul>
-             <li class="category currentcat" id="Reels">Reels
-        </li><li class="category" id="Archery">Archery
-        </li><li class="category" id="Astronomy">Astronomy
-        </li><li class="category" id="Balfolk">Balfolk
-        </li><li class="category" id="Clouds">Clouds
-        </li><li class="category" id="Fire">Fire
-        </li><li class="category" id="Flowers">Flowers
-        </li><li class="category" id="Frost">Frost
-        </li><li class="category" id="Other">Other
-        </li><li class="category" id="Sun">Sun
-        </li><li class="category" id="Traffic">Traffic
-        </li></ul>
+            <li class="category currentcat" id="Reels">Reels
+            <li class="category" id="Archery">Archery
+            <li class="category" id="Astronomy">Astronomy
+            <li class="category" id="Balfolk">Balfolk
+            <li class="category" id="Clouds">Clouds
+            <li class="category" id="Fire">Fire
+            <li class="category" id="Flowers">Flowers
+            <li class="category" id="Frost">Frost
+            <li class="category" id="Other">Other
+            <li class="category" id="Sun">Sun
+            <li class="category" id="Traffic">Traffic
+        </ul>
     </div>
 
     <div id="thumbnails">
