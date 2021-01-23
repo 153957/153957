@@ -34,96 +34,76 @@ footer:
     </script>
 ---
 
-<div class='columns'>
-    <div>
-        <h4>Source code</h4>
+<div class='columns' markdown>
+<div markdown>
+#### Source code
 
-        <ul>
-            <li><a id="mail_contact">arne aa delaat dd net</a>
-            <li><a rel="noreferrer" href="https://www.github.com/153957/153957/">Website</a>
-            <li><a rel="noreferrer" href="https://www.github.com/153957/153957-theme/">Photo album theme</a>
-            <li><a rel="noreferrer" href="https://www.github.com/153957/time-lapse/">Time-lapse compile</a>
-        </ul>
+- <a id="mail_contact">arne aa delaat dd net</a>
+- <a rel="noreferrer" href="https://www.github.com/153957/153957/">Website</a>
+- <a rel="noreferrer" href="https://www.github.com/153957/153957-theme/">Photo album theme</a>
+- <a rel="noreferrer" href="https://www.github.com/153957/time-lapse/">Time-lapse compile</a>
 
-        <h4>Websites created</h4>
+#### Websites created
 
-        <ul>
-            <li><a rel="noreferrer" href="https://www.github.com/153957/shs-geronimo/">SHS Geronimo</a>
-            <li><a rel="noreferrer" href="https://www.github.com/153957/spin.off/">spin.off</a>
-            <li><a rel="noreferrer" href="https://www.github.com/153957/vrouwenkoor-unlimited/">Vrouwenkoor UNLIMITED</a>
-            <li><a rel="noreferrer" href="https://experimentele-flats.nl">Experimentele Flats</a>
-            <li><a rel="noreferrer" href="http://www.leeters.net">Hugo Leeters Schilderwerken</a>
-        </ul>
+- <a rel="noreferrer" href="https://www.github.com/153957/shs-geronimo/">SHS Geronimo</a>
+- <a rel="noreferrer" href="https://www.github.com/153957/spin.off/">spin.off</a>
+- <a rel="noreferrer" href="https://www.github.com/153957/vrouwenkoor-unlimited/">Vrouwenkoor UNLIMITED</a>
+- <a rel="noreferrer" href="https://experimentele-flats.nl">Experimentele Flats</a>
+- <a rel="noreferrer" href="http://www.leeters.net">Hugo Leeters Schilderwerken</a>
 
-        <h4>Events photographed</h4>
+#### Events photographed
 
-        <ul>
-            <li><a rel="noreferrer" href="https://www.balfolk.nl/">Bal Folk!</a>
-            <li><a rel="noreferrer" href="https://www.castlefest.nl/">Castlefest</a> (Vana-events)
-            <li><a rel="noreferrer" href="https://www.keltfest.nl/">Keltfest</a> (Vana-events)
-            <li><a rel="noreferrer" href="https://www.elfia.com/">Elfia (Elf Fantasy Fair)</a>
-            <li><a rel="noreferrer" href="https://www.archeon.nl/">MidWinter Fair</a>
-        </ul>
-    </div>
+- <a rel="noreferrer" href="https://www.balfolk.nl/">Bal Folk!</a>
+- <a rel="noreferrer" href="https://www.castlefest.nl/">Castlefest</a> (Vana-events)
+- <a rel="noreferrer" href="https://www.keltfest.nl/">Keltfest</a> (Vana-events)
+- <a rel="noreferrer" href="https://www.elfia.com/">Elfia (Elf Fantasy Fair)</a>
+- <a rel="noreferrer" href="https://www.archeon.nl/">MidWinter Fair</a>
+</div>
+<div markdown>
+#### Camera hardware
 
-    <div>
-        <h4>Camera hardware</h4>
+- <a rel="noreferrer" href="https://imaging.nikon.com">Nikon DSLR</a>
+- <a rel="noreferrer" href="https://www.canon.com/">Canon Powershot</a>
+- <a rel="noreferrer" href="https://www.sigmaphoto.com/">Sigma</a>
+- <a rel="noreferrer" href="https://reallyrightstuff.com/">Really Right Stuff</a>
+- <a rel="noreferrer" href="https://gitzo.com/">Gitzo</a>
 
-        <ul>
-            <li><a rel="noreferrer" href="https://imaging.nikon.com">Nikon DSLR</a>
-            <li><a rel="noreferrer" href="https://www.canon.com/">Canon Powershot</a>
-            <li><a rel="noreferrer" href="https://www.sigmaphoto.com/">Sigma</a>
-            <li><a rel="noreferrer" href="https://reallyrightstuff.com/">Really Right Stuff</a>
-            <li><a rel="noreferrer" href="https://gitzo.com/">Gitzo</a>
-        </ul>
+#### Software used
 
-        <h4>Software used</h4>
+##### Photography
 
-        <h5>Photography</h5>
+- <a rel="noreferrer" href="https://www.captureone.com/">Capture One</a>
+- <a rel="noreferrer" href="https://www.apple.com/">Apple Aperture</a>
+- <a rel="noreferrer" href="https://www.lemkesoft.com/">GraphicConverter</a>
+- <a rel="noreferrer" href="https://www.publicspace.net/ABetterFinderRename/">A Better Finder Rename</a>
 
-        <ul>
-            <li><a rel="noreferrer" href="https://www.captureone.com/">Capture One</a>
-            <li><a rel="noreferrer" href="https://www.apple.com/">Apple Aperture</a>
-            <li><a rel="noreferrer" href="https://www.lemkesoft.com/">GraphicConverter</a>
-            <li><a rel="noreferrer" href="https://www.publicspace.net/ABetterFinderRename/">A Better Finder Rename</a>
-        </ul>
+##### Time-lapse
 
-        <h5>Time-lapse</h5>
+- <a rel="noreferrer" href="https://github.com/kkroening/ffmpeg-python/">ffmpeg-python</a>
+- <a rel="noreferrer" href="https://www.ffmpeg.org/">FFmpeg</a>
 
-        <ul>
-            <li><a rel="noreferrer" href="https://github.com/kkroening/ffmpeg-python/">ffmpeg-python</a>
-            <li><a rel="noreferrer" href="https://www.ffmpeg.org/">FFmpeg</a>
-        </ul>
+##### Website
 
-        <h5>Website</h5>
+- <a rel="noreferrer" href="https://www.github.com/">GitHub</a>
+- <a rel="noreferrer" href="https://www.barebones.com/products/bbedit/">BBEdit</a>
+- <a rel="noreferrer" href="https://github.com/getpelican/pelican">Pelican</a>
+- <a rel="noreferrer" href="https://sigal.saimon.org">Sigal</a>
+- <a rel="noreferrer" href="https://github.com/worseisbetter/galleria">Galleria</a>
+</div>
+<div markdown>
+#### Interesting sites
 
-        <ul>
-            <li><a rel="noreferrer" href="https://www.github.com/">GitHub</a>
-            <li><a rel="noreferrer" href="https://www.barebones.com/products/bbedit/">BBEdit</a>
-            <li><a rel="noreferrer" href="https://github.com/getpelican/pelican">Pelican</a>
-            <li><a rel="noreferrer" href="https://sigal.saimon.org">Sigal</a>
-            <li><a rel="noreferrer" href="https://github.com/worseisbetter/galleria">Galleria</a>
-        </ul>
-    </div>
+##### Time-lapse
 
-    <div>
-        <h4>Interesting sites</h4>
+- <a rel="noreferrer" href="https://www.setvak.cz/timelapse/timelapse.html">Martin Setvak</a>
+- <a rel="noreferrer" href="http://www.timescapes.org/">Timescapes</a>
+- <a rel="noreferrer" href="https://www.zardec.net.au/keith/lapse2.htm">A Turorial about Time-lapse Photography</a>
 
-        <h5>Time-lapse</h5>
+##### Photography
 
-        <ul>
-            <li><a rel="noreferrer" href="https://www.setvak.cz/timelapse/timelapse.html">Martin Setvak</a>
-            <li><a rel="noreferrer" href="http://www.timescapes.org/">Timescapes</a>
-            <li><a rel="noreferrer" href="https://www.zardec.net.au/keith/lapse2.htm">A Turorial about Time-lapse Photography</a>
-        </ul>
-
-        <h5>Photography</h5>
-
-        <ul>
-            <li><a rel="noreferrer" href="https://www.wenversteeg.nl">Wen Versteeg</a>
-            <li><a rel="noreferrer" href="https://rizomorf.nl">Merel Dames</a>
-            <li><a rel="noreferrer" href="https://www.simplemoment.com/">Jean-Sébastien Monzani</a>
-            <li><a rel="noreferrer" href="https://www.pbase.com/ole_thorsen/">Ole Thorsen</a>
-        </ul>
-    </div>
+- <a rel="noreferrer" href="https://www.wenversteeg.nl">Wen Versteeg</a>
+- <a rel="noreferrer" href="https://rizomorf.nl">Merel Dames</a>
+- <a rel="noreferrer" href="https://www.simplemoment.com/">Jean-Sébastien Monzani</a>
+- <a rel="noreferrer" href="https://www.pbase.com/ole_thorsen/">Ole Thorsen</a>
+</div>
 </div>

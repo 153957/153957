@@ -22,7 +22,7 @@ head:
 - [Preventing flicker](#flicker)
 - [Motion](#motion)
 
-<hr>
+---
 
 <h3 id="basics">Basics of Time-lapse</h3>
 
@@ -60,7 +60,7 @@ anything, just let your imagination take control.
 To get a better idea of what time-lapse is; view my <a href="{filename}/timelapse.md">
 Time-lapse Movies</a>.
 
-<hr>
+---
 
 <h3 id="requirements">Requirements</h3>
 
@@ -119,7 +119,7 @@ Example subjects:<br>
 *Moving clouds, blooming or withering flowers, melting ice, clockwork, people, animals, traffic,
 sunrise, sunset, and stars.*
 
-<hr>
+---
 
 <h3 id="taking">Taking the pictures</h3>
 
@@ -220,7 +220,7 @@ for time-lapse shooting, here are some examples:
     [% captioned_image section='intervalometer' image='aputure' caption='Aputure' %]
 </div>
 
-<hr>
+---
 
 <h3 id="making">How to make movies out of pictures</h3>
 
@@ -308,7 +308,7 @@ steered from Python using ffmpeg-python and my own time-lapse layer over that.
 Scripts for creating the movies are stored here:
 <a href="https://github.com/153957/time-lapse/" rel="noreferrer">Time-Lapse assembling</a>.
 
-<hr>
+---
 
 <h3 id="flicker">Preventing flicker</h3>
 
@@ -356,7 +356,7 @@ include a deflickering option.
     </a>
 </div>
 
-<hr>
+---
 
 #### Ramping Exposure
 
@@ -379,7 +379,7 @@ camera, or even to use combinations of changing the aperture, shutter speed, and
     [% captioned_image section='advanced' image='aperturemotor' caption='Aperture motor' %]
 </div>
 
-<hr>
+---
 
 <h3 id="motion">Motion</h3>
 
