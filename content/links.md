@@ -4,6 +4,15 @@ banner: DSC_038794
 order: 4
 head:  
     <style>
+        #content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        #content > div {
+            flex-grow: 1;
+            min-width: 220px;
+        }
         #pageHeader h1 {
             top: 80px;
             left: 390px;
@@ -19,23 +28,27 @@ head:
     </style>
 footer:  
     <script>
-         var _bla0 = "mai";
-         var _bla1 = "lto:";
-         var _bla2 = "ar";
-         var _bla3 = "ne@";
-         var _bla4 = "del";
-         var _bla5 = "aat";
-         var _bla6 = ".ne";
-         var _bla7 = "t";
-         var _bla = _bla0 + _bla1 + _bla2 + _bla3 + _bla4 + _bla5 + _bla6 + _bla7;
-         var _blaa = _bla2 + _bla3 + _bla4 + _bla5 + _bla6 + _bla7;
-         document.getElementById('mail_contact').href = _bla;
-         document.getElementById('mail_contact').innerHTML = _blaa;
+        setTimeout(
+            function() {
+                 var _bla0 = "mai";
+                 var _bla1 = "lto:";
+                 var _bla2 = "ar";
+                 var _bla3 = "ne@";
+                 var _bla4 = "delaat";
+                 var _bla6 = ".ne";
+                 var _bla7 = "t";
+                 var _bla = _bla0 + _bla1 + _bla2 + _bla3 + _bla4 + _bla6 + _bla7;
+                 var _blaa = _bla2 + _bla3 + _bla4 + _bla6 + _bla7;
+                 document.getElementById('mail_contact').href = _bla;
+                 document.getElementById('mail_contact').innerHTML = _blaa;
+            },
+            700
+        );
     </script>
 ---
 
-<div class='columns' markdown>
 <div markdown>
+
 #### Source code
 
 - <a id="mail_contact">arne aa delaat dd net</a>
@@ -58,8 +71,10 @@ footer:
 - <a rel="noreferrer" href="https://www.keltfest.nl/">Keltfest</a> (Vana-events)
 - <a rel="noreferrer" href="https://www.elfia.com/">Elfia (Elf Fantasy Fair)</a>
 - <a rel="noreferrer" href="https://www.archeon.nl/">MidWinter Fair</a>
+
 </div>
 <div markdown>
+
 #### Camera hardware
 
 - <a rel="noreferrer" href="https://imaging.nikon.com">Nikon DSLR</a>
@@ -89,8 +104,10 @@ footer:
 - <a rel="noreferrer" href="https://github.com/getpelican/pelican">Pelican</a>
 - <a rel="noreferrer" href="https://sigal.saimon.org">Sigal</a>
 - <a rel="noreferrer" href="https://github.com/worseisbetter/galleria">Galleria</a>
+
 </div>
 <div markdown>
+
 #### Interesting sites
 
 ##### Time-lapse
@@ -105,5 +122,6 @@ footer:
 - <a rel="noreferrer" href="https://rizomorf.nl">Merel Dames</a>
 - <a rel="noreferrer" href="https://www.simplemoment.com/">Jean-Sébastien Monzani</a>
 - <a rel="noreferrer" href="https://www.pbase.com/ole_thorsen/">Ole Thorsen</a>
+
 </div>
-</div>
+
