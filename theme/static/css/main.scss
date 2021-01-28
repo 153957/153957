@@ -39,14 +39,6 @@ body {
     height: 250px;
 }
 
-img {
-    border: 0;
-}
-
-a img {
-    border: 0;
-}
-
 p {
     margin-top: 5px;
     color: #222;
@@ -133,7 +125,7 @@ a:hover {
     height: 170px;
     overflow: hidden;
 
-    & h1 {
+    h1 {
         position: absolute;
         top: 100px;
         left: 425px;
@@ -146,7 +138,7 @@ a:hover {
         font-weight: normal;
     }
 
-    & h2 {
+    h2 {
         display: none;
         position: absolute;
         top: 158px;
@@ -176,12 +168,12 @@ nav {
         background: rgba(0, 0, 0, 0.4);
     }
 
-    & .active {
+    .active {
         transition: background 0.1s linear;
         background: rgba(0, 0, 0, 1);
     }
 
-    & ul {
+    ul {
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -189,12 +181,12 @@ nav {
         list-style: none;
     }
 
-    & ul #current {
+    ul #current {
         background: #416e83;
         color: #eee;
     }
 
-    & a {
+    a {
         display: block;
         transition: background 0.1s linear;
         padding: 0 20px 0 12px;
@@ -248,19 +240,19 @@ hr {
     text-align: center;
     color: #6b6b6b;
 
-    & p {
+    p {
         margin: 0;
         padding: 0;
         font-size: 11px;
     }
 
-    & a:link,
-    & a:visited {
+    a:link,
+    a:visited {
         color: #686868;
     }
 
-    & a:hover,
-    & a:active {
+    a:hover,
+    a:active {
         color: #979797;
     }
 }
@@ -270,7 +262,7 @@ hr {
     flex-direction: row;
     flex-wrap: wrap;
 
-    & > div {
+    > div {
         flex-grow: 1;
         min-width: 220px;
     }
