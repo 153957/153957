@@ -32,7 +32,7 @@ Time-lapse: Denoting the photographic technique of taking a sequence of frames a
 set intervals to record changes that take place slowly over time. When the frames
 are shown at normal speed, or in quick succession, the action seems much faster.
 
-So, what exactly does this mean and how do we achieve this <em>Time-lapse</em>
+So, what exactly does this mean and how do we achieve this *Time-lapse*
 effect? You'll need a camera and a subject that changes over time, like a sunset
 or flowers. Then simply need to take photos at a different speed then at which you
 will play them back.
@@ -57,8 +57,8 @@ advised to choose the playback speed in such a way that the motion of the movie 
 smooth, not to fast nor to slow. You can make a time-lapse movie from just about
 anything, just let your imagination take control.
 
-To get a better idea of what time-lapse is; view my <a href="{filename}/timelapse.md">
-Time-lapse Movies</a>.
+To get a better idea of what time-lapse is; view my
+[Time-lapse Movies]({filename}/timelapse.md).
 
 ---
 
@@ -197,20 +197,20 @@ for time-lapse shooting, here are some examples:
 <div class="columns">
     <div>
         <strong>macOS:</strong><br>
-        <a href="https://boinx.com/istopmotion/" rel="noreferrer">iStop Motion</a><br>
-        <a href="https://www.cloudmakers.eu/astrodslr/" rel="noreferrer">AstroDSLR</a><br>
-        <a href="https://support.apple.com/kb/PH17899" rel="noreferrer">Image Capture</a><br>
+        <a href="https://boinx.com/istopmotion/">iStop Motion</a><br>
+        <a href="https://www.cloudmakers.eu/astrodslr/">AstroDSLR</a><br>
+        <a href="https://support.apple.com/kb/PH17899">Image Capture</a><br>
     </div>
     <div>
         <strong>Windows:</strong><br>
-        <a href="http://digicamcontrol.com" rel="noreferrer">digiCamControl</a> (Nikon, free)<br>
-        <a href="http://www.granitebaysoftware.com/Products/ProductGBTEOS.aspx" rel="noreferrer">GBTimeLapse</a> (Canon)<br>
+        <a href="http://digicamcontrol.com">digiCamControl</a> (Nikon, free)<br>
+        <a href="http://www.granitebaysoftware.com/Products/ProductGBTEOS.aspx">GBTimeLapse</a> (Canon)<br>
     </div>
     <div>
         <strong>Other intervalometers:</strong><br>
-        <a href="https://www.timelapseplus.com" rel="noreferrer">Timelapse+</a><br>
-        <a href="https://lrtimelapse.com/lrtpt/" rel="noreferrer">LRT PRO Timer</a><br>
-        <a href="https://chdk.wikia.com/wiki/CHDK" rel="noreferrer">CHDK firmware</a> (Canon)
+        <a href="https://www.timelapseplus.com">Timelapse+</a><br>
+        <a href="https://lrtimelapse.com/lrtpt/">LRT PRO Timer</a><br>
+        <a href="https://chdk.wikia.com/wiki/CHDK">CHDK firmware</a> (Canon)
     </div>
 </div>
 
@@ -251,49 +251,49 @@ with your needs.
         <th style="text-align: center; width: 60px;">Free?</th>
     </tr>
     <tr>
-        <td><a href="https://www.adobe.com/products/catalog.html?filters=cd_252Fvideo-audio" rel="noreferrer">Adobe Video Software</a></td>
+        <td><a href="https://www.adobe.com/products/catalog.html?filters=cd_252Fvideo-audio">Adobe Video Software</a></td>
         <td class="select"></td>
         <td class="select"></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td><a href="https://www.apple.com/final-cut-pro/" rel="noreferrer">Final Cut Pro X</a></td>
+        <td><a href="https://www.apple.com/final-cut-pro/">Final Cut Pro X</a></td>
         <td class="select"></td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td><a href="https://www.avid.com/media-composer-first" rel="noreferrer">Media Composer First</a></td>
+        <td><a href="https://www.avid.com/media-composer-first">Media Composer First</a></td>
         <td class="select"></td>
         <td class="select"></td>
         <td></td>
         <td class="select"></td>
     </tr>
     <tr>
-        <td><a href="http://fixounet.free.fr/avidemux/" rel="noreferrer">Avidemux</a></td>
+        <td><a href="http://fixounet.free.fr/avidemux/">Avidemux</a></td>
         <td class="select"></td>
         <td class="select"></td>
         <td class="select"></td>
         <td class="select"></td>
     </tr>
     <tr>
-        <td><a href="https://www.ffmpeg.org" rel="noreferrer">FFmpeg</a></td>
+        <td><a href="https://www.ffmpeg.org">FFmpeg</a></td>
         <td class="select"></td>
         <td class="select"></td>
         <td class="select"></td>
         <td class="select"></td>
     </tr>
     <tr>
-        <td><a href="https://lrtimelapse.com/" rel="noreferrer">LrTimelapse</a></td>
+        <td><a href="https://lrtimelapse.com/">LrTimelapse</a></td>
         <td class="select"></td>
         <td class="select"></td>
         <td></td>
         <td class="selecthalf"></td>
     </tr>
     <tr>
-        <td><a href="http://www.panolapse360.com" rel="noreferrer">Panolapse</a></td>
+        <td><a href="http://www.panolapse360.com">Panolapse</a></td>
         <td class="select"></td>
         <td class="select"></td>
         <td></td>
@@ -306,7 +306,7 @@ with your needs.
 On this website the movies are created from the photos using ffmpeg. This is
 steered from Python using ffmpeg-python and my own time-lapse layer over that.
 Scripts for creating the movies are stored here:
-<a href="https://github.com/153957/time-lapse/" rel="noreferrer">Time-Lapse assembling</a>.
+<a href="https://github.com/153957/time-lapse/">Time-Lapse assembling</a>.
 
 ---
 
@@ -338,7 +338,7 @@ loosening the lens from the camera body in a particualar way, but that is more c
 Luckily there is software out there that can help in post-processing to remove
 flicker. FFmpeg includes a <a href="https://ffmpeg.org/ffmpeg-filters.html#deflicker"
 rel="noreferrer">deflicker filter</a>. For Adobe Lightroom, a plug-in can be used: <a
-href="https://lrtimelapse.com/" rel="noreferrer">LrTimelapse</a>. Many other tools also
+href="https://lrtimelapse.com/">LrTimelapse</a>. Many other tools also
 include a deflickering option.
 
 <div class="screenshots">
@@ -389,10 +389,9 @@ motion to the movie after you have shot it, by using video editing software.
 
 #### Motion during shoot
 
-You can use a <a href="http://www.dynamicperception.com/default.asp"
-rel="noreferrer">Dynamic Perception</a> setup combined with the <a
-href="https://github.com/DynamicPerception/OMLibraries" rel="noreferrer">Open
-Moco</a> software to add pan and tilt to your time-lapse movies. The software and
+You can use a [Dynamic Perception](https://www.dynamicperception.com/)
+setup combined with the [Open Moco](https://github.com/DynamicPerception/OMLibraries)
+software to add pan and tilt to your time-lapse movies. The software and
 tools are designed specifically for motion in time-lapse, being able to move very
 slowly and create natural looking motion (ease-in and out).
 

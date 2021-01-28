@@ -49,61 +49,55 @@ footer:
 
 <div markdown>
 
-#### Source code
+#### Contact
 
 - <a id="mail_contact">arne aa delaat dd net</a>
-- <a rel="noreferrer" href="https://www.github.com/153957/153957/">Website</a>
-- <a rel="noreferrer" href="https://www.github.com/153957/153957-theme/">Photo album theme</a>
-- <a rel="noreferrer" href="https://www.github.com/153957/time-lapse/">Time-lapse compile</a>
+
+#### Source code
+
+- [Website](https://www.github.com/153957/153957/)
+- [Photo album theme](https://www.github.com/153957/153957-theme/)
+- [Time-lapse compile](https://www.github.com/153957/time-lapse/)
 
 #### Websites created
 
-- <a rel="noreferrer" href="https://www.github.com/153957/shs-geronimo/">SHS Geronimo</a>
-- <a rel="noreferrer" href="https://www.github.com/153957/spin.off/">spin.off</a>
-- <a rel="noreferrer" href="https://www.github.com/153957/vrouwenkoor-unlimited/">Vrouwenkoor UNLIMITED</a>
-- <a rel="noreferrer" href="https://experimentele-flats.nl">Experimentele Flats</a>
-- <a rel="noreferrer" href="http://www.leeters.net">Hugo Leeters Schilderwerken</a>
-
-#### Events photographed
-
-- <a rel="noreferrer" href="https://www.balfolk.nl/">Bal Folk!</a>
-- <a rel="noreferrer" href="https://www.castlefest.nl/">Castlefest</a> (Vana-events)
-- <a rel="noreferrer" href="https://www.keltfest.nl/">Keltfest</a> (Vana-events)
-- <a rel="noreferrer" href="https://www.elfia.com/">Elfia (Elf Fantasy Fair)</a>
-- <a rel="noreferrer" href="https://www.archeon.nl/">MidWinter Fair</a>
+- [Experimentele Flats](https://experimentele-flats.nl)
+- [SHS Geronimo](https://www.github.com/153957/shs-geronimo/)
+- [spin.off](https://www.github.com/153957/spin.off/)
+- [Vrouwenkoor UNLIMITED](https://www.github.com/153957/vrouwenkoor-unlimited/)
 
 </div>
 <div markdown>
 
 #### Camera hardware
 
-- <a rel="noreferrer" href="https://imaging.nikon.com">Nikon DSLR</a>
-- <a rel="noreferrer" href="https://www.canon.com/">Canon Powershot</a>
-- <a rel="noreferrer" href="https://www.sigmaphoto.com/">Sigma</a>
-- <a rel="noreferrer" href="https://reallyrightstuff.com/">Really Right Stuff</a>
-- <a rel="noreferrer" href="https://gitzo.com/">Gitzo</a>
+- [Nikon DSLR](https://imaging.nikon.com)
+- [Canon Powershot](https://www.canon.com/)
+- [Sigma](https://www.sigmaphoto.com/)
+- [Really Right Stuff](https://reallyrightstuff.com/)
+- [Gitzo](https://gitzo.com/)
 
 #### Software used
 
 ##### Photography
 
-- <a rel="noreferrer" href="https://www.captureone.com/">Capture One</a>
-- <a rel="noreferrer" href="https://www.apple.com/">Apple Aperture</a>
-- <a rel="noreferrer" href="https://www.lemkesoft.com/">GraphicConverter</a>
-- <a rel="noreferrer" href="https://www.publicspace.net/ABetterFinderRename/">A Better Finder Rename</a>
+- [Capture One](https://www.captureone.com/)
+- [Apple Aperture](https://www.apple.com/)
+- [GraphicConverter](https://www.lemkesoft.com/)
+- [A Better Finder Rename](https://www.publicspace.net/ABetterFinderRename/)
 
 ##### Time-lapse
 
-- <a rel="noreferrer" href="https://github.com/kkroening/ffmpeg-python/">ffmpeg-python</a>
-- <a rel="noreferrer" href="https://www.ffmpeg.org/">FFmpeg</a>
+- [ffmpeg-python](https://github.com/kkroening/ffmpeg-python/)
+- [FFmpeg](https://www.ffmpeg.org/)
 
 ##### Website
 
-- <a rel="noreferrer" href="https://www.github.com/">GitHub</a>
-- <a rel="noreferrer" href="https://www.barebones.com/products/bbedit/">BBEdit</a>
-- <a rel="noreferrer" href="https://github.com/getpelican/pelican">Pelican</a>
-- <a rel="noreferrer" href="https://sigal.saimon.org">Sigal</a>
-- <a rel="noreferrer" href="https://github.com/worseisbetter/galleria">Galleria</a>
+- [GitHub](https://www.github.com/)
+- [BBEdit](https://www.barebones.com/products/bbedit/)
+- [Pelican](https://github.com/getpelican/pelican)
+- [Sigal](https://sigal.saimon.org)
+- [Galleria](https://github.com/worseisbetter/galleria)
 
 </div>
 <div markdown>
@@ -112,16 +106,24 @@ footer:
 
 ##### Time-lapse
 
-- <a rel="noreferrer" href="https://www.setvak.cz/timelapse/timelapse.html">Martin Setvak</a>
-- <a rel="noreferrer" href="http://www.timescapes.org/">Timescapes</a>
-- <a rel="noreferrer" href="https://www.zardec.net.au/keith/lapse2.htm">A Turorial about Time-lapse Photography</a>
+- [Martin Setvak](https://www.setvak.cz/timelapse/timelapse.html)
+- [Timescapes](http://www.timescapes.org/)
+- [A Turorial about Time-lapse Photography](https://www.zardec.net.au/keith/lapse2.htm)
 
 ##### Photography
 
-- <a rel="noreferrer" href="https://www.wenversteeg.nl">Wen Versteeg</a>
-- <a rel="noreferrer" href="https://rizomorf.nl">Merel Dames</a>
-- <a rel="noreferrer" href="https://www.simplemoment.com/">Jean-Sébastien Monzani</a>
-- <a rel="noreferrer" href="https://www.pbase.com/ole_thorsen/">Ole Thorsen</a>
+- [Wen Versteeg](https://www.wenversteeg.nl)
+- [Merel Dames](https://rizomorf.nl)
+- [Jean-Sébastien Monzani](https://www.simplemoment.com/)
+- [Ole Thorsen](https://www.pbase.com/ole_thorsen/)
+
+#### Events photographed
+
+- [Bal Folk!](https://www.balfolk.nl/)
+- [Castlefest](https://www.castlefest.nl/) (Vana-events)
+- [Keltfest](https://www.keltfest.nl/) (Vana-events)
+- [Elfia (Elf Fantasy Fair)](https://www.elfia.com/)
+- [MidWinter Fair](https://www.archeon.nl/)
 
 </div>
 
