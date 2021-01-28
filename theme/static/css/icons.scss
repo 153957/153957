@@ -2,9 +2,7 @@
     font-family: 'fontello';
     font-weight: normal;
     font-style: normal;
-    src:
-        url('../font/icons.woff') format('woff'),
-        url('../font/icons.woff2') format('woff2');
+    src: url('../font/icons.woff2') format('woff2');
 }
 
 .icon {
@@ -21,8 +19,8 @@
 }
 
 @keyframes icon-spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(359deg); }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .icon-pause::before { content: '\e800'; }
