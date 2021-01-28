@@ -3,6 +3,22 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+    src: url('../font/Jost-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+    src: url('../font/Jost-700.woff2') format('woff2');
+}
+
 body {
     margin-top: 0;
     background: #fff;
@@ -125,6 +141,7 @@ a:hover {
         line-height: 26px;
         white-space: nowrap;
         color: #fff;
+        font-family: Jost;
         font-size: 25px;
         font-weight: normal;
     }
