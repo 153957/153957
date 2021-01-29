@@ -49,17 +49,17 @@ footer:
 
 <div markdown>
 
-#### Contact
+### Contact
 
 - <a id="mail_contact">arne aa delaat dd net</a>
 
-#### Source code
+### Source code
 
 - [Website](https://www.github.com/153957/153957/)
 - [Photo album theme](https://www.github.com/153957/153957-theme/)
 - [Time-lapse compile](https://www.github.com/153957/time-lapse/)
 
-#### Websites created
+### Websites created
 
 - [Experimentele Flats](https://experimentele-flats.nl)
 - [SHS Geronimo](https://www.github.com/153957/shs-geronimo/)
@@ -69,7 +69,7 @@ footer:
 </div>
 <div markdown>
 
-#### Camera hardware
+### Camera hardware
 
 - [Nikon DSLR](https://imaging.nikon.com)
 - [Canon Powershot](https://www.canon.com/)
@@ -77,24 +77,22 @@ footer:
 - [Really Right Stuff](https://reallyrightstuff.com/)
 - [Gitzo](https://gitzo.com/)
 
-#### Software used
-
-##### Photography
+### Photography
 
 - [Capture One](https://www.captureone.com/)
 - [Apple Aperture](https://www.apple.com/)
 - [GraphicConverter](https://www.lemkesoft.com/)
 - [A Better Finder Rename](https://www.publicspace.net/ABetterFinderRename/)
 
-##### Time-lapse
+### Time-lapse
 
 - [ffmpeg-python](https://github.com/kkroening/ffmpeg-python/)
 - [FFmpeg](https://www.ffmpeg.org/)
 
-##### Website
+### Website
 
-- [GitHub](https://www.github.com/)
 - [BBEdit](https://www.barebones.com/products/bbedit/)
+- [GitHub](https://www.github.com/)
 - [Pelican](https://github.com/getpelican/pelican)
 - [Sigal](https://sigal.saimon.org)
 - [Galleria](https://github.com/worseisbetter/galleria)
@@ -102,22 +100,20 @@ footer:
 </div>
 <div markdown>
 
-#### Interesting sites
-
-##### Time-lapse
+### Other time-lapse sites
 
 - [Martin Setvak](https://www.setvak.cz/timelapse/timelapse.html)
 - [Timescapes](http://www.timescapes.org/)
 - [A Turorial about Time-lapse Photography](https://www.zardec.net.au/keith/lapse2.htm)
 
-##### Photography
+### Other photography sites
 
 - [Wen Versteeg](https://www.wenversteeg.nl)
 - [Merel Dames](https://rizomorf.nl)
 - [Jean-Sébastien Monzani](https://www.simplemoment.com/)
 - [Ole Thorsen](https://www.pbase.com/ole_thorsen/)
 
-#### Events photographed
+### Events photographed
 
 - [Bal Folk!](https://www.balfolk.nl/)
 - [Castlefest](https://www.castlefest.nl/) (Vana-events)
