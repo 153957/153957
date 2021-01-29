@@ -42,6 +42,7 @@ SHORTCODES = {
                 alt=""
                 src="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}.jpg"
                 srcset="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}@2x.jpg 2x"
+                loading="lazy"
             >
             <span class="caption">{{{{ caption }}}}</span>
         </a>
@@ -54,7 +55,8 @@ SHORTCODES = {
             alt=""
             data-fps="{{{{ fps }}}}"
             {{{{ 'data-' + data.replace(' ', 'data-') if data else '' }}}}
-            src="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse_src/{{{{ id.partition('_')[0] }}}}/{{{{ id }}}}.png"
+            src="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/{{{{ id.partition('_')[0] }}}}/{{{{ id }}}}.png"
+            loading="lazy"
         />
     """,
 }
