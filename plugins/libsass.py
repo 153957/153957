@@ -14,7 +14,7 @@ def compile_sass(instance):
     """
     Compile SASS/SCSS with libsass to CSS
     """
-    paths = instance.settings.get(SETTINGS_NAME)
+    paths = instance.settings.get(SETTINGS_NAME, [])
 
     for input_output_paths in paths:
         sass.compile(dirname=input_output_paths)

@@ -28,6 +28,7 @@ OUTPUT_CSS = OUTPUT_PATH / THEME_STATIC_DIR / 'css'
 PLUGINS = [
     'plugins.libsass',
     'plugins.shortcodes',
+    'plugins.thumbnails',
 ]
 
 LIBSASS_PATHS = [
@@ -53,13 +54,18 @@ SHORTCODES = {
             id="{{{{ id }}}}"
             class="thumbnail"
             alt=""
+            src="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/{{{{ id.partition('_')[0] }}}}/{{{{ id }}}}.png"
+            srcset="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/{{{{ id.partition('_')[0] }}}}/{{{{ id }}}}@2x.png 2x"
+            loading="lazy"
             data-fps="{{{{ fps }}}}"
             {{{{ 'data-' + data.replace(' ', 'data-') if data else '' }}}}
-            src="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/{{{{ id.partition('_')[0] }}}}/{{{{ id }}}}.png"
-            loading="lazy"
         />
     """,
 }
+
+THUMBNAIL_PATHS = [
+    OUTPUT_PATH,
+]
 
 
 # No blog, just pages!
