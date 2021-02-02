@@ -9,6 +9,10 @@ head:
             left: 180px;
             top: 20px;
         }
+        #content {
+            padding-left: 0;
+            padding-right: 0;
+        }
     </style>
 footer: 
     <script src="/static/base/js/photos.js"></script>
