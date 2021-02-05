@@ -1,7 +1,8 @@
 .PHONY: serve build install
 
 build: install
-	pelican --delete-output-directory
+	rm -rf .build
+	pelican
 
 serve: install
 	pelican --listen --autoreload
