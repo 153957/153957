@@ -13,28 +13,28 @@ head:
         }
     </style>
 footer: 
-    <script src="/static/base/js/vendor/jquery.tipTip.js"></script>
-    <script src="/static/base/js/index.js"></script>
+    <script src="/static/js/vendor/jquery.tipTip.js"></script>
+    <script src="/static/js/index.js"></script>
 ---
 
 <a href="{filename}/photography.md" class="collage" data-tip="Photography">
     <img
         alt="Photography"
-        src="/static/base/images_index/photography.jpg"
-        srcset="/static/base/images_index/photography@2x.jpg 2x"
+        src="/static/images_index/photography.jpg"
+        srcset="/static/images_index/photography@2x.jpg 2x"
     >
 </a>
 <a href="{filename}/timelapse.md" class="collage" data-tip="Time-Lapse Movies">
     <img
         alt="Time-Lapse"
-        src="/static/base/images_index/timelapse.jpg"
-        srcset="/static/base/images_index/timelapse@2x.jpg 2x"
+        src="/static/images_index/timelapse.jpg"
+        srcset="/static/images_index/timelapse@2x.jpg 2x"
     >
 </a>
 <a href="{filename}/timelapse_guide.md" class="collage" data-tip="Time-Lapse Guide">
     <img
         alt="Time-Lapse Guide"
-        src="/static/base/images_index/timelapse_guide.jpg"
-        srcset="/static/base/images_index/timelapse_guide@2x.jpg 2x"
+        src="/static/images_index/timelapse_guide.jpg"
+        srcset="/static/images_index/timelapse_guide@2x.jpg 2x"
     >
 </a>

@@ -9,7 +9,7 @@ SITEURL = ''
 OUTPUT_PATH = PROJECT_DIR / '.build'
 
 THEME = PROJECT_DIR / 'theme'
-THEME_STATIC_DIR = 'static/base'
+THEME_STATIC_DIR = 'static'
 
 PATH = 'content'
 PAGE_PATHS = ['']

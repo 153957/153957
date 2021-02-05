@@ -18,12 +18,12 @@ head:
             padding: 0 9px;
         }
     </style>
-    <link rel="stylesheet" href="/static/base/css/tipTip.css" />
-    <link rel="stylesheet" href="/static/base/css/video.css" />
-    <link rel="stylesheet" href="/static/base/css/controls.css" />
+    <link rel="stylesheet" href="/static/css/tipTip.css" />
+    <link rel="stylesheet" href="/static/css/video.css" />
+    <link rel="stylesheet" href="/static/css/controls.css" />
 footer: 
-    <script src="/static/base/js/vendor/jquery.tipTip.js"></script>
-    <script src="/static/base/js/video.js"></script>
+    <script src="/static/js/vendor/jquery.tipTip.js"></script>
+    <script src="/static/js/video.js"></script>
 ---
 
 <div id="slider">
@@ -234,7 +234,7 @@ footer:
         class="showing"
         data-id="D700_D90_150317_NorthernLights"
         alt="Northern Lights"
-        src="/static/base/images_timelapse/D700_D90_150317_NorthernLights_poster.jpg"
+        src="/static/images_timelapse/D700_D90_150317_NorthernLights_poster.jpg"
     />
     <video id="player"></video>
 </div>

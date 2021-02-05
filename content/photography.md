@@ -14,7 +14,7 @@ head:
         }
     </style>
 footer: 
-    <script src="/static/base/js/photos.js"></script>
+    <script src="/static/js/photos.js"></script>
 ---
 
 <iframe
