@@ -79,7 +79,7 @@ footer:
 
 ### Photography
 
-- [Capture One](https://www.captureone.com/)
+- Adobe Lightroom Classic
 - [Apple Aperture](https://www.apple.com/)
 - [GraphicConverter](https://www.lemkesoft.com/)
 - [A Better Finder Rename](https://www.publicspace.net/ABetterFinderRename/)
