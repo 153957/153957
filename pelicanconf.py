@@ -58,7 +58,7 @@ SHORTCODES = {
             srcset="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/{{{{ id.partition('_')[0] }}}}/{{{{ id }}}}@2x.png 2x"
             loading="lazy"
             data-fps="{{{{ fps }}}}"
-            {{{{ 'data-' + data.replace(' ', 'data-') if data else '' }}}}
+            {{{{ 'data-' + data.replace(' ', ' data-') if data else '' }}}}
         />
     """,
 }
