@@ -14,6 +14,7 @@ head:
         }
     </style>
 footer: 
+    <script src="/static/js/vendor/iframeResizer.min.js"></script>
     <script src="/static/js/photos.js"></script>
 ---
 
