@@ -14,22 +14,29 @@
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/tipTip.css">
         <style>
             #pageHeader {
-                background-image: linear-gradient(to bottom,
-                                                  rgba(255, 255, 255, 0) 70%,
-                                                  rgba(255, 255, 255, 0.1) 75%,
-                                                  rgba(255, 255, 255, 0.9) 95%,
-                                                  rgba(255, 255, 255, 1)),
+                background-image: linear-gradient(to bottom, #fff0 70%, #fff2 75%, #fffe 95%, #ffff),
                                   url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}.jpg');
             }
-            @media screen and (-webkit-min-device-pixel-ratio: 2),
-                   screen and (min-resolution: 192dpi),
-                   screen and (min-resolution: 2dppx) {
+
+            @media (prefers-color-scheme: dark) {
                 #pageHeader {
-                    background-image: linear-gradient(to bottom,
-                                                      rgba(255, 255, 255, 0) 70%,
-                                                      rgba(255, 255, 255, 0.1) 75%,
-                                                      rgba(255, 255, 255, 0.9) 95%,
-                                                      rgba(255, 255, 255, 1)),
+                    background-image: linear-gradient(to bottom, #1110 70%, #1112 75%, #111e 95%, #111f),
+                                      url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}.jpg');
+                }
+            }
+
+            @media screen and (-webkit-min-device-pixel-ratio: 2),
+                   screen and (min-resolution: 2x) {
+                #pageHeader {
+                    background-image: linear-gradient(to bottom, #fff0 70%, #fff2 75%, #fffe 95%, #ffff),
+                                      url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}@2x.jpg');
+                }
+            }
+
+            @media screen and (prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2),
+                   screen and (prefers-color-scheme: dark) and (min-resolution: 2x) {
+                #pageHeader {
+                    background-image: linear-gradient(to bottom, #1110 70%, #1112 75%, #111e 95%, #111f),
                                       url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}@2x.jpg');
                 }
             }

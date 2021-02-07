@@ -22,13 +22,13 @@
     font-size: 14px;
 }
 
-.currentcat {
-    color: #1676a7;
-}
-
 .category:hover,
-.currentcat:hover {
-    color: #1184be;
+.currentcat {
+    color: #159;
+
+    @media (prefers-color-scheme: dark) {
+        color: #4af;
+    }
 }
 
 #thumbnails {
@@ -58,7 +58,7 @@
         vertical-align: bottom;
         text-align: center;
         line-height: 1;
-        color: rgba(255, 255, 255, 0.8);
+        color: #fffc;
         font-family: 'fontello';
         font-size: 30px;
         -webkit-font-smoothing: antialiased;
@@ -111,6 +111,10 @@ audio {
     text-align: center;
     color: black;
     font-size: 900%;
+
+    @media (prefers-color-scheme: dark) {
+        color: #eee;
+    }
 }
 
 #movie {
