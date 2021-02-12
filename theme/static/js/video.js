@@ -86,7 +86,7 @@ $(document).ready(function() {
     $global.movie.on('click', '#quality_toggle', toggleQuality);
     $global.movie.on('click', '#fullscreen_button', fullscreen);
     $global.movie.on('click', '#play_pause_button', playPause);
-    $global.movie.on('click', '#player's, playPause);
+    $global.movie.on('click', '#player', playPause);
 
     /* Load linked video */
     if (window.location.hash) {
