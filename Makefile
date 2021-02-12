@@ -8,4 +8,4 @@ serve: install
 	pelican --listen --autoreload
 
 install:
-	pip install -r requirements.txt
+	pip install --upgrade --upgrade-strategy=eager -r requirements.txt
