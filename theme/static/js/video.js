@@ -294,7 +294,7 @@ function addControls() {
 
 /* CanPlay -> Hide Status, Show Controls and Play*/
 function hideLoad() {
-    $global.status.removeClass('showing').addClass('hidden");
+    $global.status.removeClass('showing').addClass('hidden');
     if (!controlsCreated) {
         $('#player').attr('controls', 'true');
     }
