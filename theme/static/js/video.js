@@ -288,7 +288,7 @@ function addControls() {
             ontimeupdate: 'progress()',
             onended: 'pause()'
         });
-        $controls.volumeIndicator.val(volume).trigger('change");
+        $controls.volumeIndicator.val(volume).trigger('change');
     }
 }
 
