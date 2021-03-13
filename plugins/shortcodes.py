@@ -32,7 +32,7 @@ SETTINGS_NAME = 'SHORTCODES'
 
 
 def expand_shortcodes(text, shortcodes) -> str:
-    def repl(group):
+    def replace_shortcode(group):
         """replace shortcodes with evaluated templates"""
         match = group.groups()[0]
         code, _, args = match.partition(' ')
@@ -44,7 +44,7 @@ def expand_shortcodes(text, shortcodes) -> str:
         except KeyError:
             raise KeyError(f'shortcode "{code}" not found')
 
-    return re.sub(r'\[% ([\w\W]+?) %\]', repl, text, flags=re.MULTILINE)
+    return re.sub(r'\[% ([\w\W]+?) %\]', replace_shortcode, text, flags=re.MULTILINE)
 
 
 def content_object_init(instance):
