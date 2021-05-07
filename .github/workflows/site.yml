@@ -11,23 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-    - name: Install Python dependencies
-      run: |
-        pip install --upgrade pip wheel
-        pip install -r requirements.txt
-    - name: Build site
-      run: |
-        pelican
-    - name: Check html
-      uses: Cyb3r-Jak3/html5validator-action@v0.4.4
-      with:
-        root: .build/
-        css: true
-        log_level: INFO
-        extra: --ignore index_
-
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - run: |
+          pip install --upgrade pip wheel
+          pip install -r requirements.txt
+      - run: pelican
+      - uses: Cyb3r-Jak3/html5validator-action@v0.5
+        with:
+          root: .build/
+          css: true
+          log_level: INFO
+          ignore: index_
