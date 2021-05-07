@@ -24,4 +24,6 @@ jobs:
           root: .build/
           css: true
           log_level: INFO
-          ignore: index_
+          ignore:
+            - index_footer.html
+            - index_header.html
