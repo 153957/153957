@@ -1,11 +1,22 @@
-.PHONY: serve build install
+.PHONY: devinstall
+devinstall:
+	pip install --upgrade pip
+	pip install --upgrade --upgrade-strategy eager -r requirements.txt -r requirements-dev.txt
 
-build: install
+.PHONY: install
+install:
+	pip install --upgrade pip
+	pip install --upgrade --upgrade-strategy eager -r requirements.txt
+
+.PHONY: flaketest
+flaketest:
+	flake8
+
+.PHONY: build
+build:
 	rm -rf .build
 	pelican
 
-serve: install
+.PHONY: serve
+serve:
 	pelican --listen --autoreload
-
-install:
-	pip install --upgrade --upgrade-strategy=eager -r requirements.txt

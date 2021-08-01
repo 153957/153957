@@ -13,7 +13,5 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.9'
-      - run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt -r requirements-dev.txt
-      - run: flake8
+      - run: make devinstall
+      - run: make flaketest
