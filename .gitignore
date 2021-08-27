@@ -2,11 +2,6 @@
 .DS_Store*
 Icon?
 
-# Generated thumbnails
-theme/static/images_timelapse/thumbs/
-theme/static/css/thumbs/
-.previous_checksum
-
 # Pelican
 .build/
 
