@@ -1,7 +1,7 @@
 /* "use strict"; */
 
 /* Global variables */
-var base = 'https://arne.delaat.net/'; /* 'https://delaat.me/'; */
+var base = 'https://arne.delaat.net/TimeLapse/';
 var quality = '960';
 var extension = '.mp4';
 
@@ -325,22 +325,7 @@ function swapVideo(movieid) {
         currentQuality = '960';
     }
     var camera = movieid.substring(0, 3);
-    var movie_path = currentQuality + '/' + movieid + extension;
-    if (camera === 'D70') {
-        videolink = base + 'TimeLapse_D700/' + movie_path;
-    } else if (camera === 'D50') {
-        videolink = base + 'TimeLapse_D500/' + movie_path;
-    } else if (camera === 'D30') {
-        videolink = base + 'TimeLapse_D300/' + movie_path;
-    } else if (camera === 'D90') {
-        videolink = base + 'TimeLapse_D90/' + movie_path;
-    } else if (camera === 'D80') {
-        videolink = base + 'TimeLapse_D80/' + movie_path;
-    } else if (camera === 'S60') {
-        videolink = base + 'TimeLapse_S60/' + movie_path;
-    } else {
-        videolink = base + 'Movies/' + movie_path;
-    }
+    var videolink = base + currentQuality + '/' + movieid + extension;
 
     /* Example video */
     // videolink = '../static/sample_video/150317_NorthernLights.mp4'

@@ -54,8 +54,8 @@ SHORTCODES = {
             id="{{{{ id }}}}"
             class="thumbnail"
             alt=""
-            src="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/{{{{ id.partition('_')[0] }}}}/{{{{ id }}}}.png"
-            srcset="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/{{{{ id.partition('_')[0] }}}}/{{{{ id }}}}@2x.png 2x"
+            src="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/thumbs/{{{{ id }}}}.png"
+            srcset="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/thumbs/{{{{ id }}}}@2x.png 2x"
             loading="lazy"
             data-fps="{{{{ fps }}}}"
             {{{{ 'data-' + data.replace(' ', ' data-') if data else '' }}}}
