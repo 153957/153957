@@ -304,9 +304,9 @@ with your needs.
 #### Exporting the movie
 
 On this website the movies are created from the photos using ffmpeg. This is
-steered from Python using ffmpeg-python and my own time-lapse layer over that.
-Scripts for creating the movies are stored here:
-<a href="https://github.com/153957/time-lapse/">Time-Lapse assembling</a>.
+steered from Python using [ffmpeg-python](https://github.com/kkroening/ffmpeg-python)
+and my own time-lapse layer over that. Scripts for creating the movies are stored here:
+[Time-Lapse assembling](https://github.com/153957/time-lapse/).
 
 ---
 
