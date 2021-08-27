@@ -12,11 +12,14 @@ install:
 flaketest:
 	flake8
 
-.PHONY: build
-build:
+.PHONY: clean
+clean:
 	rm -rf .build
+
+.PHONY: build
+build: clean
 	pelican
 
 .PHONY: serve
-serve:
+serve: clean
 	pelican --listen --autoreload
