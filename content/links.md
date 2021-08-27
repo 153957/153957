@@ -103,7 +103,6 @@ footer:
 ### Other time-lapse sites
 
 - [Martin Setvak](https://www.setvak.cz/timelapse/timelapse.html)
-- [Timescapes](http://www.timescapes.org/)
 - [A Turorial about Time-lapse Photography](https://www.zardec.net.au/keith/lapse2.htm)
 
 ### Other photography sites
