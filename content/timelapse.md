@@ -149,6 +149,7 @@ footer:
             [% thumbnail id=051218_S60_1 fps=15 data='960' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=200606_WEN_1 fps=25 data='960 1920' %]
             [% thumbnail id=190430_APL_2_3_4 fps=30 data='960 1920' %]
             [% thumbnail id=190430_APL_1 fps=24 data='960 1920' %]
             [% thumbnail id=190429_APL_1_2_3_4_5 fps=30 data='960 1920' %]
