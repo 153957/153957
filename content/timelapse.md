@@ -89,6 +89,7 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
+            [% thumbnail id=201018_WEN_1_3 fps=25 data='960 1920' %]
             [% thumbnail id=181019_ADL_1 fps=24 data='960 1920' %]
             [% thumbnail id=181012_ADL_1 fps=30 data='960 1920' %]
             [% thumbnail id=170218_ADL_1_2_3 fps=24 data='960 1920' %]
@@ -155,6 +156,7 @@ footer:
             [% thumbnail id=190429_APL_1_2_3_4_5 fps=30 data='960 1920' %]
             [% thumbnail id=180921_ADL_1 fps=24 data='960 1920' %]
             [% thumbnail id=180628_APL_1 fps=25 data='960 1920' %]
+            [% thumbnail id=171119_APL_2_3 fps=25 data='960 1920' %]
             [% thumbnail id=160813_ADL_1_2 fps=30 data='960 1920' %]
             [% thumbnail id=151203_ADL_1_3_4 fps=24 data='960 1920' %]
             [% thumbnail id=140608_ADL_2 fps=24 data='960 1920' %]
