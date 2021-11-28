@@ -187,6 +187,7 @@ footer:
             [% thumbnail id=081214_DSC_1 fps=30 data='960 audio' %]
         </div>
         <div class="slide" id="Astronomy-content">
+            [% thumbnail id=200713_APL_ADL_1_2_3_4 fps=30 data='960 1920' %]
             [% thumbnail id=180727_ADL_APL_1_2_4_5 fps=25 data='960 1920' %]
             [% thumbnail id=150322_ARN_1 fps=24 data='960 1920' %]
             [% thumbnail id=150316_ARN_1 fps=24 data='960 1920' %]
