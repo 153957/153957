@@ -59,10 +59,8 @@
 				    .replace(/_/g, " ")
                     .replace(/^[0-2][0-9]{5}/, "Date: $&")
                     .replace(/ (ADL|APL|ARN|WEN|DSC|S60)/, "<br>Camera: $&")
-                    .replace("Events", "<br>Title: The following events do<br>not occur in real-time")
-                    .replace("Virtual", "<br>Title: Virtual")
-                    .replace("CaDansa", "<br>Title: CaDansa")
-                    .replace("Northern", "<br>Title: Northern");
+                    .replace(/ [a-zA-Z]{4}+/, "<br>Title: $&")
+                    .replace("Events", "The following events do<br>not occur in real-time")
 			}
 			if(org_title != ""){
 				/*
