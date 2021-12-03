@@ -113,6 +113,7 @@ footer:
             [% thumbnail id=080716_DSC_4 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Frost-content">
+            [% thumbnail id=210207_ADL_1_2 fps=60 data='960 1920' %]
             [% thumbnail id=100201_DSC_3 fps=25 data='960' %]
             [% thumbnail id=100201_DSC_1 fps=15 data='960' %]
             [% thumbnail id=090109_DSC_1 fps=30 data='960' %]
