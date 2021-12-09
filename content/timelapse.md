@@ -223,12 +223,12 @@ footer:
                 time-lapse movies. Most movies were created with my Nikon DSLRs and some
                 with my Canon Powershot. The Nikon D80 and D90 required an external
                 intervalometer or a computer to control the camera, the Canon S60, Nikon
-                D500 and D700 have built-in intervalometers.
+                D300, D500, and D700 have built-in intervalometers.
 
                 The movies are ordered by shooting date,
                 the newest are at the top of the categories. Most movies are made in the
-                Netherlands, but some were shot in Chile, Iceland, Japan, or China. The categories
-                include movies about archery shooting, balfolk dancing, blooming flowers,
+                Netherlands, but some were shot in Chile, Iceland, Finland, Japan, or China.
+                The categories include movies about archery shooting, balfolk dancing, blooming flowers,
                 traffic, fireshows, clouds, sunset, sunrise, night skies, stars, waterfalls,
                 ice cubes melting, and some other miscellaneous subjects.
             </p>
