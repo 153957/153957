@@ -45,7 +45,7 @@ footer:
     <div id="thumbnails">
         <div class="slide" id="Flowers-content">
             [% thumbnail id=181014_ADL_1_2 fps=24 data='960 1920' %]
-            [% thumbnail id=130217_ARN_1_4 fps=24 data='960 1920' %]
+            [% thumbnail id=130217_ARN_False_Rose_of_Jericho fps=24 data='960 1920' %]
             [% thumbnail id=080816_DSC_1 fps=24 data='960 1920' %]
             [% thumbnail id=080806_DSC_1 fps=48 data='960 1920' %]
             [% thumbnail id=080714_DSC_1 fps=30 data='960' %]
@@ -59,7 +59,7 @@ footer:
             [% thumbnail id=060716_S60_1 fps=15 data='960 audio' %]
         </div>
         <div class="slide" id="Clouds-content">
-            [% thumbnail id=180430_APL_1_2 fps=24 data='960 1920' %]
+            [% thumbnail id=180430_APL_Loch_Lomond fps=24 data='960 1920' %]
             [% thumbnail id=121004_ARN_1 fps=48 data='960 1920' %]
             [% thumbnail id=110413_ADL_1 fps=24 data='960 1920' %]
             [% thumbnail id=110209_ADL_1 fps=25 data='960 1920' %]
@@ -88,18 +88,18 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
-            [% thumbnail id=201018_WEN_1_3 fps=25 data='960 1920' %]
+            [% thumbnail id=201018_WEN_A2 fps=25 data='960 1920' %]
             [% thumbnail id=181019_ADL_1 fps=24 data='960 1920' %]
             [% thumbnail id=181012_ADL_1 fps=30 data='960 1920' %]
             [% thumbnail id=180810_APL_1 fps=30 data='960 1920' %]
-            [% thumbnail id=170218_ADL_1_2_3 fps=24 data='960 1920' %]
-            [% thumbnail id=130424_ARN_1 fps=24 data='960 1920' %]
+            [% thumbnail id=170218_ADL_Utrecht_Centraal fps=24 data='960 1920' %]
+            [% thumbnail id=130424_ARN_Tippelzone fps=24 data='960 1920' %]
             [% thumbnail id=121103_ARN_2 fps=30 data='960 1920' %]
             [% thumbnail id=120826_ADL_1 fps=25 data='960 1920' %]
             [% thumbnail id=120506_ARN_1_2 fps=48 data='960' %]
             [% thumbnail id=101129_DSC_1 fps=24 data='960 1920' %]
             [% thumbnail id=101121_DSC_2 fps=25 data='960' %]
-            [% thumbnail id=101118_101126_DSC_1 fps=25 data='960' %]
+            [% thumbnail id=101118_101126_DSC_Rijkswaterstaat fps=25 data='960' %]
             [% thumbnail id=101109_ADL_2 fps=24 data='960 1920' %]
             [% thumbnail id=100914_DSC_1 fps=25 data='960' %]
             [% thumbnail id=100913_DSC_2 fps=25 data='960' %]
@@ -144,7 +144,7 @@ footer:
             [% thumbnail id=090617_DSC_1 fps=15 data='960 1920 audio' %]
         </div>
         <div class="slide" id="Archery-content">
-            [% thumbnail id=120524_ADL_ARN_1_2_3_4 fps=48 data='960 1920' %]
+            [% thumbnail id=120524_ADL_ARN_EC_Archery fps=48 data='960 1920' %]
             [% thumbnail id=100816_DSC_3 fps=25 data='960' %]
             [% thumbnail id=090906_DSC_2 fps=15 data='960' %]
             [% thumbnail id=090906_DSC_1 fps=25 data='960' %]
@@ -171,13 +171,13 @@ footer:
             [% thumbnail id=100208_DSC_1 fps=25 data='960' %]
             [% thumbnail id=090918_DSC_1 fps=25 data='960' %]
             [% thumbnail id=090715_DSC_1 fps=25 data='960' %]
-            [% thumbnail id=090712_DSC_2 fps=25 data='960' %]
+            [% thumbnail id=090712_DSC_Tokyo_Tower fps=25 data='960' %]
             [% thumbnail id=090710_DSC_2 fps=25 data='960' %]
             [% thumbnail id=080721_DSC_1 fps=30 data='960' %]
             [% thumbnail id=060404_S60_1 fps=10 data='960 audio' %]
         </div>
         <div class="slide" id="Fire-content">
-            [% thumbnail id=160813_ARN_1 fps=60 data='960 1920' %]
+            [% thumbnail id=160813_ARN_Rhein_in_Flammen fps=60 data='960 1920' %]
             [% thumbnail id=111111_DSC_1 fps=25 data='960' %]
             [% thumbnail id=110311_DSC_1 fps=25 data='960 audio' %]
             [% thumbnail id=101231_DSC_1 fps=24 data='960 1920' %]
@@ -191,7 +191,7 @@ footer:
         </div>
         <div class="slide" id="Astronomy-content">
             [% thumbnail id=200713_APL_ADL_Neowise fps=30 data='960 1920' %]
-            [% thumbnail id=180727_ADL_APL_1_2_4_5 fps=25 data='960 1920' %]
+            [% thumbnail id=180727_ADL_APL_Lunar_Eclipse fps=25 data='960 1920' %]
             [% thumbnail id=150322_ARN_1 fps=24 data='960 1920' %]
             [% thumbnail id=150316_ARN_1 fps=24 data='960 1920' %]
             [% thumbnail id=140416_140417_ARN_1 fps=48 data='960' %]
@@ -211,10 +211,10 @@ footer:
             [% thumbnail id=080716_DSC_3 fps=30 data='960' %]
         </div>
         <div class="slide currentslide currentreveal" id="Reels-content">
-            [% thumbnail id=150317_ADL_ARN_NorthernLights fps=24 data='960 1920' %]
+            [% thumbnail id=150317_ADL_ARN_Northern_Lights fps=24 data='960 1920' %]
             [% thumbnail id=110127_ADL_DSC_Virtual_Eyes fps=24 data='960 1920 audio' %]
             [% thumbnail id=081103_DSC_Events fps=30 data='960 1920 audio' %]
-            [% thumbnail id=110514_110520_DSC_1_2_4 fps=25 data='960 audio' %]
+            [% thumbnail id=110514_110520_DSC_La_Silla_Observatory fps=25 data='960 audio' %]
         </div>
         <div class="slide" id="Description-content">
             <p>
