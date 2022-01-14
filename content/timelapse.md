@@ -108,7 +108,7 @@ footer:
             [% thumbnail id=091019_DSC_1 fps=15 data='960' %]
             [% thumbnail id=090727_DSC_3 fps=25 data='960' %]
             [% thumbnail id=090727_DSC_2 fps=25 data='960' %]
-            [% thumbnail id=090721_DSC_1 fps=25 data='960' %]
+            [% thumbnail id=090721_DSC_Shanghai_Jiao_Tong_University fps=25 data='960' %]
             [% thumbnail id=090712_DSC_1 fps=15 data='960' %]
             [% thumbnail id=080716_DSC_4 fps=24 data='960 1920' %]
         </div>
