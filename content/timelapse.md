@@ -18,7 +18,6 @@ head:
             padding: 0 9px;
         }
     </style>
-    <link rel="stylesheet" href="/static/css/tipTip.css" />
     <link rel="stylesheet" href="/static/css/video.css" />
     <link rel="stylesheet" href="/static/css/controls.css" />
 footer: 
