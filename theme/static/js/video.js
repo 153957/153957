@@ -18,7 +18,7 @@ $(document).ready(function() {
         movie: $('#movie'),
         poster: $('#poster'),
         status: $('#status'),
-        video: $('#player').get(0)
+        video: $('#player').get(0),
     };
 
     /* Category Slider */
@@ -41,7 +41,7 @@ $(document).ready(function() {
     $global.thumbnails.tipTip({
         attribute: 'id',
         delay: '25',
-        defaultPosition: 'top'
+        defaultPosition: 'top',
     });
 
     /* Thumbnail Links */
@@ -291,7 +291,7 @@ function addControls() {
             onprogress: 'buffering()',
             onvolumechange: 'volumeUsed()',
             ontimeupdate: 'progress()',
-            onended: 'pause()'
+            onended: 'pause()',
         });
         $controls.volumeIndicator.val(volume).trigger('change');
     }
