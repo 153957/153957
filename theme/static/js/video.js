@@ -230,7 +230,7 @@ function addControls() {
             backwardStepButton =
                 '<div id="step_frame_backward" class="icon icon-step-backward" title="Step frame backward"></div>';
             frameDisplay =
-                '<div id="frame_display">00</div>';
+                '<div id="frame_display" title="Subsecond frame">00</div>';
         }
         if ($global.current.hasAttribute('data-audio')) {
             // Video has an audio track
@@ -260,7 +260,7 @@ function addControls() {
                 <div id="play_pause_button" class="icon icon-play" title="Toggle play/pause"></div>
                 ${fowardStepButton}
                 <div id="progress_bar">
-                    <div id="time_display">0:00</div>
+                    <div id="time_display" title="Elapsed time">0:00</div>
                     ${frameDisplay}
                     <div id="progress_back">
                         <div id="progress_buffered" style="width: 0;"></div>
@@ -310,7 +310,7 @@ function hideLoad() {
 function errorStatus() {
     $global.status
         .removeClass('icon-circle-notch icon-spin hidden')
-        .addClass('icon-times-circle-o showing error');
+        .addClass('icon-cancel-circled showing error');
 }
 
 /* Exchange Video Player HTML With New Source */
