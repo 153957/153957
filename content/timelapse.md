@@ -100,7 +100,7 @@ footer:
             [% thumbnail id=101129_DSC_1 fps=24 data='960 1920' %]
             [% thumbnail id=101121_DSC_2 fps=25 data='960' %]
             [% thumbnail id=101118_101126_DSC_Rijkswaterstaat fps=25 data='960' %]
-            [% thumbnail id=101109_ADL_2 fps=24 data='960 1920' %]
+            [% thumbnail id=101109_ADL_A27 fps=24 data='960 1920' %]
             [% thumbnail id=100914_DSC_1 fps=25 data='960' %]
             [% thumbnail id=100913_DSC_2 fps=25 data='960' %]
             [% thumbnail id=100722_ADL_4_5 fps=25 data='960' %]
@@ -152,7 +152,7 @@ footer:
         </div>
         <div class="slide" id="Other-content">
             [% thumbnail id=200606_WEN_1 fps=25 data='960 1920' %]
-            [% thumbnail id=191108_ADL_1_2_3 fps=30 data='960 1920' %]
+            [% thumbnail id=191108_ADL_Haarrijnseplas fps=30 data='960 1920' %]
             [% thumbnail id=190430_APL_2_3_4 fps=30 data='960 1920' %]
             [% thumbnail id=190430_APL_1 fps=24 data='960 1920' %]
             [% thumbnail id=190429_APL_1_2_3_4_5 fps=30 data='960 1920' %]
@@ -183,8 +183,8 @@ footer:
             [% thumbnail id=101231_DSC_1 fps=24 data='960 1920' %]
             [% thumbnail id=091228_ADL_1 fps=25 data='960' %]
             [% thumbnail id=090829_DSC_1 fps=25 data='960' %]
-            [% thumbnail id=090718_DSC_2 fps=12 data='960' %]
-            [% thumbnail id=090718_DSC_1 fps=25 data='960 audio' %]
+            [% thumbnail id=090718_DSC_Tamagawa_Hanabi_2 fps=12 data='960' %]
+            [% thumbnail id=090718_DSC_Tamagawa_Hanabi_1 fps=25 data='960 audio' %]
             [% thumbnail id=090603_DSC_2 fps=25 data='960 audio' %]
             [% thumbnail id=090403_DSC_2 fps=12 data='960 1920' %]
             [% thumbnail id=081214_DSC_1 fps=30 data='960 audio' %]
