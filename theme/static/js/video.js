@@ -1,14 +1,14 @@
 /* "use strict"; */
 
 /* Global variables */
-var base = 'https://arne.delaat.net/TimeLapse/';
-var quality = '960';
-var extension = '.mp4';
+var base = 'https://arne.delaat.net/TimeLapse/'
+var quality = '960'
+var extension = '.mp4'
 
-var volume = 50;
-var controlsCreated = false;
-var fullscreen = false;
-var progressId;
+var volume = 50
+var controlsCreated = false
+var fullscreen = false
+var progressId
 
 /* Initiate */
 $(document).ready(function() {
@@ -19,218 +19,218 @@ $(document).ready(function() {
         poster: $('#poster'),
         status: $('#status'),
         video: $('#player').get(0),
-    };
+    }
 
     /* Category Slider */
     $('#categories').on('click', '.category', function() {
-        const thumbs = $(this).attr('id') + '-content';
+        const thumbs = $(this).attr('id') + '-content'
         if (
             $(`#${thumbs}`).get(0) !==
             $('#thumbnails').find('.currentslide').get(0)
         ) {
-            $('#thumbnails .currentslide').removeClass('currentslide currentreveal');
-            $('#categories .currentcat').removeClass('currentcat');
+            $('#thumbnails .currentslide').removeClass('currentslide currentreveal')
+            $('#categories .currentcat').removeClass('currentcat')
             // First make the item displayed, then add the class to transition the opacity.
             $(`#${thumbs}`).addClass('currentslide')
-            setTimeout(function() {$(`#${thumbs}`).addClass('currentreveal')}, 0);
-            $(this).addClass('currentcat');
+            setTimeout(function() {$(`#${thumbs}`).addClass('currentreveal')}, 0)
+            $(this).addClass('currentcat')
         }
-    });
+    })
 
     /* Thumbnail Tips */
     $global.thumbnails.tipTip({
         attribute: 'id',
         delay: '25',
         defaultPosition: 'top',
-    });
+    })
 
     /* Thumbnail Links */
     $('#thumbnails').on('click', '.thumbnail', function() {
-        swapVideo(this.id);
-        return false;
-    });
+        swapVideo(this.id)
+        return false
+    })
 
     /* Poster Link */
     $global.poster.on('click', function() {
-        swapVideo(this.dataset.id);
-        return false;
-    });
+        swapVideo(this.dataset.id)
+        return false
+    })
 
     /* Fullscreen Button */
     /* Check Full screen support */
     if ($global.video.requestFullscreen) {
         fullscreen = function() {
-            $global.video.requestFullscreen();
-            return false;
-        };
+            $global.video.requestFullscreen()
+            return false
+        }
     } else if ($global.video.msRequestFullscreen) {
         fullscreen = function() {
-            $global.video.msRequestFullscreen();
-            return false;
-        };
+            $global.video.msRequestFullscreen()
+            return false
+        }
     } else if ($global.video.mozRequestFullScreen) {
         fullscreen = function() {
-            $global.video.mozRequestFullScreen();
-            return false;
-        };
+            $global.video.mozRequestFullScreen()
+            return false
+        }
     } else if ($global.video.webkitRequestFullscreen) {
         fullscreen = function() {
-            $global.video.webkitRequestFullscreen();
-            return false;
-        };
+            $global.video.webkitRequestFullscreen()
+            return false
+        }
     }
 
-    $global.movie.on('click', '#step_frame_forward', stepFrameFoward);
-    $global.movie.on('click', '#step_frame_backward', stepFrameBackward);
-    $global.movie.on('click', '#volume_speaker_button', mute);
-    $global.movie.on('click', '#quality_toggle', toggleQuality);
-    $global.movie.on('click', '#fullscreen_button', fullscreen);
-    $global.movie.on('click', '#play_pause_button', playPause);
+    $global.movie.on('click', '#step_frame_forward', stepFrameFoward)
+    $global.movie.on('click', '#step_frame_backward', stepFrameBackward)
+    $global.movie.on('click', '#volume_speaker_button', mute)
+    $global.movie.on('click', '#quality_toggle', toggleQuality)
+    $global.movie.on('click', '#fullscreen_button', fullscreen)
+    $global.movie.on('click', '#play_pause_button', playPause)
 
-    const coarse = window.matchMedia('(pointer: coarse)');
+    const coarse = window.matchMedia('(pointer: coarse)')
     if (!coarse.matches) {
-        $global.movie.on('click', '#player', playPause);
+        $global.movie.on('click', '#player', playPause)
     }
 
     /* Load linked video */
     if (window.location.hash) {
         if ($global.thumbnails.filter(window.location.hash).length) {
-            const hash_value = window.location.hash.replace('#', '');
-            swapVideo(hash_value);
+            const hash_value = window.location.hash.replace('#', '')
+            swapVideo(hash_value)
         }
     }
-});
+})
 /* /Initiate */
 
 /* Set Button */
 function playingPaused() {
-    $controls.playButton.toggleClass('icon-play', $global.video.paused);
-    $controls.playButton.toggleClass('icon-pause', !$global.video.paused);
+    $controls.playButton.toggleClass('icon-play', $global.video.paused)
+    $controls.playButton.toggleClass('icon-pause', !$global.video.paused)
 }
 
 /* Ended: Pause */
 function pause() {
-    $global.video.pause();
+    $global.video.pause()
 }
 
 /* Play movie and track progress */
 function play() {
-    $global.video.play();
+    $global.video.play()
     if (progressId) {
-        clearInterval(progressId);
+        clearInterval(progressId)
     }
-    progressId = setInterval(progress, 20);
+    progressId = setInterval(progress, 20)
 }
 
 /* Play/Pause button action */
 function playPause() {
     if ($global.video.paused) {
-        play();
+        play()
     } else {
-        $global.video.pause();
+        $global.video.pause()
     }
-    return false;
+    return false
 }
 
 /* Show Progress */
 function progress() {
-    const currentTime = $global.video.currentTime;
-    const percentDone = currentTime / $global.video.duration * 100;
-    $controls.progressElapsed.style.width = percentDone + '%';
-    $controls.progressIndicator.val(currentTime);
+    const currentTime = $global.video.currentTime
+    const percentDone = (currentTime / $global.video.duration) * 100
+    $controls.progressElapsed.style.width = percentDone + '%'
+    $controls.progressIndicator.val(currentTime)
     // Ensure length of 2 characters (left pad with zero)
-    const seconds = ('0' + Math.max(Math.floor(currentTime % 60), 0)).slice(-2);
-    const minutes = Math.max(Math.floor(currentTime / 60), 0);
-    $controls.timeDisplay.html(`${minutes}:${seconds}`);
+    const seconds = ('0' + Math.max(Math.floor(currentTime % 60), 0)).slice(-2)
+    const minutes = Math.max(Math.floor(currentTime / 60), 0)
+    $controls.timeDisplay.html(`${minutes}:${seconds}`)
     if ($global.current.hasAttribute('data-fps')) {
         // Only set frame number if fps is known
-        const frames = ('0' + Math.max(Math.floor(currentTime % 1 * $global.current.dataset.fps), 0)).slice(-2);
-        $controls.frameDisplay.html(frames);
+        const frames = ('0' + Math.max(Math.floor((currentTime % 1) * $global.current.dataset.fps), 0)).slice(-2)
+        $controls.frameDisplay.html(frames)
     }
     if (progressId && $global.video.paused) {
-        clearInterval(progressId);
+        clearInterval(progressId)
     }
 }
 
 /* Step one frame */
 function stepFrameFoward() {
-    $global.video.pause();
-    $global.video.currentTime += 1 / $global.current.dataset.fps;
+    $global.video.pause()
+    $global.video.currentTime += 1 / $global.current.dataset.fps
 }
 
 function stepFrameBackward() {
-    $global.video.pause();
-    $global.video.currentTime -= 1 / $global.current.dataset.fps;
+    $global.video.pause()
+    $global.video.currentTime -= 1 / $global.current.dataset.fps
 }
 
 /* Show Buffering */
 function buffering() {
-    let maxBuffered = 0.0;
+    let maxBuffered = 0.0
     if ($global.video.buffered.length > 0) {
-        maxBuffered = $global.video.buffered.end(0);
+        maxBuffered = $global.video.buffered.end(0)
     }
-    const percentBuffered = maxBuffered / $global.video.duration * 100;
-    $controls.progressBuffered.style.width = percentBuffered + '%';
+    const percentBuffered = (maxBuffered / $global.video.duration) * 100
+    $controls.progressBuffered.style.width = percentBuffered + '%'
 }
 
 /* Select Time */
 function setTime() {
-    $global.video.currentTime = $controls.progressIndicator.val();
+    $global.video.currentTime = $controls.progressIndicator.val()
 }
 
 /* Mute */
 function mute() {
     if ($global.video.muted || $global.video.volume === 0 || volume === 0) {
-        $controls.volumeIndicator.val(50).trigger('change');
+        $controls.volumeIndicator.val(50).trigger('change')
     } else {
-        $controls.volumeIndicator.val(0).trigger('change');
+        $controls.volumeIndicator.val(0).trigger('change')
     }
 }
 
 /* Change Volume */
 function setVolume() {
-    $global.video.volume = $controls.volumeIndicator.val() / 100;
+    $global.video.volume = $controls.volumeIndicator.val() / 100
 }
 
 /* Video volume changed, store value and update UI */
 function volumeUsed() {
-    volume = parseInt($global.video.volume * 100, 10);
-    volumeUI();
+    volume = parseInt($global.video.volume * 100, 10)
+    volumeUI()
 }
 
 function volumeUI() {
-    $controls.volumeIndicator.val(volume);
-    $controls.volumeButton.toggleClass('icon-volume-off', volume === 0);
-    $controls.volumeButton.toggleClass('icon-volume-down', 0 < volume && volume < 50);
-    $controls.volumeButton.toggleClass('icon-volume-up', volume >= 50);
+    $controls.volumeIndicator.val(volume)
+    $controls.volumeButton.toggleClass('icon-volume-off', volume === 0)
+    $controls.volumeButton.toggleClass('icon-volume-down', 0 < volume && volume < 50)
+    $controls.volumeButton.toggleClass('icon-volume-up', volume >= 50)
 }
 
 /* Toggle quality*/
 function toggleQuality() {
-    quality = quality === '960' ? '1920' : '960';
-    swapVideo($global.current.id);
+    quality = quality === '960' ? '1920' : '960'
+    swapVideo($global.current.id)
 }
 
 /* Metadata Loaded -> Set Width/Height/Margins */
 function addControls() {
     /* Attach Webkit Controls */
     if (!controlsCreated) {
-        let fowardStepButton = '';
-        let backwardStepButton = '';
-        let frameDisplay = '';
-        let audioControls = '';
-        let qualityToggleButton = '';
-        let fullscreenButton = '';
-        controlsCreated = true;
+        let fowardStepButton = ''
+        let backwardStepButton = ''
+        let frameDisplay = ''
+        let audioControls = ''
+        let qualityToggleButton = ''
+        let fullscreenButton = ''
+        controlsCreated = true
 
         if ($global.current.hasAttribute('data-fps')) {
             // Video framerate is known
             fowardStepButton =
-                '<div id="step_frame_forward" class="icon icon-step-forward" title="Step frame forward"></div>';
+                '<div id="step_frame_forward" class="icon icon-step-forward" title="Step frame forward"></div>'
             backwardStepButton =
-                '<div id="step_frame_backward" class="icon icon-step-backward" title="Step frame backward"></div>';
+                '<div id="step_frame_backward" class="icon icon-step-backward" title="Step frame backward"></div>'
             frameDisplay =
-                '<div id="frame_display" title="Subsecond frame">00</div>';
+                '<div id="frame_display" title="Subsecond frame">00</div>'
         }
         if ($global.current.hasAttribute('data-audio')) {
             // Video has an audio track
@@ -242,16 +242,16 @@ function addControls() {
                                oninput="setVolume()" onchange="setVolume()">
                     </div>
                 </div>
-            `;
+            `
         }
         if ($global.current.hasAttribute('data-1920')) {
             // HQ version available
             qualityToggleButton =
-                `<div id="quality_toggle" class="quality_${quality}" title="Toggle high quality">HQ</div>`;
+                `<div id="quality_toggle" class="quality_${quality}" title="Toggle high quality">HQ</div>`
         }
         if (fullscreen) {
             fullscreenButton =
-                '<div id="fullscreen_button" class="icon icon-resize-full" title="Fullscreen"></div>';
+                '<div id="fullscreen_button" class="icon icon-resize-full" title="Fullscreen"></div>'
         }
 
         $global.movie.append(`
@@ -273,7 +273,7 @@ function addControls() {
                 ${qualityToggleButton}
                 ${fullscreenButton}
             </div>
-        `);
+        `)
         window.$controls = {
             controls: $('#controls'),
             playButton: $('#play_pause_button'),
@@ -284,7 +284,7 @@ function addControls() {
             frameDisplay: $('#frame_display'),
             volumeButton: $('#volume_speaker_button'),
             volumeIndicator: $('#volume_indicator'),
-        };
+        }
         $('#player').attr({
             onpause: 'playingPaused()',
             onplay: 'playingPaused()',
@@ -292,65 +292,65 @@ function addControls() {
             onvolumechange: 'volumeUsed()',
             ontimeupdate: 'progress()',
             onended: 'pause()',
-        });
-        $controls.volumeIndicator.val(volume).trigger('change');
+        })
+        $controls.volumeIndicator.val(volume).trigger('change')
     }
 }
 
 /* CanPlay -> Hide Status, Show Controls and Play*/
 function hideLoad() {
-    $global.status.removeClass('showing').addClass('hidden');
+    $global.status.removeClass('showing').addClass('hidden')
     if (!controlsCreated) {
-        $('#player').attr('controls', 'true');
+        $('#player').attr('controls', 'true')
     }
-    play();
+    play()
 }
 
 /* Change Status to Error Image */
 function errorStatus() {
     $global.status
         .removeClass('icon-circle-notch icon-spin hidden')
-        .addClass('icon-cancel-circled showing error');
+        .addClass('icon-cancel-circled showing error')
 }
 
 /* Exchange Video Player HTML With New Source */
 function swapVideo(movieid) {
-    controlsCreated = false;
-    $global.poster.hide();
+    controlsCreated = false
+    $global.poster.hide()
 
-    $global.thumbnails.removeClass('currentmovie');
-    $global.current = $(`#${movieid}`).get(0);
-    $global.current.classList.add('currentmovie');
+    $global.thumbnails.removeClass('currentmovie')
+    $global.current = $(`#${movieid}`).get(0)
+    $global.current.classList.add('currentmovie')
 
-    let currentQuality = quality;
+    let currentQuality = quality
     if (!$global.current.hasAttribute(`data-${quality}`)) {
         // Requested quality not available for the chosen movie, use default fallback
-        currentQuality = '960';
+        currentQuality = '960'
     }
-    const videolink = base + currentQuality + '/' + movieid + extension;
+    const videolink = base + currentQuality + '/' + movieid + extension
 
     /* Example video */
     // videolink = '../static/sample_video/150317_NorthernLights.mp4'
 
     /* HTML5 Video */
-    const coarse = window.matchMedia('(pointer: coarse)');
+    const coarse = window.matchMedia('(pointer: coarse)')
 
     if (coarse.matches) {
         $global.movie.html(`
             <video src="${videolink}" id="player" preload="auto" controls></video>
             <span id="status" class="icon icon-circle-notch icon-spin hidden"></span>
-        `);
+        `)
     } else {
         $global.movie.html(`
             <span id="status" class="icon icon-circle-notch icon-spin showing"></span>
             <video src="${videolink}" id="player" preload="auto" onloadedmetadata="addControls()" oncanplay="hideLoad()"></video>
-        `);
+        `)
     }
 
-    $global.movie.height('auto');
-    $global.video = $('#player').get(0);
-    $global.status = $('#status');
-    $global.video.addEventListener('error', errorStatus, true);
-    window.location.hash = movieid;
-    return false;
+    $global.movie.height('auto')
+    $global.video = $('#player').get(0)
+    $global.status = $('#status')
+    $global.video.addEventListener('error', errorStatus, true)
+    window.location.hash = movieid
+    return false
 }
