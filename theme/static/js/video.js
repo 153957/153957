@@ -25,14 +25,14 @@ $(document).ready(function() {
     $('#categories').on('click', '.category', function() {
         const thumbs = $(this).attr('id') + '-content';
         if (
-            $('#' + thumbs).get(0) !==
+            $(`#${thumbs}`).get(0) !==
             $('#thumbnails').find('.currentslide').get(0)
         ) {
             $('#thumbnails .currentslide').removeClass('currentslide currentreveal');
             $('#categories .currentcat').removeClass('currentcat');
             // First make the item displayed, then add the class to transition the opacity.
-            $('#' + thumbs).addClass('currentslide')
-            setTimeout(function() {$('#' + thumbs).addClass('currentreveal')}, 0);
+            $(`#${thumbs}`).addClass('currentslide')
+            setTimeout(function() {$(`#${thumbs}`).addClass('currentreveal')}, 0);
             $(this).addClass('currentcat');
         }
     });
@@ -141,7 +141,7 @@ function progress() {
     // Ensure length of 2 characters (left pad with zero)
     const seconds = ('0' + Math.max(Math.floor(currentTime % 60), 0)).slice(-2);
     const minutes = Math.max(Math.floor(currentTime / 60), 0);
-    $controls.timeDisplay.html(minutes + ':' + seconds);
+    $controls.timeDisplay.html(`${minutes}:${seconds}`);
     if ($global.current.hasAttribute('data-fps')) {
         // Only set frame number if fps is known
         const frames = ('0' + Math.max(Math.floor(currentTime % 1 * $global.current.dataset.fps), 0)).slice(-2);
@@ -234,45 +234,46 @@ function addControls() {
         }
         if ($global.current.hasAttribute('data-audio')) {
             // Video has an audio track
-            audioControls =
-                '<div id="volume_speaker_button" class="icon icon-volume-up" title="(Un)mute audio"></div>' +
-                '<div id="volume_bar">' +
-                '    <div id="volume_back">' +
-                '        <input id="volume_indicator" type="range" value="50" min="0" max="100"' +
-                '               oninput="setVolume()" onchange="setVolume()">' +
-                '    </div>' +
-                '</div>';
+            audioControls = `
+                <div id="volume_speaker_button" class="icon icon-volume-up" title="(Un)mute audio"></div>
+                <div id="volume_bar">
+                    <div id="volume_back">
+                        <input id="volume_indicator" type="range" value="50" min="0" max="100"
+                               oninput="setVolume()" onchange="setVolume()">
+                    </div>
+                </div>
+            `;
         }
         if ($global.current.hasAttribute('data-1920')) {
             // HQ version available
             qualityToggleButton =
-                '<div id="quality_toggle" class="quality_' + quality + '" title="Toggle high quality">HQ</div>';
+                `<div id="quality_toggle" class="quality_${quality}" title="Toggle high quality">HQ</div>`;
         }
         if (fullscreen) {
             fullscreenButton =
                 '<div id="fullscreen_button" class="icon icon-resize-full" title="Fullscreen"></div>';
         }
 
-        $global.movie.append(
-            '<div id="controls">' +
-            backwardStepButton +
-            '    <div id="play_pause_button" class="icon icon-play" title="Toggle play/pause"></div>' +
-            fowardStepButton +
-            '    <div id="progress_bar">' +
-            '        <div id="time_display">0:00</div>' +
-            frameDisplay +
-            '        <div id="progress_back">' +
-            '            <div id="progress_buffered" style="width: 0;"></div>' +
-            '            <div id="progress_elapsed" style="width: 0;"></div>' +
-            '            <input id="progress_indicator" type="range" step="any" value="0"' +
-            '                   min="0" max="' + $global.video.duration + '" oninput="setTime()" onchange="setTime()">' +
-            '        </div>' +
-            '    </div>' +
-            audioControls +
-            qualityToggleButton +
-            fullscreenButton +
-            '</div>'
-        );
+        $global.movie.append(`
+            <div id="controls">
+                ${backwardStepButton}
+                <div id="play_pause_button" class="icon icon-play" title="Toggle play/pause"></div>
+                ${fowardStepButton}
+                <div id="progress_bar">
+                    <div id="time_display">0:00</div>
+                    ${frameDisplay}
+                    <div id="progress_back">
+                        <div id="progress_buffered" style="width: 0;"></div>
+                        <div id="progress_elapsed" style="width: 0;"></div>
+                        <input id="progress_indicator" type="range" step="any" value="0"
+                               min="0" max="${$global.video.duration}" oninput="setTime()" onchange="setTime()">
+                    </div>
+                </div>
+                ${audioControls}
+                ${qualityToggleButton}
+                ${fullscreenButton}
+            </div>
+        `);
         window.$controls = {
             controls: $('#controls'),
             playButton: $('#play_pause_button'),
@@ -318,11 +319,11 @@ function swapVideo(movieid) {
     $global.poster.hide();
 
     $global.thumbnails.removeClass('currentmovie');
-    $global.current = $('#' + movieid).get(0);
+    $global.current = $(`#${movieid}`).get(0);
     $global.current.classList.add('currentmovie');
 
     let currentQuality = quality;
-    if (!$global.current.hasAttribute('data-' + quality)) {
+    if (!$global.current.hasAttribute(`data-${quality}`)) {
         // Requested quality not available for the chosen movie, use default fallback
         currentQuality = '960';
     }
@@ -335,15 +336,15 @@ function swapVideo(movieid) {
     const coarse = window.matchMedia('(pointer: coarse)');
 
     if (coarse.matches) {
-        $global.movie.html(
-            '<video src="' + videolink + '" id="player" preload="auto" controls></video>' +
-            '<span id="status" class="icon icon-circle-notch icon-spin hidden"></span>'
-        );
+        $global.movie.html(`
+            <video src="${videolink}" id="player" preload="auto" controls></video>
+            <span id="status" class="icon icon-circle-notch icon-spin hidden"></span>
+        `);
     } else {
-        $global.movie.html(
-            '<span id="status" class="icon icon-circle-notch icon-spin showing"></span>' +
-            '<video src="' + videolink + '" id="player" preload="auto" onloadedmetadata="addControls()" oncanplay="hideLoad()"></video>'
-        );
+        $global.movie.html(`
+            <span id="status" class="icon icon-circle-notch icon-spin showing"></span>
+            <video src="${videolink}" id="player" preload="auto" onloadedmetadata="addControls()" oncanplay="hideLoad()"></video>
+        `);
     }
 
     $global.movie.height('auto');
