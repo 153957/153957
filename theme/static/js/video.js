@@ -183,7 +183,7 @@ function mute() {
     if ($global.video.muted || $global.video.volume === 0 || volume === 0) {
         $controls.volumeIndicator.val(50).trigger('change');
     } else {
-        $controls.volumeIndicator.val(0).trigger('trigger');
+        $controls.volumeIndicator.val(0).trigger('change');
     }
 }
 
