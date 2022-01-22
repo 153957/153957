@@ -23,7 +23,7 @@ $(document).ready(function() {
 
     /* Category Slider */
     $('#categories').on('click', '.category', function() {
-        var thumbs = $(this).attr('id') + '-content';
+        const thumbs = $(this).attr('id') + '-content';
         if (
             $('#' + thumbs).get(0) !==
             $('#thumbnails').find('.currentslide').get(0)
@@ -95,7 +95,7 @@ $(document).ready(function() {
     /* Load linked video */
     if (window.location.hash) {
         if ($global.thumbnails.filter(window.location.hash).length) {
-            var hash_value = window.location.hash.replace('#', '');
+            const hash_value = window.location.hash.replace('#', '');
             swapVideo(hash_value);
         }
     }
@@ -134,17 +134,17 @@ function playPause() {
 
 /* Show Progress */
 function progress() {
-    var currentTime = $global.video.currentTime;
-    var percentDone = currentTime / $global.video.duration * 100;
+    const currentTime = $global.video.currentTime;
+    const percentDone = currentTime / $global.video.duration * 100;
     $controls.progressElapsed.style.width = percentDone + '%';
     $controls.progressIndicator.val(currentTime);
     // Ensure length of 2 characters (left pad with zero)
-    var seconds = ('0' + Math.max(Math.floor(currentTime % 60), 0)).slice(-2);
-    var minutes = Math.max(Math.floor(currentTime / 60), 0);
+    const seconds = ('0' + Math.max(Math.floor(currentTime % 60), 0)).slice(-2);
+    const minutes = Math.max(Math.floor(currentTime / 60), 0);
     $controls.timeDisplay.html(minutes + ':' + seconds);
     if ($global.current.hasAttribute('data-fps')) {
         // Only set frame number if fps is known
-        var frames = ('0' + Math.max(Math.floor(currentTime % 1 * $global.current.dataset.fps), 0)).slice(-2);
+        const frames = ('0' + Math.max(Math.floor(currentTime % 1 * $global.current.dataset.fps), 0)).slice(-2);
         $controls.frameDisplay.html(frames);
     }
     if (progressId && $global.video.paused) {
@@ -165,11 +165,11 @@ function stepFrameBackward() {
 
 /* Show Buffering */
 function buffering() {
-    var maxBuffered = 0.0;
+    let maxBuffered = 0.0;
     if ($global.video.buffered.length > 0) {
         maxBuffered = $global.video.buffered.end(0);
     }
-    var percentBuffered = maxBuffered / $global.video.duration * 100;
+    const percentBuffered = maxBuffered / $global.video.duration * 100;
     $controls.progressBuffered.style.width = percentBuffered + '%';
 }
 
@@ -215,12 +215,12 @@ function toggleQuality() {
 function addControls() {
     /* Attach Webkit Controls */
     if (!controlsCreated) {
-        var fowardStepButton = '';
-        var backwardStepButton = '';
-        var frameDisplay = '';
-        var audioControls = '';
-        var qualityToggleButton = '';
-        var fullscreenButton = '';
+        let fowardStepButton = '';
+        let backwardStepButton = '';
+        let frameDisplay = '';
+        let audioControls = '';
+        let qualityToggleButton = '';
+        let fullscreenButton = '';
         controlsCreated = true;
 
         if ($global.current.hasAttribute('data-fps')) {
@@ -314,8 +314,6 @@ function errorStatus() {
 
 /* Exchange Video Player HTML With New Source */
 function swapVideo(movieid) {
-    var videolink;
-
     controlsCreated = false;
     $global.poster.hide();
 
@@ -323,19 +321,18 @@ function swapVideo(movieid) {
     $global.current = $('#' + movieid).get(0);
     $global.current.classList.add('currentmovie');
 
-    var currentQuality = quality;
+    let currentQuality = quality;
     if (!$global.current.hasAttribute('data-' + quality)) {
         // Requested quality not available for the chosen movie, use default fallback
         currentQuality = '960';
     }
-    var camera = movieid.substring(0, 3);
-    var videolink = base + currentQuality + '/' + movieid + extension;
+    const videolink = base + currentQuality + '/' + movieid + extension;
 
     /* Example video */
     // videolink = '../static/sample_video/150317_NorthernLights.mp4'
 
     /* HTML5 Video */
-    var coarse = window.matchMedia('(pointer: coarse)');
+    const coarse = window.matchMedia('(pointer: coarse)');
 
     if (coarse.matches) {
         $global.movie.html(
