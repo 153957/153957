@@ -88,7 +88,7 @@ $(document).ready(function() {
     $global.movie.on('click', '#play_pause_button', playPause);
 
     const coarse = window.matchMedia('(pointer: coarse)');
-    if (coarse.matches) {
+    if (!coarse.matches) {
         $global.movie.on('click', '#player', playPause);
     }
 
