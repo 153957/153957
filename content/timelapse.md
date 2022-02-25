@@ -59,6 +59,9 @@ footer:
             [% thumbnail id=060716_S60_1 fps=15 data='960 audio' %]
         </div>
         <div class="slide" id="Clouds-content">
+            [% thumbnail id=220219_APL_1_4 fps=30 data='960 1920' %]
+            [% thumbnail id=220130_APL_2 fps=30 data='960 1920' %]
+            [% thumbnail id=210306_APL_1 fps=25 data='960 1920' %]
             [% thumbnail id=180430_APL_Loch_Lomond fps=24 data='960 1920' %]
             [% thumbnail id=121004_ARN_1 fps=48 data='960 1920' %]
             [% thumbnail id=110413_ADL_1 fps=24 data='960 1920' %]
@@ -151,6 +154,7 @@ footer:
             [% thumbnail id=051218_S60_1 fps=15 data='960' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=201118_APL_3 fps=30 data='960 1920' %]
             [% thumbnail id=200606_WEN_1 fps=25 data='960 1920' %]
             [% thumbnail id=191108_ADL_Haarrijnseplas fps=30 data='960 1920' %]
             [% thumbnail id=190430_APL_2_3_4 fps=30 data='960 1920' %]
