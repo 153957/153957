@@ -61,7 +61,7 @@ footer:
         <div class="slide" id="Clouds-content">
             [% thumbnail id=220219_APL_1_4 fps=30 data='960 1920' %]
             [% thumbnail id=220130_APL_2 fps=30 data='960 1920' %]
-            [% thumbnail id=210306_APL_1 fps=25 data='960 1920' %]
+            [% thumbnail id=210306_APL_Radio_Kootwijk fps=25 data='960 1920' %]
             [% thumbnail id=180430_APL_Loch_Lomond fps=24 data='960 1920' %]
             [% thumbnail id=121004_ARN_1 fps=48 data='960 1920' %]
             [% thumbnail id=110413_ADL_1 fps=24 data='960 1920' %]
