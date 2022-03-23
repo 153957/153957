@@ -91,6 +91,7 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
+            [% thumbnail id=220323_APL_A2 fps=24 data='960 1920' %]
             [% thumbnail id=201018_WEN_A2 fps=25 data='960 1920' %]
             [% thumbnail id=181019_ADL_1 fps=24 data='960 1920' %]
             [% thumbnail id=181012_ADL_1 fps=30 data='960 1920' %]
