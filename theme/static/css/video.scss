@@ -48,25 +48,9 @@
         margin: 1px;
     }
 
-    .currentmovie::before,
-    .thumbnail:hover::before {
-        display: inline-block;
-        position: absolute;
-        top: 25%;
-        left: 0;
-        width: 100%;
-        vertical-align: bottom;
-        text-align: center;
-        line-height: 1;
-        color: #fffc;
-        font-family: 'fontello';
-        font-size: 30px;
-        -webkit-font-smoothing: antialiased;
-        content: '\e80a';
-    }
-
-    .currentmovie::before {
-        color: rgba(255, 255, 255, 0.9);
+    .currentmovie,
+    .thumbnail:hover {
+        opacity: 0.5;
     }
 }
 
