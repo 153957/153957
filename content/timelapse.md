@@ -29,7 +29,6 @@ footer:
     <div id="categories">
         <ul>
             <li class="category currentcat" id="Reels">Reels
-            <li class="category" id="Archery">Archery
             <li class="category" id="Astronomy">Astronomy
             <li class="category" id="Balfolk">Balfolk
             <li class="category" id="Clouds">Clouds
@@ -37,6 +36,7 @@ footer:
             <li class="category" id="Flowers">Flowers
             <li class="category" id="Frost">Frost
             <li class="category" id="Other">Other
+            <li class="category" id="Sport">Sport
             <li class="category" id="Sun">Sun
             <li class="category" id="Traffic">Traffic
         </ul>
@@ -127,6 +127,7 @@ footer:
             [% thumbnail id=050504_S60_1 fps=15 data='960 1920' %]
         </div>
         <div class="slide" id="Sun-content">
+            [% thumbnail id=220401_APL_Haarrijnseplas fps=24 data='960 1920' %]
             [% thumbnail id=130305_ARN_1_2 fps=48 data='960 1920' %]
             [% thumbnail id=100816_DSC_1_2 fps=25 data='960' %]
             [% thumbnail id=100722_DSC_1 fps=25 data='960' %]
@@ -147,7 +148,8 @@ footer:
             [% thumbnail id=090906_DSC_3 fps=25 data='960 audio' %]
             [% thumbnail id=090617_DSC_1 fps=15 data='960 1920 audio' %]
         </div>
-        <div class="slide" id="Archery-content">
+        <div class="slide" id="Sport-content">
+            [% thumbnail id=220401_APL_City_Skydive fps=24 data='960 1920' %]
             [% thumbnail id=120524_ADL_ARN_EC_Archery fps=48 data='960 1920' %]
             [% thumbnail id=100816_DSC_3 fps=25 data='960' %]
             [% thumbnail id=090906_DSC_2 fps=15 data='960' %]
