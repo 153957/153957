@@ -49,7 +49,7 @@ footer:
             [% thumbnail id=080816_DSC_1 fps=24 data='960 1920' %]
             [% thumbnail id=080806_DSC_1 fps=48 data='960 1920' %]
             [% thumbnail id=080714_DSC_1 fps=30 data='960' %]
-            [% thumbnail id=080614_S60_1 fps=25 data='960 audio' %]
+            [% thumbnail id=080614_S60_Hibiscus fps=24 data='960 1920' %]
             [% thumbnail id=080608_S60_1 fps=25 data='960' %]
             [% thumbnail id=080607_S60_1 fps=25 data='960' %]
             [% thumbnail id=080515_S60_1 fps=25 data='960' %]
