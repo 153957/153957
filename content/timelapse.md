@@ -30,8 +30,8 @@ footer:
         <ul>
             <li class="category currentcat" id="Reels">Reels
             <li class="category" id="Astronomy">Astronomy
-            <li class="category" id="Balfolk">Balfolk
             <li class="category" id="Clouds">Clouds
+            <li class="category" id="Dance">Dance
             <li class="category" id="Fire">Fire
             <li class="category" id="Flowers">Flowers
             <li class="category" id="Frost">Frost
@@ -140,7 +140,8 @@ footer:
             [% thumbnail id=080110_S60_1 fps=15 data='960' %]
             [% thumbnail id=070601_S60_1 fps=25 data='960' %]
         </div>
-        <div class="slide" id="Balfolk-content">
+        <div class="slide" id="Dance-content">
+            [% thumbnail id=160605_ADL_Taboe_Tango fps=24 data='960 1920' %]
             [% thumbnail id=141016_ARN_CaDansa fps=24 data='960 1920 audio' %]
             [% thumbnail id=120602_ARN_1 fps=25 data='960 audio' %]
             [% thumbnail id=100405_DSC_1 fps=25 data='960 audio' %]
