@@ -114,7 +114,9 @@ footer:
 
 ### Events photographed
 
-- [Bal Folk!](https://www.balfolk.nl/)
+- [Balfolk](https://www.balfolk.nl/)
+- [CaDansa](https://www.cadansa.nl)
+- [Boombal festival](https://boombalfestival.be/)
 - [Castlefest](https://www.castlefest.nl/) (Vana-events)
 - [Keltfest](https://www.keltfest.nl/) (Vana-events)
 - [Elfia (Elf Fantasy Fair)](https://www.elfia.com/)
