@@ -44,6 +44,7 @@ footer:
 
     <div id="thumbnails">
         <div class="slide" id="Flowers-content">
+            [% thumbnail id=220914_ADL_Maranta_Leuconeura fps=60 data='960 1920' %]
             [% thumbnail id=181014_ADL_1_2 fps=24 data='960 1920' %]
             [% thumbnail id=130217_ARN_False_Rose_of_Jericho fps=24 data='960 1920' %]
             [% thumbnail id=080816_DSC_1 fps=24 data='960 1920' %]
