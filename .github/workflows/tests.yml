@@ -16,7 +16,7 @@ jobs:
           cache: 'pip'
       - run: make install
       - run: make build
-      - uses: Cyb3r-Jak3/html5validator-action@v7.1.1
+      - uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
           root: .build/
           css: true
