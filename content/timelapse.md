@@ -60,6 +60,7 @@ footer:
             [% thumbnail id=060716_S60_1 fps=15 data='960 audio' %]
         </div>
         <div class="slide" id="Clouds-content">
+            [% thumbnail id=221026_APL_Uinta_Wasatch_Cache fps=24 data='960 1920' %]
             [% thumbnail id=220219_APL_1_4 fps=30 data='960 1920' %]
             [% thumbnail id=220130_APL_2 fps=30 data='960 1920' %]
             [% thumbnail id=210306_APL_Radio_Kootwijk fps=25 data='960 1920' %]
