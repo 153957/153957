@@ -1,7 +1,7 @@
 # 153957
 
-[![License](https://img.shields.io/github/license/153957/153957)](https://github.com/153957/153957/blob/master/LICENSE)
-[![Build](https://img.shields.io/github/workflow/status/153957/153957/Run%20tests)](https://github.com/153957/153957/actions)
+[![License](https://img.shields.io/github/license/153957/153957)](https://github.com/153957/153957/blob/main/LICENSE)
+[![Build](https://img.shields.io/github/actions/workflow/status/153957/153957/tests.yml?branch=main)](https://github.com/153957/153957/actions)
 
 This is the source code for my personal website:
 [153957 Photography](https://arne.delaat.net)
