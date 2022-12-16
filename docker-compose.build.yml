@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   pelican-build:
-    image: 'python:3.10'
+    image: 'python:3.11'
     restart: 'no'
     volumes:
       - '.:/base'
