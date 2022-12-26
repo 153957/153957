@@ -162,6 +162,7 @@ footer:
         </div>
         <div class="slide" id="Other-content">
             [% thumbnail id=221028_APL_City_Creek fps=24 data='960 1920' %]
+            [% thumbnail id=221008_APL_1_2_5 fps=48 data='960 1920' %]
             [% thumbnail id=220630_APL_1_3 fps=30 data='960 1920' %]
             [% thumbnail id=220517_APL_Laafland_Efteling fps=25 data='960 1920' %]
             [% thumbnail id=220514_APL_Noordermeerdijk fps=30 data='960 1920' %]
