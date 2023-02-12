@@ -93,6 +93,8 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
+            [% thumbnail id=220924_APL_Dom_Luis_I fps=24 data='960 1920' %]
+            [% thumbnail id=220924_APL_Douro_River fps=24 data='960 1920' %]
             [% thumbnail id=220323_APL_A2 fps=24 data='960 1920' %]
             [% thumbnail id=201018_WEN_A2 fps=25 data='960 1920' %]
             [% thumbnail id=181019_ADL_1 fps=24 data='960 1920' %]
@@ -163,6 +165,9 @@ footer:
         <div class="slide" id="Other-content">
             [% thumbnail id=221028_APL_City_Creek fps=24 data='960 1920' %]
             [% thumbnail id=221008_APL_1_2_5 fps=48 data='960 1920' %]
+            [% thumbnail id=220924_APL_Porto fps=24 data='960 1920' %]
+            [% thumbnail id=220924_APL_She_Changes fps=24 data='960 1920' %]
+            [% thumbnail id=220925_APL_Via_Catarina fps=24 data='960 1920' %]
             [% thumbnail id=220630_APL_1_3 fps=30 data='960 1920' %]
             [% thumbnail id=220517_APL_Laafland_Efteling fps=25 data='960 1920' %]
             [% thumbnail id=220514_APL_Noordermeerdijk fps=30 data='960 1920' %]
