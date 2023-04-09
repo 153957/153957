@@ -93,6 +93,7 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
+            [% thumbnail id=221029_APL_City_Creek fps=48 data='960 1920' %]
             [% thumbnail id=220924_APL_Dom_Luis_I fps=24 data='960 1920' %]
             [% thumbnail id=220924_APL_Douro_River fps=24 data='960 1920' %]
             [% thumbnail id=220323_APL_A2 fps=24 data='960 1920' %]
@@ -163,6 +164,8 @@ footer:
             [% thumbnail id=051218_S60_1 fps=15 data='960' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=230305_APL_1 fps=24 data='960 1920' %]
+            [% thumbnail id=221102_APL_Boulder_Creek fps=30 data='960 1920' %]
             [% thumbnail id=221028_APL_City_Creek fps=24 data='960 1920' %]
             [% thumbnail id=221008_APL_1_2_5 fps=48 data='960 1920' %]
             [% thumbnail id=220924_APL_Porto fps=24 data='960 1920' %]
