@@ -94,6 +94,7 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
+            [% thumbnail id=230424_APL_Villa_Carlos_Paz fps=24 data='960 1920' %]
             [% thumbnail id=221029_APL_City_Creek fps=48 data='960 1920' %]
             [% thumbnail id=220924_APL_Dom_Luis_I fps=24 data='960 1920' %]
             [% thumbnail id=220323_APL_A2 fps=24 data='960 1920' %]
@@ -116,10 +117,10 @@ footer:
             [% thumbnail id=100722_ADL_4_5 fps=25 data='960' %]
             [% thumbnail id=091019_DSC_3 fps=25 data='960' %]
             [% thumbnail id=091019_DSC_1 fps=15 data='960' %]
-            [% thumbnail id=090727_DSC_3 fps=25 data='960' %]
-            [% thumbnail id=090727_DSC_2 fps=25 data='960' %]
-            [% thumbnail id=090721_DSC_Shanghai_Jiao_Tong_University fps=25 data='960' %]
-            [% thumbnail id=090712_DSC_1 fps=15 data='960' %]
+            [% thumbnail id=090727_DSC_Narita_International_Airport fps=24 data='960 1920' %]
+            [% thumbnail id=090727_DSC_Shanghai_Pudong_Airport fps=24 data='960 1920' %]
+            [% thumbnail id=090721_DSC_Shanghai_Jiao_Tong_University fps=24 data='960 1920' %]
+            [% thumbnail id=090712_DSC_1 fps=24 data='960 1920' %]
             [% thumbnail id=080716_DSC_4 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Frost-content">
@@ -200,7 +201,7 @@ footer:
             [% thumbnail id=100208_DSC_1 fps=25 data='960' %]
             [% thumbnail id=090918_DSC_1 fps=25 data='960' %]
             [% thumbnail id=090715_DSC_1 fps=25 data='960' %]
-            [% thumbnail id=090712_DSC_Tokyo_Tower fps=25 data='960' %]
+            [% thumbnail id=090712_DSC_Tokyo_Tower fps=24 data='960 1920' %]
             [% thumbnail id=090710_DSC_2 fps=25 data='960' %]
             [% thumbnail id=080721_DSC_1 fps=30 data='960' %]
             [% thumbnail id=060404_S60_1 fps=10 data='960 audio' %]
@@ -216,7 +217,7 @@ footer:
             [% thumbnail id=090718_DSC_Tamagawa_Hanabi_1 fps=25 data='960 audio' %]
             [% thumbnail id=090603_DSC_2 fps=25 data='960 audio' %]
             [% thumbnail id=090403_DSC_2 fps=12 data='960 1920' %]
-            [% thumbnail id=081214_DSC_1 fps=30 data='960 audio' %]
+            [% thumbnail id=081214_DSC_Midwinter_Fair fps=30 data='960 audio' %]
         </div>
         <div class="slide" id="Astronomy-content">
             [% thumbnail id=200713_APL_ADL_Neowise fps=30 data='960 1920' %]
