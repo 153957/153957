@@ -107,6 +107,7 @@ footer:
             [% thumbnail id=130424_ARN_Tippelzone fps=24 data='960 1920' %]
             [% thumbnail id=121103_ARN_2 fps=30 data='960 1920' %]
             [% thumbnail id=120826_ADL_1 fps=25 data='960 1920' %]
+            [% thumbnail id=120515_ARN_N409 fps=24 data='960 1920' %]
             [% thumbnail id=120506_ARN_1_2 fps=48 data='960' %]
             [% thumbnail id=101129_DSC_1 fps=24 data='960 1920' %]
             [% thumbnail id=101121_DSC_2 fps=25 data='960' %]
