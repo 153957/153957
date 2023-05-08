@@ -113,7 +113,7 @@ footer:
             [% thumbnail id=101121_DSC_2 fps=25 data='960' %]
             [% thumbnail id=101118_101126_DSC_Rijkswaterstaat fps=25 data='960' %]
             [% thumbnail id=101109_ADL_A27 fps=24 data='960 1920' %]
-            [% thumbnail id=100914_DSC_1 fps=25 data='960' %]
+            [% thumbnail id=100914_DSC_Utrecht_Centraal fps=24 data='960 1920' %]
             [% thumbnail id=100913_DSC_2 fps=25 data='960' %]
             [% thumbnail id=100722_ADL_4_5 fps=25 data='960' %]
             [% thumbnail id=091019_DSC_3 fps=25 data='960' %]
@@ -210,7 +210,7 @@ footer:
         <div class="slide" id="Fire-content">
             [% thumbnail id=160813_ARN_Rhein_in_Flammen fps=60 data='960 1920' %]
             [% thumbnail id=111111_DSC_1 fps=25 data='960' %]
-            [% thumbnail id=110311_DSC_1 fps=25 data='960 audio' %]
+            [% thumbnail id=110311_DSC_Holland_Casino fps=24 data='960 1920' %]
             [% thumbnail id=101231_DSC_1 fps=24 data='960 1920' %]
             [% thumbnail id=091228_ADL_1 fps=25 data='960' %]
             [% thumbnail id=090829_DSC_1 fps=25 data='960' %]
