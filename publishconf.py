@@ -1,4 +1,4 @@
-from pelicanconf import *  # noqa: F401, F403
+from pelicanconf import *  # noqa: F403
 
 SITEURL = 'https://arne.delaat.net'
 RELATIVE_URLS = False
