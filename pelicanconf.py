@@ -1,3 +1,5 @@
+"""Base and development configuration for Pelican"""
+
 from pathlib import Path
 
 PROJECT_DIR = Path(__file__).parent
@@ -78,8 +80,8 @@ CATEGORIES_SAVE_AS = False
 TAGS_SAVE_AS = False
 INDEX_SAVE_AS = False
 
-# Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+# Set the following to True if you want document-relative URLs when developing
+RELATIVE_URLS = False
 
 # No feeds, no blog!
 FEED_ALL_ATOM = None

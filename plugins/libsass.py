@@ -1,5 +1,4 @@
-"""
-libsass
+"""libsass
 
 This plugin compiles sass/scss files to plain css.
 """
@@ -11,9 +10,7 @@ SETTINGS_NAME = 'LIBSASS_PATHS'
 
 
 def compile_sass(instance: Pelican) -> None:
-    """
-    Compile SASS/SCSS with libsass to CSS
-    """
+    """Compile SASS/SCSS with libsass to CSS"""
     paths = instance.settings.get(SETTINGS_NAME, [])
 
     for input_output_paths in paths:
@@ -21,4 +18,5 @@ def compile_sass(instance: Pelican) -> None:
 
 
 def register() -> None:
+    """Register with pelican"""
     signals.finalized.connect(compile_sass)

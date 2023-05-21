@@ -1,3 +1,5 @@
+"""Production configuration for Pelican"""
+
 from pelicanconf import *  # noqa: F403
 
 SITEURL = 'https://arne.delaat.net'

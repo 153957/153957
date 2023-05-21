@@ -1,5 +1,4 @@
-"""
-thumbnails
+"""thumbnails
 
 This plugin creates half size versions of images in specified path.
 
@@ -20,6 +19,7 @@ SETTINGS_NAME = 'THUMBNAIL_PATHS'
 
 
 def create_thumbnail(image_path: Path) -> None:
+    """Create half size (halved width and height) thumbnail"""
     extension = image_path.suffix
     image = Image.open(image_path)
     image.thumbnail((
@@ -30,9 +30,7 @@ def create_thumbnail(image_path: Path) -> None:
 
 
 def create_thumbnails(instance: Pelican) -> None:
-    """
-    Create half size versions of '@2x' images in given paths
-    """
+    """Create half size versions of '@2x' images in given paths"""
     extensions = ['.png', '.jpg', '.jpeg']
     paths = instance.settings.get(SETTINGS_NAME, [])
 
@@ -48,4 +46,5 @@ def create_thumbnails(instance: Pelican) -> None:
 
 
 def register() -> None:
+    """Register with pelican"""
     signals.finalized.connect(create_thumbnails)
