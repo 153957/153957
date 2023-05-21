@@ -24,7 +24,7 @@ def create_thumbnail(image_path: Path) -> None:
     image = Image.open(image_path)
     image.thumbnail((
         image.size[0] / 2,
-        image.size[1] / 2
+        image.size[1] / 2,
     ))
     image.save(str(image_path).replace(f'@2x{extension}', extension))
 

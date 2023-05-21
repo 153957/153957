@@ -8,7 +8,7 @@ The purpose of this plugin is to allow explicit and quick jinja2 templating in y
 
 Example:
 
-    #pelicanconf.py
+In `pelicanconf.py` add:
 
     SHORTCODES = {
         'image': "<img src=/images/{{src}}>{{desc|title}}<img>"
@@ -18,9 +18,10 @@ Then in your content:
 
     [% image src=foo.png desc="this is a test" %]
 
-will become:
+which will become:
 
     <img src=/images/foo.png>This Is A Test<img>
+
 """
 import re
 
@@ -33,7 +34,7 @@ SETTINGS_NAME = 'SHORTCODES'
 
 def expand_shortcodes(text: str, shortcodes: dict[str, str]) -> str:
     def replace_shortcode(group: re.Match) -> str:
-        """replace shortcodes with evaluated templates"""
+        """Replace shortcodes with evaluated templates"""
         match = group.groups()[0]
         code, _, args = match.partition(' ')
         args = re.split(r'(\w+)=', args)
