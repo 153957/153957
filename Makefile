@@ -8,9 +8,9 @@ install:
 	pip install --upgrade pip
 	pip install --upgrade --upgrade-strategy eager -r requirements.txt
 
-.PHONY: flaketest
-flaketest:
-	flake8
+.PHONY: rufftest
+rufftest:
+	ruff .
 
 .PHONY: clean
 clean:
