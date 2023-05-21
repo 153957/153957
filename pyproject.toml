@@ -21,6 +21,17 @@ select = [
     'E271', 'E272', 'E273', 'E274', 'E275',
 ]
 
+ignore = [
+    'D213',  # Start multi-line docstring on first line
+    'D203',  # Had to disable one of these (D211)
+    'D400',  # Do not require . at end of first line in docstring
+    'D415',  # Do not require ./!/? at end of first line in docstring
+    'EM102',  # Allow f-string in exception message
+    'Q',  # Currently use single quotes
+    'SLF001',  # Allow accessing private attributes
+    'TRY003',  # Allow long messages in exceptions
+]
+
 [tool.ruff.isort]
 lines-between-types = 1
 section-order = [
