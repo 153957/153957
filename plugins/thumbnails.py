@@ -10,15 +10,16 @@ same format, but without the `@2x` suffix.
 
 """
 from multiprocessing import Pool
+from pathlib import Path
 
 from PIL import Image
 
-from pelican import signals
+from pelican import Pelican, signals
 
 SETTINGS_NAME = 'THUMBNAIL_PATHS'
 
 
-def create_thumbnail(image_path):
+def create_thumbnail(image_path: Path) -> None:
     extension = image_path.suffix
     image = Image.open(image_path)
     image.thumbnail((
@@ -28,7 +29,7 @@ def create_thumbnail(image_path):
     image.save(str(image_path).replace(f'@2x{extension}', extension))
 
 
-def create_thumbnails(instance):
+def create_thumbnails(instance: Pelican) -> None:
     """
     Create half size versions of '@2x' images in given paths
     """
@@ -46,5 +47,5 @@ def create_thumbnails(instance):
         pool.map(create_thumbnail, image_paths)
 
 
-def register():
+def register() -> None:
     signals.finalized.connect(create_thumbnails)

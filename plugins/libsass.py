@@ -5,12 +5,12 @@ This plugin compiles sass/scss files to plain css.
 """
 import sass
 
-from pelican import signals
+from pelican import Pelican, signals
 
 SETTINGS_NAME = 'LIBSASS_PATHS'
 
 
-def compile_sass(instance):
+def compile_sass(instance: Pelican) -> None:
     """
     Compile SASS/SCSS with libsass to CSS
     """
@@ -20,5 +20,5 @@ def compile_sass(instance):
         sass.compile(dirname=input_output_paths)
 
 
-def register():
+def register() -> None:
     signals.finalized.connect(compile_sass)

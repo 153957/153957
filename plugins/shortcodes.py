@@ -26,13 +26,13 @@ import re
 
 from jinja2 import Template
 
-from pelican import signals
+from pelican import Pelican, signals
 
 SETTINGS_NAME = 'SHORTCODES'
 
 
-def expand_shortcodes(text, shortcodes) -> str:
-    def replace_shortcode(group):
+def expand_shortcodes(text: str, shortcodes: dict[str, str]) -> str:
+    def replace_shortcode(group: re.Match) -> str:
         """replace shortcodes with evaluated templates"""
         match = group.groups()[0]
         code, _, args = match.partition(' ')
@@ -47,12 +47,12 @@ def expand_shortcodes(text, shortcodes) -> str:
     return re.sub(r'\[% ([\w\W]+?) %\]', replace_shortcode, text, flags=re.MULTILINE)
 
 
-def content_object_init(instance):
+def content_object_init(instance: Pelican) -> None:
     shortcodes = instance.settings.get(SETTINGS_NAME)
     if not shortcodes or not instance._content:
         return
     instance._content = expand_shortcodes(instance._content, shortcodes)
 
 
-def register():
+def register() -> None:
     signals.content_object_init.connect(content_object_init)
