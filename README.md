@@ -32,3 +32,15 @@ Use the following command to locally test the site (http://localhost:8000),
 with automatic rebuilds when making changes:
 
     make serve
+
+
+## Using Docker
+
+To use Docker to build and develop use these commands, to serve the
+development server:
+
+    docker compose up -d
+
+And to build the site:
+
+    docker compose -f docker-compose.build.yml up

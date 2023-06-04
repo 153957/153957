@@ -17,9 +17,9 @@ clean:
 	rm -rf .build
 
 .PHONY: build
-build: clean
+build: clean install
 	pelican
 
 .PHONY: serve
-serve: clean
+serve: clean install devinstall
 	pelican --listen --autoreload
