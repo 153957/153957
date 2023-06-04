@@ -8,8 +8,8 @@ install:
 	pip install --upgrade pip
 	pip install --upgrade --upgrade-strategy eager -r requirements.txt
 
-.PHONY: rufftest
-rufftest:
+.PHONY: linttest
+linttest:
 	ruff .
 
 .PHONY: clean
