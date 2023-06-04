@@ -15,7 +15,7 @@ THEME_STATIC_DIR = 'static'
 
 PATH = 'content'
 PAGE_PATHS = ['']
-STATIC_PATHS = []
+STATIC_PATHS: list[str] = []
 
 TIMEZONE = 'UTC'
 DEFAULT_LANG = 'en'
@@ -71,7 +71,7 @@ THUMBNAIL_PATHS = [
 
 
 # No blog, just pages!
-ARTICLE_PATHS = []
+ARTICLE_PATHS: list[str] = []
 ARTICLE_URL = False
 ARTICLE_SAVE_AS = False
 ARCHIVES_SAVE_AS = False

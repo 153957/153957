@@ -34,7 +34,7 @@ from pelican import Pelican, signals
 SETTINGS_NAME = 'SHORTCODES'
 
 
-def replace_shortcode(group: re.Match, shortcodes: dict[str, str]) -> str:
+def replace_shortcode(group: re.Match[str], shortcodes: dict[str, str]) -> str:
     """Replace shortcodes with evaluated templates"""
     match = group.groups()[0]
     code, _, args = match.partition(' ')
