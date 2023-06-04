@@ -1,0 +1,47 @@
+[tool.black]
+target-version = ['py311']
+line-length = 120
+skip-string-normalization = true
+
+[tool.ruff]
+line-length = 120
+target-version = 'py311'
+format = 'github'
+
+select = [
+    # https://github.com/charliermarsh/ruff#supported-rules
+    'ALL',
+    'E111', 'E112', 'E113', 'E114', 'E115', 'E116', 'E117',
+    'E201', 'E202', 'E203',
+    'E211',
+    'E221', 'E222', 'E223', 'E224', 'E225', 'E226', 'E227', 'E228',
+    'E231',
+    'E251', 'E252',
+    'E261', 'E262', 'E265', 'E266',
+    'E271', 'E272', 'E273', 'E274', 'E275',
+]
+
+ignore = [
+    'D213',  # Start multi-line docstring on first line
+    'D203',  # Had to disable one of these (D211)
+    'D400',  # Do not require . at end of first line in docstring
+    'D415',  # Do not require ./!/? at end of first line in docstring
+    'EM102',  # Allow f-string in exception message
+    'Q',  # Currently use single quotes
+    'SLF001',  # Allow accessing private attributes
+    'TRY003',  # Allow long messages in exceptions
+]
+
+[tool.ruff.isort]
+lines-between-types = 1
+section-order = [
+    'future',
+    'standard-library',
+    'third-party',
+    'pelican',
+    'first-party',
+    'local-folder',
+]
+
+[tool.ruff.isort.sections]
+pelican = ['pelican']

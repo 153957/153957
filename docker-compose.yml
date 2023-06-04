@@ -1,6 +1,6 @@
 version: '3.7'
-services:
 
+services:
   pelican:
     image: 'python:3.11'
     restart: unless-stopped

@@ -34,4 +34,4 @@ jobs:
           cache: 'pip'
           cache-dependency-path: 'requirements*.txt'
       - run: make devinstall
-      - run: make flaketest
+      - run: make linttest
