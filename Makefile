@@ -1,7 +1,7 @@
 .PHONY: devinstall
 devinstall:
 	pip install --upgrade pip
-	pip install --upgrade --upgrade-strategy eager -r requirements.txt -r requirements-dev.txt
+	pip install --upgrade --upgrade-strategy eager -r requirements-dev.txt
 
 .PHONY: install
 install:
