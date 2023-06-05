@@ -11,10 +11,18 @@ This showcases my photography and time-lapse.
 
 ## Setup
 
-Create a new virtual env with Python 3.11 and install the requirements:
+Create a new virtual environment with Python 3.11:
 
     conda create -n website python=3.11 --yes
-    pip install -r requirements.txt
+
+or 
+
+    python3.11 -m venv <venv>
+    source <venv>/bin/activate
+
+And install the requirements:
+
+    make install
 
 
 ## Make website
