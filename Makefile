@@ -13,13 +13,16 @@ install:
 	pip install --upgrade pip
 	pip install --upgrade --upgrade-strategy eager -r requirements.txt
 
-.PHONY: mypytest
-mypytest:
-	mypy .
+.PHONY: test
+test: rufftest typingtest
 
 .PHONY: rufftest
 rufftest:
 	ruff .
+
+.PHONY: typingtest
+typingtest:
+	mypy .
 
 .PHONY: clean
 clean:

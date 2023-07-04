@@ -24,7 +24,7 @@ jobs:
           log_level: INFO
           blacklist: index_footer.html index_header.html
 
-  rufftests:
+  rufftest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -36,7 +36,7 @@ jobs:
       - run: make ruffinstall
       - run: make rufftest
 
-  mypytests:
+  typingtest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -48,4 +48,4 @@ jobs:
             requirements-mypy.txt
             requirements.txt
       - run: make mypyinstall
-      - run: make mypytest
+      - run: make typingtest
