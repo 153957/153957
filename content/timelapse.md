@@ -149,6 +149,7 @@ footer:
             [% thumbnail id=070601_S60_1 fps=25 data='960' %]
         </div>
         <div class="slide" id="Dance-content">
+            [% thumbnail id=220319_APL_Mini_Dansstage fps=24 data='960 1920' %]
             [% thumbnail id=160605_ADL_Taboe_Tango fps=24 data='960 1920' %]
             [% thumbnail id=141016_ARN_CaDansa fps=24 data='960 1920 audio' %]
             [% thumbnail id=120602_ARN_1 fps=25 data='960 audio' %]
@@ -171,6 +172,7 @@ footer:
             [% thumbnail id=220924_APL_Douro_River fps=24 data='960 1920' %]
             [% thumbnail id=220517_APL_Laafland_Efteling fps=25 data='960 1920' %]
             [% thumbnail id=220514_APL_Noordermeerdijk fps=30 data='960 1920' %]
+            [% thumbnail id=201118_ADL_APL_Oudegracht fps=24 data='960 1920' %]
             [% thumbnail id=191108_ADL_Haarrijnseplas fps=30 data='960 1920' %]
             [% thumbnail id=190430_APL_2_3_4 fps=30 data='960 1920' %]
             [% thumbnail id=190430_APL_1 fps=24 data='960 1920' %]
