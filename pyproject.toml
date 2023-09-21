@@ -6,13 +6,8 @@ skip-string-normalization = true
 [tool.ruff]
 line-length = 120
 target-version = 'py311'
-
-select = [
-    # https://github.com/charliermarsh/ruff#supported-rules
-    'ALL',
-    'NURSERY',
-]
-
+preview = true
+select = ['ALL']  # https://docs.astral.sh/ruff/rules/
 ignore = [
     'CPY001',  # Do not require copyright notices
     'D213',  # Start multi-line docstring on first line
