@@ -1,12 +1,11 @@
-[tool.black]
-target-version = ['py311']
-line-length = 120
-skip-string-normalization = true
-
 [tool.ruff]
 line-length = 120
 target-version = 'py311'
-preview = true
+
+[tool.ruff.format]
+quote-style = 'single'  # Prefer single quotes, except for triple quotes strings
+
+[tool.ruff.lint]
 select = ['ALL']  # https://docs.astral.sh/ruff/rules/
 ignore = [
     'CPY001',  # Do not require copyright notices
@@ -15,12 +14,14 @@ ignore = [
     'D400',  # Do not require . at end of first line in docstring
     'D415',  # Do not require ./!/? at end of first line in docstring
     'EM102',  # Allow f-string in exception message
-    'Q',  # Currently use single quotes
     'SLF001',  # Allow accessing private attributes
     'TRY003',  # Allow long messages in exceptions
 ]
 
-[tool.ruff.isort]
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = 'single'
+
+[tool.ruff.lint.isort]
 lines-between-types = 1
 section-order = [
     'future',
@@ -31,7 +32,7 @@ section-order = [
     'local-folder',
 ]
 
-[tool.ruff.isort.sections]
+[tool.ruff.lint.isort.sections]
 pelican = ['pelican']
 
 [tool.mypy]
