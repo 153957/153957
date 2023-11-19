@@ -28,7 +28,7 @@ def create_thumbnail(image_path: Path) -> None:
             image.size[1] / 2,
         ),
     )
-    image.save(str(image_path).replace(f'@2x{extension}', extension))
+    image.save(str(image_path).replace(f'@2x{extension}', extension), optimize=True)
 
 
 def create_thumbnails(instance: Pelican) -> None:
