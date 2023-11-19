@@ -22,23 +22,25 @@ def create_thumbnail(image_path: Path) -> None:
     """Create half size (halved width and height) thumbnail"""
     extension = image_path.suffix
     image = Image.open(image_path)
-    image.thumbnail((
-        image.size[0] / 2,
-        image.size[1] / 2,
-    ))
+    image.thumbnail(
+        (
+            image.size[0] / 2,
+            image.size[1] / 2,
+        ),
+    )
     image.save(str(image_path).replace(f'@2x{extension}', extension))
 
 
 def create_thumbnails(instance: Pelican) -> None:
     """Create half size versions of '@2x' images in given paths"""
     extensions = ['.png', '.jpg', '.jpeg']
-    paths = instance.settings.get(SETTINGS_NAME, [])
+    thumbnail_paths = instance.settings.get(SETTINGS_NAME, [])
 
     image_paths = [
         image_path
         for extension in extensions
-        for path in paths
-        for image_path in path.rglob(f'*@2x{extension}')
+        for thumbnail_path in thumbnail_paths
+        for image_path in thumbnail_path.rglob(f'*@2x{extension}')
     ]
 
     with Pool() as pool:
