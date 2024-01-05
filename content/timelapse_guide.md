@@ -197,14 +197,15 @@ for time-lapse shooting, here are some examples:
 <div class="columns">
     <div>
         <strong>macOS:</strong><br>
+        <a href="https://dslrdashboard.info">qDslrDashboard</a> (free)<br>
         <a href="https://boinx.com/istopmotion/">iStop Motion</a><br>
         <a href="https://www.cloudmakers.eu/astrodslr/">AstroDSLR</a><br>
         <a href="https://support.apple.com/kb/PH17899">Image Capture</a><br>
     </div>
     <div>
         <strong>Windows:</strong><br>
-        <a href="http://digicamcontrol.com">digiCamControl</a> (Nikon, free)<br>
-        <a href="http://www.granitebaysoftware.com/Products/ProductGBTEOS.aspx">GBTimeLapse</a> (Canon)<br>
+        <a href="https://dslrdashboard.info">qDslrDashboard</a> (free)<br>
+        <a href="https://digicamcontrol.com">digiCamControl</a> (free)<br>
     </div>
     <div>
         <strong>Other intervalometers:</strong><br>

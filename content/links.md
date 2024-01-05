@@ -79,7 +79,7 @@ footer:
 
 ### Photography
 
-- Adobe Lightroom Classic
+- [Adobe Lightroom Classic](https://www.adobe.com/products/photoshop-lightroom-classic.html)
 - [Apple Aperture](https://www.apple.com/)
 - [GraphicConverter](https://www.lemkesoft.com/)
 - [A Better Finder Rename](https://www.publicspace.net/ABetterFinderRename/)
@@ -95,7 +95,6 @@ footer:
 - [GitHub](https://www.github.com/)
 - [Pelican](https://github.com/getpelican/pelican)
 - [Sigal](https://sigal.saimon.org)
-- [Galleria](https://github.com/worseisbetter/galleria)
 
 </div>
 <div markdown>
@@ -117,8 +116,8 @@ footer:
 - [Balfolk](https://www.balfolk.nl/)
 - [CaDansa](https://www.cadansa.nl)
 - [Boombal festival](https://boombalfestival.be/)
-- [Castlefest](https://www.castlefest.nl/) (Vana-events)
-- [Keltfest](https://www.keltfest.nl/) (Vana-events)
+- [Castlefest](https://www.castlefest.nl/)
+- [Keltfest](https://www.keltfest.nl/)
 - [Elfia (Elf Fantasy Fair)](https://www.elfia.com/)
 - [MidWinter Fair](https://www.archeon.nl/)
 
