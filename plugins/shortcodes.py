@@ -26,6 +26,7 @@ which will become:
 import re
 
 from functools import partial
+from itertools import pairwise
 
 from jinja2 import Template
 
@@ -37,10 +38,21 @@ SETTINGS_NAME = 'SHORTCODES'
 def replace_shortcode(group: re.Match[str], shortcodes: dict[str, str]) -> str:
     """Replace shortcodes with evaluated templates"""
     match = group.groups()[0]
-    code, _, args = match.partition(' ')
-    args = re.split(r'(\w+)=', args)
-    args = [a.strip('\'" ') for a in args if a]
-    kwargs = {args[i]: args[i + 1] for i in range(0, len(args), 2)}
+    code, _, kwargs = match.partition(' ')
+    kwargs = re.split(r'(\w+)=', kwargs)
+    kwargs = [kwarg.strip('\'" ') for kwarg in kwargs if kwarg]
+    kwargs = dict(pairwise(kwargs))
+
+    if code == 'thumbnail':
+        tooltip = kwargs['id']
+        tooltip = re.sub(r'(_\d\d?)+$', '', tooltip)
+        tooltip = tooltip.replace('_', ' ')
+        tooltip = tooltip.replace('Events', 'The following events do not occur in real-time')
+        tooltip = re.sub(r'^(( ?[0-2]\d{5})+)', r'Date: \1&#10;', tooltip)
+        tooltip = re.sub(r'(( ADL| APL| ARN| WEN| DSC| S60)+)$', r'Camera:\1', tooltip)
+        if 'Camera:' not in tooltip:
+            tooltip = re.sub(r'(( ADL| APL| ARN| WEN| DSC| S60)+)', r'Camera:\1&#10;Title:', tooltip)
+        kwargs['tooltip'] = tooltip
     try:
         return Template(shortcodes[code]).render(**kwargs)
     except KeyError:

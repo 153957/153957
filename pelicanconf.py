@@ -22,7 +22,7 @@ DEFAULT_LANG = 'en'
 
 SLUGIFY_SOURCE = 'basename'
 PAGE_SAVE_AS = '{slug}.html'
-PAGE_URL = '{slug}.html'
+PAGE_URL = '/{slug}.html'
 PAGE_ORDER_BY = 'order'
 
 OUTPUT_CSS = OUTPUT_PATH / THEME_STATIC_DIR / 'css'
@@ -41,18 +41,21 @@ SHORTCODES = {
     # Link to image via a thumbnail with a caption
     'captioned_image': f"""
         <a href="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/{{{{ image }}}}.jpg" target="_blank">
-            <img
-                alt=""
-                src="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}.jpg"
-                srcset="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}@2x.jpg 2x"
-                loading="lazy"
-            >
-            <span class="caption">{{{{ caption }}}}</span>
+          <img
+            alt=""
+            src="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}.jpg"
+            srcset="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}@2x.jpg 2x"
+            loading="lazy"
+          >
+          <span class="caption">{{{{ caption }}}}</span>
         </a>
     """,
     # Add a thumbnail for a time-lapse movie
     'thumbnail': f"""
-        <img
+        <div
+          data-tip="{{{{ tooltip }}}}"
+        >
+          <img
             id="{{{{ id }}}}"
             class="thumbnail"
             alt=""
@@ -61,7 +64,8 @@ SHORTCODES = {
             loading="lazy"
             data-fps="{{{{ fps }}}}"
             {{{{ 'data-' + data.replace(' ', ' data-') if data else '' }}}}
-        />
+          />
+        </div>
     """,
 }
 

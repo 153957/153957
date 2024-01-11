@@ -2,27 +2,26 @@
 title: Links
 banner: DSC_038794
 order: 4
+top: 80px
+left: 390px;
 head:  
     <style>
-        #content {
+        main {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            padding: 8px 12px 0;
         }
-        #content > div {
+        main > div {
             flex-grow: 1;
             min-width: 220px;
         }
-        #pageHeader h1 {
-            top: 80px;
-            left: 390px;
-        }
-        #content ul {
+        main ul {
             list-style-type:none;
             list-style-position: inside;
             margin-bottom: 10px;
         }
-        #content li {
+        main li {
             margin-left: 5px;
         }
     </style>
@@ -38,7 +37,7 @@ footer:
                  var _bla6 = ".ne";
                  var _bla7 = "t";
                  var _bla = _bla0 + _bla1 + _bla2 + _bla3 + _bla4 + _bla6 + _bla7;
-                 var _blaa = _bla2 + _bla3 + _bla4 + _bla6 + _bla7;
+                 var _blaa = `${_bla2}${_bla3}${_bla4}${_bla6}${_bla7}`;
                  document.getElementById('mail_contact').href = _bla;
                  document.getElementById('mail_contact').innerHTML = _blaa;
             },

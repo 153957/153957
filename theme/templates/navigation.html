@@ -1,7 +1,7 @@
 <nav>
-    <ul>
-        {% for page_ in pages %}
-            <li><a href="{{ page_.url }}" {% if page == page_ %}class="active"{% endif %}>{{ page_.title }}</a>
-        {% endfor %}
-    </ul>
+  <ul>
+    {% for page_ in pages %}
+      <li><a href="{{ page_.url }}" {% if page == page_ %}class="active"{% endif %}>{{ page_.title }}</a>
+    {% endfor %}
+  </ul>
 </nav>

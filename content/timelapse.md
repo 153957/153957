@@ -1,27 +1,14 @@
 ---
 title: Time-Lapse
 save_as: timelapse.html
-banner: DSC_085677
+banner: ADL_125307
 order: 2
-head: 
-    <style>
-        #pageHeader h1 {
-            left: 650px;
-            top: 25px;
-        }
-        /* Temporary fix */
-        #content {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        #slider {
-            padding: 0 9px;
-        }
-    </style>
+top: 25px
+left: 68%
+head:
     <link rel="stylesheet" href="/static/css/video.css" />
     <link rel="stylesheet" href="/static/css/controls.css" />
-footer: 
-    <script src="/static/js/vendor/jquery.tipTip.js"></script>
+footer:
     <script src="/static/js/video.js"></script>
 ---
 

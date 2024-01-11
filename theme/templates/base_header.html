@@ -1,57 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>153957 Photography : {{ page.title }}</title>
-        {% include 'favicon.html' %}
-        <meta name="application-name" content="153957 Photography">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="referrer" content="same-origin">
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/vendor/normalize.css">
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/icons.css">
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/main.css">
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/tipTip.css">
-        <style>
-            #pageHeader {
-                background-image: linear-gradient(to bottom, #fff0 70%, #fff2 75%, #fffe 95%, #ffff),
-                                  url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}.jpg');
-            }
+  <head>
+    <meta charset="utf-8">
+    <title>153957 Photography : {{ page.title }}</title>
+    {% include 'favicon.html' %}
+    <meta name="application-name" content="153957 Photography">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="same-origin">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/vendor/normalize.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/icons.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/main.css">
+    <style>
+      header {
+        --banner: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}.jpg');
+        --banner2x: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}@2x.jpg');
+        --top: {{ page.top| default('100px') }};
+        --left: {{ page.left| default('425px') }};
+      }
+    </style>
+    {{ page.head|join('\n') }}
+  </head>
 
-            @media (prefers-color-scheme: dark) {
-                #pageHeader {
-                    background-image: linear-gradient(to bottom, #1110 70%, #1112 75%, #111e 95%, #111f),
-                                      url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}.jpg');
-                }
-            }
-
-            @media screen and (-webkit-min-device-pixel-ratio: 2),
-                   screen and (min-resolution: 2x) {
-                #pageHeader {
-                    background-image: linear-gradient(to bottom, #fff0 70%, #fff2 75%, #fffe 95%, #ffff),
-                                      url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}@2x.jpg');
-                }
-            }
-
-            @media screen and (prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2),
-                   screen and (prefers-color-scheme: dark) and (min-resolution: 2x) {
-                #pageHeader {
-                    background-image: linear-gradient(to bottom, #1110 70%, #1112 75%, #111e 95%, #111f),
-                                      url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}@2x.jpg');
-                }
-            }
-        </style>
-        {{ page.head|join('\n') }}
-    </head>
-
-    <body>
-        <div id="wrapper">
-            <div id="shadow"></div>
-            <div id="pageHeader">
-                {% include 'navigation.html' %}
-                <h1>153957 Photography</h1>
-                <h2>{{ page.title }}</h2>
-            </div><!-- /pageHeader -->
-            <div id="container">
-                <div id="contentContainer">
-                    <div id="content">
+  <body>
+    <div id="wrapper">
+      <div id="shadow"></div>
+      <header>
+        {% include 'navigation.html' %}
+        <h1>153957 Photography</h1>
+        <h2>{{ page.title }}</h2>
+      </header>
+      <main>

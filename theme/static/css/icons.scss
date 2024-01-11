@@ -1,26 +1,26 @@
 @font-face {
-    font-family: 'fontello';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../font/icons.woff2') format('woff2');
+  font-family: 'fontello';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../font/icons.woff2') format('woff2');
 }
 
 .icon {
-    display: inline-block;
-    text-rendering: auto;
-    font: normal normal normal 14px/1 'fontello';
-    font-size: inherit;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-rendering: auto;
+  font: normal normal normal 14px/1 'fontello';
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-spin {
-    animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
 }
 
 @keyframes icon-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .icon-pause::before { content: '\e800'; }

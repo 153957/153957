@@ -3,13 +3,9 @@ title: Time-Lapse Guide
 save_as: timelapse_guide.html
 banner: DSC_084625
 order: 3
-head: 
-    <style>
-      #pageHeader h1 {
-          left: 180px;
-          top: 30px;
-      }
-    </style>
+top: 30px
+left: 180px
+head:
     <link rel="stylesheet" href="/static/css/guide.css" />
 ---
 

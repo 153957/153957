@@ -1,29 +1,9 @@
 ---
 title: Event Photography
-save_as: photos_events.html
+url: /photos_events/
+save_as: photos_events/index.html
 banner: ADL_137130
 order: 1
-head: 
-    <style>
-        #pageHeader h1 {
-            left: 180px;
-            top: 20px;
-        }
-        #content {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    </style>
-footer: 
-    <script src="/static/js/vendor/iframeResizer.min.js"></script>
-    <script src="/static/js/photos.js"></script>
+top: 20px
+left: 180px
 ---
-
-<iframe
-    allow="fullscreen"
-    class="album"
-    data-album="Photos_Events/"
-    height="750"
-    id="target"
-    src="about:blank">
-</iframe>

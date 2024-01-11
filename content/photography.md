@@ -1,28 +1,9 @@
 ---
 title: Photography
+url: /photography/
+save_as: photography/index.html
 banner: ADL_004711
 order: 0
-head: 
-    <style>
-        #pageHeader h1 {
-            left: 360px;
-            top: 25px;
-        }
-        #content {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    </style>
-footer: 
-    <script src="/static/js/vendor/iframeResizer.min.js"></script>
-    <script src="/static/js/photos.js"></script>
+top: 25px
+left: 40%
 ---
-
-<iframe
-    allow="fullscreen"
-    class="album"
-    data-album="Photography/"
-    height="750"
-    id="target"
-    src="about:blank">
-</iframe>
