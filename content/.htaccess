@@ -1,12 +1,20 @@
 Redirect 301 /tltips.html /timelapse_guide.html
+Redirect 301 /photography.html /Photography/
+Redirect 301 /photos_events.html /Photos_Events/
 
 RedirectMatch 301 ~arne/(.*)$ https://arne.delaat.net/$1
+RedirectMatch 301 (?i)/photos_d80.html /Photography/
+RedirectMatch 301 (?i)/photos_d700.html /Photography/
+RedirectMatch 301 (?i)/photos_s60.html /Photography/
+RedirectMatch 301 (?i)/Photos_D700/(.*) /Photography/$1
 
 ErrorDocument 404 /404.html
 ErrorDocument 403 https://arne.delaat.net/403.html
 
 AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
 AddOutputFilterByType DEFLATE application/javascript application/xml application/x-shockwave-flash
+
+Header set Content-Security-Policy "script-src 'self' 'unsafe-inline'; frame-ancestors 'self'; base-uri 'none'; object-src 'none';"
 
 <FilesMatch "\.xml$">
 Header set Cache-Control "no-cache"
