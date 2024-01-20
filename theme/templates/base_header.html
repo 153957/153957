@@ -3,10 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>153957 Photography : {{ page.title }}</title>
-    {% include 'favicon.html' %}
-    <meta name="application-name" content="153957 Photography">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="153957 Photography">
+    <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_favicon/manifest.json">
+    <link rel="mask-icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_favicon/safari-pinned-tab.svg" color="#4d4d4d">
+    <meta name="theme-color" content="#ffffff">
     <meta name="referrer" content="same-origin">
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/vendor/normalize.css">
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/icons.css">
@@ -26,7 +32,13 @@
     <div id="wrapper">
       <div id="shadow"></div>
       <header>
-        {% include 'navigation.html' %}
+        <nav>
+          <ul>
+            {% for page_ in pages %}
+              <li><a href="{{ page_.url }}" {% if page == page_ %}class="active"{% endif %}>{{ page_.title }}</a>
+            {% endfor %}
+          </ul>
+        </nav>
         <h1>153957 Photography</h1>
         <h2>{{ page.title }}</h2>
       </header>
