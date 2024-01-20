@@ -1,3 +1,6 @@
+{% if page.template == 'album' %}
+head = '''
+{% else %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="application-name" content="153957 Photography">
+{% endif %}
     <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images_favicon/favicon-32x32.png">
@@ -26,9 +30,14 @@
       }
     </style>
     {{ page.head|join('\n') }}
+{% if page.template == 'album' %}
+'''
+{% else %}
   </head>
 
   <body>
+{% endif %}
+{% if page.template == 'album' %}body_prefix = '''{% endif %}
     <div id="wrapper">
       <div id="shadow"></div>
       <header>
@@ -43,3 +52,4 @@
         <h2>{{ page.title }}</h2>
       </header>
       <main>
+{% if page.template == 'album' %}'''{% endif %}

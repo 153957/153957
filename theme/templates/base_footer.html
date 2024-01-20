@@ -1,3 +1,4 @@
+{% if page.template == 'album' %}body_suffix = '''{% endif %}
       </main>
       <footer>
         <p>
@@ -9,7 +10,10 @@
         </p>
       </footer>
     </div><!-- /wrapper -->
-
     {{ page.footer|join('\n') }}
+{% if page.template == 'album' %}
+'''
+{% else %}
   </body>
 </html>
+{% endif %}
