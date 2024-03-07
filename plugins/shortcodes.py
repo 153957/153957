@@ -23,6 +23,7 @@ which will become:
     <img src=/images/foo.png>This Is A Test<img>
 
 """
+
 import re
 
 from functools import partial

@@ -8,6 +8,7 @@ images will be resized by 50% and stored next to the original in the
 same format, but without the `@2x` suffix.
 
 """
+
 from multiprocessing import Pool
 from pathlib import Path
 

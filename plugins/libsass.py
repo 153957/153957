@@ -2,6 +2,7 @@
 
 This plugin compiles sass/scss files to plain css.
 """
+
 import sass
 
 from pelican import Pelican, signals
