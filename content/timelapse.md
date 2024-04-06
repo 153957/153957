@@ -49,10 +49,12 @@ footer:
         </div>
         <div class="slide" id="Clouds-content">
             [% thumbnail id=221026_APL_Uinta_Wasatch_Cache fps=24 data='960 1920' %]
+            [% thumbnail id=220514_APL_Woudagemaal fps=30 data='960 1920' %]
             [% thumbnail id=220219_APL_1_4 fps=30 data='960 1920' %]
             [% thumbnail id=220130_APL_2 fps=30 data='960 1920' %]
             [% thumbnail id=210306_APL_Radio_Kootwijk fps=25 data='960 1920' %]
             [% thumbnail id=180430_APL_Loch_Lomond fps=24 data='960 1920' %]
+            [% thumbnail id=130505_ARN_4 fps=48 data='960 1920' %]
             [% thumbnail id=121004_ARN_1 fps=48 data='960 1920' %]
             [% thumbnail id=110413_ADL_1 fps=24 data='960 1920' %]
             [% thumbnail id=110209_ADL_1 fps=25 data='960 1920' %]
@@ -81,6 +83,7 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
+            [% thumbnail id=240113_240114_APL_Prague fps=30 data='960 1920' %]
             [% thumbnail id=230424_APL_Villa_Carlos_Paz fps=24 data='960 1920' %]
             [% thumbnail id=221029_APL_City_Creek fps=48 data='960 1920' %]
             [% thumbnail id=220924_APL_Dom_Luis_I fps=24 data='960 1920' %]
@@ -154,6 +157,7 @@ footer:
             [% thumbnail id=051218_S60_1 fps=15 data='960' %]
         </div>
         <div class="slide" id="Water-content">
+            [% thumbnail id=230424_APL_Balcon_Norte fps=24 data='960 1920' %]
             [% thumbnail id=221102_APL_Boulder_Creek fps=30 data='960 1920' %]
             [% thumbnail id=221028_APL_City_Creek fps=24 data='960 1920' %]
             [% thumbnail id=220924_APL_Douro_River fps=24 data='960 1920' %]
