@@ -253,8 +253,8 @@ footer:
                 D300, D500, and D700 have built-in intervalometers.
 
                 The movies are ordered by shooting date,
-                the newest are at the top of the categories. Most movies are made in the
-                Netherlands, but some were shot in Chile, Iceland, Finland, Japan, or China.
+                the newest are at the top of the categories. Most movies are made in the Netherlands,
+                with others shot in Argentina, Portugal, Chile, Iceland, Finland, Japan, and China.
                 The categories include movies about archery shooting, balfolk dancing, blooming flowers,
                 traffic, fireshows, clouds, sunset, sunrise, night skies, stars, waterfalls,
                 ice cubes melting, and some other miscellaneous subjects.
