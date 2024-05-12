@@ -37,7 +37,9 @@ head = '''
 
   <body>
 {% endif %}
-{% if page.template == 'album' %}body_prefix = '''{% endif %}
+{% if page.template == 'album' %}
+body_prefix = '''
+{% endif %}
     <div id="wrapper">
       <div id="shadow"></div>
       <header>
@@ -52,4 +54,6 @@ head = '''
         <h2>{{ page.title }}</h2>
       </header>
       <main>
-{% if page.template == 'album' %}'''{% endif %}
+{% if page.template == 'album' %}
+'''
+{% endif %}
