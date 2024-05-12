@@ -239,6 +239,7 @@ footer:
             [% thumbnail id=080716_DSC_3 fps=30 data='960' %]
         </div>
         <div class="slide currentslide currentreveal" id="Reels-content">
+            [% thumbnail id=240510_APL_ADL_Northern_Lights fps=48 data='960 1920' %]
             [% thumbnail id=150317_ADL_ARN_Northern_Lights fps=24 data='960 1920' %]
             [% thumbnail id=110127_ADL_DSC_Virtual_Eyes fps=24 data='960 1920 audio' %]
             [% thumbnail id=081103_DSC_Events fps=30 data='960 1920 audio' %]
@@ -267,9 +268,9 @@ footer:
     <img
         id="poster"
         class="showing"
-        data-id="110127_ADL_DSC_Virtual_Eyes"
-        alt="Virtual Eyes"
-        src="/static/images_timelapse/110127_ADL_DSC_Virtual_Eyes_poster.jpg"
+        data-id="240510_APL_ADL_Northern_Lights"
+        alt="Northern Lights"
+        src="/static/images_timelapse/240510_APL_ADL_Northern_Lights_poster.jpg"
     />
     <video id="player"></video>
 </div>
