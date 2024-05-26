@@ -315,8 +315,8 @@ function swapVideo(movieid) {
             <span id="status" class="icon icon-circle-notch icon-spin showing"></span>
             <video src="${videolink}" id="player" preload="auto"></video>
         `
-        document.getElementById('player').addEventListener('loadedmetadata', addControls)
-        document.getElementById('player').addEventListener('canplay', hideLoad)
+        document.getElementById('player').addEventListener('loadedmetadata', addControls, {'once': true})
+        document.getElementById('player').addEventListener('canplay', hideLoad, {'once': true})
     }
 
     document.getElementById('player').addEventListener('error', errorStatus, true)
