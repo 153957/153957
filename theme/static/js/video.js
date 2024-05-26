@@ -149,6 +149,7 @@ function mute() {
     } else {
         document.getElementById('volume_indicator').value = 0
     }
+    setVolume()
 }
 
 /* Change Volume */
@@ -163,7 +164,7 @@ function volumeUsed() {
 }
 
 function volumeUI() {
-    document.getElementById('volume_indicator').value = volume
+    document.getElementById('volume_indicator').value = document.getElementById('player').muted ? 0 : volume
     document.getElementById('volume_speaker_button').classList.toggle('icon-volume-off', volume === 0)
     document.getElementById('volume_speaker_button').classList.toggle('icon-volume-down', 0 < volume && volume < 50)
     document.getElementById('volume_speaker_button').classList.toggle('icon-volume-up', volume >= 50)
