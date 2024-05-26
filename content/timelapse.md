@@ -273,5 +273,4 @@ footer:
         alt="Northern Lights"
         src="/static/images_timelapse/240510_APL_ADL_Northern_Lights_poster.jpg"
     />
-    <video id="player"></video>
 </div>
