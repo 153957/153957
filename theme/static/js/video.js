@@ -172,7 +172,9 @@ function volumeUI() {
 /* Toggle quality*/
 function toggleQuality() {
     quality = quality === '960' ? '1920' : '960'
+    const currentTime = document.getElementById('player').currentTime
     swapVideo($global.current.id)
+    document.getElementById('player').currentTime = currentTime
 }
 
 /* Metadata Loaded -> Set Width/Height/Margins */
