@@ -174,7 +174,7 @@ footer:
             [% thumbnail id=140608_ADL_2 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Other-content">
-            [% thumbnail id=240714_APL_1 fps=24 data='960 1920' %]
+            [% thumbnail id=240714_APL_Neoliet fps=24 data='960 1920' %]
             [% thumbnail id=240101_APL_1 fps=30 data='960 1920' %]
             [% thumbnail id=230527_APL_The_Kelpies fps=24 data='960 1920' %]
             [% thumbnail id=230305_APL_1 fps=24 data='960 1920' %]
