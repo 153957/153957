@@ -149,6 +149,7 @@ footer:
             [% thumbnail id=090617_DSC_1 fps=15 data='960 1920 audio' %]
         </div>
         <div class="slide" id="Sport-content">
+            [% thumbnail id=240714_APL_Neoliet fps=24 data='960 1920' %]
             [% thumbnail id=220401_APL_City_Skydive fps=24 data='960 1920' %]
             [% thumbnail id=120524_ADL_ARN_EC_Archery fps=48 data='960 1920' %]
             [% thumbnail id=100816_DSC_3 fps=25 data='960' %]
@@ -174,7 +175,6 @@ footer:
             [% thumbnail id=140608_ADL_2 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Other-content">
-            [% thumbnail id=240714_APL_Neoliet fps=24 data='960 1920' %]
             [% thumbnail id=240101_APL_1 fps=30 data='960 1920' %]
             [% thumbnail id=230527_APL_The_Kelpies fps=24 data='960 1920' %]
             [% thumbnail id=230305_APL_1 fps=24 data='960 1920' %]
