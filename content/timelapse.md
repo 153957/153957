@@ -53,6 +53,7 @@ footer:
             [% thumbnail id=220219_APL_1_4 fps=30 data='960 1920' %]
             [% thumbnail id=220130_APL_2 fps=30 data='960 1920' %]
             [% thumbnail id=210306_APL_Radio_Kootwijk fps=25 data='960 1920' %]
+            [% thumbnail id=210113_WEN_1 fps=48 data='960 1920' %]
             [% thumbnail id=180430_APL_Loch_Lomond fps=24 data='960 1920' %]
             [% thumbnail id=130505_ARN_4 fps=48 data='960 1920' %]
             [% thumbnail id=121004_ARN_1 fps=48 data='960 1920' %]
@@ -115,6 +116,8 @@ footer:
             [% thumbnail id=080716_DSC_4 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Frost-content">
+            [% thumbnail id=210918_WEN_2 fps=30 data='960 1920' %]
+            [% thumbnail id=210918_WEN_1 fps=30 data='960 1920' %]
             [% thumbnail id=210207_ADL_1_2 fps=60 data='960 1920' %]
             [% thumbnail id=100201_DSC_3 fps=25 data='960' %]
             [% thumbnail id=100201_DSC_1 fps=15 data='960' %]
