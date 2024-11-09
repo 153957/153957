@@ -11,13 +11,13 @@ This showcases my photography and time-lapse.
 
 ## Setup
 
-Create a new virtual environment with Python 3.11:
+Create a new virtual environment with Python 3.13:
 
-    conda create -n website python=3.11 --yes
+    conda create -n website python=3.13 --yes
 
 or 
 
-    python3.11 -m venv <venv>
+    python3.13 -m venv <venv>
     source <venv>/bin/activate
 
 And install the requirements:
