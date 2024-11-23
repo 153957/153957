@@ -1,10 +1,10 @@
 .PHONY: mypyinstall
 mypyinstall:
-	pip install --upgrade -r requirements-mypy.txt
+	uv pip install --upgrade -r requirements-mypy.txt
 
 .PHONY: ruffinstall
 ruffinstall:
-	pip install --upgrade -r requirements-ruff.txt
+	uv pip install --upgrade -r requirements-ruff.txt
 
 .PHONY: install
 install:
@@ -40,4 +40,4 @@ serve: clean install ruffinstall mypyinstall
 setupvenv:
 	uv venv --python 3.13
 	. .venv/bin/activate
-	echo PATH=$PATH >> $GITHUB_ENV
+	echo PATH=$(PATH) >> $(GITHUB_ENV)
