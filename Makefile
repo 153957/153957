@@ -1,17 +1,14 @@
 .PHONY: mypyinstall
 mypyinstall:
-	pip install --upgrade pip
-	pip install --upgrade --upgrade-strategy eager -r requirements-mypy.txt
+	pip install --upgrade -r requirements-mypy.txt
 
 .PHONY: ruffinstall
 ruffinstall:
-	pip install --upgrade pip
-	pip install --upgrade --upgrade-strategy eager -r requirements-ruff.txt
+	pip install --upgrade -r requirements-ruff.txt
 
 .PHONY: install
 install:
-	pip install --upgrade pip
-	pip install --upgrade --upgrade-strategy eager -r requirements.txt
+	uv pip install --upgrade -r requirements.txt
 
 .PHONY: test
 test: rufftest typingtest
@@ -36,3 +33,11 @@ build: clean install
 .PHONY: serve
 serve: clean install ruffinstall mypyinstall
 	pelican --listen --autoreload
+
+# The following is to be used in GitHub Actions
+
+.PHONY: setupvenv
+setupvenv:
+	uv venv --python 3.13
+	. .venv/bin/activate
+	echo PATH=$PATH >> $GITHUB_ENV
