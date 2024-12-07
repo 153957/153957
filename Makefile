@@ -33,11 +33,3 @@ build: clean install
 .PHONY: serve
 serve: clean install ruffinstall mypyinstall
 	pelican --listen --autoreload
-
-# The following is to be used in GitHub Actions
-
-.PHONY: setupvenv
-setupvenv:
-	uv venv --python 3.13
-	. .venv/bin/activate
-	echo PATH=$(PATH) >> $(GITHUB_ENV)
