@@ -7,6 +7,11 @@ top: 30px
 left: 180px
 head:
     <link rel="stylesheet" href="/static/css/guide.css" />
+    <style>
+        main {
+            max-width: 900px;
+        }
+    </style>
 ---
 
 ### Jump to a topic
