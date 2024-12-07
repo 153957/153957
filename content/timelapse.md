@@ -165,6 +165,8 @@ footer:
             [% thumbnail id=051218_S60_1 fps=15 data='960' %]
         </div>
         <div class="slide" id="Water-content">
+            [% thumbnail id=240914_APL_Prior_Park fps=24 data='960 1920' %]
+            [% thumbnail id=240914_APL_4 fps=24 data='960 1920' %]
             [% thumbnail id=240522_APL_TESO fps=48 data='960 1920' %]
             [% thumbnail id=230424_APL_Balcon_Norte fps=24 data='960 1920' %]
             [% thumbnail id=221102_APL_Boulder_Creek fps=30 data='960 1920' %]
