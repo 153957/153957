@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
-          cache: 'pip'
-          cache-dependency-path: 'requirements.txt'
+      - uses: astral-sh/setup-uv@v4
+      - run: |
+          uv venv --python 3.13
+          . .venv/bin/activate
+          echo PATH=$PATH >> $GITHUB_ENV
       - run: make install
       - run: make build
       - uses: Cyb3r-Jak3/html5validator-action@v7.2.0
@@ -28,11 +28,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
-          cache: 'pip'
-          cache-dependency-path: 'requirements-ruff.txt'
+      - uses: astral-sh/setup-uv@v4
+      - run: |
+          uv venv --python 3.13
+          . .venv/bin/activate
+          echo PATH=$PATH >> $GITHUB_ENV
       - run: make ruffinstall
       - run: make rufftest
         env:
@@ -42,12 +42,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
-          cache: 'pip'
-          cache-dependency-path: |
-            requirements-mypy.txt
-            requirements.txt
+      - uses: astral-sh/setup-uv@v4
+      - run: |
+          uv venv --python 3.13
+          . .venv/bin/activate
+          echo PATH=$PATH >> $GITHUB_ENV
       - run: make mypyinstall
       - run: make typingtest
