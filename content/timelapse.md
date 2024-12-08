@@ -32,6 +32,7 @@ footer:
 
     <div id="thumbnails">
         <div class="slide" id="Flowers-content">
+            [% thumbnail id=220919_ADL_Maranta_Leuconeura fps=48 data='960 1920' %]
             [% thumbnail id=220914_ADL_Maranta_Leuconeura fps=60 data='960 1920' %]
             [% thumbnail id=181014_ADL_1_2 fps=24 data='960 1920' %]
             [% thumbnail id=130217_ARN_False_Rose_of_Jericho fps=24 data='960 1920' %]
@@ -95,6 +96,7 @@ footer:
             [% thumbnail id=181019_ADL_1 fps=24 data='960 1920' %]
             [% thumbnail id=181012_ADL_1 fps=30 data='960 1920' %]
             [% thumbnail id=180810_APL_1 fps=30 data='960 1920' %]
+            [% thumbnail id=171119_ADL_N230 fps=24 data='960 1920' %]
             [% thumbnail id=170218_ADL_Utrecht_Centraal fps=24 data='960 1920' %]
             [% thumbnail id=130424_ARN_2 fps=30 data='960 1920' %]
             [% thumbnail id=130424_ARN_Tippelzone fps=24 data='960 1920' %]
