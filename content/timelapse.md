@@ -189,6 +189,7 @@ footer:
             [% thumbnail id=240302_240714_APL_Jaarbeurs fps=48 data='960 1920' %]
             [% thumbnail id=240101_APL_1 fps=30 data='960 1920' %]
             [% thumbnail id=230527_APL_The_Kelpies fps=24 data='960 1920' %]
+            [% thumbnail id=230417_Holland_Casino fps=24 data='960 1920' %]
             [% thumbnail id=230305_APL_1 fps=24 data='960 1920' %]
             [% thumbnail id=221008_APL_1_2_5 fps=48 data='960 1920' %]
             [% thumbnail id=220924_APL_Porto fps=24 data='960 1920' %]
