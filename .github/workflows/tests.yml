@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v4
+      - uses: astral-sh/setup-uv@v5
       - run: |
           uv venv --python 3.13
           . .venv/bin/activate
@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v4
+      - uses: astral-sh/setup-uv@v5
       - run: |
           uv venv --python 3.13
           . .venv/bin/activate
@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v4
+      - uses: astral-sh/setup-uv@v5
       - run: |
           uv venv --python 3.13
           . .venv/bin/activate
