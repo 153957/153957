@@ -11,10 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - run: |
-          uv venv --python 3.13
-          . .venv/bin/activate
-          echo PATH=$PATH >> $GITHUB_ENV
+        with:
+          python-version: '3.13'
       - run: make install
       - run: make build
       - uses: Cyb3r-Jak3/html5validator-action@v7.2.0
@@ -29,10 +27,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - run: |
-          uv venv --python 3.13
-          . .venv/bin/activate
-          echo PATH=$PATH >> $GITHUB_ENV
+        with:
+          python-version: '3.13'
       - run: make ruffinstall
       - run: make rufftest
         env:
@@ -43,9 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - run: |
-          uv venv --python 3.13
-          . .venv/bin/activate
-          echo PATH=$PATH >> $GITHUB_ENV
+        with:
+          python-version: '3.13'
       - run: make mypyinstall
       - run: make typingtest
