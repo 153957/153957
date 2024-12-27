@@ -50,9 +50,9 @@ def replace_shortcode(group: re.Match[str], shortcodes: dict[str, str]) -> str:
         tooltip = tooltip.replace('_', ' ')
         tooltip = tooltip.replace('Events', 'The following events do not occur in real-time')
         tooltip = re.sub(r'^(( ?[0-2]\d{5})+)', r'Date: \1&#10;', tooltip)
-        tooltip = re.sub(r'(( ADL| APL| ARN| WEN| DSC| S60)+)$', r'Camera:\1', tooltip)
+        tooltip = re.sub(r'(( ADL| APL| ARN| WEN| DSC| S60| MIK)+)$', r'Camera:\1', tooltip)
         if 'Camera:' not in tooltip:
-            tooltip = re.sub(r'(( ADL| APL| ARN| WEN| DSC| S60)+)', r'Camera:\1&#10;Title:', tooltip)
+            tooltip = re.sub(r'(( ADL| APL| ARN| WEN| DSC| S60| MIK)+)', r'Camera:\1&#10;Title:', tooltip)
         kwargs['tooltip'] = tooltip
     try:
         return Template(shortcodes[code]).render(**kwargs)
