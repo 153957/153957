@@ -3,7 +3,7 @@
 This plugin creates half size versions of images in specified path.
 
 The setting THUMBNAIL_PATHS can be a list of pathlib.Paths, each will be
-recursively searched for images whos names end in `@2x`. Each of those
+recursively searched for images with names ending in `@2x`. Each of those
 images will be resized by 50% and stored next to the original in the
 same format, but without the `@2x` suffix.
 

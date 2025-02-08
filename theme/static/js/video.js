@@ -117,7 +117,7 @@ function progress() {
 }
 
 /* Step one frame */
-function stepFrameFoward() {
+function stepFrameForward() {
     document.getElementById('player').pause()
     document.getElementById('player').currentTime += 1 / $global.current.dataset.fps
 }
@@ -182,7 +182,7 @@ function toggleQuality() {
 function addControls() {
     /* Attach Webkit Controls */
     if (!controlsCreated) {
-        let fowardStepButton = ''
+        let forwardStepButton = ''
         let backwardStepButton = ''
         let frameDisplay = ''
         let audioControls = ''
@@ -192,7 +192,7 @@ function addControls() {
 
         if ($global.current.hasAttribute('data-fps')) {
             // Video framerate is known
-            fowardStepButton =
+            forwardStepButton =
                 '<div id="step_frame_forward" class="icon icon-step-forward" title="Step frame forward"></div>'
             backwardStepButton =
                 '<div id="step_frame_backward" class="icon icon-step-backward" title="Step frame backward"></div>'
@@ -224,7 +224,7 @@ function addControls() {
             <div id="controls">
                 ${backwardStepButton}
                 <div id="play_pause_button" class="icon icon-play" title="Toggle play/pause"></div>
-                ${fowardStepButton}
+                ${forwardStepButton}
                 <div id="progress_bar">
                     <div id="time_display" title="Elapsed time">0:00</div>
                     ${frameDisplay}
@@ -254,7 +254,7 @@ function addControls() {
         document.getElementById('progress_indicator').addEventListener('change', setTime)
 
         document.getElementById('play_pause_button')?.addEventListener('click', playPause)
-        document.getElementById('step_frame_forward')?.addEventListener('click', stepFrameFoward)
+        document.getElementById('step_frame_forward')?.addEventListener('click', stepFrameForward)
         document.getElementById('step_frame_backward')?.addEventListener('click', stepFrameBackward)
 
         document.getElementById('volume_speaker_button')?.addEventListener('click', mute)

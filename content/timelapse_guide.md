@@ -47,7 +47,7 @@ Make a movie playing at 25 fps from these photos, the movie will be 4 seconds lo
 This movie will speed up time by a factor of 250:<br>
 **1000 seconds / 4 seconds = 250×**.
 
-So if a flower normaly takes half an hour to open, you can show that flower
+So if a flower normally takes half an hour to open, you can show that flower
 opening with a movie 8 seconds long if you take one photo every 10 seconds and
 play it back at 25 frames per second<br>
 **2000 seconds / 250 = 8 seconds**
@@ -112,7 +112,7 @@ that it is stable and wont slide away.
 #### Composition - a subject
 
 Of course you also need something to make the pictures of, preferably something
-that moves. Try to predict how the subjet will move over time to make certain that
+that moves. Try to predict how the subject will move over time to make certain that
 your camera covers the correct angle and uses the correct interval to show the
 motion.
 
@@ -132,8 +132,8 @@ intervalometer to take control over the camera.
 Depending on your software/hardware/subject you must select an interval (e.g. 5
 seconds) between each photo and the total amount (e.g. 500) of photos to be made.
 Then initiate the shooting and wait while your photos are being taken. Then
-tranfer them to your computer (if you where using the computer to make the photos,
-the photos most likely will already be transfered to the computer). After this you
+transfer them to your computer (if you where using the computer to make the photos,
+the photos most likely will already be transferred to the computer). After this you
 can make a movie out of them.
 
 #### Power
@@ -161,7 +161,7 @@ time), because that will prevent a lot of flickering in the resulting movie. Mak
 sure that you take some test shots before starting the time-lapse to make sure the
 exposure is set correctly.
 
-When lighting conditions are very inconsistent, it may be beter to let the camera
+When lighting conditions are very inconsistent, it may be better to let the camera
 determine the shutter speed, you should then use Aperture priority mode (fixed
 aperture) to prevent changing of Depth of Field, while letting the camera decide
 the appropriate exposure. If there is still flickering in your movie, see the
@@ -333,7 +333,7 @@ shows how the aperture blades move during the taking of a photo. There are sever
 ways to avoid this potential problem, you can for instance shoot 'wide-open'
 (lowest f-stop), because then the aperture does not move at all. There are also
 ways to fix the aperture of a lens to a certain setting on a DSLR, by partly
-loosening the lens from the camera body in a particualar way, but that is more complicated.
+loosening the lens from the camera body in a particular way, but that is more complicated.
 
 #### Removing flicker
 
