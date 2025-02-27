@@ -250,7 +250,7 @@ with your needs.
 
 <table>
     <tr>
-        <th style="width: 180px;">Software</th>
+        <th style="width: 210px;">Software</th>
         <th style="text-align: center; width: 60px;">macOS</th>
         <th style="text-align: center; width: 60px;">Windows</th>
         <th style="text-align: center; width: 60px;">Linux</th>
@@ -306,7 +306,7 @@ with your needs.
         <td class="selecthalf"></td>
     </tr>
     <tr>
-        <td><a href="http://www.panolapse360.com">Panolapse</a></td>
+        <td><a href="https://www.panolapse360.com">Panolapse</a></td>
         <td class="select"></td>
         <td class="select"></td>
         <td></td>
