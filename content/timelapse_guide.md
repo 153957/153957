@@ -9,7 +9,7 @@ head:
     <link rel="stylesheet" href="/static/css/guide.css" />
     <style>
         main {
-            max-width: 900px;
+            max-width: 800px;
         }
     </style>
 ---
@@ -35,21 +35,22 @@ are shown at normal speed, or in quick succession, the action seems much faster.
 
 So, what exactly does this mean and how do we achieve this *Time-lapse*
 effect? You'll need a camera and a subject that changes over time, like a sunset
-or flowers. Then simply need to take photos at a different speed then at which you
-will play them back.
+or flowers. Then simply need to take photos at a different interval then the
+interval at which you will play them back.
 
 #### Example
 
 Take a total of 100 photos, taking one photo every 10 seconds:<br>
 **100 photos × 10 seconds = 1000 seconds**.<br>
-Make a movie playing at 25 fps from these photos, the movie will be 4 seconds long:<br>
+Make a movie playing at 25 frame per second (fps) from these photos,
+the movie will be 4 seconds long:<br>
 **100 photos / 25 frames per second = 4 seconds**.<br>
 This movie will speed up time by a factor of 250:<br>
 **1000 seconds / 4 seconds = 250×**.
 
-So if a flower normally takes half an hour to open, you can show that flower
-opening with a movie 8 seconds long if you take one photo every 10 seconds and
-play it back at 25 frames per second<br>
+If a flower normally takes about half an hour (2000 seconds) to open, you can
+show that flower opening with a movie 8 seconds long if you take one photo every
+10 seconds and play it back at 25 frames per second<br>
 **2000 seconds / 250 = 8 seconds**
 
 Using this basic knowledge, you can take the photos at a shorter or longer
@@ -69,35 +70,34 @@ To get a better idea of what time-lapse is; view my
 
 For this you can use a digital or analog device. Digital is preferable as that
 will make the following steps much easier. The device can be a still camera, video
-camera, webcam or something equivalent.
+camera, smartphone, webcam, or something equivalent.
 
 A very important requirement is that you can control the interval at which the
 device takes pictures (see Trigger, below). It also needs to have enough storage
 to be able to hold all the pictures that you want for your time-lapse, they can
-either be stored on the camera or the computer. The camera of course needs a good
-battery, or you need to use an AC adapter to give it continuous power.
+either be stored on the camera or another device, like a connected computer. The
+camera needs a good battery, or connected to an AC adapter to give it continuous
+power.
 
 #### Trigger - an intervalometer
 
-If your camera doesn't support interval shooting on its own; use a computer or an
-intervalometer to trigger the camera instead. See the topic 'Taking the pictures'
-for a list of useful software and possible intervalometers.
-
-A computer will need to be connected to the camera via an USB cable, and make sure
-that the camera is set to the correct USB mode (PTP/MTP) to allow the computer to
-control it. A laptop might be most useful because it is very flexible, and can be
-taken to places where a desktop computer can not. You do have to make sure that
-your laptop battery will last long enough.
+Some cameras have built-in functionality to make a time-lapse. Sometimes such a
+feature is called an 'intervalometer'. If your camera doesn't support interval
+shooting on its own; use an external device to trigger it. This can be a
+computer or an intervalometer to trigger the camera. See the topic 'Taking the
+pictures' for a list of useful software and possible intervalometers. A computer
+needs to be connected to the camera via a cable or wirelessly, a cable is
+probably more reliable and less of a power drain.
 
 #### Stability - a tripod
 
 A tripod is very important when making a time-lapse movie. It will ensure that all
 pictures are aligned correctly. It can be useful to weigh down your
 tripod with extra weight to lower the center of gravity and increase stability.
-Alternatively, a Superclamp can be used to attach the camera to something stationary.
+Alternatively, a clamp can be used to attach the camera to something stationary.
 
 Simply laying the camera on a flat and steady surface can suffice, but make certain
-that it is stable and wont slide away.
+that it is stable and won't slide away.
 
 <div class="screenshots">
     [% captioned_image section='require' image='tripod_vft' caption='Camera and umbrella tripods' %]
@@ -117,8 +117,8 @@ your camera covers the correct angle and uses the correct interval to show the
 motion.
 
 Example subjects:<br>
-*Moving clouds, blooming or withering flowers, melting ice, clockwork, people, animals, traffic,
-sunrise, sunset, and stars.*
+*Moving clouds, blooming or withering flowers, melting ice, clockwork, people, animals,
+traffic, sunrise, sunset, or stars.*
 
 ---
 
@@ -151,8 +151,9 @@ Check that you have enough space left on your memory card to fit all the images
 that you want to take. If you don't have enough storage you might consider setting
 your camera to a lower quality setting (not recommended). Or just buy a larger
 memory card, since memory cards are fairly cheap these days you can easily buy an
-8GB+ memory card which can hold many photos. I recommend shooting in the highest
-quality possible. This gives you the most flexibility when you process the images.
+32GB+ memory card which can hold many photos. I recommend shooting in the highest
+quality possible (RAW). This gives you the most flexibility when you process the
+images.
 
 #### Exposure mode
 
@@ -229,13 +230,16 @@ for time-lapse shooting, here are some examples:
 Once you have made the photos for your time-lapse movie you will want to make a
 movie out of them, here are some tips to help you do that.
 
-#### Tip; Remove the first frame
+#### Tip; Remove the first and last frame
 
 If you have to press a button on your camera to start the time-lapse shooting I
 suggest you do this:<br> When you press a button on your camera to initiate the
 time-lapse, you are moving the camera a little bit. This causes the first photo to
 be a bit off center when compared to the other photos. Therefore I suggest you remove
 the first photo before you make the movie.
+
+Sometimes stopping the time-lapse recording also requires turning the camera
+off, so also check the last frame.
 
 #### Software
 
@@ -253,7 +257,14 @@ with your needs.
         <th style="text-align: center; width: 60px;">Free?</th>
     </tr>
     <tr>
-        <td><a href="https://www.adobe.com/products/catalog.html?filters=cd_252Fvideo-audio">Adobe Video Software</a></td>
+        <td><a href="https://github.com/153957/time-lapse/">time-lapse Python package</a></td>
+        <td class="select"></td>
+        <td class="select"></td>
+        <td class="select"></td>
+        <td class="select"></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.adobe.com/products/catalog.html#category=video">Adobe Video Software</a></td>
         <td class="select"></td>
         <td class="select"></td>
         <td></td>
@@ -305,10 +316,12 @@ with your needs.
 
 #### Exporting the movie
 
-On this website the movies are created from the photos using ffmpeg. This is
-steered from Python using [ffmpeg-python](https://github.com/kkroening/ffmpeg-python)
-and my own time-lapse layer over that. Scripts for creating the movies are stored here:
-[Time-Lapse assembling](https://github.com/153957/time-lapse/).
+On this website the movies are created from the photos using
+[FFmpeg](https://ffmpeg.org). This is steered from Python using
+[ffmpeg-python](https://github.com/kkroening/ffmpeg-python) and my own
+[time-lapse](https://github.com/153957/time-lapse/) package to manage that.
+Scripts describing the creation of the individual movies are stored here:
+[Time-lapse scripts](https://github.com/153957/time-lapse-scripts/).
 
 ---
 
@@ -333,15 +346,17 @@ shows how the aperture blades move during the taking of a photo. There are sever
 ways to avoid this potential problem, you can for instance shoot 'wide-open'
 (lowest f-stop), because then the aperture does not move at all. There are also
 ways to fix the aperture of a lens to a certain setting on a DSLR, by partly
-loosening the lens from the camera body in a particular way, but that is more complicated.
+loosening the lens from the camera body in a particular way, but that is more
+complicated.
 
 #### Removing flicker
 
-Luckily there is software out there that can help in post-processing to remove
-flicker. FFmpeg includes a <a href="https://ffmpeg.org/ffmpeg-filters.html#deflicker"
-rel="noreferrer">deflicker filter</a>. For Adobe Lightroom, a plug-in can be used: <a
-href="https://lrtimelapse.com/">LrTimelapse</a>. Many other tools also
-include a deflickering option.
+Luckily there is software out there that can help in post-processing to reduce
+flicker. FFmpeg includes a
+[deflicker-filter](https://ffmpeg.org/ffmpeg-filters.html#deflicker), this is
+used by my time-lapse package. For Adobe Lightroom, a plug-in can be used:
+[LrTimelapse](https://lrtimelapse.com/). Many other tools also include a
+deflickering option.
 
 <div class="screenshots">
     <a href="/static/images_guide/flicker/S60_070728_1_flickering.mp4" target="_blank">
