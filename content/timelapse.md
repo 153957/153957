@@ -86,6 +86,7 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
+            [% thumbnail id=241115_APL_Guiness_Storehouse fps=30 data='960 1920' %]
             [% thumbnail id=240113_240114_APL_Prague fps=30 data='960 1920' %]
             [% thumbnail id=230601_APL_Edinburgh fps=24 data='960 1920' %]
             [% thumbnail id=230424_APL_Villa_Carlos_Paz fps=24 data='960 1920' %]
@@ -168,6 +169,7 @@ footer:
             [% thumbnail id=051218_S60_1 fps=15 data='960' %]
         </div>
         <div class="slide" id="Water-content">
+            [% thumbnail id=250204_APL_Veilinghaven fps=24 data='960 1920' %]
             [% thumbnail id=240914_APL_Prior_Park fps=24 data='960 1920' %]
             [% thumbnail id=240914_APL_4 fps=24 data='960 1920' %]
             [% thumbnail id=240522_APL_TESO fps=48 data='960 1920' %]
@@ -187,6 +189,7 @@ footer:
             [% thumbnail id=140608_ADL_2 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=241115_APL_Tick_Followed_Tock fps=24 data='960 1920' %]
             [% thumbnail id=240302_240714_APL_Jaarbeurs fps=48 data='960 1920' %]
             [% thumbnail id=240101_APL_1 fps=30 data='960 1920' %]
             [% thumbnail id=230527_APL_The_Kelpies fps=24 data='960 1920' %]
