@@ -1,7 +1,7 @@
 /* "use strict"; */
 
 /* Global variables */
-const base = 'https://arne.delaat.net/TimeLapse/'
+const base = '/TimeLapse/'
 const extension = '.mp4'
 var quality = '960'
 
