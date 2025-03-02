@@ -279,8 +279,8 @@ function hideLoad() {
 
 /* Change Status to Error Image */
 function errorStatus() {
-    document.getElementById('status').classList.remove('icon-circle-notch icon-spin hidden')
-    document.getElementById('status').classList.add('icon-cancel-circled showing error')
+    document.getElementById('status').classList.remove('icon-circle-notch', 'icon-spin', 'hidden')
+    document.getElementById('status').classList.add('icon-cancel-circled', 'showing', 'error')
 }
 
 /* Exchange Video Player HTML With New Source */
