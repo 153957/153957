@@ -89,6 +89,7 @@ footer:
             [% thumbnail id=241115_APL_Guiness_Storehouse fps=30 data='960 1920' %]
             [% thumbnail id=240113_240114_APL_Prague fps=30 data='960 1920' %]
             [% thumbnail id=230601_APL_Edinburgh fps=24 data='960 1920' %]
+            [% thumbnail id=230527_APL_A82 fps=48 data='960 1920' %]
             [% thumbnail id=230424_APL_Villa_Carlos_Paz fps=24 data='960 1920' %]
             [% thumbnail id=221029_APL_City_Creek fps=48 data='960 1920' %]
             [% thumbnail id=220924_APL_Dom_Luis_I fps=24 data='960 1920' %]
@@ -150,6 +151,7 @@ footer:
         </div>
         <div class="slide" id="Dance-content">
             [% thumbnail id=240127_APL_Dansstage fps=24 data='960 1920' %]
+            [% thumbnail id=230531_APL_Stramash fps=24 data='960 1920' %]
             [% thumbnail id=220319_APL_Mini_Dansstage fps=24 data='960 1920' %]
             [% thumbnail id=160605_ADL_Taboe_Tango fps=24 data='960 1920' %]
             [% thumbnail id=141016_ARN_CaDansa fps=24 data='960 1920 audio' %]
@@ -173,6 +175,7 @@ footer:
             [% thumbnail id=240914_APL_Prior_Park fps=24 data='960 1920' %]
             [% thumbnail id=240914_APL_4 fps=24 data='960 1920' %]
             [% thumbnail id=240522_APL_TESO fps=48 data='960 1920' %]
+            [% thumbnail id=230527_APL_Loch_Lomond fps=30 data='960 1920' %]
             [% thumbnail id=230424_APL_Balcon_Norte fps=24 data='960 1920' %]
             [% thumbnail id=221102_APL_Boulder_Creek fps=30 data='960 1920' %]
             [% thumbnail id=221028_APL_City_Creek fps=24 data='960 1920' %]
