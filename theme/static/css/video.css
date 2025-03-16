@@ -11,7 +11,7 @@
   width: 180px;
   vertical-align: top;
 
-  .category {
+  & .category {
     display: inline-block;
     cursor: pointer;
     padding: 1px 0;
@@ -36,7 +36,7 @@
   flex-basis: 260px;
   flex-grow: 1;
 
-  .slide {
+  & .slide {
     display: none;
     opacity: 0;
     transition: opacity 0.7s;
@@ -54,7 +54,7 @@
     }
   }
 
-  .thumbnail {
+  & .thumbnail {
     display: block;
     position: relative;
     border-radius: 2px;
@@ -65,12 +65,12 @@
     margin: 1px;
   }
 
-  .currentmovie,
-  .thumbnail:hover {
+  & .currentmovie,
+  & .thumbnail:hover {
     opacity: 0.5;
   }
 
-  [data-tip] {
+  & [data-tip] {
     position: relative;
 
     &::before {

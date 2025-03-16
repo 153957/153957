@@ -28,13 +28,8 @@ PAGE_ORDER_BY = 'order'
 OUTPUT_CSS = OUTPUT_PATH / THEME_STATIC_DIR / 'css'
 
 PLUGINS = [
-    'plugins.libsass',
     'plugins.shortcodes',
     'plugins.thumbnails',
-]
-
-LIBSASS_PATHS = [
-    (OUTPUT_CSS, OUTPUT_CSS),
 ]
 
 SHORTCODES = {
