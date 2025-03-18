@@ -114,46 +114,46 @@
   &:focus {
     outline: none;
   }
+}
 
-  // Intentionally defined as separate rules
-  &::-moz-range-thumb {
-    appearance: none;
-    border: none;
-    border-radius: 1px;
-    background: linear-gradient(to bottom, #1c1c1c, #0a0a0a);
-    cursor: pointer;
-    width: 5px;
-    height: 10px;
-  }
+// Intentionally defined as separate rules
+#progress_indicator::-moz-range-thumb {
+  appearance: none;
+  border: none;
+  border-radius: 1px;
+  background: linear-gradient(to bottom, #1c1c1c, #0a0a0a);
+  cursor: pointer;
+  width: 5px;
+  height: 10px;
+}
 
-  &::-webkit-slider-thumb {
-    appearance: none;
-    border: none;
-    border-radius: 1px;
-    background: linear-gradient(to bottom, #1c1c1c, #0a0a0a);
-    cursor: pointer;
-    width: 5px;
-    height: 10px;
-  }
+#progress_indicator::-webkit-slider-thumb {
+  appearance: none;
+  border: none;
+  border-radius: 1px;
+  background: linear-gradient(to bottom, #1c1c1c, #0a0a0a);
+  cursor: pointer;
+  width: 5px;
+  height: 10px;
+}
 
-  // Intentionally defined as separate rules
-  &::-moz-range-track {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    width: 100%;
-    height: 10px;
-    color: transparent;
-  }
+// Intentionally defined as separate rules
+#progress_indicator::-moz-range-track {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  height: 10px;
+  color: transparent;
+}
 
-  &::-webkit-slider-runnable-track {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    width: 100%;
-    height: 10px;
-    color: transparent;
-  }
+#progress_indicator::-webkit-slider-runnable-track {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  height: 10px;
+  color: transparent;
 }
 
 /* Volume */
@@ -192,48 +192,48 @@
   &:focus {
     outline: none;
   }
+}
 
-  // Intentionally defined as separate rules
-  &::-moz-range-thumb {
-    appearance: none;
-    display: block;
-    border: none;
-    border-radius: 50%;
-    background: linear-gradient(to bottom, #ddd, #888);
-    background-clip: padding-box;
-    width: 10px;
-    height: 10px;
-  }
+// Intentionally defined as separate rules
+#volume_indicator::-moz-range-thumb {
+  appearance: none;
+  display: block;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ddd, #888);
+  background-clip: padding-box;
+  width: 10px;
+  height: 10px;
+}
 
-  &::-webkit-slider-thumb {
-    appearance: none;
-    display: block;
-    border: none;
-    border-radius: 50%;
-    background: linear-gradient(to bottom, #ddd, #888);
-    background-clip: padding-box;
-    width: 10px;
-    height: 10px;
-  }
+#volume_indicator::-webkit-slider-thumb {
+  appearance: none;
+  display: block;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ddd, #888);
+  background-clip: padding-box;
+  width: 10px;
+  height: 10px;
+}
 
-  // Intentionally defined as separate rules
-  &::-moz-range-track {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    width: 100%;
-    height: 10px;
-    color: transparent;
-  }
+// Intentionally defined as separate rules
+#volume_indicator::-moz-range-track {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  height: 10px;
+  color: transparent;
+}
 
-  &::-webkit-slider-runnable-track {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    width: 100%;
-    height: 10px;
-    color: transparent;
-  }
+#volume_indicator::-webkit-slider-runnable-track {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  height: 10px;
+  color: transparent;
 }
 
 /* Appearance Sliders */
