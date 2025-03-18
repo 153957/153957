@@ -227,6 +227,7 @@ footer:
             [% thumbnail id=060404_S60_1 fps=10 data='960 audio' %]
         </div>
         <div class="slide" id="Fire-content">
+            [% thumbnail id=250317_APL_U_Flow fps=15 data='960 1920' %]
             [% thumbnail id=160813_ARN_Rhein_in_Flammen fps=60 data='960 1920' %]
             [% thumbnail id=111111_DSC_1 fps=25 data='960' %]
             [% thumbnail id=110311_DSC_Holland_Casino fps=24 data='960 1920' %]
