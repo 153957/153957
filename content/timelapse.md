@@ -171,6 +171,7 @@ footer:
             [% thumbnail id=051218_S60_1 fps=15 data='960' %]
         </div>
         <div class="slide" id="Water-content">
+            [% thumbnail id=250317_APL_Gele_brug fps=30 data='960 1920' %]
             [% thumbnail id=250204_APL_Veilinghaven fps=24 data='960 1920' %]
             [% thumbnail id=240914_APL_Prior_Park fps=24 data='960 1920' %]
             [% thumbnail id=240914_APL_4 fps=24 data='960 1920' %]
