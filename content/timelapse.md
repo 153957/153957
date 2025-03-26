@@ -150,6 +150,7 @@ footer:
             [% thumbnail id=070601_S60_1 fps=25 data='960' %]
         </div>
         <div class="slide" id="Dance-content">
+            [% thumbnail id=250126_APL_Diemerbal fps=30 data='960 1920' %]
             [% thumbnail id=240127_APL_Dansstage fps=24 data='960 1920' %]
             [% thumbnail id=230531_APL_Stramash fps=24 data='960 1920' %]
             [% thumbnail id=220319_APL_Mini_Dansstage fps=24 data='960 1920' %]
