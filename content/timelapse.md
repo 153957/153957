@@ -151,6 +151,7 @@ footer:
         </div>
         <div class="slide" id="Dance-content">
             [% thumbnail id=250126_APL_Diemerbal fps=30 data='960 1920' %]
+            [% thumbnail id=250113_APL_Duo_Niepold_Cutting fps=48 data='960 1920' %]
             [% thumbnail id=240127_APL_Dansstage fps=24 data='960 1920' %]
             [% thumbnail id=230531_APL_Stramash fps=24 data='960 1920' %]
             [% thumbnail id=220319_APL_Mini_Dansstage fps=24 data='960 1920' %]
@@ -194,6 +195,7 @@ footer:
             [% thumbnail id=140608_ADL_2 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=250421_APL_Draailier_en_Doedelzak fps=48 data='960 1920' %]
             [% thumbnail id=241220_APL_Lumineuze_Nachten fps=30 data='960 1920' %]
             [% thumbnail id=241115_APL_Tick_Followed_Tock fps=24 data='960 1920' %]
             [% thumbnail id=240302_240714_APL_Jaarbeurs fps=48 data='960 1920' %]
