@@ -10,9 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           python-version: '3.13'
+          activate-environment: true
       - run: make install
       - run: make build
       - uses: Cyb3r-Jak3/html5validator-action@v7.2.0
@@ -25,9 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           python-version: '3.13'
+          activate-environment: true
       - run: make ruffinstall
       - run: make rufftest
         env:
@@ -37,8 +39,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           python-version: '3.13'
+          activate-environment: true
       - run: make mypyinstall
       - run: make typingtest
