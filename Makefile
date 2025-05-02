@@ -31,5 +31,5 @@ build: clean install
 	pelican
 
 .PHONY: serve
-serve: clean install ruffinstall mypyinstall
+serve: clean install
 	pelican --listen --autoreload
