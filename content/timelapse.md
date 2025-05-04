@@ -196,6 +196,7 @@ footer:
             [% thumbnail id=140608_ADL_2 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=250503_APL_Stevenskerk fps=48 data='960 1920' %]
             [% thumbnail id=250421_APL_Draailier_en_Doedelzak fps=48 data='960 1920' %]
             [% thumbnail id=241220_APL_Lumineuze_Nachten fps=30 data='960 1920' %]
             [% thumbnail id=241115_APL_Tick_Followed_Tock fps=24 data='960 1920' %]
