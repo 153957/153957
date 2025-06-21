@@ -139,6 +139,7 @@ footer:
         </div>
         <div class="slide" id="Sun-content">
             [% thumbnail id=220401_APL_Haarrijnseplas fps=24 data='960 1920' %]
+            [% thumbnail id=130505_ARN_6 fps=30 data='960 1920' %]
             [% thumbnail id=130305_ARN_1_2 fps=48 data='960 1920' %]
             [% thumbnail id=100816_DSC_1_2 fps=25 data='960' %]
             [% thumbnail id=100722_DSC_1 fps=25 data='960' %]
