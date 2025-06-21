@@ -49,6 +49,7 @@ footer:
             [% thumbnail id=060716_S60_1 fps=15 data='960 audio' %]
         </div>
         <div class="slide" id="Clouds-content">
+            [% thumbnail id=250603_ADL_1 fps=30 data='960 1920' %]
             [% thumbnail id=240628_APL_1 fps=24 data='960 1920' %]
             [% thumbnail id=221026_APL_Uinta_Wasatch_Cache fps=24 data='960 1920' %]
             [% thumbnail id=220514_APL_Woudagemaal fps=30 data='960 1920' %]
@@ -196,6 +197,7 @@ footer:
             [% thumbnail id=140608_ADL_2 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=250603_ADL_APL_Windmolenpad fps=30 data='960 1920' %]
             [% thumbnail id=250503_APL_Stevenskerk fps=48 data='960 1920' %]
             [% thumbnail id=250421_APL_Draailier_en_Doedelzak fps=48 data='960 1920' %]
             [% thumbnail id=241220_APL_Lumineuze_Nachten fps=30 data='960 1920' %]
