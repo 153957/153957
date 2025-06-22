@@ -221,6 +221,7 @@ footer:
             [% thumbnail id=151203_ADL_1_3_4 fps=24 data='960 1920' %]
             [% thumbnail id=151003_ARN_Nikhef fps=48 data='960 1920' %]
             [% thumbnail id=150409_ARN_Cloud_chamber fps=24 data='960 1920' %]
+            [% thumbnail id=150312_ADL_1_2_3_5 fps=24 data='960 1920' %]
             [% thumbnail id=150205_150206_ARN_1 fps=24 data='960 1920' %]
             [% thumbnail id=110413_111202_120219_ADL_1_2 fps=25 data='960 1920' %]
             [% thumbnail id=110122_111127_130426_130428_ADL_ARN_1_2_4 fps=25 data='960 1920' %]
