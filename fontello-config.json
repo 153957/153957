@@ -25,21 +25,9 @@
       "src": "fontawesome"
     },
     {
-      "uid": "3c24ee33c9487bbf18796ca6dffa1905",
-      "css": "resize-small",
-      "code": 59395,
-      "src": "fontawesome"
-    },
-    {
       "uid": "4ffd8122933b9ee0183b925e1554969f",
       "css": "circle-notch",
       "code": 61902,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "e9b178b4a02c08399ca5ea10ba522528",
-      "css": "creative-commons",
-      "code": 62046,
       "src": "fontawesome"
     },
     {
@@ -61,33 +49,9 @@
       "src": "fontawesome"
     },
     {
-      "uid": "cda0cdcfd38f5f1d9255e722dad42012",
-      "css": "spinner",
-      "code": 61712,
-      "src": "fontawesome"
-    },
-    {
       "uid": "0f4cae16f34ae243a6144c18a003f2d8",
       "css": "cancel-circled",
       "code": 59399,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "qdhvqjd167ee2byleebhw58j4omhb8pl",
-      "css": "resize-small-1",
-      "code": 59400,
-      "src": "modernpics"
-    },
-    {
-      "uid": "dsfybb9l0x5fyd7e3o5kyisqppifztfu",
-      "css": "resize-full-1",
-      "code": 59401,
-      "src": "modernpics"
-    },
-    {
-      "uid": "e835d9d0f2ee39ae01b01cc6a6fa24ab",
-      "css": "play-circled",
-      "code": 59402,
       "src": "fontawesome"
     },
     {

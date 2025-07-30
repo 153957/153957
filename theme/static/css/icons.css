@@ -26,16 +26,10 @@
 .icon-pause::before { content: '\e800'; }
 .icon-play::before { content: '\e801'; }
 .icon-resize-full::before { content: '\e802'; }
-.icon-resize-small::before { content: '\e803'; }
 .icon-volume-off::before { content: '\e804'; }
 .icon-volume-down::before { content: '\e805'; }
 .icon-volume-up::before { content: '\e806'; }
 .icon-cancel-circled::before { content: '\e807'; }
-.icon-resize-small-1::before { content: '\e808'; }
-.icon-resize-full-1::before { content: '\e809'; }
-.icon-play-circled::before { content: '\e80a'; }
 .icon-step-forward::before { content: '\e80b'; }
 .icon-step-backward::before { content: '\e80c'; }
-.icon-spinner::before { content: '\f110'; }
 .icon-circle-notch::before { content: '\f1ce'; }
-.icon-creative-commons::before { content: '\f25e'; }
