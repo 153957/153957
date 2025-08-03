@@ -302,6 +302,8 @@ function swapVideo(movieid) {
     }
     const videolink = `${base}${currentQuality}/${movieid}${extension}`
 
+    const poster = `/static/images_timelapse/thumbs/${movieid}@2x.png`
+
     /* Example video */
     // videolink = '../static/sample_video/150317_NorthernLights.mp4'
 
@@ -310,13 +312,13 @@ function swapVideo(movieid) {
 
     if (coarse.matches) {
         document.getElementById('movie').innerHTML = `
-            <video src="${videolink}" id="player" preload="auto" controls></video>
+            <video poster="${poster}" src="${videolink}" id="player" preload="auto" controls></video>
             <span id="status" class="icon icon-circle-notch icon-spin hidden"></span>
         `
     } else {
         document.getElementById('movie').innerHTML = `
             <span id="status" class="icon icon-circle-notch icon-spin showing"></span>
-            <video src="${videolink}" id="player" preload="auto"></video>
+            <video poster="${poster}" src="${videolink}" id="player" preload="auto"></video>
         `
         document.getElementById('player').addEventListener('loadedmetadata', addControls, {'once': true})
         document.getElementById('player').addEventListener('canplay', hideLoad, {'once': true})
