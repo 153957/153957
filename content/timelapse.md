@@ -187,6 +187,7 @@ footer:
             [% thumbnail id=240908_APL_Swanage fps=30 data='960 1920' %]
             [% thumbnail id=240906_240907_APL_Eastbourne fps=30 data='960 1920' %]
             [% thumbnail id=240522_APL_TESO fps=48 data='960 1920' %]
+            [% thumbnail id=230527_APL_Beinn_Dubh fps=48 data='960 1920' %]
             [% thumbnail id=230527_APL_Loch_Lomond fps=30 data='960 1920' %]
             [% thumbnail id=230424_APL_Balcon_Norte fps=24 data='960 1920' %]
             [% thumbnail id=221102_APL_Boulder_Creek fps=30 data='960 1920' %]
