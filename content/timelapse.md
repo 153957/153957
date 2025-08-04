@@ -97,6 +97,7 @@ footer:
             [% thumbnail id=230527_APL_A82 fps=48 data='960 1920' %]
             [% thumbnail id=230424_APL_Villa_Carlos_Paz fps=24 data='960 1920' %]
             [% thumbnail id=221029_APL_City_Creek fps=48 data='960 1920' %]
+            [% thumbnail id=221027_APL_Salt_Lake_City fps=30 data='960 1920' %]
             [% thumbnail id=220924_APL_Dom_Luis_I fps=24 data='960 1920' %]
             [% thumbnail id=220323_APL_A2 fps=24 data='960 1920' %]
             [% thumbnail id=201018_WEN_A2 fps=25 data='960 1920' %]
