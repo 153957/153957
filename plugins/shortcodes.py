@@ -31,7 +31,8 @@ from itertools import pairwise
 
 from jinja2 import Template
 
-from pelican import Pelican, signals
+from pelican import signals
+from pelican.contents import Content
 
 SETTINGS_NAME = 'SHORTCODES'
 
@@ -66,7 +67,7 @@ def expand_shortcodes(text: str, shortcodes: dict[str, str]) -> str:
     return re.sub(r'\[% ([\w\W]+?) %\]', shortcode_replacer, text, flags=re.MULTILINE)
 
 
-def content_object_init(instance: Pelican) -> None:
+def content_object_init(instance: Content) -> None:
     """Apply shortcodes to content, replacing original content"""
     shortcodes = instance.settings.get(SETTINGS_NAME)
     if not shortcodes or not instance._content:
