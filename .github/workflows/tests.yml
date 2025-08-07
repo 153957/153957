@@ -43,5 +43,5 @@ jobs:
         with:
           python-version: '3.13'
           activate-environment: true
-      - run: make mypyinstall
+      - run: make tyinstall
       - run: make typingtest
