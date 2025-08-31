@@ -21,6 +21,7 @@ jobs:
           root: .build/
           log_level: INFO
           blacklist: index_footer.html index_header.html
+          css: true
 
   rufftest:
     runs-on: ubuntu-latest
