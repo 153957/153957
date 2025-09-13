@@ -89,6 +89,7 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
+            [% thumbnail id=250907_ADL_Vleutensebaan fps=30 data='960 1920' %]
             [% thumbnail id=250408_APL_Wadi_Musa fps=48 data='960 1920' %]
             [% thumbnail id=250406_APL_Wadi_Rum fps=30 data='960 1920' %]
             [% thumbnail id=241115_APL_Guiness_Storehouse fps=30 data='960 1920' %]
@@ -207,6 +208,8 @@ footer:
             [% thumbnail id=140608_ADL_2 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=250907_APL_Graffiti fps=24 data='960 1920' %]
+            [% thumbnail id=250810_APL_1 fps=24 data='960 1920' %]
             [% thumbnail id=250603_ADL_APL_Windmolenpad fps=30 data='960 1920' %]
             [% thumbnail id=250503_APL_Stevenskerk fps=48 data='960 1920' %]
             [% thumbnail id=250421_APL_Draailier_en_Doedelzak fps=48 data='960 1920' %]
@@ -264,6 +267,7 @@ footer:
             [% thumbnail id=081214_DSC_Midwinter_Fair fps=30 data='960 audio' %]
         </div>
         <div class="slide" id="Astronomy-content">
+            [% thumbnail id=250907_ADL_APL_Lunar_Eclipse fps=30 data='960 1920' %]
             [% thumbnail id=250406_APL_Rum_Planet_Camp fps=24 data='960 1920' %]
             [% thumbnail id=200713_APL_ADL_Neowise fps=30 data='960 1920' %]
             [% thumbnail id=180727_ADL_APL_Lunar_Eclipse fps=25 data='960 1920' %]
