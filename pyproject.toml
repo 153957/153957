@@ -5,7 +5,7 @@ version = '0.0.0'
 dependencies = [
     'jinja2==3.1.6',
     'pelican[Markdown]==4.11.0',
-    'pillow==11.3.0',
+    'pillow==12.0.0',
 ]
 
 [dependency-groups]
