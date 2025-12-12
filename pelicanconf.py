@@ -6,7 +6,7 @@ PROJECT_DIR = Path(__file__).parent
 
 AUTHOR = 'Arne de Laat'
 SITENAME = '153957 Photography'
-SITEURL = ''
+SITEURL: str = ''
 
 OUTPUT_PATH = PROJECT_DIR / '.build'
 
