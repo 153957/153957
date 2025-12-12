@@ -11,23 +11,11 @@ This showcases my photography and time-lapse.
 
 ## Setup
 
-Create a new virtual environment with Python 3.13:
-
-    conda create -n website python=3.13 --yes
-
-or 
-
-    python3.13 -m venv <venv>
-    source <venv>/bin/activate
-
-And install the requirements:
-
-    make install
-
+Clone this repository and ensure `uv` is installed.
 
 ## Make website
 
-Activate the virtual env and run:
+To build the website use:
 
     make build
 
@@ -36,7 +24,7 @@ The built website should then be in the `.build` directory.
 
 ## Developing
 
-Use the following command to locally test the site (http://localhost:8000),
+Use the following target to locally test the site (http://localhost:8000),
 with automatic rebuilds when making changes:
 
     make serve
@@ -51,4 +39,4 @@ development server:
 
 And to build the site:
 
-    docker compose -f docker-compose.build.yml up
+    docker compose -f compose.build.yaml up

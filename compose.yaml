@@ -1,8 +1,6 @@
-version: '3.7'
-
 services:
   pelican:
-    image: 'python:3.13'
+    image: 'ghcr.io/astral-sh/uv:debian'
     restart: unless-stopped
     volumes:
       - '.:/base'

@@ -1,3 +1,19 @@
+[project]
+name = '153957'
+requires-python = '>=3.13'
+version = '0.0.0'
+dependencies = [
+    'jinja2==3.1.6',
+    'pelican[Markdown]==4.11.0',
+    'pillow==11.3.0',
+]
+
+[dependency-groups]
+dev = [
+    'ruff==0.14.1',
+    'ty==0.0.1a34',
+]
+
 [tool.ruff]
 line-length = 120
 target-version = 'py313'

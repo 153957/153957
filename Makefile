@@ -1,35 +1,23 @@
-.PHONY: tyinstall
-tyinstall:
-	uv pip install --upgrade -r requirements-ty.txt
-
-.PHONY: ruffinstall
-ruffinstall:
-	uv pip install --upgrade -r requirements-ruff.txt
-
-.PHONY: install
-install:
-	uv pip install --upgrade -r requirements.txt
-
 .PHONY: test
 test: rufftest typingtest
 
 .PHONY: rufftest
 rufftest:
-	ruff check .
-	ruff format --check .
+	uv run ruff check .
+	uv run ruff format --check .
 
 .PHONY: typingtest
 typingtest:
-	ty check
+	uv run ty check
 
 .PHONY: clean
 clean:
 	rm -rf .build
 
 .PHONY: build
-build: clean install
-	pelican
+build: clean
+	uv run pelican
 
 .PHONY: serve
-serve: clean install
-	pelican --listen --autoreload
+serve: clean
+	uv run pelican --listen --autoreload
