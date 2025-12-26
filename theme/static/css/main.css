@@ -212,7 +212,6 @@ nav {
   }
 
   & .active {
-    transition: background 0.1s linear;
     background: rgba(0, 0, 0, 1);
   }
 
@@ -231,7 +230,6 @@ nav {
 
   & a {
     display: block;
-    transition: background 0.1s linear;
     padding: 0 20px 0 12px;
     height: 1.9em;
     text-decoration: none;
