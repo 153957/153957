@@ -103,13 +103,16 @@ footer:
 ### Other time-lapse sites
 
 - [Martin Setvak](https://www.setvak.cz/timelapse/timelapse.html)
+- [Lincoln Harrison](https://www.lincolnharrison.com/)
 
 ### Other photography sites
 
 - [Wen Versteeg](https://www.wenversteeg.nl)
 - [Merel Dames](https://rizomorf.nl)
+- [Ork de Rooij](https://orkfotografie.nl)
 - [Jean-Sébastien Monzani](https://www.simplemoment.com/)
 - [Ole Thorsen](https://www.pbase.com/ole_thorsen/)
+- [Exclusive Architecture](https://exclusivearchitecture.com/)
 
 ### Events photographed
 
