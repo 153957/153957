@@ -89,7 +89,9 @@ footer:
             [% thumbnail id=050621_S60_2 fps=25 data='960' %]
         </div>
         <div class="slide" id="Traffic-content">
+            [% thumbnail id=251101_APL_Teleférico_Benalmadena fps=60 data='960 1920' %]
             [% thumbnail id=250907_ADL_Vleutensebaan fps=30 data='960 1920' %]
+            [% thumbnail id=250720_APL_Ede_Wageningen fps=30 data='960 1920' %]
             [% thumbnail id=250408_APL_Wadi_Musa fps=48 data='960 1920' %]
             [% thumbnail id=250406_APL_Wadi_Rum fps=30 data='960 1920' %]
             [% thumbnail id=241115_APL_Guiness_Storehouse fps=30 data='960 1920' %]
@@ -130,6 +132,7 @@ footer:
             [% thumbnail id=080716_DSC_4 fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Frost-content">
+            [% thumbnail id=260104_APL_Soestduinen fps=30 data='960 1920' %]
             [% thumbnail id=241216_MIK_1 fps=48 data='960 1920' %]
             [% thumbnail id=210918_WEN_2 fps=30 data='960 1920' %]
             [% thumbnail id=210918_WEN_1 fps=30 data='960 1920' %]
@@ -205,9 +208,10 @@ footer:
             [% thumbnail id=190429_APL_1_2_3_4_5 fps=30 data='960 1920' %]
             [% thumbnail id=180628_APL_1 fps=25 data='960 1920' %]
             [% thumbnail id=160813_ADL_1_2 fps=30 data='960 1920' %]
-            [% thumbnail id=140608_ADL_2 fps=24 data='960 1920' %]
+            [% thumbnail id=140608_ADL_Slot_Zeist fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=251209_APL_Oliebollen_Neude fps=48 data='960 1920' %]
             [% thumbnail id=251221_APL_Lumineuze_Nachten fps=48 data='960 1920' %]
             [% thumbnail id=250907_APL_Graffiti fps=24 data='960 1920' %]
             [% thumbnail id=250810_APL_1 fps=24 data='960 1920' %]
