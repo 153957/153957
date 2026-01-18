@@ -168,6 +168,7 @@ footer:
             [% thumbnail id=220319_APL_Mini_Dansstage fps=24 data='960 1920' %]
             [% thumbnail id=161021_ARN_CaDansa_Rondeau fps=30 data='960 1920' %]
             [% thumbnail id=160605_ADL_Taboe_Tango fps=24 data='960 1920' %]
+            [% thumbnail id=151023_ARN_CaDansa fps=25 data='960 1920 audio' %]
             [% thumbnail id=141016_ARN_CaDansa fps=24 data='960 1920 audio' %]
             [% thumbnail id=131109_ARN_CaDansa fps=30 data='960 audio' %]
             [% thumbnail id=120602_ARN_1 fps=25 data='960 audio' %]
