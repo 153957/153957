@@ -171,6 +171,8 @@ footer:
             [% thumbnail id=151023_ARN_CaDansa fps=25 data='960 1920 audio' %]
             [% thumbnail id=141016_ARN_CaDansa fps=24 data='960 1920 audio' %]
             [% thumbnail id=131109_ARN_CaDansa fps=30 data='960 audio' %]
+            [% thumbnail id=121117_ARN_CaDansa fps=30 data='960 1920' %]
+            [% thumbnail id=121117_ARN_CaDansa_Naragonia fps=48 data='960 1920' %]
             [% thumbnail id=120602_ARN_1 fps=25 data='960 audio' %]
             [% thumbnail id=100405_DSC_1 fps=25 data='960 audio' %]
             [% thumbnail id=091009_DSC_2 fps=30 data='960 audio' %]
