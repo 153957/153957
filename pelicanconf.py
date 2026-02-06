@@ -35,11 +35,11 @@ PLUGINS = [
 SHORTCODES = {
     # Link to image via a thumbnail with a caption
     'captioned_image': f"""
-        <a href="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/{{{{ image }}}}.jpg" target="_blank">
+        <a href="/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/{{{{ image }}}}.jpg" target="_blank">
           <img
             alt=""
-            src="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}.jpg"
-            srcset="{SITEURL}/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}@2x.jpg 2x"
+            src="/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}.jpg"
+            srcset="/{THEME_STATIC_DIR}/images_guide/{{{{ section }}}}/thumbs/{{{{ image }}}}@2x.jpg 2x"
             loading="lazy"
           >
           <span class="caption">{{{{ caption }}}}</span>
@@ -54,8 +54,8 @@ SHORTCODES = {
             id="{{{{ id }}}}"
             class="thumbnail"
             alt=""
-            src="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/thumbs/{{{{ id }}}}.png"
-            srcset="{SITEURL}/{THEME_STATIC_DIR}/images_timelapse/thumbs/{{{{ id }}}}@2x.png 2x"
+            src="/{THEME_STATIC_DIR}/images_timelapse/thumbs/{{{{ id }}}}.png"
+            srcset="/{THEME_STATIC_DIR}/images_timelapse/thumbs/{{{{ id }}}}@2x.png 2x"
             loading="lazy"
             data-fps="{{{{ fps }}}}"
             {{{{ 'data-' + data.replace(' ', ' data-') if data else '' }}}}
@@ -67,7 +67,6 @@ SHORTCODES = {
 THUMBNAIL_PATHS = [
     OUTPUT_PATH,
 ]
-
 
 # No blog, just pages!
 ARTICLE_PATHS: list[str] = []
