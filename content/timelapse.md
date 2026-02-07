@@ -216,6 +216,7 @@ footer:
             [% thumbnail id=140608_ADL_Slot_Zeist fps=24 data='960 1920' %]
         </div>
         <div class="slide" id="Other-content">
+            [% thumbnail id=260207_ADL_APL_Board_Game_Design_XXL fps=30 data='960 1920' %]
             [% thumbnail id=251209_APL_Oliebollen_Neude fps=48 data='960 1920' %]
             [% thumbnail id=251221_APL_Lumineuze_Nachten fps=48 data='960 1920' %]
             [% thumbnail id=250907_APL_Graffiti fps=24 data='960 1920' %]
