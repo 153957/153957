@@ -11,7 +11,7 @@ Example usage:
 In `pelicanconf.py` add:
 
     SHORTCODES = {
-        'image': "<img src=/images/{{src}}>{{desc|title}}<img>"
+        'image': '<img src=/images/{{src}}>{{desc|title}}<img>'
     }
 
 Then in your content:
