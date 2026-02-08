@@ -23,26 +23,13 @@ document
                 return
             }
 
-            // Hide all thumbnails
-            const slides = document.querySelectorAll('.slide')
-            for (const slide of slides) {
-                slide.classList.remove('currentslide', 'currentreveal')
-            }
-            // Unhighlight current category
-            document.getElementById('categories').querySelector('.currentcategory').classList.remove('currentcategory')
-
             // Show thumbnails for chosen category
-            const thumbs = `${category.id}-content`
-            if (category.id === 'All') {
-                for (const slide of slides) {
-                    slide.classList.add('currentslide')
-                    setTimeout(function () {slide.classList.add('currentreveal')}, 0)
-                }
-            } else if (!document.getElementById(thumbs).classList.contains('currentslide')) {
-                // First make the item displayed, then add the class to transition the opacity.
-                document.getElementById(thumbs).classList.add('currentslide')
-                setTimeout(function() {document.getElementById(thumbs).classList.add('currentreveal')}, 0)
-            }
+            // First make the item displayed, then add the class to transition the opacity.
+            document.getElementById('thumbnails').classList = category.id
+            setTimeout(function () {document.getElementById('thumbnails').classList.add('reveal')}, 0)
+
+            // Unhighlight previous category
+            document.getElementById('categories').querySelector('.currentcategory').classList.remove('currentcategory')
             // Highlight current category
             category.classList.add('currentcategory')
         })
@@ -308,7 +295,7 @@ function swapVideo(movieid) {
 
     document
         .getElementById('thumbnails')
-        .querySelectorAll('.thumbnail')
+        .querySelectorAll('.currentmovie')
         .forEach(thumbnail => thumbnail.classList.remove('currentmovie'))
     $global.current = document.getElementById(movieid)
     $global.current.classList.add('currentmovie')

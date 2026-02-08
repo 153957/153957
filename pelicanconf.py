@@ -48,6 +48,7 @@ SHORTCODES = {
     # Add a thumbnail for a time-lapse movie
     'thumbnail': f"""
         <div
+          class="{{{{ category }}}}"
           data-tip="{{{{ tooltip }}}}"
         >
           <img
