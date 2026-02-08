@@ -25,6 +25,7 @@ which will become:
 """
 
 import re
+import typing
 
 from functools import partial
 from itertools import pairwise
@@ -69,7 +70,7 @@ def expand_shortcodes(text: str, shortcodes: dict[str, str]) -> str:
 
 def content_object_init(instance: Content) -> None:
     """Apply shortcodes to content, replacing original content"""
-    shortcodes = instance.settings.get(SETTINGS_NAME)
+    shortcodes = typing.cast('dict[str, str]', instance.settings.get(SETTINGS_NAME))
     if not shortcodes or not instance._content:
         return
     instance._content = expand_shortcodes(instance._content, shortcodes)
