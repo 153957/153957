@@ -11,7 +11,7 @@
   width: 180px;
   vertical-align: top;
 
-  & .category {
+  & li {
     display: inline-block;
     cursor: pointer;
     padding: 1px 0;
@@ -21,7 +21,7 @@
     font-size: 14px;
 
     &:hover,
-    &.currentcat {
+    &.currentcategory {
       color: #159;
 
       @media (prefers-color-scheme: dark) {

@@ -15,18 +15,36 @@ window.$global = {}
 /* Category Slider */
 document
     .getElementById('categories')
-    .querySelectorAll('.category')
+    .querySelectorAll('li')
     .forEach(function (category) {
         category.addEventListener('click', function() {
+            if (category.classList.contains('currentcategory')) {
+                // Do nothing if already current category
+                return
+            }
+
+            // Hide all thumbnails
+            const slides = document.querySelectorAll('.slide')
+            for (const slide of slides) {
+                slide.classList.remove('currentslide', 'currentreveal')
+            }
+            // Unhighlight current category
+            document.getElementById('categories').querySelector('.currentcategory').classList.remove('currentcategory')
+
+            // Show thumbnails for chosen category
             const thumbs = `${category.id}-content`
-            if (!document.getElementById(thumbs).classList.contains('currentslide')) {
-                document.getElementById('thumbnails').querySelector('.currentslide').classList.remove('currentslide', 'currentreveal')
-                document.getElementById('categories').querySelector('.currentcat').classList.remove('currentcat')
+            if (category.id === 'All') {
+                for (const slide of slides) {
+                    slide.classList.add('currentslide')
+                    setTimeout(function () {slide.classList.add('currentreveal')}, 0)
+                }
+            } else if (!document.getElementById(thumbs).classList.contains('currentslide')) {
                 // First make the item displayed, then add the class to transition the opacity.
                 document.getElementById(thumbs).classList.add('currentslide')
                 setTimeout(function() {document.getElementById(thumbs).classList.add('currentreveal')}, 0)
-                category.classList.add('currentcat')
             }
+            // Highlight current category
+            category.classList.add('currentcategory')
         })
     })
 

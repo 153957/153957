@@ -27,18 +27,19 @@ description:
 <div id="slider">
     <div id="categories">
         <ul>
-            <li class="category currentcat" id="Reels">Reels
-            <li class="category" id="Astronomy">Astronomy
-            <li class="category" id="Clouds">Clouds
-            <li class="category" id="Dance">Dance
-            <li class="category" id="Fire">Fire
-            <li class="category" id="Flowers">Flowers
-            <li class="category" id="Frost">Frost
-            <li class="category" id="Other">Other
-            <li class="category" id="Sport">Sport
-            <li class="category" id="Sun">Sun
-            <li class="category" id="Traffic">Traffic
-            <li class="category" id="Water">Water
+            <li id="Reels" class="currentcategory">Reels
+            <li id="Astronomy">Astronomy
+            <li id="Clouds">Clouds
+            <li id="Dance">Dance
+            <li id="Fire">Fire
+            <li id="Flowers">Flowers
+            <li id="Frost">Frost
+            <li id="Other">Other
+            <li id="Sport">Sport
+            <li id="Sun">Sun
+            <li id="Traffic">Traffic
+            <li id="Water">Water
+            <li id="All">Show all
         </ul>
     </div>
 
