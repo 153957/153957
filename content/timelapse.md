@@ -10,6 +10,18 @@ head:
     <link rel="stylesheet" href="/static/css/controls.css" />
 footer:
     <script src="/static/js/video.js"></script>
+description:
+    This is my time-lapse showcase. This page contains a collection of my
+    time-lapse movies. Most movies were created with my Nikon DSLRs and some
+    with my Canon Powershot. The Nikon D80 and D90 required an external
+    intervalometer or a computer to control the camera, the Canon S60, Nikon
+    D300, D500, and D700 have built-in intervalometers.
+    The movies are ordered by shooting date,
+    the newest are at the top of the categories. Most movies are made in the Netherlands,
+    with others shot in Argentina, Portugal, Chile, Iceland, Scotland, Finland, France, Japan, and China.
+    The categories include movies about archery shooting, balfolk dancing, blooming flowers,
+    traffic, fireshows, clouds, sunset, sunrise, night skies, stars, waterfalls,
+    ice cubes melting, and some other miscellaneous subjects.
 ---
 
 <div id="slider">
@@ -307,22 +319,6 @@ footer:
             [% thumbnail id=110127_ADL_DSC_Virtual_Eyes fps=24 data='960 1920 audio' %]
             [% thumbnail id=081103_DSC_Events fps=30 data='960 1920 audio' %]
             [% thumbnail id=110514_110520_DSC_La_Silla_Observatory fps=25 data='960 audio' %]
-        </div>
-        <div class="slide" id="Description-content">
-            <p>
-                This is my time-lapse showcase. This page contains a collection of my
-                time-lapse movies. Most movies were created with my Nikon DSLRs and some
-                with my Canon Powershot. The Nikon D80 and D90 required an external
-                intervalometer or a computer to control the camera, the Canon S60, Nikon
-                D300, D500, and D700 have built-in intervalometers.
-
-                The movies are ordered by shooting date,
-                the newest are at the top of the categories. Most movies are made in the Netherlands,
-                with others shot in Argentina, Portugal, Chile, Iceland, Finland, Japan, and China.
-                The categories include movies about archery shooting, balfolk dancing, blooming flowers,
-                traffic, fireshows, clouds, sunset, sunrise, night skies, stars, waterfalls,
-                ice cubes melting, and some other miscellaneous subjects.
-            </p>
         </div>
     </div>
 </div>

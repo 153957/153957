@@ -6,7 +6,7 @@ head = '''
   <head>
     <meta charset="utf-8">
     <title>153957 Photography : {{ page.title }}</title>
-    <meta name="description" content="">
+    <meta name="description" content="{{ page.description | join(' ') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="application-name" content="153957 Photography">
 {% endif %}
