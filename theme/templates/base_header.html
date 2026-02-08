@@ -23,8 +23,8 @@ head = '''
     <link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/css/main.css">
     <style>
       header {
-        --banner: url('/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}.jpg');
-        --banner2x: url('/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}@2x.jpg');
+        --banner: url("/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}.jpg");
+        --banner2x: url("/{{ THEME_STATIC_DIR }}/images_banners/{{ page.banner|default('DSC_000166') }}@2x.jpg");
         --top: {{ page.top| default('100px') }};
         --left: {{ page.left| default('425px') }};
       }
