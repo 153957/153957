@@ -2,6 +2,14 @@
 name = '153957'
 requires-python = '>=3.14'
 version = '0.0.0'
+description = 'Personal website'
+authors = [
+  { name = 'Arne de Laat', email = 'arne@delaat.net' },
+]
+readme = 'README.md'
+classifiers = [
+  'Private :: Do Not Upload',
+]
 dependencies = [
     'jinja2==3.1.6',
     'pelican[Markdown]==4.11.0',
@@ -15,8 +23,8 @@ dev = [
 ]
 
 [tool.ruff]
+unsafe-fixes = false
 line-length = 120
-target-version = 'py314'
 
 [tool.ruff.format]
 quote-style = 'single'  # Prefer single quotes, except for triple quotes strings
@@ -31,6 +39,8 @@ ignore = [
     'D415',  # Do not require ./!/? at end of first line in docstring
     'EM102',  # Allow f-string in exception message
     'SLF001',  # Allow accessing private attributes
+    'TC002',  # Allow typing-only import outside type-checking block
+    'TC003',  # Allow typing-only stdlib import outside type-checking block
     'TRY003',  # Allow long messages in exceptions
 ]
 
