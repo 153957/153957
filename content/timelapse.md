@@ -44,6 +44,7 @@ description:
     </div>
 
     <div id="thumbnails" class="reels reveal">
+        [% thumbnail id=260207_APL_2 category=other fps=48 data='960 1920' %]
         [% thumbnail id=260207_ADL_APL_Board_Game_Design_XXL category=other fps=30 data='960 1920' %]
         [% thumbnail id=260104_APL_Soestduinen category=frost fps=30 data='960 1920' %]
         [% thumbnail id=251221_APL_Lumineuze_Nachten category=other fps=48 data='960 1920' %]
@@ -52,6 +53,7 @@ description:
         [% thumbnail id=250907_APL_Graffiti category=other fps=24 data='960 1920' %]
         [% thumbnail id=250907_ADL_Vleutensebaan category=traffic fps=30 data='960 1920' %]
         [% thumbnail id=250907_ADL_APL_Lunar_Eclipse category=astronomy fps=30 data='960 1920' %]
+        [% thumbnail id=250906_APL_Biesbosch category=water fps=60 data='960 1920' %]
         [% thumbnail id=250810_APL_1 category=other fps=24 data='960 1920' %]
         [% thumbnail id=250802_APL_2_3_4 category=flowers fps=24 data='960 1920' %]
         [% thumbnail id=250802_APL_1 category=water fps=24 data='960 1920' %]
@@ -139,7 +141,7 @@ description:
         [% thumbnail id=181014_ADL_1_2 category=flowers fps=24 data='960 1920' %]
         [% thumbnail id=181012_ADL_1 category=traffic fps=30 data='960 1920' %]
         [% thumbnail id=180921_ADL_1 category=other fps=24 data='960 1920' %]
-        [% thumbnail id=180810_APL_1 category=traffic fps=30 data='960 1920' %]
+        [% thumbnail id=180810_APL_1 category=water fps=30 data='960 1920' %]
         [% thumbnail id=180727_ADL_APL_Lunar_Eclipse category=astronomy fps=25 data='960 1920' %]
         [% thumbnail id=180628_APL_1 category=water fps=25 data='960 1920' %]
         [% thumbnail id=180430_APL_Loch_Lomond category=clouds fps=24 data='960 1920' %]
