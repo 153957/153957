@@ -52,6 +52,7 @@ description:
         [% thumbnail id=251221_APL_Lumineuze_Nachten category=other fps=48 data='960 1920' %]
         [% thumbnail id=251209_APL_Oliebollen_Neude category=other fps=48 data='960 1920' %]
         [% thumbnail id=251101_APL_Teleférico_Benalmadena category=traffic fps=60 data='960 1920' %]
+        [% thumbnail id=251023_APL_CaDansa category=astronomy fps=48 data='960 1920' %]
         [% thumbnail id=250907_APL_Graffiti category=other fps=24 data='960 1920' %]
         [% thumbnail id=250907_ADL_Vleutensebaan category=traffic fps=30 data='960 1920' %]
         [% thumbnail id=250907_ADL_APL_Lunar_Eclipse category=astronomy fps=30 data='960 1920' %]
