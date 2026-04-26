@@ -198,6 +198,7 @@ description:
         [% thumbnail id=110514_110520_DSC_La_Silla_Observatory category=reels fps=25 data='960 audio' %]
         [% thumbnail id=110413_ADL_1 category=clouds fps=24 data='960 1920' %]
         [% thumbnail id=110413_111202_120219_ADL_1_2 category=other fps=25 data='960 1920' %]
+        [% thumbnail id=110319_DSC_A12 category=astronomy fps=60 data='960 1920' %]
         [% thumbnail id=110311_DSC_Holland_Casino category=fire fps=24 data='960 1920' %]
         [% thumbnail id=110209_ADL_1 category=clouds fps=25 data='960 1920' %]
         [% thumbnail id=110127_ADL_DSC_Virtual_Eyes category=reels fps=24 data='960 1920 audio' %]
