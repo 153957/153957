@@ -45,8 +45,11 @@ description:
 
     <div id="thumbnails" class="reels reveal">
         [% thumbnail id=260424_APL_Wilhelminapark category=water fps=30 data='960 1920' %]
+        [% thumbnail id=260414_APL_Propylaea category=water fps=30 data='960 1920' %]
+        [% thumbnail id=260414_APL_National_Garden category=water fps=24 data='960 1920' %]
         [% thumbnail id=260226_APL_Brusselplein category=other fps=30 data='960 1920' %]
         [% thumbnail id=260226_APL_2 category=other fps=48 data='960 1920' %]
+        [% thumbnail id=260207_APL_Neude category=other fps=24 data='960 1920' %]
         [% thumbnail id=260207_APL_2 category=other fps=48 data='960 1920' %]
         [% thumbnail id=260207_ADL_APL_Board_Game_Design_XXL category=other fps=30 data='960 1920' %]
         [% thumbnail id=260104_APL_Soestduinen category=frost fps=30 data='960 1920' %]
