@@ -44,6 +44,7 @@ description:
     </div>
 
     <div id="thumbnails" class="reels reveal">
+        [% thumbnail id=260531_ADL_APL_Marathon category=traffic fps=30 data='960 1920' %]
         [% thumbnail id=260424_APL_Wilhelminapark category=water fps=30 data='960 1920' %]
         [% thumbnail id=260414_APL_Propylaea category=other fps=30 data='960 1920' %]
         [% thumbnail id=260414_APL_National_Garden category=water fps=24 data='960 1920' %]
