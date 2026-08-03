@@ -102,6 +102,7 @@ description:
         [% thumbnail id=240113_240114_APL_Prague category=traffic fps=30 data='960 1920' %]
         [% thumbnail id=240101_APL_1 category=other fps=30 data='960 1920' %]
         [% thumbnail id=230908_APL_Noordoosterkanaal category=water fps=30 data='960 1920' %]
+        [% thumbnail id=230707_APL_1 category=astronomy fps=48 data='960 1920' %]
         [% thumbnail id=230705_APL_La_Neste_de_Rioumajou category=water fps=30 data='960 1920' %]
         [% thumbnail id=230705_APL_Cascada_del_Cinca category=water fps=48 data='960 1920' %]
         [% thumbnail id=230705_APL_Cascada_de_la_Larri category=water fps=30 data='960 1920' %]
