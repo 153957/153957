@@ -18,7 +18,7 @@ description:
     D300, D500, and D700 have built-in intervalometers.
     The movies are ordered by shooting date,
     the newest are at the top of the categories. Most movies are made in the Netherlands,
-    with others shot in Argentina, Portugal, Chile, Iceland, Scotland, Finland, France, Japan, and China.
+    with others shot in Argentina, Portugal, Chile, Iceland, Scotland, Finland, France, Spain, Japan, and China.
     The categories include movies about archery shooting, balfolk dancing, blooming flowers,
     traffic, fireshows, clouds, sunset, sunrise, night skies, stars, waterfalls,
     ice cubes melting, and some other miscellaneous subjects.
@@ -44,6 +44,7 @@ description:
     </div>
 
     <div id="thumbnails" class="reels reveal">
+        [% thumbnail id=260720_APL_1_2_3_5 category=sun fps=60 data='960 1920' %]
         [% thumbnail id=260623_APL_1 category=traffic fps=50 data='960 1920' %]
         [% thumbnail id=260531_ADL_APL_Marathon category=traffic fps=30 data='960 1920' %]
         [% thumbnail id=260424_APL_Wilhelminapark category=water fps=30 data='960 1920' %]
