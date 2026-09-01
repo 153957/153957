@@ -20,4 +20,4 @@ build: clean
 
 .PHONY: serve
 serve: clean
-	uv run pelican --listen --autoreload
+	uv run pelican --listen --autoreload --bind 0.0.0.0
