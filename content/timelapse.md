@@ -27,8 +27,7 @@ description:
 <div id="slider">
     <div id="categories">
         <ul>
-            <li id="reels" class="currentcategory">Reels
-            <li id="astronomy">Astronomy
+            <li id="astronomy" class="currentcategory">Astronomy
             <li id="clouds">Clouds
             <li id="dance">Dance
             <li id="fire">Fire
@@ -43,7 +42,7 @@ description:
         </ul>
     </div>
 
-    <div id="thumbnails" class="reels reveal">
+    <div id="thumbnails" class="astronomy reveal">
         [% thumbnail id=260815_APL_Parque_Grande category=water fps=30 data='960 1920' %]
         [% thumbnail id=260815_APL_1 category=water fps=30 data='960 1920' %]
         [% thumbnail id=260812_ADL_APL_Eclipse category=sun fps=48 data='960 1920' %]
@@ -100,7 +99,7 @@ description:
         [% thumbnail id=240714_APL_Neoliet category=sport fps=24 data='960 1920' %]
         [% thumbnail id=240628_APL_1 category=clouds fps=24 data='960 1920' %]
         [% thumbnail id=240522_APL_TESO category=water fps=48 data='960 1920' %]
-        [% thumbnail id=240510_APL_ADL_Northern_Lights category=reels fps=48 data='960 1920' %]
+        [% thumbnail id=240510_APL_ADL_Northern_Lights category=astronomy fps=48 data='960 1920' %]
         [% thumbnail id=240302_240714_APL_Jaarbeurs category=other fps=48 data='960 1920' %]
         [% thumbnail id=240127_APL_Dansstage category=dance fps=24 data='960 1920' %]
         [% thumbnail id=240113_240114_APL_Prague category=traffic fps=30 data='960 1920' %]
@@ -180,7 +179,7 @@ description:
         [% thumbnail id=150928_ADL_ARN_Lunar_Eclipse category=astronomy fps=30 data='960 1920' %]
         [% thumbnail id=150409_ARN_Cloud_chamber category=other fps=24 data='960 1920' %]
         [% thumbnail id=150322_ARN_1 category=astronomy fps=24 data='960 1920' %]
-        [% thumbnail id=150317_ADL_ARN_Northern_Lights category=reels fps=24 data='960 1920' %]
+        [% thumbnail id=150317_ADL_ARN_Northern_Lights category=astronomy fps=24 data='960 1920' %]
         [% thumbnail id=150316_ARN_1 category=astronomy fps=24 data='960 1920' %]
         [% thumbnail id=150312_ADL_1_2_3_5 category=other fps=24 data='960 1920' %]
         [% thumbnail id=150205_150206_ARN_1 category=other fps=24 data='960 1920' %]
@@ -214,13 +213,13 @@ description:
         [% thumbnail id=110515_DSC_2 category=astronomy fps=25 data='960' %]
         [% thumbnail id=110515_110521_110522_DSC category=astronomy fps=48 data='960 1920' %]
         [% thumbnail id=110514_DSC_2 category=astronomy fps=25 data='960' %]
-        [% thumbnail id=110514_110520_DSC_La_Silla_Observatory category=reels fps=25 data='960 audio' %]
+        [% thumbnail id=110514_110520_DSC_La_Silla_Observatory category=astronomy fps=25 data='960 audio' %]
         [% thumbnail id=110413_ADL_1 category=clouds fps=24 data='960 1920' %]
         [% thumbnail id=110413_111202_120219_ADL_1_2 category=other fps=25 data='960 1920' %]
         [% thumbnail id=110319_DSC_A12 category=astronomy fps=60 data='960 1920' %]
         [% thumbnail id=110311_DSC_Holland_Casino category=fire fps=24 data='960 1920' %]
         [% thumbnail id=110209_ADL_1 category=clouds fps=25 data='960 1920' %]
-        [% thumbnail id=110127_ADL_DSC_Virtual_Eyes category=reels fps=24 data='960 1920 audio' %]
+        [% thumbnail id=110127_ADL_DSC_Virtual_Eyes category=other fps=24 data='960 1920 audio' %]
         [% thumbnail id=110122_111127_130426_130428_ADL_ARN_1_2_4 category=other fps=25 data='960 1920' %]
         [% thumbnail id=110101_DSC_1 category=fire fps=24 data='960 1920' %]
         [% thumbnail id=101231_DSC_1 category=fire fps=24 data='960 1920' %]
@@ -291,7 +290,7 @@ description:
         [% thumbnail id=081218_DSC_1 category=sun fps=25 data='960' %]
         [% thumbnail id=081214_DSC_Midwinter_Fair category=fire fps=30 data='960 audio' %]
         [% thumbnail id=081111_DSC_1 category=clouds fps=30 data='960' %]
-        [% thumbnail id=081103_DSC_Events category=reels fps=30 data='960 1920 audio' %]
+        [% thumbnail id=081103_DSC_Events category=other fps=30 data='960 1920 audio' %]
         [% thumbnail id=080816_DSC_1 category=flowers fps=24 data='960 1920' %]
         [% thumbnail id=080806_DSC_1 category=flowers fps=48 data='960 1920' %]
         [% thumbnail id=080721_DSC_1 category=other fps=30 data='960' %]
