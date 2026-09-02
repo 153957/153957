@@ -17,22 +17,7 @@ document
     .getElementById('categories')
     .querySelectorAll('li')
     .forEach(function (category) {
-        category.addEventListener('click', function() {
-            if (category.classList.contains('currentcategory')) {
-                // Do nothing if already current category
-                return
-            }
-
-            // Show thumbnails for chosen category
-            // First make the item displayed, then add the class to transition the opacity.
-            document.getElementById('thumbnails').classList = category.id
-            setTimeout(function () {document.getElementById('thumbnails').classList.add('reveal')}, 0)
-
-            // Unhighlight previous category
-            document.getElementById('categories').querySelector('.currentcategory').classList.remove('currentcategory')
-            // Highlight current category
-            category.classList.add('currentcategory')
-        })
+        category.addEventListener('click', function() {swapCategory(category)})
     })
 
 /* Thumbnail Links */
@@ -62,9 +47,30 @@ function fullscreen() {
 /* Load linked video */
 if (window.location.hash) {
     const hash_value = window.location.hash.replace('#', '')
-    if (document.getElementById(hash_value)) {
+    const chosen_video = document.getElementById(hash_value)
+    if (chosen_video) {
+        const category = document.getElementById(chosen_video.parentElement.className)
+        swapCategory(category)
         swapVideo(hash_value)
     }
+}
+
+/* Exchange Video Player HTML With New Source */
+function swapCategory(category) {
+    if (category.classList.contains('currentcategory')) {
+        // Do nothing if already current category
+        return
+    }
+
+    // Show thumbnails for chosen category
+    // First make the item displayed, then add the class to transition the opacity.
+    document.getElementById('thumbnails').classList = category.id
+    setTimeout(function () {document.getElementById('thumbnails').classList.add('reveal')}, 0)
+
+    // Unhighlight previous category
+    document.getElementById('categories').querySelector('.currentcategory').classList.remove('currentcategory')
+    // Highlight current category
+    category.classList.add('currentcategory')
 }
 
 /* Set Button */
