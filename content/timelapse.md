@@ -315,6 +315,7 @@ description:
         [% thumbnail id=060812_S60_1 category=frost fps=15 data='960' %]
         [% thumbnail id=060716_S60_1 category=flowers fps=15 data='960 audio' %]
         [% thumbnail id=060530_S60_1 category=clouds fps=25 data='960' %]
+        [% thumbnail id=060505_S60_1 category=frost fps=30 data='960 1920' %]
         [% thumbnail id=060504_S60_1 category=frost fps=15 data='960 1920' %]
         [% thumbnail id=060404_S60_1 category=other fps=10 data='960 audio' %]
         [% thumbnail id=060228_S60_1 category=clouds fps=15 data='960 audio' %]
