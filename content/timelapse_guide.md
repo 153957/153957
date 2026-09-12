@@ -257,7 +257,7 @@ with your needs.
         <th style="text-align: center; width: 60px;">Free?</th>
     </tr>
     <tr>
-        <td><a href="https://github.com/153957/time-lapse/">time-lapse Python package</a></td>
+        <td><a href="https://codeberg.org/153957/time-lapse/">time-lapse Python package</a></td>
         <td class="select"></td>
         <td class="select"></td>
         <td class="select"></td>
@@ -319,9 +319,9 @@ with your needs.
 On this website the movies are created from the photos using
 [FFmpeg](https://ffmpeg.org). This is steered from Python using
 [ffmpeg-python](https://github.com/kkroening/ffmpeg-python) and my own
-[time-lapse](https://github.com/153957/time-lapse/) package to manage that.
+[time-lapse](https://codeberg.org/153957/time-lapse/) package to manage that.
 Scripts describing the creation of the individual movies are stored here:
-[Time-lapse scripts](https://github.com/153957/time-lapse-scripts/).
+[Time-lapse scripts](https://codeberg.org/153957/time-lapse-scripts/).
 
 ---
 

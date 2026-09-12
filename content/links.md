@@ -54,11 +54,11 @@ footer:
 
 ### Source code
 
-- [Website](https://www.github.com/153957/153957/)
-- [Photo album theme](https://www.github.com/153957/153957-theme/)
-- [Time-lapse compile](https://www.github.com/153957/time-lapse/)
-- [Time-lapse scripts](https://github.com/153957/time-lapse-scripts/)
-- [Photo file management](https://www.github.com/153957/reloci/)
+- [Website](https://codeberg.org/153957/153957/)
+- [Photo album theme](https://codeberg.org/153957/153957-theme/)
+- [Time-lapse compile](https://codeberg.org/153957/time-lapse/)
+- [Time-lapse scripts](https://codeberg.org/153957/time-lapse-scripts/)
+- [Photo file management](https://codeberg.org/153957/reloci/)
 
 ### Websites created
 
@@ -93,7 +93,7 @@ footer:
 ### Website
 
 - [BBEdit](https://www.barebones.com/products/bbedit/)
-- [GitHub](https://www.github.com/)
+- [Codeberg](https://codeberg.org)
 - [Pelican](https://github.com/getpelican/pelican/)
 - [Sigal](https://sigal.saimon.org)
 
