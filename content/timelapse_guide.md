@@ -68,16 +68,15 @@ To get a better idea of what time-lapse is; view my
 
 #### Recording - the camera
 
-For this you can use a digital or analog device. Digital is preferable as that
-will make the following steps much easier. The device can be a still camera, video
-camera, smartphone, webcam, or something equivalent.
+You will need a device to record the images. This can be a photo camera,
+video camera, smartphone, webcam, or something equivalent.
 
 A very important requirement is that you can control the interval at which the
 device takes pictures (see Trigger, below). It also needs to have enough storage
 to be able to hold all the pictures that you want for your time-lapse, they can
 either be stored on the camera or another device, like a connected computer. The
-camera needs a good battery, or connected to an AC adapter to give it continuous
-power.
+camera needs a good battery, or connected to an AC adapter or power bank, to
+ensure it can capture photos for a longer period.
 
 #### Trigger - an intervalometer
 
@@ -92,12 +91,14 @@ probably more reliable and less of a power drain.
 #### Stability - a tripod
 
 A tripod is very important when making a time-lapse movie. It will ensure that all
-pictures are aligned correctly. It can be useful to weigh down your
-tripod with extra weight to lower the center of gravity and increase stability.
-Alternatively, a clamp can be used to attach the camera to something stationary.
+pictures are aligned correctly. Alternatively, a clamp can be used to attach the
+camera to something stationary. Ensure that the surface or object the camera is
+connected to is also stable. For example, a bridge can shake when vehicles pass over
+it, causing shakes in the result.
 
-Simply laying the camera on a flat and steady surface can suffice, but make certain
-that it is stable and won't slide away.
+Simply laying the camera on a flat and steady surface can also suffice. This makes
+it more difficult to frame the shot, and you'll have to make certain that it is
+stable and won't slide away.
 
 <div class="screenshots">
     [% captioned_image section='require' image='tripod_vft' caption='Camera and umbrella tripods' %]
@@ -414,8 +415,5 @@ slowly and create natural looking motion (ease-in and out).
 
 #### Motion in post
 
-Another option is to use software like Adobe After Effects to create a fake
-motion. You can add two keyframes to your movie in After Effects, one where the
-motion starts and one where it should end. Each with a different position/scale
-for the movie, the program will then automatically create the motion (with ease-in
-and out if you want) to go from one situation to the other, thus simulating motion.
+Another option is to use add the motion afterwards in software, but cropping the final
+images and simulate motion by moving the crop area.
