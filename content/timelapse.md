@@ -146,6 +146,7 @@ description:
         [% thumbnail id=220130_APL_2 category=clouds fps=30 data='960 1920' %]
         [% thumbnail id=210918_WEN_2 category=frost fps=30 data='960 1920' %]
         [% thumbnail id=210918_WEN_1 category=frost fps=30 data='960 1920' %]
+        [% thumbnail id=210826_WEN_1 category=clouds fps=24 data='960 1920' %]
         [% thumbnail id=210306_APL_Radio_Kootwijk category=clouds fps=25 data='960 1920' %]
         [% thumbnail id=210207_ADL_1_2 category=frost fps=60 data='960 1920' %]
         [% thumbnail id=210113_WEN_1 category=clouds fps=48 data='960 1920' %]
