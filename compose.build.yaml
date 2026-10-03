@@ -5,6 +5,6 @@ services:
     volumes:
       - '.:/base'
     working_dir: '/base'
-    command: 'make build'
+    command: "uvx --from 'rust-just' just build"
     stdin_open: true
     tty: true

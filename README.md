@@ -14,7 +14,7 @@ Clone this repository and ensure `uv` is installed.
 
 To build the website use:
 
-    make build
+    just build
 
 The built website should then be in the `.build` directory.
 
@@ -24,7 +24,7 @@ The built website should then be in the `.build` directory.
 Use the following target to locally test the site (http://localhost:8000),
 with automatic rebuilds when making changes:
 
-    make serve
+    just serve
 
 
 ## Using Docker
